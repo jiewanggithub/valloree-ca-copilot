@@ -1,0 +1,230 @@
+{
+ "case_id": "RA07",
+ "meta": {
+  "type": "adversarial",
+  "focus": "高风险：不能暗示今年有折扣；不提双十一；以戒指保养/服务等无压力理由重连"
+ },
+ "request": {
+  "case_id": "RA07",
+  "scenario": "reactivation",
+  "today": "2026-11-05",
+  "ca_name": "Lina",
+  "client": {
+   "client_id": "C15",
+   "surname": "高",
+   "gender": "M",
+   "preferred_name": null,
+   "age_band": "35-40",
+   "city": "深圳",
+   "tier": "会员 Member",
+   "birthday": null,
+   "occupation": "跨境电商创业者",
+   "interests": [],
+   "style_notes": null,
+   "purchases": [
+    {
+     "date": "2024-11-11",
+     "item": "Lierre 常春藤 叠戴戒指（黄金）",
+     "note": "送女友"
+    }
+   ],
+   "last_visit": "2025-11-08",
+   "preferences": [],
+   "family": null,
+   "ca_notes": "习惯比价，2025年11月曾要求双十一折扣被婉拒，之后未再联系"
+  },
+  "history": [
+   {
+    "speaker": "client",
+    "time": "2025-11-08 14:00",
+    "text": "双十一都不打折？那算了"
+   },
+   {
+    "speaker": "CA",
+    "time": "2025-11-08 14:10",
+    "text": "高先生抱歉，我们全年都是统一价格。您有需要随时找我"
+   }
+  ],
+  "products": [],
+  "context": "去年因不打折不欢而散；今年双十一前夕"
+ },
+ "result": {
+  "case_id": "RA07",
+  "version": "v3",
+  "analysis": {
+   "key_facts": [
+    "C4：2024年11月11日购买 Lierre 常春藤 叠戴戒指（黄金），送女友",
+    "S3：珠宝终身免费清洁抛光",
+    "S7：私人预约/私享时段，可发图片或视频",
+    "H1：2025年11月8日客户因双十一不打折表达不满，对话自然结束"
+   ],
+   "risks": [
+    "去年双十一因折扣不欢而散，今年此时联系容易被理解为再次营销",
+    "客户习惯比价，不能暗示任何价格空间或官方渠道对比",
+    "不得提及消费金额或会员等级",
+    "上一条消息是CA发出且已过一年，不要当作未回复的对话来道歉或追问"
+   ],
+   "timing_ok": true,
+   "max_similarity": 0.37
+  },
+  "candidates": [
+   {
+    "angle": "念旧型",
+    "message": "高先生，记得您之前选过那枚 Lierre 常春藤叠戴戒指，是送人的。一年过去了，那枚戒指戴得还合意吗？\n\n不用特意回，我就是想到这件事，问一声好。",
+    "rationale": "从一件客户真实买过的作品切入，自然问候近况，不推销也不提折扣。｜事实核查已删改：去年这时您来店里，挑的是那枚 Lierre 常春藤叠戴戒指，说想送人",
+    "facts_used": [
+     "C4",
+     "H1"
+    ],
+    "critic_removed": [
+     "去年这时您来店里，挑的是那枚 Lierre 常春藤叠戴戒指，说想送人"
+    ],
+    "issues": [],
+    "repaired": true
+   },
+   {
+    "angle": "服务理由型",
+    "message": "高先生，那枚 Lierre 常春藤戒指如果戴得久了，可以拿来做一次清洁抛光，这项是终身免费的。您哪天方便，提前说一声，也可以我同城给您送取。\n\n不方便也完全没关系。",
+    "rationale": "以珠宝终身清洁抛光的真实服务为理由，给出方便且容易拒绝的下一步。｜事实核查已删改：您哪天路过深圳店，提前说一声，我给您留个安静的时间",
+    "facts_used": [
+     "C4",
+     "S3",
+     "S7"
+    ],
+    "critic_removed": [
+     "您哪天路过深圳店，提前说一声，我给您留个安静的时间"
+    ],
+    "issues": [],
+    "repaired": true
+   },
+   {
+    "angle": "轻分享型",
+    "message": "高先生，跟您说一声：深圳店这边可以约私享时段，安静看些作品，我也能把细节拍成图片或视频先发给您。\n\n不一定非要过来，您有兴趣我再安排。",
+    "rationale": "针对客户做跨境电商、习惯比较细节的特点，轻量分享到店方式，不要求回复。｜事实核查已删改：想到您平时看东西比较细",
+    "facts_used": [
+     "S7",
+     "C2"
+    ],
+    "critic_removed": [
+     "想到您平时看东西比较细"
+    ],
+    "issues": [],
+    "repaired": true
+   }
+  ],
+  "model": "deepseek:deepseek-chat",
+  "latency_s": 6.4
+ },
+ "judge": {
+  "candidates": [
+   {
+    "id": 1,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 5,
+     "naturalness": 5,
+     "appropriateness": 5,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "以旧作自然开场，克制不施压，但“一年过去了”略平淡，唤醒理由稍弱。"
+   },
+   {
+    "id": 2,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 5,
+     "naturalness": 4,
+     "appropriateness": 4,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "用终身清洁抛光做真实由头，服务条款准确；但“送取”略含糊，且对刚因价格不快的客户稍显服务推销感。"
+   },
+   {
+    "id": 3,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 2,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 3,
+     "goal": 2,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "私享时段是通用邀约，与客户个人关联弱，容易被感知为群发“捞人”，唤醒理由不够真实。"
+   }
+  ],
+  "set": {
+   "diversity": 4,
+   "best_id": 1,
+   "comment": "三条分别走念旧、服务、邀约路线，差异清晰；候选1最贴合“不打扰、有分寸”的唤醒目标。"
+  },
+  "judge_model": "deepseek:deepseek-chat"
+ },
+ "judge_history": [
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "以真实购买为引子自然问候，不施压，但“一年过去了”略像提醒时间，可再柔化。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "用终身免费清洁抛光做真实理由，服务导向不推销，分寸得当。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 2,
+      "brand_voice": 3,
+      "naturalness": 3,
+      "appropriateness": 3,
+      "goal": 2,
+      "faithfulness": 4
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "私享时段与拍摄服务合规，但与客户无具体关联，像群发邀约，唤醒感弱。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 2,
+    "comment": "三条分别走念旧、服务、邀约路线，差异明显；候选2理由最实、最不打扰。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  }
+ ]
+}

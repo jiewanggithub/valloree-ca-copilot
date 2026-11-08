@@ -1,0 +1,160 @@
+{
+ "case_id": "E04",
+ "meta": {
+  "type": "core",
+  "focus": "与客户晚宴需求结合；简短；不用emoji"
+ },
+ "request": {
+  "case_id": "E04",
+  "scenario": "event",
+  "today": "2026-11-21",
+  "ca_name": "Lina",
+  "client": {
+   "client_id": "C01",
+   "surname": "王",
+   "gender": "F",
+   "preferred_name": "Vivian",
+   "age_band": "35-40",
+   "city": "上海",
+   "tier": "典藏 Heritage",
+   "birthday": "11-07",
+   "occupation": "投资银行合伙人",
+   "interests": [
+    "歌剧",
+    "旅行",
+    "普拉提"
+   ],
+   "style_notes": "偏爱白金与冷色调，简洁线条；戒指尺寸11号",
+   "purchases": [
+    {
+     "date": "2023-06-18",
+     "item": "Constellation 星宿 钻石戒指",
+     "note": "自购，纪念升任合伙人"
+    },
+    {
+     "date": "2026-10-30",
+     "item": "Heure Bleue 蓝调时刻 女士腕表 33mm",
+     "note": "自购"
+    }
+   ],
+   "last_visit": "2026-10-30",
+   "preferences": [
+    "喜欢简短的消息",
+    "希望被称呼为Vivian"
+   ],
+   "family": null,
+   "ca_notes": "工作忙，回复常在深夜；10月底提到11月要去维也纳听歌剧"
+  },
+  "history": [
+   {
+    "speaker": "client",
+    "time": "2026-11-18 23:50",
+    "text": "维也纳回来了，12月有个慈善晚宴，在想戴什么"
+   },
+   {
+    "speaker": "CA",
+    "time": "2026-11-19 09:00",
+    "text": "欢迎回来Vivian！晚宴的造型我帮您想想"
+   }
+  ],
+  "products": [],
+  "context": "活动：Constellation高级珠宝私享预览\n时间：2026年12月5日（周六）15:00–18:00\n地点：上海静安恒汇店VIP沙龙\n可携一位同伴；现场可试戴，适合为晚宴挑选"
+ },
+ "result": {
+  "case_id": "E04",
+  "version": "v1",
+  "analysis": {
+   "key_facts": [
+    "Vivian 10月底自购 Heure Bleue 腕表，11月去了维也纳听歌剧，回来说12月有慈善晚宴在想戴什么",
+    "CA 两天前只回了“欢迎回来，晚宴造型我帮您想想”，她的问题尚未真正被回应，需先接上",
+    "她喜欢简短消息、被称呼 Vivian，回复常在深夜，风格偏爱白金冷色调与简洁线条",
+    "活动：12月5日周六15:00–18:00，上海静安恒汇店VIP沙龙，可携一位同伴，现场可试戴"
+   ],
+   "risks": [
+    "她上一条消息在等回应，不能像没说过一样直接发活动",
+    "她偏好简短，消息不宜长；不用emoji",
+    "不编造嘉宾、礼品、名额等信息；不用“名额有限”施压",
+    "不评论晚宴造型以外的外貌话题，不打折、不做投资承诺"
+   ],
+   "timing_ok": true,
+   "max_similarity": 0.58
+  },
+  "candidates": [
+   {
+    "angle": "专属感",
+    "message": "Vivian，晚宴的事我一直记着。12月5日周六下午三点到六点，静安恒汇店VIP沙龙有一场Constellation高级珠宝私享预览，现场可以试戴。您偏爱白金和简洁线条，我想借这个机会陪您把晚宴的搭配定下来。可以带一位同伴来。方便的话回我一声就好。",
+    "rationale": "先回应她挂在心上的晚宴，再把活动与她的白金偏好、试戴需求连起来，显得是为她而约。",
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "信息清晰",
+    "message": "Vivian，接着上次说的晚宴：12月5日周六15:00–18:00，静安恒汇店VIP沙龙有一场Constellation高级珠宝私享预览，现场可试戴，也能带一位同伴。时间是下午，不影响您白天安排。想来告诉我一声，我提前留好位置。",
+    "rationale": "时间、地点、内容、能否携伴一次说清，方便她快速判断，结尾留出轻松拒绝的空间。",
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "灵活型",
+    "message": "Vivian，12月5日周六下午静安恒汇店有场Constellation私享预览，本想着晚宴正好用得上。知道您日程紧，若那天不方便，我可以另约一个安静的时段陪您慢慢试；也可以先把资料发您。您看哪种省心。",
+    "rationale": "给出到场、另约、先看资料三种选择，尊重她忙碌的节奏，不施加任何压力。",
+    "issues": [],
+    "repaired": false
+   }
+  ],
+  "model": "deepseek:deepseek-chat",
+  "latency_s": 4.6
+ },
+ "judge": {
+  "candidates": [
+   {
+    "id": 1,
+    "scores": {
+     "personalization": 5,
+     "brand_voice": 5,
+     "naturalness": 5,
+     "appropriateness": 5,
+     "goal": 5,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "以晚宴为线索串联客户偏好与活动信息，专属感自然，结尾轻松不施压。"
+   },
+   {
+    "id": 2,
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 4,
+     "goal": 5,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "信息清楚完整，但“不影响您白天安排”略显多余，个性化稍弱于候选1。"
+   },
+   {
+    "id": 3,
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 4,
+     "goal": 3,
+     "faithfulness": 4
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "灵活备选贴心，但“先把资料发您”暗示了输入中未提及的资料，且活动时间信息不够完整。"
+   }
+  ],
+  "set": {
+   "diversity": 4,
+   "best_id": 1,
+   "comment": "三条分别侧重专属感、信息清晰与灵活备选，方向有区分；候选1最贴合客户偏好与场景目标。"
+  },
+  "judge_model": "deepseek:deepseek-chat"
+ }
+}

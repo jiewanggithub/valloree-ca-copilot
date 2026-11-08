@@ -1,0 +1,258 @@
+{
+ "case_id": "RA06",
+ "meta": {
+  "type": "core",
+  "focus": "以女儿上大学一年为情感切入；不推销"
+ },
+ "request": {
+  "case_id": "RA06",
+  "scenario": "reactivation",
+  "today": "2026-11-14",
+  "ca_name": "Lina",
+  "client": {
+   "client_id": "C19",
+   "surname": "冯",
+   "gender": "F",
+   "preferred_name": null,
+   "age_band": "40-45",
+   "city": "成都",
+   "tier": "会员 Member",
+   "birthday": null,
+   "occupation": "中学校长",
+   "interests": [],
+   "style_notes": null,
+   "purchases": [
+    {
+     "date": "2025-09-01",
+     "item": "Petit Trésor 小珍宝 珍珠母贝吊坠",
+     "note": "送女儿的升学礼物"
+    }
+   ],
+   "last_visit": "2025-09-01",
+   "preferences": [],
+   "family": "女儿今年读大一",
+   "ca_notes": "很温和，喜欢聊女儿"
+  },
+  "history": [
+   {
+    "speaker": "client",
+    "time": "2025-09-03 20:11",
+    "text": "女儿戴着去学校报到了，说同学都问是哪里买的"
+   },
+   {
+    "speaker": "CA",
+    "time": "2025-09-03 20:30",
+    "text": "真好冯女士，祝她大学生活顺利"
+   }
+  ],
+  "products": [
+   {
+    "sku": "PTR-P-01",
+    "name": "Petit Trésor 小珍宝 珍珠母贝吊坠",
+    "collection": "Petit Trésor 小珍宝",
+    "category": "pendant",
+    "material": "18K黄金，白色珍珠母贝，0.05克拉钻石点缀",
+    "price": 12800,
+    "story": "四叶造型来自瓦洛蕾1920年代的档案图稿",
+    "care": "母贝避免接触香水与水"
+   }
+  ],
+  "context": "14个月未联系；母贝吊坠可免费清洁"
+ },
+ "result": {
+  "case_id": "RA06",
+  "version": "v3",
+  "analysis": {
+   "key_facts": [
+    "C3 女儿今年读大一",
+    "C4 冯女士很温和，喜欢聊女儿",
+    "C5 2025-09-01 购买 Petit Trésor 珍珠母贝吊坠，送女儿升学礼物",
+    "H1 女儿戴去报到，同学问是哪里买的",
+    "S3/S7 珠宝终身免费清洁抛光；私人预约/同城CA送达",
+    "P5 母贝避免接触香水与水"
+   ],
+   "risks": [
+    "距上次对话已437天，上一段对话已自然结束，不可当作进行中的对话回应，也不要为迟回道歉",
+    "最后一条消息来自CA，语气要更轻，不能像没发过一样",
+    "不得暗示客户久未到店或遗忘品牌",
+    "不得提及金额、等级",
+    "不得一上来推产品，不得打折、不编造细节"
+   ],
+   "timing_ok": true,
+   "max_similarity": 0.32
+  },
+  "candidates": [
+   {
+    "angle": "念旧型",
+    "message": "冯女士，您之前提过女儿戴着那枚小珍宝去学校报到，我到现在还记得。她今年学业一切可还顺利？珍珠母贝怕香水和汗水，她要是常戴，得空拿来店里我做一次免费清洁，人会清爽，贝母也更透亮。您方便时再说，不急。",
+    "rationale": "以共同记忆里的女儿报到场景自然开场，借母贝保养给出轻服务理由，结尾松弛不催。｜事实核查已删改：去年女儿戴着那枚小珍宝去报到的样子，我到现在还记得（把H1客户转述的场景说成CA亲眼所见）；今年她读大一了（时间线错误：女儿2025年9月读大一，2026年11月应已大二）",
+    "facts_used": [
+     "H1",
+     "C3",
+     "C5",
+     "P5",
+     "S3"
+    ],
+    "critic_removed": [
+     "去年女儿戴着那枚小珍宝去报到的样子，我到现在还记得（把H1客户转述的场景说成CA亲眼所见）",
+     "今年她读大一了（时间线错误：女儿2025年9月读大一，2026年11月应已大二）"
+    ],
+    "issues": [],
+    "repaired": true
+   },
+   {
+    "angle": "服务理由型",
+    "message": "冯女士，想到那枚小珍宝您女儿戴着也有一段时间了。珍珠母贝日常避开香水和汗，时间长了光泽会闷一些，我们提供终身免费清洁抛光。您若这周来成都店附近，提前说一声我帮您留个时段。",
+    "rationale": "以母贝清洁这个真实服务切入，把到店或同城送达两种方便都摆出来，不强推。｜事实核查已删改：您女儿戴了一年了（时间线错误：2025年9月至今已14个月，且与X1的14个月未联系不符）；我顺路送到您那儿（清单仅有同城CA送达，未确认可顺路配送）",
+    "facts_used": [
+     "C5",
+     "P5",
+     "S3",
+     "S7"
+    ],
+    "critic_removed": [
+     "您女儿戴了一年了（时间线错误：2025年9月至今已14个月，且与X1的14个月未联系不符）",
+     "我顺路送到您那儿（清单仅有同城CA送达，未确认可顺路配送）"
+    ],
+    "issues": [],
+    "repaired": true
+   },
+   {
+    "angle": "轻分享型",
+    "message": "冯女士，小珍宝那枚四叶的造型来自1920年代的档案图稿，忽然想起您女儿那枚。她这一年过得可好？您忙您的，不用特意回我，改天想清洁了跟我说一声就是。",
+    "rationale": "用作品故事作轻量分享，落到女儿读大一这一句关心，明确不要求回复。｜事实核查已删改：前阵子翻到小珍宝那枚四叶的档案图稿（虚构由头）；她读大一这一年（时间线错误：女儿已读大二）；戴着小四叶去过不少地方吧（虚构客户言行）",
+    "facts_used": [
+     "P4",
+     "C5",
+     "C3",
+     "S3"
+    ],
+    "critic_removed": [
+     "前阵子翻到小珍宝那枚四叶的档案图稿（虚构由头）",
+     "她读大一这一年（时间线错误：女儿已读大二）",
+     "戴着小四叶去过不少地方吧（虚构客户言行）"
+    ],
+    "issues": [],
+    "repaired": true
+   }
+  ],
+  "model": "deepseek:deepseek-chat",
+  "latency_s": 7.9
+ },
+ "judge": {
+  "candidates": [
+   {
+    "id": 1,
+    "unsupported_claims": [
+     "您之前提过女儿戴着那枚小珍宝去学校报到——客户原话是女儿戴着去学校报到了，说同学都问是哪里买的，转述基本有依据，但“您之前提过”略像引用原话，可接受"
+    ],
+    "scores": {
+     "personalization": 5,
+     "brand_voice": 5,
+     "naturalness": 5,
+     "appropriateness": 5,
+     "goal": 5,
+     "faithfulness": 4
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "以女儿报到这件真实往事自然开场，关心学业、给出免费清洁的轻下一步，分寸很好；仅“您之前提过”措辞可再松一点。"
+   },
+   {
+    "id": 2,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 3,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 4,
+     "goal": 3,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "服务理由成立、条款准确，但通篇围绕清洁，缺少对女儿这一真实话题的呼应，唤醒感偏弱。"
+   },
+   {
+    "id": 3,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 5,
+     "naturalness": 5,
+     "appropriateness": 5,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "用档案图稿的故事轻巧开场，不要求回复，气质最安静；但“忽然想起”略像由头，个性化稍逊于候选1。"
+   }
+  ],
+  "set": {
+   "diversity": 4,
+   "best_id": 1,
+   "comment": "三条分别走念旧、服务、轻分享路线，差异清晰；候选1最贴合“懂行的老朋友”且回应了女儿这条真实线索，建议作为首选。"
+  },
+  "judge_model": "deepseek:deepseek-chat"
+ },
+ "judge_history": [
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [
+      "您之前提过女儿戴着那枚小珍宝去学校报到——客户原话是“女儿戴着去学校报到了”，属合理转述，不算编造"
+     ],
+     "scores": {
+      "personalization": 5,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 5,
+      "faithfulness": 4
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "以女儿近况自然开场，清洁服务作为轻理由，分寸得当；开头“我到现在还记得”略近套话，可再收一点。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 4,
+      "naturalness": 3,
+      "appropriateness": 3,
+      "goal": 3,
+      "faithfulness": 4
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "服务理由成立但整体偏“提醒保养”，缺少与冯女士本人的连接，唤醒感偏弱，且“帮您留个时段”稍显推进。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "以档案图稿的工艺故事轻巧开场，不施压、不要求回复，气质最贴合品牌；唤醒力度略轻于候选1。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 1,
+    "comment": "三条分别走念旧、服务、工艺分享三条路，差异清晰；候选1在“真实理由+人情味”上最平衡，候选3最克制，可按客户性格二选一。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  }
+ ]
+}

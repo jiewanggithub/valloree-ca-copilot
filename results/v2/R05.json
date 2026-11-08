@@ -1,0 +1,276 @@
+{
+ "case_id": "R05",
+ "meta": {
+  "type": "core",
+  "focus": "以工艺深度打动艺术藏家；不提投资/保值"
+ },
+ "request": {
+  "case_id": "R05",
+  "scenario": "recommendation",
+  "today": "2026-11-05",
+  "ca_name": "Lina",
+  "client": {
+   "client_id": "C16",
+   "surname": "罗",
+   "gender": "F",
+   "preferred_name": null,
+   "age_band": "45-50",
+   "city": "北京",
+   "tier": "典藏 Heritage",
+   "birthday": null,
+   "occupation": "艺术基金会理事",
+   "interests": [
+    "珐琅艺术",
+    "当代艺术收藏",
+    "古籍"
+   ],
+   "style_notes": "收藏珐琅器，喜欢有工艺深度的作品",
+   "purchases": [
+    {
+     "date": "2025-06-06",
+     "item": "Constellation 星宿 钻石项链",
+     "note": "自购，定制了出生月星图"
+    }
+   ],
+   "last_visit": "2026-07-18",
+   "preferences": [
+    "语气正式"
+   ],
+   "family": null,
+   "ca_notes": "对珐琅表盘的多次烧制工艺非常感兴趣"
+  },
+  "history": [
+   {
+    "speaker": "client",
+    "time": "2026-07-18 17:20",
+    "text": "上次说的珐琅表盘多次烧制，有机会想看看"
+   }
+  ],
+  "products": [
+   {
+    "sku": "MRD-W-01",
+    "name": "Méridien 子午线 万年历腕表 40mm",
+    "collection": "Méridien 子午线",
+    "category": "watch",
+    "material": "铂金表壳，乳白色珐琅表盘，自制万年历机芯，月相显示",
+    "price": 520000,
+    "story": "万年历可准确显示至2100年，珐琅表盘经多次烧制，成品率较低",
+    "care": "避免在晚上8点至凌晨2点间调校日历"
+   }
+  ],
+  "context": "推荐万年历的珐琅表盘，客户可预约私人观赏"
+ },
+ "result": {
+  "case_id": "R05",
+  "version": "v2",
+  "analysis": {
+   "key_facts": [
+    "罗女士7月18日到店时提到想看珐琅表盘多次烧制工艺，距今已110天",
+    "她收藏珐琅器，对珐琅表盘的多次烧制工艺非常感兴趣",
+    "她去年定制过Constellation星宿项链，附出生月星图，同属与时间、天象相关的主题",
+    "Méridien子午线万年历为铂金表壳、乳白色珐琅表盘，珐琅盘多次烧制、成品率较低"
+   ],
+   "risks": [
+    "客户偏好正式语气，不可过于口语随意",
+    "上一次对话已自然结束110天，不可写成正在进行的对话，也不要为迟回致歉",
+    "不报价、不提任何优惠；如提及价格需平和陈述，不制造稀缺或紧迫感",
+    "不虚构客户未说过的细节或CA未做过的动作（如已留表、已预约）",
+    "不使用emoji，不使用网络流行语"
+   ],
+   "timing_ok": true,
+   "max_similarity": 0.4
+  },
+  "candidates": [
+   {
+    "angle": "懂你型",
+    "message": "罗女士，七月您到店里时提起过，想看看珐琅表盘多次烧制的实物，这件事我放在心上。Méridien 子午线万年历的乳白色珐琅盘正是多次烧制而成，成品率不高，盘面温润，与您收藏珐琅器的眼光应能对上。您若方便，我可以先拍几张细节图发给您过目，不合适也不必有负担。",
+    "rationale": "从她七月提过的珐琅表盘心愿切入，说明为何想到她，并给出看图的低压力下一步。",
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "故事型",
+    "message": "罗女士，Méridien 子午线万年历的珐琅表盘要经过多次烧制，每一次入炉都有成败，成品率因此不高；铂金表壳内是自制万年历机芯，可准确显示至2100年。您定制的星宿项链取的是天象，这枚腕表记的是更长的时间，我想到您或许会感兴趣。方便时来店坐坐，看看实物即可。",
+    "rationale": "以珐琅多次烧制与万年历的时间主题为故事主线，呼应她定制的星图项链，再轻轻邀约。",
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "邀约体验型",
+    "message": "罗女士，店里有一枚Méridien 子午线万年历，乳白色珐琅表盘经多次烧制，铂金表壳。您七月说过想看看珐琅表盘的工艺，若您愿意，我可以约一个您方便的时间，在店里安静看表，不占用太久。您告诉我大致合适的时段就好，不方便也完全没关系。",
+    "rationale": "简短提及产品与她的珐琅兴趣，重点放在可拒绝的私人观赏邀约上。",
+    "issues": [],
+    "repaired": false
+   }
+  ],
+  "model": "deepseek:deepseek-chat",
+  "latency_s": 5.5
+ },
+ "judge": {
+  "candidates": [
+   {
+    "id": 1,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 5,
+     "brand_voice": 5,
+     "naturalness": 4,
+     "appropriateness": 5,
+     "goal": 5,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "准确引用七月到店与珐琅兴趣，产品描述克制，结尾轻松可拒绝；仅“放在心上”略近套话，可微调。"
+   },
+   {
+    "id": 2,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 5,
+     "brand_voice": 5,
+     "naturalness": 4,
+     "appropriateness": 4,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "以星宿项链与万年历的时间感作联结，有分寸；但未直接回应“想看看”的诉求，邀约稍显含蓄。"
+   },
+   {
+    "id": 3,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 5,
+     "naturalness": 5,
+     "appropriateness": 5,
+     "goal": 5,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "自然承接七月话题并给出私人观赏的轻松下一步，语气正式得体；个性化略弱于前两条。"
+   }
+  ],
+  "set": {
+   "diversity": 5,
+   "best_id": 1,
+   "comment": "三条分别走懂你、故事、邀约路线，差异清晰；候选1在个性化与目标达成上最均衡。"
+  },
+  "judge_model": "deepseek:deepseek-chat"
+ },
+ "judge_history": [
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 5,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "引用客户七月到店时的话，自然带出产品工艺，结尾提供细节图选项，轻松无压力。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 5,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "将星宿项链与万年历的时间主题关联，有巧思，但邀约稍显直接，可更柔和。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "直接回应客户七月想看珐琅表盘的意愿，邀约私人观赏，语气正式且尊重客户时间。"
+    }
+   ],
+   "set": {
+    "diversity": 5,
+    "best_id": 1,
+    "comment": "三条分别侧重细节图、故事关联和到店体验，给CA不同选择；候选1最贴合客户偏好且无压力。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  },
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 5,
+      "brand_voice": 5,
+      "naturalness": 4,
+      "appropriateness": 5,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "准确引用七月到店时看珐琅表盘的旧话题，产品细节均来自输入，结尾轻松可拒绝，仅“放在心上”略近套话。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 5,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "以星宿项链的天象与万年历的时间感作联结，克制有分寸；但未回应客户七月想看珐琅实物的具体诉求，邀约略泛。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 5,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "直接承接七月看珐琅工艺的意愿，给出私人观赏的轻松下一步，语气正式克制，无推销感。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 3,
+    "comment": "三条分别走细节图、时间叙事、到店邀约三条路径，差异清晰；候选3最贴合客户七月提出的诉求且分寸最好。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  }
+ ]
+}

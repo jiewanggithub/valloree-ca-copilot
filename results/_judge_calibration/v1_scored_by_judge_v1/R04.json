@@ -1,0 +1,169 @@
+{
+ "case_id": "R04",
+ "meta": {
+  "type": "edge",
+  "focus": "必须回应客户的具体需求；HBL-W-02（镶钻、晚宴款）不适合日常——好的回复应只推荐或优先推荐HBL-W-01"
+ },
+ "request": {
+  "case_id": "R04",
+  "scenario": "recommendation",
+  "today": "2026-11-10",
+  "ca_name": "Lina",
+  "client": {
+   "client_id": "C11",
+   "surname": "何",
+   "gender": "F",
+   "preferred_name": null,
+   "age_band": "30-35",
+   "city": "上海",
+   "tier": "会员 Member",
+   "birthday": null,
+   "occupation": "建筑师",
+   "interests": [
+    "建筑",
+    "摄影",
+    "烘焙"
+   ],
+   "style_notes": "白金，线条感强的设计",
+   "purchases": [
+    {
+     "date": "2026-05-02",
+     "item": "Constellation 星宿 钻石戒指",
+     "note": "客户告知是自己的婚戒"
+    }
+   ],
+   "last_visit": "2026-05-02",
+   "preferences": [],
+   "family": null,
+   "ca_notes": "客户主动分享5月结婚，先生也是建筑师"
+  },
+  "history": [
+   {
+    "speaker": "client",
+    "time": "2026-11-09 22:30",
+    "text": "Lina，我想找一块能日常戴的表，工地和办公室来回跑，不要太娇气的，有推荐吗"
+   }
+  ],
+  "products": [
+   {
+    "sku": "HBL-W-01",
+    "name": "Heure Bleue 蓝调时刻 女士腕表 33mm",
+    "collection": "Heure Bleue 蓝调时刻",
+    "category": "watch",
+    "material": "精钢表壳，蓝色珍珠母贝表盘，钻石时标，自动上链机芯，动力储存70小时",
+    "price": 86000,
+    "story": "表盘的蓝来自日内瓦湖黄昏的“蓝调时刻”，每片母贝纹理独一无二",
+    "care": "建议每4-5年保养一次；加入瓦洛蕾会员计划保修延长至8年"
+   },
+   {
+    "sku": "HBL-W-02",
+    "name": "Heure Bleue 蓝调时刻 女士腕表 28mm 玫瑰金镶钻",
+    "collection": "Heure Bleue 蓝调时刻",
+    "category": "watch",
+    "material": "18K玫瑰金表壳，表圈镶嵌62颗钻石，石英机芯",
+    "price": 168000,
+    "story": "更纤细的比例，适合晚宴与正式场合",
+    "care": "石英电池约3年更换一次，可回店免费检测"
+   }
+  ],
+  "context": "客户昨晚提问，今天上午回复"
+ },
+ "result": {
+  "case_id": "R04",
+  "version": "v1",
+  "analysis": {
+   "key_facts": [
+    "客户昨晚22:30提问：想找日常戴的表，工地和办公室来回跑，不要太娇气",
+    "客户是建筑师，常跑工地，风格偏好白金、线条感强的设计",
+    "客户拥有的Constellation星宿钻石戒指是婚戒，5月购买，先生也是建筑师",
+    "客户是会员，可提及保修延长至8年"
+   ],
+   "risks": [
+    "客户在等回复，必须先直接回应手表问题，不能跳过",
+    "只推荐一款表，不做两款并列比较",
+    "不能说保值、投资，不打折，不制造紧迫感",
+    "不评论外貌、年龄、婚姻状况，婚戒可提但分寸自然",
+    "仅推荐输入中的产品，不编造库存或活动"
+   ],
+   "timing_ok": true,
+   "max_similarity": 0.41
+  },
+  "candidates": [
+   {
+    "angle": "懂你型",
+    "message": "何女士，早上好。昨晚的问题我记着呢——工地和办公室两头跑的表，得经得起磕碰又不能太厚重。我想到Heure Bleue蓝调时刻33mm，精钢表壳，蓝色珍珠母贝表盘配钻石时标，线条干净，和您平时喜欢的风格也近。自动上链，动力储存70小时，周末不戴也不容易停。要不要我先拍几张实拍图给您看看？",
+    "rationale": "先回应昨晚提问，再从客户建筑师身份与白金线条偏好出发，给出与场景匹配的理由，结尾低压力的发图提议。",
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "故事型",
+    "message": "何女士早，您昨晚说的日常表我一直在想。Heure Bleue蓝调时刻的表盘蓝，取自日内瓦湖黄昏那段蓝调时刻，每片珍珠母贝的纹理都不一样——像您画过的那些场地，各有各的脾气。33mm精钢壳，钻石时标，日常戴不娇气。您要是感兴趣，我拍段视频给您看表盘在光下的样子？",
+    "rationale": "以表盘蓝调时刻的工艺故事切入，用建筑场地作类比贴合客户职业，再落到日常佩戴，最后给轻松的看视频选项。",
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "邀约体验型",
+    "message": "何女士早上好，昨晚您问的日常表，我这边有一款想请您上手试试——Heure Bleue蓝调时刻33mm，精钢表壳配蓝色珍珠母贝表盘，跑工地和开会都戴得住。您哪天方便来店里，我给您留个安静时段慢慢看；不方便的话我先拍几张照片发您。",
+    "rationale": "简短点出产品后重心放在预约试戴的下一步，给到店和先看图两个轻松选项，不强推。",
+    "issues": [],
+    "repaired": false
+   }
+  ],
+  "model": "deepseek:deepseek-chat",
+  "latency_s": 5.0
+ },
+ "judge": {
+  "candidates": [
+   {
+    "id": 1,
+    "scores": {
+     "personalization": 5,
+     "brand_voice": 5,
+     "naturalness": 5,
+     "appropriateness": 5,
+     "goal": 5,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "直接回应昨晚的问题，用客户自己的话（工地和办公室两头跑）切入，并呼应白金线条感偏好，收尾轻松可拒绝。"
+   },
+   {
+    "id": 2,
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 4,
+     "goal": 4,
+     "faithfulness": 3
+    },
+    "hard_fail": true,
+    "hard_fail_reason": "编造客户经历：称客户“画过的那些场地”，输入中无此信息",
+    "comment": "故事讲得动人，但“您画过的那些场地”属于凭空编造的客户经历，需删改。"
+   },
+   {
+    "id": 3,
+    "scores": {
+     "personalization": 3,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 4,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "回应到位、邀约得体，但个性化偏弱，未用到婚戒或风格偏好等具体信息。"
+   }
+  ],
+  "set": {
+   "diversity": 4,
+   "best_id": 1,
+   "comment": "三条分别走懂你、故事、邀约体验路线，区分清晰；候选1最贴合“记得我、懂我”的目标且无事实问题。"
+  },
+  "judge_model": "deepseek:deepseek-chat"
+ }
+}

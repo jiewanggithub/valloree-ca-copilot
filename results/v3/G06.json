@@ -1,0 +1,243 @@
+{
+ "case_id": "G06",
+ "meta": {
+  "type": "edge",
+  "focus": "圣诞+生日双重节点；中英夹杂、轻松语气；客户说过要来店但未来——不要催"
+ },
+ "request": {
+  "case_id": "G06",
+  "scenario": "greeting",
+  "today": "2026-12-25",
+  "ca_name": "Lina",
+  "client": {
+   "client_id": "C17",
+   "surname": "谢",
+   "gender": "F",
+   "preferred_name": "Emily",
+   "age_band": "25-30",
+   "city": "上海",
+   "tier": "会员 Member",
+   "birthday": "12-25",
+   "occupation": "刚从伦敦硕士毕业，在上海做品牌策略",
+   "interests": [
+    "艺术展",
+    "brunch",
+    "网球"
+   ],
+   "style_notes": "黄金，喜欢叠戴手镯",
+   "purchases": [
+    {
+     "date": "2025-08-20",
+     "item": "Petit Trésor 小珍宝 珍珠母贝吊坠",
+     "note": "自购，出国读书前买的"
+    }
+   ],
+   "last_visit": "2025-08-20",
+   "preferences": [
+    "习惯中英夹杂，喜欢轻松的语气"
+   ],
+   "family": null,
+   "ca_notes": "说过2026年夏天毕业后回上海"
+  },
+  "history": [
+   {
+    "speaker": "client",
+    "time": "2026-08-02 14:05",
+    "text": "Hi Lina! 我回上海啦，settle下来去店里找你"
+   },
+   {
+    "speaker": "CA",
+    "time": "2026-08-02 14:20",
+    "text": "欢迎回来Emily！等你有空来坐坐"
+   }
+  ],
+  "products": [],
+  "context": "圣诞节，同时也是客户生日"
+ },
+ "result": {
+  "case_id": "G06",
+  "version": "v3",
+  "analysis": {
+   "key_facts": [
+    "C3: 生日12-25",
+    "X1: 圣诞节与生日同一天",
+    "C2: 从伦敦硕士毕业，在上海做品牌策略",
+    "H1: 2026-08-02说回上海了，settle下来会来店里",
+    "C6: 兴趣艺术展、brunch、网球",
+    "C4: 风格偏好黄金，喜欢叠戴手镯"
+   ],
+   "risks": [
+    "上一段对话145天前已自然结束，不要当成进行中的对话，也不要为迟回道歉",
+    "纯祝福：不推荐产品、不提新品、不提价格或活动、不提供服务/清洁保养",
+    "不提年龄",
+    "全文用『你』，不混用『您』",
+    "圣诞+生日双祝福，节日与生日名称要准确",
+    "不打折、不做投资承诺、不用极限词、不贬低其他品牌",
+    "可自然引用8月那条回上海的消息，但要体现是过去的事"
+   ],
+   "timing_ok": true,
+   "max_similarity": 0.41
+  },
+  "candidates": [
+   {
+    "angle": "温情回忆",
+    "message": "Emily，圣诞快乐，也祝你生日快乐！还记得八月你说回上海 settle 好就来店里坐坐。生日和圣诞撞在同一天，愿你今天过得像自己喜欢的 brunch 那样，松弛又明亮。",
+    "rationale": "以八月回上海那条消息为真实细节切入，让双重祝福落在她回来后的生活上，不涉产品与服务。｜事实核查已删改：那条消息我留着呢；从伦敦回来这几个月，应该忙得挺充实吧",
+    "facts_used": [
+     "C3",
+     "X1",
+     "H1",
+     "C6"
+    ],
+    "critic_removed": [
+     "那条消息我留着呢",
+     "从伦敦回来这几个月，应该忙得挺充实吧"
+    ],
+    "issues": [],
+    "repaired": true
+   },
+   {
+    "angle": "简洁雅致",
+    "message": "Emily，圣诞快乐，生日快乐。\n一年里最亮的两件事赶在同一天，愿你今天被好好庆祝。",
+    "rationale": "两三句克制收束，只保留节日与生日的双重祝福，适合关系尚新的节奏。",
+    "facts_used": [
+     "C3",
+     "X1"
+    ],
+    "critic_removed": [],
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "轻关怀",
+    "message": "Emily，圣诞快乐，也祝你生日快乐！上海这几个月，brand strategy 的工作还顺手吗？最近有没有遇到值得一看的展。愿新的一岁，忙里也有自己喜欢的节奏。",
+    "rationale": "祝福之外只轻轻问一句她提过的工作与兴趣，不涉及产品、服务或到店。｜事实核查已删改：之前你说喜欢看展和打球",
+    "facts_used": [
+     "C3",
+     "X1",
+     "C2",
+     "C6"
+    ],
+    "critic_removed": [
+     "之前你说喜欢看展和打球"
+    ],
+    "issues": [],
+    "repaired": true
+   }
+  ],
+  "model": "deepseek:deepseek-chat",
+  "latency_s": 6.3
+ },
+ "judge": {
+  "candidates": [
+   {
+    "id": 1,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 5,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 4,
+     "goal": 5,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "引用八月回沪的旧事并明确是过去，brunch 偏好用得自然；只是“松弛又明亮”略文艺，可再收一点。"
+   },
+   {
+    "id": 2,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 3,
+     "brand_voice": 5,
+     "naturalness": 5,
+     "appropriateness": 5,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "语气克制干净，但除了名字几乎无个人痕迹，换个客户也能发。"
+   },
+   {
+    "id": 3,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 3,
+     "goal": 3,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "祝福里连抛两个问题，把生日问候变成寒暄任务，客户还得回话，分寸稍弱。"
+   }
+  ],
+  "set": {
+   "diversity": 4,
+   "best_id": 1,
+   "comment": "三条路线区分清楚：回忆型、极简型、寒暄型；1 最贴合“被记得”的目标，2 可作备选，3 需删掉追问。"
+  },
+  "judge_model": "deepseek:deepseek-chat"
+ },
+ "judge_history": [
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "引用了八月对话，明确是过去的事，brunch 偏好也用得自然；只是生日祝福里带一句“来店里坐坐”的旧话题，稍显分心，但整体温暖可发。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "克制雅致，符合品牌气质，但个性化偏弱，换个名字也能用，缺少 Emily 的具体痕迹。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 3,
+      "naturalness": 4,
+      "appropriateness": 2,
+      "goal": 2,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "生日祝福里追问工作和看展，把祝福变成了对话任务，分寸偏失，且“brand strategy 的工作”略显打探，建议只留祝福。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 1,
+    "comment": "三条风格区分明显：温情回忆、简洁雅致、轻关怀；候选1最贴合“被记得”的目标，候选3需删去追问。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  }
+ ]
+}

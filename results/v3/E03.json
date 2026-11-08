@@ -1,0 +1,246 @@
+{
+ "case_id": "E03",
+ "meta": {
+  "type": "adversarial",
+  "focus": "陷阱：客户明确“不接受活动邀约”——应改为提供一对一私人预约观看同批作品，而不是邀请参加活动"
+ },
+ "request": {
+  "case_id": "E03",
+  "scenario": "event",
+  "today": "2026-11-10",
+  "ca_name": "Lina",
+  "client": {
+   "client_id": "C13",
+   "surname": "杨",
+   "gender": "F",
+   "preferred_name": null,
+   "age_band": "45-50",
+   "city": "上海",
+   "tier": "尊享 Privilege",
+   "birthday": null,
+   "occupation": "私募基金创始人",
+   "interests": [
+    "当代艺术",
+    "骑马"
+   ],
+   "style_notes": "喜欢独处式的购物体验",
+   "purchases": [
+    {
+     "date": "2025-09-30",
+     "item": "Heure Bleue 蓝调时刻 女士腕表 33mm",
+     "note": "自购"
+    }
+   ],
+   "last_visit": "2025-09-30",
+   "preferences": [
+    "不接受活动邀约",
+    "偏好一对一私人预约"
+   ],
+   "family": null,
+   "ca_notes": null
+  },
+  "history": [
+   {
+    "speaker": "client",
+    "time": "2025-10-05 20:00",
+    "text": "表很好，谢谢"
+   }
+  ],
+  "products": [],
+  "context": "活动：Constellation高级珠宝私享预览\n时间：2026年11月28日（周六）15:00–18:00\n地点：上海静安恒汇店\nCA被要求邀请所有尊享客户"
+ },
+ "result": {
+  "case_id": "E03",
+  "version": "v3",
+  "analysis": {
+   "key_facts": [
+    "C3：客户喜欢独处式的购物体验",
+    "C4：客户兴趣为当代艺术",
+    "C5/H1：2025年9月30日自购Heure Bleue 蓝调时刻女士腕表33mm，10月5日回复「表很好，谢谢」",
+    "X1–X3：Constellation高级珠宝私享预览，2026年11月28日周六15:00–18:00，上海静安恒汇店",
+    "S7：私人预约/私享时段"
+   ],
+   "risks": [
+    "客户明确不接受活动邀约——三条都不能写成邀请参加活动，只能提供一对一私人预约",
+    "偏好一对一私密体验，不能提携伴、不能营造集体场合感",
+    "上一段对话已在401天前自然结束，不得当作进行中的对话，也不为迟回道歉",
+    "活动为周六下午，与客户偏好无冲突，但仍有被要求邀请所有尊享客户的背景，需避免群发感与施压表述"
+   ],
+   "timing_ok": true,
+   "max_similarity": 0.45
+  },
+  "candidates": [
+   {
+    "angle": "专属感",
+    "message": "杨女士，去年您带走的那枚蓝调时刻，走时还顺心吗？\nConstellation高级珠宝私享预览在11月28日周六下午三点到六点，于静安恒汇店。知道您更习惯一个人慢慢看，所以不勉强您到场——若您愿意，我可以为您单独留一段私享时段，只您一位。您方便的话回我一声即可。",
+    "rationale": "以旧作问候起头，说明因了解其独处偏好与不接受活动邀约而改为私人时段，体现被特意考虑。｜事实核查已删改：也了解您对活动邀约的态度；把几件作品先备好",
+    "facts_used": [
+     "C3",
+     "C5",
+     "H1",
+     "X1",
+     "X2",
+     "X3",
+     "S7"
+    ],
+    "critic_removed": [
+     "也了解您对活动邀约的态度",
+     "把几件作品先备好"
+    ],
+    "issues": [],
+    "repaired": true
+   },
+   {
+    "angle": "信息清晰",
+    "message": "杨女士，11月28日周六15:00–18:00，静安恒汇店有一场Constellation高级珠宝私享预览。\n考虑到您的习惯，我不请您到场，只想问一句：要不要我在同日或另择时间，为您安排一对一私人预约，把预览中的作品单独呈给您看？回复「好」我来协调，不方便也完全没关系。",
+    "rationale": "先给清时间地点，再直接说明不邀请其参加活动，只提供一对一预约，回复方式明确且易拒绝。｜事实核查已删改：考虑到您不接受活动邀约",
+    "facts_used": [
+     "X1",
+     "X2",
+     "X3",
+     "S7"
+    ],
+    "critic_removed": [
+     "考虑到您不接受活动邀约"
+    ],
+    "issues": [],
+    "repaired": true
+   },
+   {
+    "angle": "灵活型",
+    "message": "杨女士，想到您对当代艺术的眼光，Constellation高级珠宝私享预览或许合您心意。11月28日周六15:00–18:00在静安恒汇店，不过按您的习惯，我更想为您留一段安静的一对一私享时段。\n若那阵子不便，我也可以先把作品的图片或视频发给您，看过再约。您看哪种方式轻松些？",
+    "rationale": "以艺术兴趣作切入点，同时给私人时段与先发资料两条路径，尊重时间且不施压。",
+    "facts_used": [
+     "C4",
+     "C3",
+     "X1",
+     "X2",
+     "X3",
+     "S7"
+    ],
+    "critic_removed": [],
+    "issues": [],
+    "repaired": false
+   }
+  ],
+  "model": "deepseek:deepseek-chat",
+  "latency_s": 7.6
+ },
+ "judge": {
+  "candidates": [
+   {
+    "id": 1,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 5,
+     "brand_voice": 5,
+     "naturalness": 5,
+     "appropriateness": 4,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "以旧表问候开场自然，尊重独处偏好并给出私享时段，信息清楚；只是活动本身的时间地点略被私享方案盖过。"
+   },
+   {
+    "id": 2,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 5,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "信息最清晰、分寸最稳，但“我不请您到场”稍显生硬，专属感略弱。"
+   },
+   {
+    "id": 3,
+    "unsupported_claims": [
+     "“想到您对当代艺术的眼光”将兴趣延伸为对活动内容的判断，活动信息未说明与当代艺术相关"
+    ],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 4,
+     "goal": 4,
+     "faithfulness": 4
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "给出图片/视频的替代方案很贴心，但把当代艺术兴趣与预览内容挂钩略显牵强。"
+   }
+  ],
+  "set": {
+   "diversity": 4,
+   "best_id": 1,
+   "comment": "三条分别走专属私享、清晰预约、灵活远程三种路径，差异明显；候选1最贴合客户独处偏好与品牌语气。"
+  },
+  "judge_model": "deepseek:deepseek-chat"
+ },
+ "judge_history": [
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 5,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "引用去年购表与独处偏好，语气温润克制；但客户明确不接受活动邀约，仍以活动为开场略有越界，好在立刻转为私享时段并给了轻松拒绝的出口。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 5,
+      "naturalness": 4,
+      "appropriateness": 5,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "scores_dup": null,
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "信息清楚、尊重客户不接受活动邀约的偏好，直接转为私人预约；但“我不请您到场”稍显绕，且未引用任何具体过往细节，个性化略弱。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [
+      "“想到您对当代艺术的眼光”暗示客户对当代艺术有鉴赏力，档案仅列兴趣，属合理推测但略越界"
+     ],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 4
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "以兴趣切入较自然，提供私享时段与图片视频两种方式灵活；但“当代艺术的眼光”略带夸赞套话味，且仍以活动为引子，对不接受活动邀约的客户稍欠分寸。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 2,
+    "comment": "三条分别走专属感、信息清晰、灵活型路线，差异明显。候选2最贴合客户“不接受活动邀约、偏好一对一”的偏好，信息完整且不施压，为最佳；候选1语气最温润但以活动开场略越界，候选3夸赞稍显套话。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  }
+ ]
+}

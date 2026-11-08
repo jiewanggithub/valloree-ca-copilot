@@ -1,0 +1,216 @@
+{
+ "case_id": "E06",
+ "meta": {
+  "type": "edge",
+  "focus": "客户是古典乐爱好者但工作日是手术日——活动在周四，应给出替代方案（周末私人时段）"
+ },
+ "request": {
+  "case_id": "E06",
+  "scenario": "event",
+  "today": "2026-11-14",
+  "ca_name": "Lina",
+  "client": {
+   "client_id": "C06",
+   "surname": "刘",
+   "gender": "F",
+   "preferred_name": null,
+   "age_band": "40-45",
+   "city": "上海",
+   "tier": "尊享 Privilege",
+   "birthday": "11-04",
+   "occupation": "三甲医院外科医生",
+   "interests": [
+    "马拉松",
+    "古典乐"
+   ],
+   "style_notes": "工作时不能佩戴首饰，周末才戴",
+   "purchases": [
+    {
+     "date": "2025-11-01",
+     "item": "Lierre 常春藤 手镯",
+     "note": "自购，生日礼物"
+    }
+   ],
+   "last_visit": "2026-03-20",
+   "preferences": [
+    "只在周末联系",
+    "工作日不方便看消息"
+   ],
+   "family": null,
+   "ca_notes": null
+  },
+  "history": [
+   {
+    "speaker": "CA",
+    "time": "2026-11-07 10:00",
+    "text": "刘女士，迟到的生日祝福，祝您新的一岁一切顺遂"
+   },
+   {
+    "speaker": "client",
+    "time": "2026-11-07 12:30",
+    "text": "谢谢Lina，有心了"
+   }
+  ],
+  "products": [],
+  "context": "活动：古典乐与腕表——室内乐沙龙\n时间：2026年11月26日（周四）19:30–21:00\n地点：上海静安恒汇店\n今天是周六"
+ },
+ "result": {
+  "case_id": "E06",
+  "version": "v1",
+  "analysis": {
+   "key_facts": [
+    "客户11月4日生日，CA于11月7日补送祝福，客户回复「谢谢Lina，有心了」，需先回应",
+    "客户是外科医生，古典乐是她档案中的兴趣之一",
+    "客户偏好只在周末联系，今天2026-11-14是周六，符合",
+    "客户自购Lierre常春藤手镯作为生日礼物，距上次到店239天"
+   ],
+   "risks": [
+    "必须先回应「谢谢Lina，有心了」，不能直接切入邀约",
+    "活动在工作日周四晚，客户工作日不方便，需给拒绝余地",
+    "不能编造嘉宾、礼品、名额等细节",
+    "不打折、不做投资承诺、不用极限词",
+    "不在可能被他人看到的语境中暴露礼物信息"
+   ],
+   "timing_ok": true,
+   "max_similarity": 0.47
+  },
+  "candidates": [
+   {
+    "angle": "专属感",
+    "message": "刘女士，不客气，您能收到就好。这周整理店内活动时看到26号周四晚有一场室内乐沙龙，就在恒汇店，19:30到21:00。想到您平时听古典乐，又是周末才戴首饰，这种安静的场合或许合您的节奏，就想着单独问问您。若那天不方便来也没关系，回我一声就好。",
+    "rationale": "从客户古典乐兴趣与周末佩戴习惯切入，说明为何特意想到她，再给出信息并留拒绝余地。",
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "信息清晰",
+    "message": "刘女士，收到您的谢谢，心里踏实了。跟您说个事：11月26日周四19:30到21:00，上海静安恒汇店有一场「古典乐与腕表」室内乐沙龙。若您有兴趣，回我一句我帮您记上；那天工作忙来不了也完全理解，不用特意回复。",
+    "rationale": "先回应客户，再以时间、地点、内容三要点简洁呈现，方便快速决定，结尾不强求回复。",
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "灵活型",
+    "message": "刘女士，您客气了。有件事想跟您提一句：26号周四晚19:30到21:00，恒汇店有一场古典乐室内乐沙龙。知道您工作日忙，若赶不上，我可以另约一个周末的私人时段，或先把活动内容发给您看看。您怎么方便都行，不急。",
+    "rationale": "回应后直接给出到场、私约、先发资料三种选择，尊重客户工作日不便的偏好。",
+    "issues": [],
+    "repaired": false
+   }
+  ],
+  "model": "deepseek:deepseek-chat",
+  "latency_s": 4.6
+ },
+ "judge": {
+  "candidates": [
+   {
+    "id": 1,
+    "unsupported_claims": [
+     "这周整理店内活动时看到（“整理店内活动”属于规范中明确点名的套话开头，且暗示了一个输入中未给出的动作场景）"
+    ],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 4,
+     "naturalness": 3,
+     "appropriateness": 4,
+     "goal": 4,
+     "faithfulness": 3
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "专属感与分寸都不错，但“整理店内活动时看到”是规范点名的模板开头，建议换成更自然的引入。"
+   },
+   {
+    "id": 2,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 3,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 4,
+     "goal": 5,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "时间地点内容清楚、无施压，但缺少与刘女士本人（古典乐、周末佩戴）的具体连接，专属感偏弱。"
+   },
+   {
+    "id": 3,
+    "unsupported_claims": [
+     "我可以另约一个周末的私人时段（私人预约为政策内可提供服务，但“另约周末私人时段”作为对本次活动的替代承诺，输入未确认可行性，属自造服务安排）"
+    ],
+    "scores": {
+     "personalization": 3,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 3,
+     "goal": 3,
+     "faithfulness": 3
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "体贴但把重点从活动本身岔开，且“另约周末私人时段”是未经确认的承诺，需删改。"
+   }
+  ],
+  "set": {
+   "diversity": 4,
+   "best_id": 1,
+   "comment": "三条路线区分明显（专属感/信息清晰/灵活替代）；候选1最贴合场景，只需替换套话开头即可发送。"
+  },
+  "judge_model": "deepseek:deepseek-chat"
+ },
+ "judge_history": [
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "scores": {
+      "personalization": 5,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "先回应客户致谢，再自然带出古典乐偏好与周末佩戴习惯，邀约克制不施压，信息完整。"
+    },
+    {
+     "id": 2,
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "信息清楚、回应到位，但缺少客户个人细节，换个名字也能群发，专属感稍弱。"
+    },
+    {
+     "id": 3,
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 3,
+      "goal": 3,
+      "faithfulness": 3
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "体贴工作日忙碌，但“另约周末私人时段”与“先发内容”属输入未提供的服务，略有编造风险，且邀约焦点被分散。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 1,
+    "comment": "三条分别走专属感、信息清晰、灵活备选路线，差异明显；候选1在个性化与分寸上最贴合，可直接发送。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  }
+ ]
+}

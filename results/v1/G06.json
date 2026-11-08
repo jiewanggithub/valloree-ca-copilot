@@ -1,0 +1,395 @@
+{
+ "case_id": "G06",
+ "meta": {
+  "type": "edge",
+  "focus": "圣诞+生日双重节点；中英夹杂、轻松语气；客户说过要来店但未来——不要催"
+ },
+ "request": {
+  "case_id": "G06",
+  "scenario": "greeting",
+  "today": "2026-12-25",
+  "ca_name": "Lina",
+  "client": {
+   "client_id": "C17",
+   "surname": "谢",
+   "gender": "F",
+   "preferred_name": "Emily",
+   "age_band": "25-30",
+   "city": "上海",
+   "tier": "会员 Member",
+   "birthday": "12-25",
+   "occupation": "刚从伦敦硕士毕业，在上海做品牌策略",
+   "interests": [
+    "艺术展",
+    "brunch",
+    "网球"
+   ],
+   "style_notes": "黄金，喜欢叠戴手镯",
+   "purchases": [
+    {
+     "date": "2025-08-20",
+     "item": "Petit Trésor 小珍宝 珍珠母贝吊坠",
+     "note": "自购，出国读书前买的"
+    }
+   ],
+   "last_visit": "2025-08-20",
+   "preferences": [
+    "习惯中英夹杂，喜欢轻松的语气"
+   ],
+   "family": null,
+   "ca_notes": "说过2026年夏天毕业后回上海"
+  },
+  "history": [
+   {
+    "speaker": "client",
+    "time": "2026-08-02 14:05",
+    "text": "Hi Lina! 我回上海啦，settle下来去店里找你"
+   },
+   {
+    "speaker": "CA",
+    "time": "2026-08-02 14:20",
+    "text": "欢迎回来Emily！等你有空来坐坐"
+   }
+  ],
+  "products": [],
+  "context": "圣诞节，同时也是客户生日"
+ },
+ "result": {
+  "case_id": "G06",
+  "version": "v1",
+  "analysis": {
+   "key_facts": [
+    "今天是12月25日，既是圣诞节也是Emily的生日",
+    "Emily是8月2日发消息说回上海了、会来店里，CA回复欢迎，此后145天无新对话",
+    "她出国读书前自购Petit Trésor珍珠母贝吊坠",
+    "她习惯中英夹杂、喜欢轻松语气，风格偏好黄金与叠戴手镯"
+   ],
+   "risks": [
+    "8月2日的对话以CA回复结束、客户未再回应，不能装作没发生过，也不宜追问'怎么没来'",
+    "只祝福，不提产品、价格、活动",
+    "不提及年龄，不写群发式套话",
+    "不用'亲爱的'等禁用称呼，感叹号最多1个"
+   ],
+   "timing_ok": true,
+   "max_similarity": 0.33
+  },
+  "candidates": [
+   {
+    "angle": "温情回忆",
+    "message": "Emily，圣诞快乐，也祝你生日快乐。\n想起你八月说回上海啦、settle好就来坐坐，那会儿还惦记着你出国前挑的那枚珍珠母贝小吊坠。这一年你从伦敦到上海，变化挺多的，愿你新的一岁过得轻盈顺意。\n有空路过，随时来喝杯茶。",
+    "rationale": "以她回沪那条消息和自购的吊坠为真实细节切入，把生日与节日的祝福落在她这一年的迁居上，并轻轻接续未成的到店之约。",
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "简洁雅致",
+    "message": "Emily，圣诞快乐，生日快乐。\n日内瓦今天也该落雪了，愿你的新一岁，像冬日光落在珍珠母贝上那样，安静又明亮。\nLina",
+    "rationale": "两三句收住，用品牌发源地与冬日光、母贝的意象，克制不堆砌，适合关系尚新、偏爱简短的客户。",
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "轻关怀",
+    "message": "Emily，圣诞快乐，生日快乐！上海这几天降温，出门记得多穿一件。\n你那条珍珠母贝吊坠冬天贴皮肤戴会凉，可以先暖一下再戴；要清洁抛光的话随时拿来，我帮你弄。\n回上海安顿得怎么样，有空来坐坐就好。",
+    "rationale": "祝福为主，附上天气与佩戴保养的小提醒，都是零压力的关怀，不涉任何产品与邀约压力。",
+    "issues": [],
+    "repaired": false
+   }
+  ],
+  "model": "deepseek:deepseek-chat",
+  "latency_s": 5.5
+ },
+ "judge": {
+  "candidates": [
+   {
+    "id": 1,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 5,
+     "brand_voice": 5,
+     "naturalness": 5,
+     "appropriateness": 5,
+     "goal": 5,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "引用八月回沪与出国前购坠的真实细节，祝福轻盈克制，结尾轻松可拒，几乎可直接发送。"
+   },
+   {
+    "id": 2,
+    "unsupported_claims": [
+     "日内瓦今天也该落雪了（CA在上海，写得像身在日内瓦/外地）"
+    ],
+    "scores": {
+     "personalization": 3,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 4,
+     "goal": 4,
+     "faithfulness": 2
+    },
+    "hard_fail": true,
+    "hard_fail_reason": "CA在上海却写“日内瓦今天也该落雪了”，把视角放到外地/品牌总部，违反CA同城定位；且结尾署名与规范不符。",
+    "comment": "文笔雅致但视角错位，像品牌文案而非上海门店顾问，且不应署名。"
+   },
+   {
+    "id": 3,
+    "unsupported_claims": [
+     "上海这几天降温（输入未提供天气信息）",
+     "珍珠母贝吊坠冬天贴皮肤戴会凉，可以先暖一下再戴（自造保养/佩戴建议）"
+    ],
+    "scores": {
+     "personalization": 3,
+     "brand_voice": 3,
+     "naturalness": 4,
+     "appropriateness": 2,
+     "goal": 2,
+     "faithfulness": 2
+    },
+    "hard_fail": true,
+    "hard_fail_reason": "生日祝福场景中主动提供清洁抛光服务，把祝福变成推销，违反场景禁止项；并自造天气与佩戴保养建议。",
+    "comment": "祝福里夹带清洁抛光服务与自造保养说法，时机不当，需重写为纯祝福。"
+   }
+  ],
+  "set": {
+   "diversity": 4,
+   "best_id": 1,
+   "comment": "三条风格区分明显，但仅候选1完全合规；候选2视角错位、候选3夹带服务，均不可用。"
+  },
+  "judge_model": "deepseek:deepseek-chat"
+ },
+ "judge_history": [
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "scores": {
+      "personalization": 5,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "引用八月回沪与出国前购坠的真实细节，祝福轻盈克制，结尾轻松不施压，可直接发送。"
+    },
+    {
+     "id": 2,
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 5,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 3
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "文笔雅致但“日内瓦落雪”属输入未给的想象，且几乎无客户具体信息，换个名字也能用。"
+    },
+    {
+     "id": 3,
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 3,
+      "naturalness": 4,
+      "appropriateness": 3,
+      "goal": 3,
+      "faithfulness": 4
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "生日祝福里夹带佩戴建议与清洁服务，偏实用推销，冲淡了纯祝福的分寸。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 1,
+    "comment": "三条分别走回忆、意境、关怀路线，差异清晰；候选1最贴合纯祝福目标与客户轻松中英夹杂的偏好。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  },
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [
+      "那会儿还惦记着你出国前挑的那枚珍珠母贝小吊坠（“惦记”是CA内心状态，输入无依据）"
+     ],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 4,
+      "goal": 5,
+      "faithfulness": 3
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "引用八月回沪与珍珠母贝吊坠真实细节，语气温润；但“惦记着”属虚构内心活动，建议删去。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [
+      "日内瓦今天也该落雪了（CA在上海，且无天气依据，写得像身在日内瓦）"
+     ],
+     "scores": {
+      "personalization": 2,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 3,
+      "goal": 3,
+      "faithfulness": 2
+     },
+     "hard_fail": true,
+     "hard_fail_reason": "CA写得像身在日内瓦/外地，且“日内瓦落雪”为无依据的具体陈述",
+     "comment": "文笔雅致但视角错位，CA在上海却写日内瓦落雪，且几乎无个性化。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [
+      "上海这几天降温（无天气依据）",
+      "珍珠母贝吊坠冬天贴皮肤戴会凉，可以先暖一下再戴（产品保养信息未提供）"
+     ],
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 3,
+      "naturalness": 4,
+      "appropriateness": 2,
+      "goal": 2,
+      "faithfulness": 2
+     },
+     "hard_fail": true,
+     "hard_fail_reason": "编造天气与产品保养说法，且在纯祝福场景中提供清洁抛光服务，违反场景禁止项",
+     "comment": "祝福变成保养推销，还编造降温与佩戴建议，不符合纯祝福目标。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 1,
+    "comment": "三条风格各异，但仅候选1基本可用，删去“惦记着”即可发送；另两条分别有视角错位与推销问题。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  },
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 5,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "引用八月真实对话与出国前购坠细节，祝福轻盈克制，结尾轻松不施压，可直接发送。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [
+      "日内瓦今天也该落雪了（CA在上海，写得像身在日内瓦/外地）"
+     ],
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 2
+     },
+     "hard_fail": true,
+     "hard_fail_reason": "CA在上海却写“日内瓦今天也该落雪了”，写得像身在日内瓦/外地，违反CA同城规则",
+     "comment": "文笔雅致但把视角放到日内瓦，与同城CA身份矛盾，且个性化偏弱。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 3,
+      "naturalness": 3,
+      "appropriateness": 2,
+      "goal": 2,
+      "faithfulness": 4
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "生日祝福里夹带保养与清洁抛光服务，把祝福变成推销，且“多穿一件”属套话，需删改。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 1,
+    "comment": "三条风格区分明显：温情回忆、雅致意象、轻关怀；候选1最贴合品牌与场景，候选2有地域硬伤，候选3混入服务推销。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  },
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 5,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "引用八月真实对话与珍珠母贝吊坠，祝福轻盈克制，结尾轻松可拒，几乎可直接发送。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [
+      "日内瓦今天也该落雪了（CA在上海，且无从得知日内瓦天气，写得像身在日内瓦）"
+     ],
+     "scores": {
+      "personalization": 2,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 3,
+      "goal": 3,
+      "faithfulness": 2
+     },
+     "hard_fail": true,
+     "hard_fail_reason": "CA在上海却写“日内瓦今天也该落雪了”，写得像身在日内瓦/外地，违反CA所在地规则。",
+     "comment": "文笔雅致但把视角放到日内瓦，与CA同在上海的设定冲突，且几乎无个性化信息。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [
+      "上海这几天降温（天气泛泛，无依据）",
+      "珍珠母贝吊坠冬天贴皮肤戴会凉，可以先暖一下再戴（产品保养信息中未给出）"
+     ],
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 3,
+      "naturalness": 3,
+      "appropriateness": 2,
+      "goal": 2,
+      "faithfulness": 2
+     },
+     "hard_fail": true,
+     "hard_fail_reason": "生日祝福中提供清洁抛光服务，把祝福变成推销，违反场景禁止项；并自造产品保养说法。",
+     "comment": "祝福里夹带清洁抛光服务与自造保养建议，变成推销，且含套话式添衣提醒。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 1,
+    "comment": "三条风格差异明显，但仅候选1同时满足纯祝福、个性化与所在地一致；2、3分别踩了所在地与服务推销的硬性规则。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  }
+ ]
+}

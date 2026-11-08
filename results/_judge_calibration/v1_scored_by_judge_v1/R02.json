@@ -1,0 +1,167 @@
+{
+ "case_id": "R02",
+ "meta": {
+  "type": "core",
+  "focus": "回应客户问题并给明确建议（客户喜欢明确）；星图可定制为结婚月份；最多推荐两件"
+ },
+ "request": {
+  "case_id": "R02",
+  "scenario": "recommendation",
+  "today": "2026-09-28",
+  "ca_name": "Lina",
+  "client": {
+   "client_id": "C04",
+   "surname": "赵",
+   "gender": "M",
+   "preferred_name": null,
+   "age_band": "30-35",
+   "city": "深圳",
+   "tier": "会员 Member",
+   "birthday": "11-20",
+   "occupation": "科技公司工程总监",
+   "interests": [],
+   "style_notes": null,
+   "purchases": [
+    {
+     "date": "2025-10-12",
+     "item": "Petit Trésor 小珍宝 珍珠母贝吊坠",
+     "note": "送太太的结婚纪念日礼物"
+    }
+   ],
+   "last_visit": "2025-10-12",
+   "preferences": [
+    "工作日白天很忙，晚上回复"
+   ],
+   "family": "已婚，太太喜欢珍珠和小巧的款式；结婚纪念日10月18日",
+   "ca_notes": "选礼物时希望CA给明确建议，不喜欢绕弯子"
+  },
+  "history": [
+   {
+    "speaker": "client",
+    "time": "2026-09-27 21:45",
+    "text": "纪念日快到了，今年送什么好？去年那个吊坠她很喜欢，这次想要不一样一点的"
+   }
+  ],
+  "products": [
+   {
+    "sku": "CST-N-02",
+    "name": "Constellation 星宿 钻石项链",
+    "collection": "Constellation 星宿",
+    "category": "necklace",
+    "material": "18K白金，0.3克拉主钻",
+    "price": 46000,
+    "story": "吊坠背面刻有出生当月的星图，可定制",
+    "care": "避免与硬物碰撞，睡前取下"
+   },
+   {
+    "sku": "PTR-P-01",
+    "name": "Petit Trésor 小珍宝 珍珠母贝吊坠",
+    "collection": "Petit Trésor 小珍宝",
+    "category": "pendant",
+    "material": "18K黄金，白色珍珠母贝，0.05克拉钻石点缀",
+    "price": 12800,
+    "story": "四叶造型来自瓦洛蕾1920年代的档案图稿",
+    "care": "母贝避免接触香水与水"
+   }
+  ],
+  "context": "结婚纪念日10月18日；客户主动询问"
+ },
+ "result": {
+  "case_id": "R02",
+  "version": "v1",
+  "analysis": {
+   "key_facts": [
+    "客户昨晚21:45主动问结婚纪念日送什么，明确说去年珍珠母贝吊坠太太很喜欢，今年想要不一样一点的",
+    "结婚纪念日10月18日，距今约三周",
+    "太太喜欢珍珠和小巧的款式",
+    "客户希望CA给明确建议，不喜欢绕弯子；工作日白天忙，晚上回复"
+   ],
+   "risks": [
+    "客户最后一条消息待回应，三条候选都必须先接住“想要不一样一点的”这句话，不能直接抛产品",
+    "去年已买过Petit Trésor珍珠母贝吊坠，不能再推荐同一件，也不宜再推同系列相近款",
+    "只能推荐输入中的产品，除Constellation外没有其他可选项，需避免一次推两件",
+    "不做投资、保值类表述；不暗示任何优惠",
+    "客户要明确建议，不要给一堆选项让他自己挑"
+   ],
+   "timing_ok": true,
+   "max_similarity": 0.41
+  },
+  "candidates": [
+   {
+    "angle": "懂你型",
+    "message": "赵先生，您说要“不一样一点”，我想到的方向是：从母贝的温润换到白金的清冷。Constellation 星宿钻石项链，18K白金，0.3克拉主钻，线条很简洁，戴在锁骨上不抢衣服。您太太喜欢小巧的，这条不算张扬，但和去年那枚吊坠是完全两种气质。纪念日还有三周，我先拍几张实物图给您看看？不合适也没关系。",
+    "rationale": "直接回应“不一样”，用材质与气质的对比给出明确单一建议，符合客户要明确答案的偏好，并以发图作为低压力下一步。",
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "故事型",
+    "message": "赵先生，明白，今年换一个思路。Constellation 星宿这条项链，吊坠背面可以刻出生当月的星图，是定制的。我觉得它适合您这次的心意——去年那枚是四叶，是祝福；这一条更像把某一天留在她身上。18K白金配0.3克拉主钻，戴起来是安静的。您若觉得方向对，我把定制需要的信息整理给您。",
+    "rationale": "以背面星图定制的工艺故事为主，与“纪念日”这一时间主题自然相连，最后一步只是整理信息，压力很小。",
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "邀约体验型",
+    "message": "赵先生，收到。既然想不一样，我建议您看看Constellation 星宿钻石项链，18K白金、0.3克拉主钻，风格比去年的吊坠更利落一些。方便的话，十月的某个晚上您来店里坐坐，我留一个安静时段，您看完实物再决定；也可以先由我拍段视频发给您。",
+    "rationale": "简短带出单一产品，重点放在晚间私享时段与视频两种低压力选择，贴合客户白天忙、晚上回复的习惯。",
+    "issues": [],
+    "repaired": false
+   }
+  ],
+  "model": "deepseek:deepseek-chat",
+  "latency_s": 5.3
+ },
+ "judge": {
+  "candidates": [
+   {
+    "id": 1,
+    "scores": {
+     "personalization": 5,
+     "brand_voice": 5,
+     "naturalness": 5,
+     "appropriateness": 5,
+     "goal": 5,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "精准回应“不一样一点”，用母贝到白金的对比给出明确方向，并主动提出拍实物图，分寸得当。"
+   },
+   {
+    "id": 2,
+    "scores": {
+     "personalization": 5,
+     "brand_voice": 5,
+     "naturalness": 4,
+     "appropriateness": 4,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "星图定制与纪念日心意结合得好，但“把某一天留在她身上”略偏文案腔，且未提实物确认方式。"
+   },
+   {
+    "id": 3,
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 4,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "回应到位、给出到店与视频两个选项，但“十月的某个晚上”略笼统，且未点出与太太偏好的关联。"
+   }
+  ],
+  "set": {
+   "diversity": 5,
+   "best_id": 1,
+   "comment": "三条分别走对比建议、情感故事、到店体验路线，差异清晰；候选1最贴合客户“要明确建议”的偏好，可直接发送。"
+  },
+  "judge_model": "deepseek:deepseek-chat"
+ }
+}

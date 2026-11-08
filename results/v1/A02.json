@@ -1,0 +1,379 @@
+{
+ "case_id": "A02",
+ "meta": {
+  "type": "adversarial",
+  "focus": "投诉：先致歉共情、给出明确方案；不能轻松愉快；不能承诺赔偿或折扣"
+ },
+ "request": {
+  "case_id": "A02",
+  "scenario": "aftercare",
+  "today": "2026-11-05",
+  "ca_name": "Lina",
+  "client": {
+   "client_id": "C10",
+   "surname": "郑",
+   "gender": "F",
+   "preferred_name": null,
+   "age_band": "35-40",
+   "city": "北京",
+   "tier": "尊享 Privilege",
+   "birthday": null,
+   "occupation": "律师事务所合伙人",
+   "interests": [],
+   "style_notes": "偏好玫瑰金，正式场合佩戴腕表",
+   "purchases": [
+    {
+     "date": "2026-10-25",
+     "item": "Heure Bleue 蓝调时刻 女士腕表 28mm 玫瑰金镶钻",
+     "note": "自购"
+    }
+   ],
+   "last_visit": "2026-10-25",
+   "preferences": [
+    "说话直接，重效率"
+   ],
+   "family": null,
+   "ca_notes": null
+  },
+  "history": [
+   {
+    "speaker": "client",
+    "time": "2026-11-04 21:15",
+    "text": "买了不到两周，表扣就有点松，开会的时候差点滑下来。这个价位不应该吧"
+   }
+  ],
+  "products": [
+   {
+    "sku": "HBL-W-02",
+    "name": "Heure Bleue 蓝调时刻 女士腕表 28mm 玫瑰金镶钻",
+    "collection": "Heure Bleue 蓝调时刻",
+    "category": "watch",
+    "material": "18K玫瑰金表壳，表圈镶嵌62颗钻石，石英机芯",
+    "price": 168000,
+    "story": "更纤细的比例，适合晚宴与正式场合",
+    "care": "石英电池约3年更换一次，可回店免费检测"
+   }
+  ],
+  "context": "客户投诉表扣问题；门店可安排免费检测调整，CA可上门取送"
+ },
+ "result": {
+  "case_id": "A02",
+  "version": "v1",
+  "analysis": {
+   "key_facts": [
+    "郑女士11天前自购Heure Bleue 28mm玫瑰金镶钻腕表",
+    "客户反馈表扣变松，开会时差点滑落，语气有不满",
+    "客户说话直接、重效率",
+    "门店可安排免费检测调整，CA可上门取送"
+   ],
+   "risks": [
+    "客户消息尚未回复，三条候选都必须先回应表扣问题",
+    "客户有不满，语气不可轻松愉快，须先致歉/共情",
+    "不可暗示表扣问题属正常或归因客户使用",
+    "不可承诺输入中没有的服务或赔偿",
+    "不趁机提新品"
+   ],
+   "timing_ok": true,
+   "max_similarity": 0.44
+  },
+  "candidates": [
+   {
+    "angle": "关心体验",
+    "message": "郑女士，抱歉让您遇到这个情况。表扣松到差点滑落，开会时确实让人分心，您的感受我理解。这款表扣可以调整，我这边安排门店免费检测并调紧，也可以我上门取送，不用您专门跑一趟。您看哪种方便，我按您的时间来。",
+    "rationale": "先致歉共情，回应表扣问题，再给出明确的免费检测与取送路径，契合客户重效率的偏好。",
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "实用保养",
+    "message": "郑女士，表扣的事我很抱歉。蓝调时刻这款是石英机芯，表扣松紧属于可回店免费检测调整的范围，调好后佩戴会稳很多；另外电池约三年更换一次，届时也可一并免费检测。我先帮您把表扣安排上，您方便的话告诉我时间，我来协调。",
+    "rationale": "在致歉后给出与该作品材质机芯相符的保养信息，并把表扣调整落到具体服务上。",
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "专属服务",
+    "message": "郑女士，抱歉给您添了麻烦。表扣的问题我来跟进：可以安排免费检测调整，我也可以上门取送，您不用特意到店。您把方便的时间告诉我就行，其余我来协调。",
+    "rationale": "简短直接，先致歉，再主动提供上门取送这一政策内服务，尊重客户重效率的沟通习惯。",
+    "issues": [],
+    "repaired": false
+   }
+  ],
+  "model": "deepseek:deepseek-chat",
+  "latency_s": 4.1
+ },
+ "judge": {
+  "candidates": [
+   {
+    "id": 1,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 5,
+     "naturalness": 5,
+     "appropriateness": 5,
+     "goal": 5,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "先致歉并回应表扣松动的具体困扰，给出免费检测调整与上门取送两个选项，语气克制、不施压，符合投诉场景。"
+   },
+   {
+    "id": 2,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 3,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 4,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "回应了投诉并给出方案，但把电池三年更换一并塞进投诉回复里，略显信息过载，客户此刻更关心表扣。"
+   },
+   {
+    "id": 3,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 3,
+     "brand_voice": 5,
+     "naturalness": 5,
+     "appropriateness": 5,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "简洁得体、分寸好，但未提及具体作品或客户处境，个性化略弱，换个名字也能用。"
+   }
+  ],
+  "set": {
+   "diversity": 4,
+   "best_id": 1,
+   "comment": "三条都合规且回应了投诉；候选1在共情与具体方案之间最平衡，最适合直接发送。"
+  },
+  "judge_model": "deepseek:deepseek-chat"
+ },
+ "judge_history": [
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "先共情再给方案，回应了表扣问题，语气克制得体，提供免费检测与上门取送，符合客户重效率的偏好。"
+    },
+    {
+     "id": 2,
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "回应了问题并给出保养知识，但电池更换信息在投诉语境下略显分散，客户重效率，重点应更聚焦表扣。"
+    },
+    {
+     "id": 3,
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "简洁得体，方案清晰，但缺少对客户情绪的具体回应，个性化稍弱，换个名字也能用。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 1,
+    "comment": "三条均合规，候选1在共情与效率之间平衡最好，最贴合郑女士直接重效率的风格。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  },
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "先致歉并回应表扣问题，给出免费检测调整与上门取送两个选项，语气克制、不推销，符合直接高效的偏好。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "回应了问题并给出方案，但插入电池三年更换的保养信息略显跑题，客户此刻只关心表扣。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "简洁得体、分寸好，但未提及具体作品，个性化略弱，且对客户“这个价位不应该”的情绪回应稍轻。"
+    }
+   ],
+   "set": {
+    "diversity": 3,
+    "best_id": 1,
+    "comment": "三条方向接近，均围绕表扣检测与取送；候选1最完整地承接了客户的情绪与问题，可直接发送。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  },
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "先致歉并回应表扣问题，给出免费检测调整与上门取送两个选项，语气克制、不推销，符合直接高效的偏好。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "回应了问题并补充电池保养信息，但客户正为表扣不满，此时讲电池略显跑题，且未提上门取送这一便利选项。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "简洁得体、分寸好，但未具体说明表扣可调整这一关键信息，安抚与解决感略弱于候选1。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 1,
+    "comment": "三条方向不同：候选1共情+双选项，候选2偏保养科普，候选3极简跟进；候选1最贴合投诉场景与客户直接高效的偏好。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  },
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "先致歉并回应表扣松动的具体困扰，给出免费检测调整与上门取送两个选项，语气克制、不推销，可直接发送。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "回应了问题并补充电池保养信息，但客户正为表扣不满，此时讲电池略显跑题，可删去后半段更聚焦。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "简洁得体、分寸好，但未点明表扣松动的具体问题，回应略显笼统，个性化稍弱。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 1,
+    "comment": "三条方向不同：候选1共情+方案最完整，候选2偏保养科普，候选3最简洁；推荐候选1。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  }
+ ]
+}

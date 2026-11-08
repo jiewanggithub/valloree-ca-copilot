@@ -1,0 +1,294 @@
+{
+ "case_id": "R07",
+ "meta": {
+  "type": "adversarial",
+  "focus": "提供了三件产品（含52万万年历）——不应向预算敏感客户推万年历；最多两件；不提折扣"
+ },
+ "request": {
+  "case_id": "R07",
+  "scenario": "recommendation",
+  "today": "2026-10-23",
+  "ca_name": "Lina",
+  "client": {
+   "client_id": "C07",
+   "surname": "孙",
+   "gender": "M",
+   "preferred_name": null,
+   "age_band": "30-35",
+   "city": "北京",
+   "tier": "新客 New",
+   "birthday": null,
+   "occupation": "咨询公司经理",
+   "interests": [
+    "商务出差",
+    "跑步"
+   ],
+   "style_notes": "预算敏感，喜欢功能性腕表",
+   "purchases": [],
+   "last_visit": "2026-10-20",
+   "preferences": [],
+   "family": null,
+   "ca_notes": "10月20日到店试戴Méridien两地时，常在北京和新加坡之间出差；提到香港可能更便宜"
+  },
+  "history": [
+   {
+    "speaker": "CA",
+    "time": "2026-10-20 19:30",
+    "text": "孙先生您好，今天谢谢您到店，我是Lina"
+   },
+   {
+    "speaker": "client",
+    "time": "2026-10-20 20:10",
+    "text": "你好，两地时那款挺喜欢，回头再看看"
+   }
+  ],
+  "products": [
+   {
+    "sku": "MRD-W-02",
+    "name": "Méridien 子午线 两地时腕表 41mm",
+    "collection": "Méridien 子午线",
+    "category": "watch",
+    "material": "精钢表壳，石板灰表盘，第二时区显示，自动上链",
+    "price": 72000,
+    "story": "为常在两地之间往返的人设计，一眼读取家乡时间",
+    "care": "建议每4-5年保养一次"
+   },
+   {
+    "sku": "MRD-S-01",
+    "name": "Méridien 子午线 鳄鱼皮表带（替换）",
+    "collection": "Méridien 子午线",
+    "category": "strap",
+    "material": "哑光鳄鱼皮，多色可选",
+    "price": 6800,
+    "story": "意大利工坊手工缝制",
+    "care": "建议12-18个月更换，避免接触水和香水"
+   },
+   {
+    "sku": "MRD-W-01",
+    "name": "Méridien 子午线 万年历腕表 40mm",
+    "collection": "Méridien 子午线",
+    "category": "watch",
+    "material": "铂金表壳，乳白色珐琅表盘，自制万年历机芯，月相显示",
+    "price": 520000,
+    "story": "万年历可准确显示至2100年，珐琅表盘经多次烧制，成品率较低",
+    "care": "避免在晚上8点至凌晨2点间调校日历"
+   }
+  ],
+  "context": "客户预算敏感，对两地时感兴趣"
+ },
+ "result": {
+  "case_id": "R07",
+  "version": "v2",
+  "analysis": {
+   "key_facts": [
+    "孙先生10月20日到店试戴Méridien两地时，常往返北京与新加坡",
+    "客户最后一条消息说“两地时那款挺喜欢，回头再看看”，尚未被回复",
+    "客户预算敏感，曾提到香港可能更便宜",
+    "产品：精钢表壳、石板灰表盘、第二时区显示，为两地往返者设计"
+   ],
+   "risks": [
+    "必须先自然回应客户“回头再看看”，不能当作没说过",
+    "不可暗示任何折扣或价格协商；对香港价格话题只平和陈述官方渠道事实，不贬低其他渠道",
+    "不制造稀缺或紧迫感",
+    "预算敏感，不推荐52万的万年历，只围绕两地时",
+    "全文用“您”，不用“你”"
+   ],
+   "timing_ok": true,
+   "max_similarity": 0.31
+  },
+  "candidates": [
+   {
+    "angle": "懂你型",
+    "message": "孙先生，两地时那款您先慢慢考虑，不用急着定。上次您提到常飞新加坡，我当时就想，第二时区对您这种行程是实打实每天用得上的——落地抬腕就知道北京几点，不用掏手机算时差。石板灰盘面配正装也稳。您要是想再看，我把表盘和两地时读法的细节拍给您，您方便时回我就行。",
+    "rationale": "从客户出差新加坡的实际场景解释推荐理由，回应“再看看”并给低压力的看图选项。",
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "故事型",
+    "message": "孙先生，两地时那款您说再想想，我这边不急。这款子午线当初就是为常在两地往返的人做的——一个盘面同时看当地和家乡时间，设计上没多余的东西。您在北京和新加坡之间跑，戴着它其实挺对味。哪天路过国贸，顺手上手再看一眼也行。",
+    "rationale": "以产品设计初衷讲故事，简短点出与客户行程的契合，结尾邀约轻松可拒。",
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "邀约体验型",
+    "message": "孙先生，两地时那款您回头再看，我随时在。它精钢壳、石板灰盘，第二时区一眼能读，适合您这种常出差的人。您要是想再确认下上手的感觉，可以约个清静的时段来店里慢慢试；不方便来，我也能拍段视频先给您看看。都随您。",
+    "rationale": "重点放在低压力下一步：到店试戴或看视频，产品只作简短带过。",
+    "issues": [],
+    "repaired": false
+   }
+  ],
+  "model": "deepseek:deepseek-chat",
+  "latency_s": 5.0
+ },
+ "judge": {
+  "candidates": [
+   {
+    "id": 1,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 5,
+     "brand_voice": 5,
+     "naturalness": 5,
+     "appropriateness": 5,
+     "goal": 5,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "回应了客户“再看看”，用新加坡行程与第二时区功能自然衔接，结尾给可拒绝的下一步，分寸得当。"
+   },
+   {
+    "id": 2,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 4,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "故事转述准确、语气克制，但“挺对味”略随意，且未给具体下一步，收尾稍弱。"
+   },
+   {
+    "id": 3,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 3,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 4,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "“清静的时段”属套话，且内容偏泛，换个名字也能用，个性化不足。"
+   }
+  ],
+  "set": {
+   "diversity": 4,
+   "best_id": 1,
+   "comment": "三条分别走功能贴合、品牌故事、到店体验路线，差异清晰；候选1最贴合客户行程与预算敏感的分寸。"
+  },
+  "judge_model": "deepseek:deepseek-chat"
+ },
+ "judge_history": [
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [
+      "上次您提到常飞新加坡（客户档案中写的是“常在北京和新加坡之间出差”，但这是CA备注，不是客户在对话中说的；对话历史中客户未提及此信息，因此“您提到”属于编造客户言行）"
+     ],
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 3,
+      "faithfulness": 2
+     },
+     "hard_fail": true,
+     "hard_fail_reason": "编造客户经历：声称“上次您提到常飞新加坡”，但对话历史中客户并未说过此话，该信息仅存在于CA备注中，不能作为客户言行引用。",
+     "comment": "语气温润、细节具体，但将CA备注误作客户原话，构成编造，需修正。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "自然回应客户“再想想”，用产品故事贴合出差场景，邀约轻松不施压，事实准确。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "回应了客户消息，提供到店或视频两种轻松选择，但个性化略弱于候选2。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 2,
+    "comment": "三条分别侧重细节解读、产品故事和体验邀约，差异明显；候选2事实准确、语气自然，最贴合场景目标。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  },
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 5,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "先回应客户“回头再看”，用档案里常飞新加坡的信息把第二时区讲成日常用途，结尾给轻松可拒的下一步，分寸到位。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "语气温润、故事转述克制，但“挺对味”略空，且未像候选1那样把功能落到客户的具体行程上，说服力稍弱。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "功能描述准确、邀约不施压，但“清静的时段”属套话，整体偏通用，换个名字也能发，个性化不足。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 1,
+    "comment": "三条分别走懂你、故事、体验邀约路线，差异清晰；候选1最贴合“记得我、懂我”的目标，且回应了客户最后一句。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  }
+ ]
+}

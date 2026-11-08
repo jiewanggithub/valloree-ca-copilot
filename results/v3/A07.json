@@ -1,0 +1,248 @@
+{
+ "case_id": "A07",
+ "meta": {
+  "type": "core",
+  "focus": "镶爪检查的具体理由；可提婚礼但不评论婚姻；客户是建筑师可呼应工作场景"
+ },
+ "request": {
+  "case_id": "A07",
+  "scenario": "aftercare",
+  "today": "2026-11-04",
+  "ca_name": "Lina",
+  "client": {
+   "client_id": "C11",
+   "surname": "何",
+   "gender": "F",
+   "preferred_name": null,
+   "age_band": "30-35",
+   "city": "上海",
+   "tier": "会员 Member",
+   "birthday": null,
+   "occupation": "建筑师",
+   "interests": [
+    "建筑",
+    "摄影",
+    "烘焙"
+   ],
+   "style_notes": "白金，线条感强的设计",
+   "purchases": [
+    {
+     "date": "2026-05-02",
+     "item": "Constellation 星宿 钻石戒指",
+     "note": "客户告知是自己的婚戒"
+    }
+   ],
+   "last_visit": "2026-05-02",
+   "preferences": [],
+   "family": null,
+   "ca_notes": "客户主动分享5月结婚，先生也是建筑师"
+  },
+  "history": [
+   {
+    "speaker": "client",
+    "time": "2026-05-02 18:00",
+    "text": "戒指太美了，婚礼那天一定闪闪的"
+   }
+  ],
+  "products": [
+   {
+    "sku": "CST-R-01",
+    "name": "Constellation 星宿 钻石戒指",
+    "collection": "Constellation 星宿",
+    "category": "ring",
+    "material": "18K白金，主石0.5克拉圆形钻石，七颗小钻环绕如星座",
+    "price": 68000,
+    "story": "以创始人观星笔记为灵感，七颗星钻以手工爪镶排布，单枚约需42小时工时",
+    "care": "每半年回店免费清洁检查镶爪"
+   }
+  ],
+  "context": "戒指购买已半年，建议回店免费清洁并检查镶爪"
+ },
+ "result": {
+  "case_id": "A07",
+  "version": "v3",
+  "analysis": {
+   "key_facts": [
+    "C6：2026-05-02购买Constellation星宿钻石戒指，客户告知是自己的婚戒",
+    "H1：购买当天客户说「戒指太美了，婚礼那天一定闪闪的」",
+    "P1/P2：Constellation星宿钻石戒指，18K白金，主石0.5克拉圆形钻石，七颗小钻环绕如星座",
+    "P5/X1：每半年回店免费清洁检查镶爪；购买已半年",
+    "S3/S7：珠宝终身免费清洁抛光；私人预约/私享时段",
+    "C2/C4：建筑师，5月结婚，先生也是建筑师"
+   ],
+   "risks": [
+    "上一段对话已在186天前自然结束，不要当正在进行的对话来回应，也不要为迟回道歉",
+    "客户最后一条是表达喜悦，语气可以温润但不喧闹",
+    "不趁机推销新品，只做售后关怀",
+    "人称统一用“您”",
+    "不要虚构客户试戴、婚礼当天等未记录的场景"
+   ],
+   "timing_ok": true,
+   "max_similarity": 0.43
+  },
+  "candidates": [
+   {
+    "angle": "关心体验",
+    "message": "何女士，五月那枚星宿戒指，戴到现在也有半年了。您当时说婚礼那天一定闪闪的，不知道这半年戴下来，日常佩戴还顺手吗？镶爪也需要定期看看，若有什么不放心的地方，随时跟我说。",
+    "rationale": "从半年佩戴体验切入，引用客户当年那句话作为过去的话题，语气轻松不催促。｜事实核查已删改：白金怕磕碰（清单未给出白金材质易磕碰的说明）",
+    "facts_used": [
+     "C6",
+     "H1",
+     "P2",
+     "P5"
+    ],
+    "critic_removed": [
+     "白金怕磕碰（清单未给出白金材质易磕碰的说明）"
+    ],
+    "issues": [],
+    "repaired": true
+   },
+   {
+    "angle": "实用保养",
+    "message": "何女士，星宿戒指戴了半年，想提醒您一句：这款是手工爪镶的七颗小钻，建议每半年回店免费清洁并检查一次镶爪。您方便的时候过来，我陪您一起看看。",
+    "rationale": "给出一条与作品材质工艺相符的具体保养建议，说明为什么需要检查镶爪。｜事实核查已删改：平时戴得勤，镶爪容易松（清单未给出镶爪易松的说明）",
+    "facts_used": [
+     "C6",
+     "P2",
+     "P4",
+     "P5",
+     "X1"
+    ],
+    "critic_removed": [
+     "平时戴得勤，镶爪容易松（清单未给出镶爪易松的说明）"
+    ],
+    "issues": [],
+    "repaired": true
+   },
+   {
+    "angle": "专属服务",
+    "message": "何女士，戒指买了半年，正好到了回店清洁检查镶爪的时候。您若过来，我可以帮您约一个私享时段，清洁抛光都是免费的，顺便把戒指的状态一起看看。时间您定，不急。",
+    "rationale": "主动提供政策内服务（免费清洁抛光、私享预约），下一步轻松可拒绝。",
+    "facts_used": [
+     "C6",
+     "P5",
+     "X1",
+     "S3",
+     "S7"
+    ],
+    "critic_removed": [],
+    "issues": [],
+    "repaired": false
+   }
+  ],
+  "model": "deepseek:deepseek-chat",
+  "latency_s": 6.1
+ },
+ "judge": {
+  "candidates": [
+   {
+    "id": 1,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 5,
+     "brand_voice": 5,
+     "naturalness": 5,
+     "appropriateness": 5,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "自然引用客户五月原话，关心佩戴体验并轻提镶爪检查，分寸得当；保养提醒略含蓄，目标稍弱。"
+   },
+   {
+    "id": 2,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 5,
+     "naturalness": 5,
+     "appropriateness": 5,
+     "goal": 5,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "准确转述产品保养条款，实用清晰，结尾轻松可拒绝；个性化略逊于候选1。"
+   },
+   {
+    "id": 3,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 5,
+     "naturalness": 5,
+     "appropriateness": 5,
+     "goal": 5,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "以私享时段与免费清洁为落点，服务感强且不施压，时间交由客户定，节奏从容。"
+   }
+  ],
+  "set": {
+   "diversity": 4,
+   "best_id": 1,
+   "comment": "三条分别侧重体验关怀、保养知识、专属预约，方向清晰不重复；候选1最贴合售后关怀的温润基调。"
+  },
+  "judge_model": "deepseek:deepseek-chat"
+ },
+ "judge_history": [
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 5,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "引用客户婚礼原话自然，关心体验到位，但保养提醒略轻，目标完成度稍弱。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "保养知识准确、语气克制，结尾轻松可拒绝，完成场景目标。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "私享时段与免费清洁均属政策内服务，时间由客户定，分寸得当。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 2,
+    "comment": "三条分别侧重体验关怀、保养提醒、专属预约，差异清晰；候选2最贴合售后关怀目标且信息准确。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  }
+ ]
+}

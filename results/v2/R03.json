@@ -1,0 +1,277 @@
+{
+ "case_id": "R03",
+ "meta": {
+  "type": "core",
+  "focus": "藏家：要讲机芯/珐琅干货，不要空泛赞美；正式语气"
+ },
+ "request": {
+  "case_id": "R03",
+  "scenario": "recommendation",
+  "today": "2026-11-10",
+  "ca_name": "Lina",
+  "client": {
+   "client_id": "C02",
+   "surname": "陈",
+   "gender": "M",
+   "preferred_name": null,
+   "age_band": "45-50",
+   "city": "北京",
+   "tier": "尊享 Privilege",
+   "birthday": null,
+   "occupation": "精密制造企业创始人",
+   "interests": [
+    "制表工艺",
+    "古董表收藏",
+    "高尔夫"
+   ],
+   "style_notes": "资深藏家，懂机芯，反感空洞的营销话术；偏好铂金、珐琅",
+   "purchases": [
+    {
+     "date": "2024-04-02",
+     "item": "Méridien 子午线 两地时腕表 41mm",
+     "note": "自购，常往返北京与日内瓦"
+    }
+   ],
+   "last_visit": "2026-09-12",
+   "preferences": [
+    "语气正式",
+    "只谈干货"
+   ],
+   "family": null,
+   "ca_notes": "曾问过万年历机芯的调校注意事项；对手工珐琅很感兴趣"
+  },
+  "history": [
+   {
+    "speaker": "client",
+    "time": "2026-09-12 16:02",
+    "text": "万年历那款下次去日内瓦时再看看实物"
+   }
+  ],
+  "products": [
+   {
+    "sku": "MRD-W-01",
+    "name": "Méridien 子午线 万年历腕表 40mm",
+    "collection": "Méridien 子午线",
+    "category": "watch",
+    "material": "铂金表壳，乳白色珐琅表盘，自制万年历机芯，月相显示",
+    "price": 520000,
+    "story": "万年历可准确显示至2100年，珐琅表盘经多次烧制，成品率较低",
+    "care": "避免在晚上8点至凌晨2点间调校日历"
+   }
+  ],
+  "context": "北京店刚到了一枚Méridien万年历展示表，客户可在北京先看实物"
+ },
+ "result": {
+  "case_id": "R03",
+  "version": "v2",
+  "analysis": {
+   "key_facts": [
+    "2026-09-12客户提到“万年历那款下次去日内瓦时再看看实物”",
+    "客户常往返北京与日内瓦，曾问过万年历机芯的调校注意事项",
+    "客户偏好铂金与珐琅，反感空洞营销话术",
+    "北京店刚到了一枚Méridien万年历展示表"
+   ],
+   "risks": [
+    "上一段对话已自然结束59天，不能当作正在进行的对话来回应，也不要为迟回道歉",
+    "客户语气偏好正式、只谈干货，避免寒暄铺陈",
+    "不得承诺留货或编造库存细节，只说明是展示表、可先在北京看实物",
+    "不报价、不暗示任何优惠；不制造稀缺",
+    "不使用emoji，不混用人称"
+   ],
+   "timing_ok": true,
+   "max_similarity": 0.46
+  },
+  "candidates": [
+   {
+    "angle": "懂你型",
+    "message": "陈先生，九月您提过万年历想等去日内瓦再看实物。北京店刚到了一枚Méridien万年历展示表，铂金表壳配乳白珐琅盘，正是您偏好的那一路。您若这阵子在北京，可先过来看看盘面与调校手感，与日内瓦所见应是一致的东西。不方便也无妨，回头我把几张细节图发您。",
+    "rationale": "从客户九月原话与铂金、珐琅偏好切入，把北京看表定位为去日内瓦前的先行一步，符合其务实风格。",
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "故事型",
+    "message": "陈先生，Méridien万年历的珐琅盘要经多次烧制，成品率不高，乳白色调在铂金壳上偏冷净。这次到店的展示表正是这一配置，月相与日历同盘，机械逻辑清楚。您此前问过万年历调校的注意事项，这枚正好可以对着实物说：晚八点至凌晨两点之间不宜调校日历。",
+    "rationale": "以珐琅烧制工艺与调校要点为内容主体，回应客户曾问过的技术问题，靠干货而非话术打动人。",
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "邀约体验型",
+    "message": "陈先生，北京店到了一枚Méridien万年历展示表，铂金壳、乳白珐琅盘。您若方便，可挑个时间来店里上手看看，我陪您过一遍机芯与调校的细节；时间不合适的话，我先拍段表盘与月相的短片发您，您看过再说。",
+    "rationale": "产品只作简短交代，重心放在来店上手或先看短片两个可轻松拒绝的下一步。",
+    "issues": [],
+    "repaired": false
+   }
+  ],
+  "model": "deepseek:deepseek-chat",
+  "latency_s": 4.8
+ },
+ "judge": {
+  "candidates": [
+   {
+    "id": 1,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 5,
+     "brand_voice": 5,
+     "naturalness": 5,
+     "appropriateness": 5,
+     "goal": 5,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "准确引用九月对话并明确其为过去的事，铂金珐琅偏好与北京到货信息都用得克制，结尾轻松可拒绝。"
+   },
+   {
+    "id": 2,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 5,
+     "brand_voice": 5,
+     "naturalness": 4,
+     "appropriateness": 4,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "工艺与调校干货契合客户偏好，但通篇未给出下一步动作，邀约目标稍弱。"
+   },
+   {
+    "id": 3,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 3,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 4,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "邀约与短片选项自然，但未用到客户懂机芯、问过调校等具体信息，换个名字也能发。"
+   }
+  ],
+  "set": {
+   "diversity": 4,
+   "best_id": 1,
+   "comment": "三条分别走记忆呼应、工艺干货、体验邀约，路径清晰；候选1在个性化与分寸上最完整。"
+  },
+  "judge_model": "deepseek:deepseek-chat"
+ },
+ "judge_history": [
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 5,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "准确引用九月对话并明确是过去的事，产品信息与客户偏好（铂金、珐琅）吻合，结尾轻松可拒绝，分寸得当。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 5,
+      "brand_voice": 5,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "工艺细节与调校提醒都来自产品信息，干货足；但通篇偏产品讲解，邀约动作弱，结尾略生硬。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "邀约与备选方案清楚，但未用到客户九月原话或珐琅偏好，换个名字也能发，个性化偏弱。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 1,
+    "comment": "三条分别走懂你、工艺、邀约路线，差异明显；候选1最贴合“记得我、懂我”的目标且分寸最好。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  },
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 5,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "准确引用九月对话并明确其为过去的事，产品信息与客户偏好（铂金、珐琅）贴合，结尾轻松可拒绝，分寸得当。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 5,
+      "brand_voice": 5,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "工艺与调校干货契合客户偏好，但未给出下一步动作，邀约意图偏弱，结尾略显收束。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "邀约与短片方案自然，但未引用客户九月原话或珐琅偏好，个性化略弱，换个名字也能用。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 1,
+    "comment": "三条分别走懂你、工艺干货、邀约体验路线，差异清晰；候选1最贴合客户正式、只谈干货的偏好且引用真实对话，最为稳妥。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  }
+ ]
+}

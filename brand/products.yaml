@@ -1,0 +1,81 @@
+# Fictional catalogue for Maison Vallorée. Prices in RMB (boutique retail).
+- sku: CST-R-01
+  name: Constellation 星宿 钻石戒指
+  collection: Constellation 星宿
+  category: ring
+  material: 18K白金，主石0.5克拉圆形钻石，七颗小钻环绕如星座
+  price: 68000
+  story: 以创始人观星笔记为灵感，七颗星钻以手工爪镶排布，单枚约需42小时工时
+  care: 每半年回店免费清洁检查镶爪
+- sku: CST-N-02
+  name: Constellation 星宿 钻石项链
+  collection: Constellation 星宿
+  category: necklace
+  material: 18K白金，0.3克拉主钻
+  price: 46000
+  story: 吊坠背面刻有出生当月的星图，可定制
+  care: 避免与硬物碰撞，睡前取下
+- sku: LRR-B-01
+  name: Lierre 常春藤 手镯
+  collection: Lierre 常春藤
+  category: bracelet
+  material: 18K玫瑰金，藤叶纹手工錾刻
+  price: 38000
+  story: 常春藤象征长久的陪伴，藤叶纹由匠人逐片錾刻，每只略有不同
+  care: 可终身免费抛光
+- sku: LRR-R-02
+  name: Lierre 常春藤 叠戴戒指
+  collection: Lierre 常春藤
+  category: ring
+  material: 18K黄金/玫瑰金/白金三色可选
+  price: 16800
+  story: 设计为可叠戴，适合日常
+  care: 30天内免费改圈
+- sku: PTR-P-01
+  name: Petit Trésor 小珍宝 珍珠母贝吊坠
+  collection: Petit Trésor 小珍宝
+  category: pendant
+  material: 18K黄金，白色珍珠母贝，0.05克拉钻石点缀
+  price: 12800
+  story: 四叶造型来自瓦洛蕾1920年代的档案图稿
+  care: 母贝避免接触香水与水
+- sku: HBL-W-01
+  name: Heure Bleue 蓝调时刻 女士腕表 33mm
+  collection: Heure Bleue 蓝调时刻
+  category: watch
+  material: 精钢表壳，蓝色珍珠母贝表盘，钻石时标，自动上链机芯，动力储存70小时
+  price: 86000
+  story: 表盘的蓝来自日内瓦湖黄昏的“蓝调时刻”，每片母贝纹理独一无二
+  care: 建议每4-5年保养一次；加入瓦洛蕾会员计划保修延长至8年
+- sku: HBL-W-02
+  name: Heure Bleue 蓝调时刻 女士腕表 28mm 玫瑰金镶钻
+  collection: Heure Bleue 蓝调时刻
+  category: watch
+  material: 18K玫瑰金表壳，表圈镶嵌62颗钻石，石英机芯
+  price: 168000
+  story: 更纤细的比例，适合晚宴与正式场合
+  care: 石英电池约3年更换一次，可回店免费检测
+- sku: MRD-W-01
+  name: Méridien 子午线 万年历腕表 40mm
+  collection: Méridien 子午线
+  category: watch
+  material: 铂金表壳，乳白色珐琅表盘，自制万年历机芯，月相显示
+  price: 520000
+  story: 万年历可准确显示至2100年，珐琅表盘经多次烧制，成品率较低
+  care: 避免在晚上8点至凌晨2点间调校日历
+- sku: MRD-W-02
+  name: Méridien 子午线 两地时腕表 41mm
+  collection: Méridien 子午线
+  category: watch
+  material: 精钢表壳，石板灰表盘，第二时区显示，自动上链
+  price: 72000
+  story: 为常在两地之间往返的人设计，一眼读取家乡时间
+  care: 建议每4-5年保养一次
+- sku: MRD-S-01
+  name: Méridien 子午线 鳄鱼皮表带（替换）
+  collection: Méridien 子午线
+  category: strap
+  material: 哑光鳄鱼皮，多色可选
+  price: 6800
+  story: 意大利工坊手工缝制
+  care: 建议12-18个月更换，避免接触水和香水

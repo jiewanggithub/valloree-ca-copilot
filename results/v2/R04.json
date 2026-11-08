@@ -1,0 +1,288 @@
+{
+ "case_id": "R04",
+ "meta": {
+  "type": "edge",
+  "focus": "必须回应客户的具体需求；HBL-W-02（镶钻、晚宴款）不适合日常——好的回复应只推荐或优先推荐HBL-W-01"
+ },
+ "request": {
+  "case_id": "R04",
+  "scenario": "recommendation",
+  "today": "2026-11-10",
+  "ca_name": "Lina",
+  "client": {
+   "client_id": "C11",
+   "surname": "何",
+   "gender": "F",
+   "preferred_name": null,
+   "age_band": "30-35",
+   "city": "上海",
+   "tier": "会员 Member",
+   "birthday": null,
+   "occupation": "建筑师",
+   "interests": [
+    "建筑",
+    "摄影",
+    "烘焙"
+   ],
+   "style_notes": "白金，线条感强的设计",
+   "purchases": [
+    {
+     "date": "2026-05-02",
+     "item": "Constellation 星宿 钻石戒指",
+     "note": "客户告知是自己的婚戒"
+    }
+   ],
+   "last_visit": "2026-05-02",
+   "preferences": [],
+   "family": null,
+   "ca_notes": "客户主动分享5月结婚，先生也是建筑师"
+  },
+  "history": [
+   {
+    "speaker": "client",
+    "time": "2026-11-09 22:30",
+    "text": "Lina，我想找一块能日常戴的表，工地和办公室来回跑，不要太娇气的，有推荐吗"
+   }
+  ],
+  "products": [
+   {
+    "sku": "HBL-W-01",
+    "name": "Heure Bleue 蓝调时刻 女士腕表 33mm",
+    "collection": "Heure Bleue 蓝调时刻",
+    "category": "watch",
+    "material": "精钢表壳，蓝色珍珠母贝表盘，钻石时标，自动上链机芯，动力储存70小时",
+    "price": 86000,
+    "story": "表盘的蓝来自日内瓦湖黄昏的“蓝调时刻”，每片母贝纹理独一无二",
+    "care": "建议每4-5年保养一次；加入瓦洛蕾会员计划保修延长至8年"
+   },
+   {
+    "sku": "HBL-W-02",
+    "name": "Heure Bleue 蓝调时刻 女士腕表 28mm 玫瑰金镶钻",
+    "collection": "Heure Bleue 蓝调时刻",
+    "category": "watch",
+    "material": "18K玫瑰金表壳，表圈镶嵌62颗钻石，石英机芯",
+    "price": 168000,
+    "story": "更纤细的比例，适合晚宴与正式场合",
+    "care": "石英电池约3年更换一次，可回店免费检测"
+   }
+  ],
+  "context": "客户昨晚提问，今天上午回复"
+ },
+ "result": {
+  "case_id": "R04",
+  "version": "v2",
+  "analysis": {
+   "key_facts": [
+    "客户1天前询问想要一块日常佩戴的腕表，工地和办公室来回跑，不要太娇气",
+    "客户是建筑师，风格偏好白金、线条感强的设计",
+    "客户最近一次购买是Constellation星宿钻石戒指，作为婚戒",
+    "客户在上海，CA也在上海静安恒汇店"
+   ],
+   "risks": [
+    "客户在等回复，必须先回应她的问题",
+    "不能推荐过于娇气或正式场合的表款（如玫瑰金镶钻款），要贴合工地场景",
+    "不能编造客户未提及的细节，如试戴经历",
+    "不报价时附加任何优惠，不制造紧迫感",
+    "人称统一用“您”"
+   ],
+   "timing_ok": true,
+   "max_similarity": 0.4
+  },
+  "candidates": [
+   {
+    "angle": "懂你型",
+    "message": "何女士，早上好。您说工地和办公室两头跑，我想到的是Heure Bleue蓝调时刻33mm——精钢表壳，日常磕碰不用太紧张，自动上链机芯70小时动力储存，周末摘下周一戴上也不用重调。蓝色珍珠母贝表盘配钻石时标，跟您平时喜欢的白金线条感也搭。您要是有空，我把表盘细节拍给您看看？",
+    "rationale": "从客户的工作场景和风格偏好出发，解释为什么这款精钢腕表适合她，结尾提供低压力选项。",
+    "issues": [],
+    "repaired": true
+   },
+   {
+    "angle": "故事型",
+    "message": "何女士，您昨晚说的日常表，我想起Heure Bleue蓝调时刻。表盘那片蓝来自日内瓦湖黄昏的蓝调时刻，每片珍珠母贝的纹理都不一样——跟您做建筑时看光线落在立面上的感觉有点像。33mm精钢表壳，自动上链，日常戴不娇气。您方便的话，我拍几张实表图给您，看看是不是您想要的调子？",
+    "rationale": "以表盘蓝调时刻的故事切入，呼应客户建筑师的职业敏感，再自然落到日常佩戴的实用性。",
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "邀约体验型",
+    "message": "何女士，您昨晚问的日常表，有一款Heure Bleue蓝调时刻33mm，精钢表壳、自动上链，工地和办公室来回戴都合适。表这东西还是上手看最准，您哪天路过静安恒汇店，我留个安静的时间给您慢慢试；不方便的话，我先拍段视频发您也行。",
+    "rationale": "简短提及产品后，重点放在低压力的到店试戴或视频看表，给客户充分的选择空间。",
+    "issues": [
+     "[SOFT:cliche] 套话:安静的时段"
+    ],
+    "repaired": false
+   }
+  ],
+  "model": "deepseek:deepseek-chat",
+  "latency_s": 6.4
+ },
+ "judge": {
+  "candidates": [
+   {
+    "id": 1,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 5,
+     "brand_voice": 5,
+     "naturalness": 5,
+     "appropriateness": 5,
+     "goal": 5,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "精准回应工地场景，把70小时动力储存转成生活语言，并呼应白金线条偏好，分寸得当。"
+   },
+   {
+    "id": 2,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 5,
+     "brand_voice": 5,
+     "naturalness": 4,
+     "appropriateness": 5,
+     "goal": 5,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "用蓝调时刻与建筑光线做类比很懂客户，但“看光线落在立面上”略带想象，可稍收。"
+   },
+   {
+    "id": 3,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 3,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 4,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "邀约自然、可拒绝，但“留个安静的时间”接近套话，且未用客户风格偏好，个性化偏弱。"
+   }
+  ],
+  "set": {
+   "diversity": 4,
+   "best_id": 1,
+   "comment": "三条分别走功能贴合、情感类比、到店体验，路线清晰；候选1最稳，兼顾懂行与克制。"
+  },
+  "judge_model": "deepseek:deepseek-chat"
+ },
+ "judge_history": [
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 5,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "精准回应工地与办公室场景，用70小时动力储存和精钢表壳给出实在理由，并呼应客户白金线条偏好，收尾轻松可拒绝。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [
+      "跟您做建筑时看光线落在立面上的感觉有点像（客户档案只写职业为建筑师，未提及此感受或经历）"
+     ],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 2
+     },
+     "hard_fail": true,
+     "hard_fail_reason": "编造客户经历：虚构客户“做建筑时看光线落在立面上”的感受，输入中无依据",
+     "comment": "故事本身动人，但把客户职业延伸成虚构的私人感受，属于编造，需删去该句。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "回应了需求并给出试戴与视频两个选项，但缺少客户个人细节，稍显通用。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 1,
+    "comment": "三条分别走实用懂你、故事、邀约体验路线，差异清晰；候选1最贴合客户实际场景且无编造，可直接发送。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  },
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 5,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "精准回应客户需求，用精钢与70小时动力储存对应“不娇气”，并自然衔接客户的白金线条偏好，结尾轻松可拒绝。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 5,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 4
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "故事讲得动人，但“看光线落在立面上”是对客户工作感受的合理推测，略偏想象；整体仍克制可用。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "回应了需求并给出试戴邀约，但“留个安静的时间”接近套话，且未用到客户的白金线条偏好，个性化偏弱。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 1,
+    "comment": "三条分别走懂你、故事、体验路线，差异清晰；候选1最贴合客户信息且分寸最好。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  }
+ ]
+}

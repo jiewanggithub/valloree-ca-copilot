@@ -1,0 +1,272 @@
+{
+ "case_id": "A02",
+ "meta": {
+  "type": "adversarial",
+  "focus": "投诉：先致歉共情、给出明确方案；不能轻松愉快；不能承诺赔偿或折扣"
+ },
+ "request": {
+  "case_id": "A02",
+  "scenario": "aftercare",
+  "today": "2026-11-05",
+  "ca_name": "Lina",
+  "client": {
+   "client_id": "C10",
+   "surname": "郑",
+   "gender": "F",
+   "preferred_name": null,
+   "age_band": "35-40",
+   "city": "北京",
+   "tier": "尊享 Privilege",
+   "birthday": null,
+   "occupation": "律师事务所合伙人",
+   "interests": [],
+   "style_notes": "偏好玫瑰金，正式场合佩戴腕表",
+   "purchases": [
+    {
+     "date": "2026-10-25",
+     "item": "Heure Bleue 蓝调时刻 女士腕表 28mm 玫瑰金镶钻",
+     "note": "自购"
+    }
+   ],
+   "last_visit": "2026-10-25",
+   "preferences": [
+    "说话直接，重效率"
+   ],
+   "family": null,
+   "ca_notes": null
+  },
+  "history": [
+   {
+    "speaker": "client",
+    "time": "2026-11-04 21:15",
+    "text": "买了不到两周，表扣就有点松，开会的时候差点滑下来。这个价位不应该吧"
+   }
+  ],
+  "products": [
+   {
+    "sku": "HBL-W-02",
+    "name": "Heure Bleue 蓝调时刻 女士腕表 28mm 玫瑰金镶钻",
+    "collection": "Heure Bleue 蓝调时刻",
+    "category": "watch",
+    "material": "18K玫瑰金表壳，表圈镶嵌62颗钻石，石英机芯",
+    "price": 168000,
+    "story": "更纤细的比例，适合晚宴与正式场合",
+    "care": "石英电池约3年更换一次，可回店免费检测"
+   }
+  ],
+  "context": "客户投诉表扣问题；门店可安排免费检测调整，CA可上门取送"
+ },
+ "result": {
+  "case_id": "A02",
+  "version": "v2",
+  "analysis": {
+   "key_facts": [
+    "郑女士11天前购买Heure Bleue蓝调时刻28mm玫瑰金镶钻腕表，自用",
+    "客户1天前反馈表扣变松，开会时差点滑落，语气不满",
+    "客户说话直接、重效率，是律所合伙人",
+    "门店可安排免费检测调整，CA可同城上门取送"
+   ],
+   "risks": [
+    "客户在等回复已一天，必须首先致歉并回应表扣问题，不能像没看到",
+    "客户有不满，语气不能轻松愉快，不能趁机推销",
+    "不能承诺输入中没有的赔偿或服务，只能提免费检测调整与上门取送",
+    "保养信息需与石英机芯材质相符，不能编造表扣工艺细节",
+    "不打折、不暗示优惠，不贬低渠道"
+   ],
+   "timing_ok": true,
+   "max_similarity": 0.46
+  },
+  "candidates": [
+   {
+    "angle": "关心体验",
+    "message": "郑女士，抱歉让您遇到表扣松的问题，开会时差点滑下来，确实让人不踏实。这款表扣可以调整，我这边安排免费检测和调整，也可以同城上门取送，您方便的话告诉我哪个时段合适，我提前协调好。",
+    "rationale": "先致歉共情，直接给出免费检测调整和上门取送两条路径，符合客户重效率的偏好。",
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "实用保养",
+    "message": "郑女士，表扣松的事我看到了，先向您致歉。这款是石英机芯，日常回店可免费检测，表扣的松紧也一并帮您调好。您把表交给我，检测调整完再送回，不用您专门跑一趟。",
+    "rationale": "回应投诉的同时带出石英机芯免费检测的保养信息，并说明可上门取送，不额外推销。",
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "专属服务",
+    "message": "郑女士，表扣松了让您开会时分心，很抱歉。我这边可以安排免费检测调整，也能同城上门取送，您选一种就行。调整好之后我再跟您确认佩戴是否合手。",
+    "rationale": "以专属服务为落点，提供免费检测调整与上门取送，并留一个轻松的后续确认，不要求立即回复。",
+    "issues": [],
+    "repaired": false
+   }
+  ],
+  "model": "deepseek:deepseek-chat",
+  "latency_s": 4.1
+ },
+ "judge": {
+  "candidates": [
+   {
+    "id": 1,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 5,
+     "naturalness": 5,
+     "appropriateness": 5,
+     "goal": 5,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "先致歉并回应表扣松的具体情境，给出免费检测调整与同城取送，结尾给轻松可选的时段，分寸得当。"
+   },
+   {
+    "id": 2,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 3,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 4,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "回应了投诉并给出取送方案，但插入石英机芯免费检测略偏保养科普，对投诉当下的安抚稍弱。"
+   },
+   {
+    "id": 3,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 3,
+     "brand_voice": 5,
+     "naturalness": 5,
+     "appropriateness": 5,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "语气克制、方案清楚，但未给具体时段或下一步抓手，客户需自行推进，效率感稍弱。"
+   }
+  ],
+  "set": {
+   "diversity": 4,
+   "best_id": 1,
+   "comment": "三条都合规且回应投诉，候选1在安抚、方案与轻松下一步之间最平衡，最贴合客户重效率的偏好。"
+  },
+  "judge_model": "deepseek:deepseek-chat"
+ },
+ "judge_history": [
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "先致歉并回应表扣问题，给出免费检测调整与上门取送，语气克制、结尾易拒绝，符合直接高效的偏好。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "回应了问题并给出方案，但插入石英机芯保养略显答非所问，客户要的是解决表扣。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "方案清楚、结尾有跟进，但“选一种就行”稍显生硬，且未明确时段协调，效率感略弱。"
+    }
+   ],
+   "set": {
+    "diversity": 3,
+    "best_id": 1,
+    "comment": "三条方向相近，均围绕检测调整与取送；候选1最贴合客户直接重效率的偏好，回应最完整。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  },
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 5,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "先致歉并回应表扣问题，给出免费检测调整与同城取送，结尾轻松易拒，分寸得当。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "回应了问题并给出方案，但“石英机芯免费检测”略偏题，客户关心的是表扣，重点可更聚焦。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 5,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "致歉到位，两种方案让客户自选，结尾确认佩戴体验，简洁且尊重客户重效率的偏好。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 3,
+    "comment": "三条均合规；候选3在回应问题、给选择与收尾确认上最完整，最贴合客户直接重效率的风格。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  }
+ ]
+}

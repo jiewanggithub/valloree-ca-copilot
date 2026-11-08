@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vallorée CA Copilot</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Crect width=%2232%22 height=%2232%22 rx=%226%22 fill=%22%231f2a44%22/%3E%3Ctext x=%2216%22 y=%2223%22 font-size=%2220%22 text-anchor=%22middle%22 fill=%22%23a8874a%22 font-family=%22serif%22%3EV%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Noto+Serif+SC:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <span class="logo">VALLORÉE</span>
+    <span class="sub">CA Copilot · 话术助手</span>
+  </div>
+  <nav class="tabs" role="tablist">
+    <button class="tab active" data-tab="gen" role="tab">生成 Generate</button>
+    <button class="tab" data-tab="eval" role="tab">测试集评估 Evaluation</button>
+  </nav>
+  <span class="ver" id="ver"></span>
+</header>
+
+<!-- ───────────── GENERATE ───────────── -->
+<main id="gen" class="view">
+  <section class="col-left">
+    <div class="card">
+      <label class="lbl">载入测试用例 <span class="muted">Load a test case</span></label>
+      <div class="row">
+        <select id="caseSel"><option value="">— 自定义输入 Custom —</option></select>
+        <button class="ghost" id="resetBtn" title="清空">清空</button>
+      </div>
+      <p class="focus" id="caseFocus"></p>
+    </div>
+
+    <div class="card">
+      <label class="lbl">场景 <span class="muted">Scenario</span></label>
+      <div class="pills" id="scenPills"></div>
+    </div>
+
+    <div class="card">
+      <label class="lbl">客户 <span class="muted">Client</span></label>
+      <select id="clientSel"></select>
+      <div class="profile" id="profile"></div>
+    </div>
+
+    <div class="card two">
+      <div>
+        <label class="lbl">今天 <span class="muted">Today</span></label>
+        <input type="date" id="today">
+      </div>
+      <div>
+        <label class="lbl">CA 名字</label>
+        <input type="text" id="caName" value="Lina">
+      </div>
+    </div>
+
+    <div class="card">
+      <label class="lbl">产品信息 <span class="muted">Products (optional)</span></label>
+      <div class="chips" id="prodChips"></div>
+    </div>
+
+    <div class="card">
+      <label class="lbl">场景背景 / CA 意图 <span class="muted">Context</span></label>
+      <textarea id="context" rows="4" placeholder="例如：今天是客户生日 / 活动时间地点 / 想推荐的理由"></textarea>
+    </div>
+  </section>
+
+  <section class="col-right">
+    <div class="chat card">
+      <div class="chat-head">
+        <span class="chat-name" id="chatName">客户</span>
+        <span class="muted small">微信对话 · WeChat history</span>
+      </div>
+      <div class="chat-body" id="chatBody"></div>
+      <div class="chat-add">
+        <div class="seg" id="speakerSeg">
+          <button class="on" data-sp="client">客户</button><button data-sp="CA">CA</button>
+        </div>
+        <input type="datetime-local" id="turnTime">
+        <input type="text" id="turnText" placeholder="添加一条消息，回车确认">
+        <button class="ghost" id="addTurn">添加</button>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button class="primary" id="genBtn">生成三条话术</button>
+      <div class="steps" id="steps" hidden>
+        <span data-s="0">计算上下文信号</span><span data-s="1">生成三个角度</span><span data-s="2">事实核查</span><span data-s="3">合规检查</span>
+      </div>
+      <span class="meta small muted" id="genMeta"></span>
+    </div>
+
+    <div id="alerts"></div>
+    <div class="cands" id="cands"></div>
+
+    <details class="card details" id="sigBox" hidden>
+      <summary>系统信号与可引用事实 <span class="muted">Signals &amp; fact sheet</span></summary>
+      <div class="sig-grid">
+        <div><h4>上下文信号</h4><dl id="sigList"></dl></div>
+        <div><h4>可引用事实清单</h4><ul id="factList" class="facts"></ul></div>
+      </div>
+      <div id="analysisBox"></div>
+    </details>
+  </section>
+</main>
+
+<!-- ───────────── EVALUATION ───────────── -->
+<main id="eval" class="view" hidden>
+  <div class="kpis" id="kpis"></div>
+  <div class="eval-wrap">
+    <aside class="card eval-list">
+      <div class="filters">
+        <select id="fScen"><option value="">全部场景</option></select>
+        <select id="fType"><option value="">全部类型</option><option>core</option><option>edge</option><option>adversarial</option></select>
+        <label class="check"><input type="checkbox" id="fBad"> 只看有问题的</label>
+      </div>
+      <div id="caseList"></div>
+    </aside>
+    <section class="card eval-detail" id="evalDetail">
+      <p class="muted">选择左侧用例查看 v1 / v2 / v3 输出对比。</p>
+    </section>
+  </div>
+</main>
+
+<div class="toast" id="toast"></div>
+<script src="/static/app.js"></script>
+</body>
+</html>

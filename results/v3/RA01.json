@@ -1,0 +1,245 @@
+{
+ "case_id": "RA01",
+ "meta": {
+  "type": "core",
+  "focus": "用“档案/vintage”兴趣自然重连；不指责；画册是输入中的真实信息"
+ },
+ "request": {
+  "case_id": "RA01",
+  "scenario": "reactivation",
+  "today": "2026-11-10",
+  "ca_name": "Lina",
+  "client": {
+   "client_id": "C08",
+   "surname": "黄",
+   "gender": "F",
+   "preferred_name": "Coco",
+   "age_band": "25-30",
+   "city": "深圳",
+   "tier": "会员 Member",
+   "birthday": null,
+   "occupation": "时尚买手",
+   "interests": [
+    "vintage",
+    "设计档案",
+    "旅行"
+   ],
+   "style_notes": "喜欢有历史感的设计，黄金",
+   "purchases": [
+    {
+     "date": "2024-03-08",
+     "item": "Petit Trésor 小珍宝 珍珠母贝吊坠",
+     "note": "自购，喜欢它来自1920年代档案图稿的故事"
+    }
+   ],
+   "last_visit": "2024-03-08",
+   "preferences": [
+    "希望被称呼为Coco"
+   ],
+   "family": null,
+   "ca_notes": null
+  },
+  "history": [
+   {
+    "speaker": "client",
+    "time": "2024-03-09 12:00",
+    "text": "好喜欢这个档案故事，谢谢Lina"
+   }
+  ],
+  "products": [
+   {
+    "sku": "PTR-P-01",
+    "name": "Petit Trésor 小珍宝 珍珠母贝吊坠",
+    "collection": "Petit Trésor 小珍宝",
+    "category": "pendant",
+    "material": "18K黄金，白色珍珠母贝，0.05克拉钻石点缀",
+    "price": 12800,
+    "story": "四叶造型来自瓦洛蕾1920年代的档案图稿",
+    "care": "母贝避免接触香水与水"
+   }
+  ],
+  "context": "2年半未联系；瓦洛蕾档案馆刚出版了一本1920年代设计手稿画册，门店可赠送给会员"
+ },
+ "result": {
+  "case_id": "RA01",
+  "version": "v3",
+  "analysis": {
+   "key_facts": [
+    "Coco 是时尚买手，喜欢 vintage、设计档案、旅行",
+    "2024-03-08 自购 Petit Trésor 珍珠母贝吊坠，喜欢其来自1920年代档案图稿的故事",
+    "2024-03-09 客户留言「好喜欢这个档案故事，谢谢Lina」",
+    "瓦洛蕾档案馆刚出版1920年代设计手稿画册，门店可赠送给会员",
+    "珠宝终身免费清洁抛光；母贝避免接触香水与水"
+   ],
+   "risks": [
+    "距上次联系976天，不可暗示「好久没来」或「是不是把我们忘了」",
+    "客户最后一条是致谢，对话已自然结束，不要当成未回复来回应或为迟回道谢",
+    "不打折、不投资承诺、不编造画册内容细节",
+    "不评论职业近况或消费，不暴露会员等级以外的信息",
+    "称呼统一为 Coco，全文用「您」"
+   ],
+   "timing_ok": true,
+   "max_similarity": 0.3
+  },
+  "candidates": [
+   {
+    "angle": "念旧型",
+    "message": "Coco，想起您当时说过喜欢小珍宝那枚吊坠背后的档案故事。那块珍珠母贝最近还好吗？我这边可以帮您做一次免费清洁抛光，顺路的话带来就好。",
+    "rationale": "以客户亲口喜欢的档案故事为共同记忆，自然衔接并附一个低门槛服务，不催回复。｜事实核查已删改：想起您当时说过喜欢小珍宝那枚吊坠背后的档案故事——四叶来自1920年代的手稿（客户原话为“好喜欢这个档案故事，谢谢Lina”，未提及四叶来自1920年代手稿）",
+    "facts_used": [
+     "C5",
+     "P4",
+     "P5",
+     "S3"
+    ],
+    "critic_removed": [
+     "想起您当时说过喜欢小珍宝那枚吊坠背后的档案故事——四叶来自1920年代的手稿（客户原话为“好喜欢这个档案故事，谢谢Lina”，未提及四叶来自1920年代手稿）"
+    ],
+    "issues": [],
+    "repaired": true
+   },
+   {
+    "angle": "服务理由型",
+    "message": "Coco，提醒一句：小珍宝的珍珠母贝怕香水和湿气，戴完用软布轻轻擦一下会更好。另外珠宝清洁抛光是终身免费的，您哪天方便来深圳店，我提前帮您留个位置。",
+    "rationale": "以真实的保养提醒与服务切入，给客户方便而非推销，可轻松拒绝。",
+    "facts_used": [
+     "P5",
+     "S3",
+     "S7"
+    ],
+    "critic_removed": [],
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "轻分享型",
+    "message": "Coco，瓦洛蕾档案馆刚出了一本1920年代设计手稿画册，想到您喜欢 vintage 和设计档案，应该会看得有意思。门店可以赠送给会员，您方便来取时我帮您留一本；不急着回复，看到了就好。",
+    "rationale": "借与客户兴趣吻合的轻量信息分享，明确不要求回复，降低被「捞」的感觉。",
+    "facts_used": [
+     "C3",
+     "C4",
+     "X1"
+    ],
+    "critic_removed": [],
+    "issues": [],
+    "repaired": false
+   }
+  ],
+  "model": "deepseek:deepseek-chat",
+  "latency_s": 6.1
+ },
+ "judge": {
+  "candidates": [
+   {
+    "id": 1,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 4,
+     "goal": 3,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "引用真实档案故事与保养服务，语气温润；但清洁抛光作为唤醒由头略显服务导向，与客户vintage/档案兴趣关联不够。"
+   },
+   {
+    "id": 2,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 3,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 3,
+     "goal": 2,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "保养提醒与免费服务均合规，但整体像售后通知，缺少与客户档案兴趣的真实连接，唤醒感偏弱。"
+   },
+   {
+    "id": 3,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 5,
+     "brand_voice": 5,
+     "naturalness": 5,
+     "appropriateness": 5,
+     "goal": 5,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "以档案馆画册为真实由头，精准呼应vintage与设计档案兴趣，结尾轻松可拒绝，唤醒自然不施压。"
+   }
+  ],
+  "set": {
+   "diversity": 4,
+   "best_id": 3,
+   "comment": "三条分别走念旧、服务、轻分享路线，差异清晰；候选3最贴合客户兴趣且最不显'捞人'。"
+  },
+  "judge_model": "deepseek:deepseek-chat"
+ },
+ "judge_history": [
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [
+      "想起您当时说过喜欢小珍宝那枚吊坠背后的档案故事（客户原话是“好喜欢这个档案故事”，档案故事是购买时被告知的，并非客户“说过”的偏好表述，属轻微转述偏差）"
+     ],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 3,
+      "faithfulness": 3
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "念旧开头自然，但“您当时说过”略有转述偏差，且清洁抛光作为由头偏服务提醒，唤醒力度一般。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 2,
+      "brand_voice": 3,
+      "naturalness": 3,
+      "appropriateness": 3,
+      "goal": 2,
+      "faithfulness": 4
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "保养提醒加免费服务，信息准确但换个名字就能群发，缺乏与Coco的真实连接，唤醒感弱。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 5,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "用档案画册呼应客户vintage与设计档案的兴趣，理由真实、语气克制，结尾轻松可拒绝，最符合唤醒目标。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 3,
+    "comment": "三条分别走念旧、服务提醒、轻分享路线，差异明显；候选3最贴合客户兴趣且不施压，是首选。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  }
+ ]
+}

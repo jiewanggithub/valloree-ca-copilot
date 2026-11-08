@@ -1,0 +1,393 @@
+{
+ "case_id": "RA03",
+ "meta": {
+  "type": "core",
+  "focus": "以天文兴趣+月相自然切入；正式；保养是次要信息"
+ },
+ "request": {
+  "case_id": "RA03",
+  "scenario": "reactivation",
+  "today": "2026-11-21",
+  "ca_name": "Lina",
+  "client": {
+   "client_id": "C09",
+   "surname": "吴",
+   "gender": "M",
+   "preferred_name": null,
+   "age_band": "55-60",
+   "city": "杭州",
+   "tier": "典藏 Heritage",
+   "birthday": null,
+   "occupation": "已退休，曾任大学教授",
+   "interests": [
+    "天文",
+    "古典音乐",
+    "书法"
+   ],
+   "style_notes": "只戴一块表，非常爱惜",
+   "purchases": [
+    {
+     "date": "2021-03-21",
+     "item": "Méridien 子午线 万年历腕表 40mm",
+     "note": "自购，纪念退休"
+    }
+   ],
+   "last_visit": "2025-04-10",
+   "preferences": [
+    "语气正式",
+    "不喜欢频繁打扰"
+   ],
+   "family": null,
+   "ca_notes": "对月相显示特别有感情，说过“退休后终于有时间看月亮”"
+  },
+  "history": [
+   {
+    "speaker": "client",
+    "time": "2025-04-10 15:30",
+    "text": "表走得很准，月相每天看着很安心"
+   }
+  ],
+  "products": [
+   {
+    "sku": "MRD-W-01",
+    "name": "Méridien 子午线 万年历腕表 40mm",
+    "collection": "Méridien 子午线",
+    "category": "watch",
+    "material": "铂金表壳，乳白色珐琅表盘，自制万年历机芯，月相显示",
+    "price": 520000,
+    "story": "万年历可准确显示至2100年，珐琅表盘经多次烧制，成品率较低",
+    "care": "避免在晚上8点至凌晨2点间调校日历"
+   }
+  ],
+  "context": "19个月未联系；表已到保养周期；本周六晚有月全食（虚构天象，可提及）"
+ },
+ "result": {
+  "case_id": "RA03",
+  "version": "v1",
+  "analysis": {
+   "key_facts": [
+    "客户最后一条消息是2025-04-10：「表走得很准，月相每天看着很安心」，至今未回复",
+    "Méridien 万年历腕表已佩戴约五年，进入建议保养周期",
+    "客户曾说“退休后终于有时间看月亮”，对月相有感情",
+    "本周六晚有月全食（虚构天象），与客户天文兴趣相关"
+   ],
+   "risks": [
+    "必须先回应客户上一条消息，不能像没发生过一样开启新话题",
+    "客户不喜欢频繁打扰、语气正式：篇幅宜短，不做追问式施压",
+    "不暗示“好久没来”，不提购买时间跨度",
+    "不主动报价、不推新作，保养只作建议不作推销"
+   ],
+   "timing_ok": true,
+   "max_similarity": 0.25
+  },
+  "candidates": [
+   {
+    "angle": "念旧型",
+    "message": "吴先生，您那句“月相每天看着很安心”，我一直记着。退休后能静下心看月亮，是件难得的事。表戴了这几年，走时若还稳，就继续陪着您；哪天想让它回店里做次检查，我提前替您安排。这周就不多扰您了。",
+    "rationale": "先原样接住客户那句话，再以“看月亮”的共同记忆轻轻收尾，不要求回复。",
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "服务理由型",
+    "message": "吴先生，您说月相每天看着安心，听着真好。算下来这块子午线也到了建议保养的时段，万年历机芯做一次检查会更稳妥。您若不急，我可以先问好门店的时段，等您方便时再送过来，不必特意跑一趟。",
+    "rationale": "以保养周期这一真实服务理由切入，把主动权交给客户，不催不推。",
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "轻分享型",
+    "message": "吴先生，月相走得准，您看着安心，这话我记下了。本周六晚有月全食，想着您既看天文又日日对着月相，或许愿意抬头看一眼。若那晚月相盘也跟着走到满月前后，倒是难得的对照。不必回复，只当一句闲话。",
+    "rationale": "用与客户天文兴趣相关的天象作轻量分享，明确说不必回复，压力最小。",
+    "issues": [],
+    "repaired": false
+   }
+  ],
+  "model": "deepseek:deepseek-chat",
+  "latency_s": 4.4
+ },
+ "judge": {
+  "candidates": [
+   {
+    "id": 1,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 4,
+     "naturalness": 3,
+     "appropriateness": 4,
+     "goal": 3,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "引用真实对话且不施压，但“我一直记着”属套话，且未给出重新联系的具体由头，唤醒力度偏弱。"
+   },
+   {
+    "id": 2,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 4,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "以保养周期为真实由头，分寸得当、可拒绝，但“我可以先问好门店的时段”略像已承诺动作，且未用月全食这一更自然的契机。"
+   },
+   {
+    "id": 3,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 5,
+     "brand_voice": 5,
+     "naturalness": 5,
+     "appropriateness": 5,
+     "goal": 5,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "以月全食与客户天文、月相偏好自然衔接，不推销、不要求回复，正式克制，最贴合沉睡唤醒的分寸。"
+   }
+  ],
+  "set": {
+   "diversity": 4,
+   "best_id": 3,
+   "comment": "三条分别走念旧、保养服务、轻分享路线，差异清晰；候选3以真实天象为由头最自然，无被“捞”之感。"
+  },
+  "judge_model": "deepseek:deepseek-chat"
+ },
+ "judge_history": [
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "回应了客户原话、语气温润克制，但未给出具体联系理由，唤醒力度偏弱。"
+    },
+    {
+     "id": 2,
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 4,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "以保养周期为真实理由，先回应客户原话再给轻松下一步，分寸得当。"
+    },
+    {
+     "id": 3,
+     "scores": {
+      "personalization": 5,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 5,
+      "faithfulness": 4
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "借月全食与客户天文爱好自然搭话，不要求回复，最无被“捞”感；唯“月相盘走到满月前后”属推测性表述，略欠严谨。"
+    }
+   ],
+   "set": {
+    "diversity": 5,
+    "best_id": 3,
+    "comment": "三条分别走念旧、服务、轻分享路线，差异清晰；候选3最贴合客户天文兴趣且零压力，候选2作为保养提醒可作备选。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  },
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [
+      "“我一直记着”属于规范中明确列为套话的表述，且暗示了输入中未记录的持续记忆行为",
+      "“表戴了这几年，走时若还稳”暗示了客户近年佩戴状态，输入中无依据"
+     ],
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 3,
+      "naturalness": 3,
+      "appropriateness": 3,
+      "goal": 2,
+      "faithfulness": 3
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "开头落入规范点名的套话，且未给出真实联系理由，唤醒感偏弱。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [
+      "“到了建议保养的时段”在输入中无保养周期依据，属于自造服务周期"
+     ],
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 3,
+      "naturalness": 3,
+      "appropriateness": 2,
+      "goal": 2,
+      "faithfulness": 2
+     },
+     "hard_fail": true,
+     "hard_fail_reason": "编造输入中不存在的保养周期/建议保养时段，违反事实忠实规则",
+     "comment": "以自造的保养周期为由头，本质仍是服务推销，且违反不编造规则。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 5,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "comment": "以月全食与客户天文、月相偏好自然衔接，不推销、不施压，结尾轻松可拒，分寸得当。",
+     "hard_fail": false
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 3,
+    "comment": "三条分别走念旧、服务、轻分享路线，差异明显；候选3最贴合品牌分寸与场景目标。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  },
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [
+      "我提前替您安排（暗示CA可代为安排，但输入未说明具体安排内容，属轻微越界）"
+     ],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 3,
+      "appropriateness": 4,
+      "goal": 3,
+      "faithfulness": 4
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "引用真实对话有温度，但“我一直记着”属套话，且未给出联系的真实由头，唤醒感偏弱。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [
+      "到了建议保养的时段（输入仅说“表已到保养周期”，属场景背景，可算有依据）"
+     ],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 3,
+      "goal": 4,
+      "faithfulness": 4
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "以保养为理由自然合理，但客户不喜欢频繁打扰，一上来提送修略显推进，分寸稍紧。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 5,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "以月全食与客户天文、月相偏好自然衔接，不推销、不施压，结尾轻松可拒，最贴合唤醒目标。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 3,
+    "comment": "三条分别走念旧、服务、轻分享路线，差异明显；候选3最克制自然，且用真实天象作由头，无被“捞”感。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  },
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 3,
+      "appropriateness": 4,
+      "goal": 3,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "引用真实对话且分寸得当，但“我一直记着”属套话，且未给出重新联系的具体由头，唤醒力度偏弱。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [
+      "“到了建议保养的时段”在输入中没有依据（场景背景只说表已到保养周期，但候选把它表述为品牌建议保养时段，属自造服务周期）"
+     ],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 3,
+      "goal": 3,
+      "faithfulness": 3
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "保养由头合理但“建议保养时段”无输入依据，且一上来即谈送修，对不喜欢频繁打扰的客户略显推进过快。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 5,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "以月全食与客户天文、月相偏好自然衔接，不推销、不施压，结尾轻松可拒，是三条中最贴合唤醒目标的一条。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 3,
+    "comment": "三条分别走念旧、服务、轻分享路线，差异清晰；候选3最自然且最符合“不被捞”的唤醒目标。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  }
+ ]
+}

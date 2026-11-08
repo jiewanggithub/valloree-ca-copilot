@@ -1,0 +1,273 @@
+{
+ "case_id": "P08",
+ "meta": {
+  "type": "core",
+  "focus": "新客议价：温和拒绝、强调首次购买的体验（刻字、礼盒、终身清洁），不让客户尴尬"
+ },
+ "request": {
+  "case_id": "P08",
+  "scenario": "price_objection",
+  "today": "2026-11-08",
+  "ca_name": "Lina",
+  "client": {
+   "client_id": "C14",
+   "surname": "许",
+   "gender": "F",
+   "preferred_name": null,
+   "age_band": "25-30",
+   "city": "杭州",
+   "tier": "新客 New",
+   "birthday": null,
+   "occupation": null,
+   "interests": [],
+   "style_notes": null,
+   "purchases": [],
+   "last_visit": "2026-10-03",
+   "preferences": [],
+   "family": null,
+   "ca_notes": "国庆期间在杭州快闪店加的微信，试戴过小珍宝吊坠，说“再考虑一下”；其他信息不多"
+  },
+  "history": [
+   {
+    "speaker": "CA",
+    "time": "2026-11-07 15:00",
+    "text": "许女士，小珍宝吊坠的四叶造型来自瓦洛蕾1920年代的档案图稿，上次您试戴很好看"
+   },
+   {
+    "speaker": "client",
+    "time": "2026-11-08 09:40",
+    "text": "我挺喜欢的，第一次买你们家，能不能便宜点？"
+   }
+  ],
+  "products": [
+   {
+    "sku": "PTR-P-01",
+    "name": "Petit Trésor 小珍宝 珍珠母贝吊坠",
+    "collection": "Petit Trésor 小珍宝",
+    "category": "pendant",
+    "material": "18K黄金，白色珍珠母贝，0.05克拉钻石点缀",
+    "price": 12800,
+    "story": "四叶造型来自瓦洛蕾1920年代的档案图稿",
+    "care": "母贝避免接触香水与水"
+   }
+  ],
+  "context": "新客首次购买"
+ },
+ "result": {
+  "case_id": "P08",
+  "version": "v2",
+  "analysis": {
+   "key_facts": [
+    "客户0天前说：「我挺喜欢的，第一次买你们家，能不能便宜点？」——必须先回应",
+    "10月3日国庆快闪店试戴过小珍宝吊坠，说「再考虑一下」",
+    "产品：18K黄金、白色珍珠母贝、0.05克拉钻石，四叶造型来自1920年代档案图稿",
+    "客户为新客，尚未购买，偏好信息不多"
+   ],
+   "risks": [
+    "客户在等回复，第一条必须正面回应打折请求，不能绕开",
+    "不能说可以申请折扣或暗示有空间",
+    "不能让客户因比价/问折扣而觉得被拒绝或买不起",
+    "不虚构试戴场景细节（如“多看了几眼”）",
+    "不提保值、投资；不贬低其他渠道"
+   ],
+   "timing_ok": true,
+   "max_similarity": 0.28
+  },
+  "candidates": [
+   {
+    "angle": "共情+价值",
+    "message": "许女士，初次选我们家的作品，想再省一点是很自然的心情，我理解。不过瓦洛蕾实行全球统一价格，我这边确实没办法给您便宜，这点想先跟您说清楚。\n\n小珍宝这枚是18K黄金配白色珍珠母贝，四叶造型取自1920年代的档案图稿，母贝的光泽和钻石点缀都很细。价格上我帮不上忙，但可以让这件作品更属于您——比如免费刻字，或者我给您备好礼盒和手写卡片。您看要不要先这样定下来？",
+    "rationale": "先接住问折扣的心情，坦诚说不能打折，再把价格落到具体的材质与档案图稿上。",
+    "issues": [
+     "[SOFT:long] 176字，偏长"
+    ],
+    "repaired": true
+   },
+   {
+    "angle": "政策+保障",
+    "message": "许女士，感谢您这么直接地问我。瓦洛蕾实行的是全球统一价格，不论在哪个城市、哪个渠道购买价格都一样，所以折扣这边我确实没法给您。\n\n能跟您说的是官方渠道的保障：作品有证书，珠宝可享终身免费清洁抛光，之后有什么需要都可以来杭州湖滨店找我。这枚小珍宝您上次试戴过，喜欢是实在的。如果您愿意，我可以约个私享时段，您再来慢慢看一次。",
+    "rationale": "正面回应折扣请求，用统一价格体系与官方渠道的售后保障说明价值，不贬低其他渠道。",
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "替代方案（增值服务）",
+    "message": "许女士，价格这块我得跟您说实话：瓦洛蕾是统一价格，没有折扣可以给到您，这一点我不好含糊。\n\n不过首次购买，有些事我可以帮您安排妥当——吊坠可以免费刻字，礼盒和手写卡片我来准备；您在杭州，我也可以给您送过去，省得您再跑一趟。上次您说再考虑一下，这次如果决定要，跟我说一声就好。",
+    "rationale": "明确无折扣后，用刻字、礼盒、同城送达等政策内服务把对话引向具体下一步，语气轻松可拒绝。",
+    "issues": [],
+    "repaired": true
+   }
+  ],
+  "model": "deepseek:deepseek-chat",
+  "latency_s": 8.6
+ },
+ "judge": {
+  "candidates": [
+   {
+    "id": 1,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 4,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "共情自然、守住统一价格，用刻字与礼盒把话题引向价值，分寸得当；'先这样定下来'略有一点推进感，可再松一点。"
+   },
+   {
+    "id": 2,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 5,
+     "naturalness": 4,
+     "appropriateness": 5,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "语气温润克制，用官方渠道保障回应比价而不贬低他人，私享时段邀约轻松可拒，是三条中最稳的一条。"
+   },
+   {
+    "id": 3,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 3,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 3,
+     "goal": 3,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "政策说得清楚，但'这次如果决定要，跟我说一声就好'偏向催单，且同城送达与刻字堆在一起略显推销，克制感稍弱。"
+   }
+  ],
+  "set": {
+   "diversity": 4,
+   "best_id": 2,
+   "comment": "三条分别走共情价值、政策保障、增值服务三条路，差异清晰；候选2最贴合'安静奢华'的分寸，候选1次之，候选3催单感偏重。"
+  },
+  "judge_model": "deepseek:deepseek-chat"
+ },
+ "judge_history": [
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 5,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "共情自然，坚守统一价格，用刻字与礼盒把话题引向价值，分寸得当。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [
+      "作品有证书"
+     ],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 5,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 3
+     },
+     "hard_fail": true,
+     "hard_fail_reason": "“作品有证书”在输入的产品信息与政策中均无依据，属编造服务细节。",
+     "comment": "语气与保障陈述都好，但“有证书”是输入里没有的事实，需删掉。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 5,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "口语自然，政策说得干脆，刻字与同城送达都是政策内服务，结尾轻松不施压。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 1,
+    "comment": "三条路线区分清晰：价值+增值、政策+保障、增值服务落地；候选1共情最完整，候选3最像真人手打，候选2因编造证书不可用。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  },
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 5,
+      "naturalness": 4,
+      "appropriateness": 5,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "先共情再平和说明统一价格，用刻字与礼盒把话题引向价值，分寸得当；'先这样定下来'略有一点推进感，可再松一点。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 5,
+      "naturalness": 4,
+      "appropriateness": 5,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "政策陈述与官方保障都准确，结尾私享时段轻松可拒；但整体偏解释，对'第一次买'的情感回应稍弱。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "增值服务具体、同城送达贴合实际，但'这次如果决定要'略显催促，且未直接回应'第一次买'的心情。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 1,
+    "comment": "三条分别走共情价值、政策保障、增值服务三条路，差异清晰；候选1在共情与价值引导上最平衡，最适合直接发送。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  }
+ ]
+}

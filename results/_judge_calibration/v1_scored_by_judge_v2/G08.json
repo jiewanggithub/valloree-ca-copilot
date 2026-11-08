@@ -1,0 +1,219 @@
+{
+ "case_id": "G08",
+ "meta": {
+  "type": "edge",
+  "focus": "迟到的生日祝福——要自然说明并尊重客户“只在周末联系”的偏好，不能假装是当天"
+ },
+ "request": {
+  "case_id": "G08",
+  "scenario": "greeting",
+  "today": "2026-11-07",
+  "ca_name": "Lina",
+  "client": {
+   "client_id": "C06",
+   "surname": "刘",
+   "gender": "F",
+   "preferred_name": null,
+   "age_band": "40-45",
+   "city": "上海",
+   "tier": "尊享 Privilege",
+   "birthday": "11-04",
+   "occupation": "三甲医院外科医生",
+   "interests": [
+    "马拉松",
+    "古典乐"
+   ],
+   "style_notes": "工作时不能佩戴首饰，周末才戴",
+   "purchases": [
+    {
+     "date": "2025-11-01",
+     "item": "Lierre 常春藤 手镯",
+     "note": "自购，生日礼物"
+    }
+   ],
+   "last_visit": "2026-03-20",
+   "preferences": [
+    "只在周末联系",
+    "工作日不方便看消息"
+   ],
+   "family": null,
+   "ca_notes": null
+  },
+  "history": [
+   {
+    "speaker": "CA",
+    "time": "2026-03-20 15:00",
+    "text": "刘女士，手镯抛光好了，您周末方便时来取"
+   },
+   {
+    "speaker": "client",
+    "time": "2026-03-21 10:12",
+    "text": "好的，周六上午过来"
+   }
+  ],
+  "products": [],
+  "context": "客户生日是11月4日（周三），因客户只接受周末联系，今天（周六）才发"
+ },
+ "result": {
+  "case_id": "G08",
+  "version": "v1",
+  "analysis": {
+   "key_facts": [
+    "客户最后消息：「好的，周六上午过来」——取抛光手镯，尚未确认是否已到店，需先回应",
+    "生日11月4日，3天前已过；今天11月7日周六，是客户唯一方便联系的时段",
+    "客户为外科医生，工作时不能佩戴首饰，周末才戴；兴趣为马拉松与古典乐",
+    "上次到店为2026-03-20，距今232天，关系需轻、不催"
+   ],
+   "risks": [
+    "必须先回应「周六上午过来」这句未回复的消息，不能当作没发生",
+    "不提产品、新品、价格、活动；纯祝福",
+    "不提年龄、不写「值此佳节之际」式模板",
+    "避免群发感；避免工作日语境；不追问是否已到店造成压力"
+   ],
+   "timing_ok": true,
+   "max_similarity": 0.45
+  },
+  "candidates": [
+   {
+    "angle": "温情回忆",
+    "message": "刘女士，周六上午您说过来取手镯——不知后来是否顺利，若还没取也不急，我给您留着。另外，四号是您的生日，我记得那只Lierre手镯是您买给自己的生日礼物，这份心意我一直记着。迟了几天，还是想认真说一句：生日快乐，愿这一年跑得尽兴、听得舒心。",
+    "rationale": "先回应取件，再以她自购生日手镯的真实细节切入祝福，落在马拉松与古典乐的生活意象上，真诚不生硬。",
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "简洁雅致",
+    "message": "刘女士，周六上午您过来取手镯的事，还顺利吗？另外补一句迟到的祝福：四号生日快乐。愿时间待您温柔，像一件打磨得好的作品，安静、经得起看。",
+    "rationale": "两句回应加两句祝福，干净克制，用品牌关于时间的意象收尾，适合短信偏好短的她。",
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "轻关怀",
+    "message": "刘女士，周六上午您说过来取手镯，后来一切顺利吧？十一月了，上海早晚凉，出门跑步记得添件外套。四号是您的生日，迟了几天，还是想说一声生日快乐，愿您这一年身体轻快、心里从容。手镯若还没取，平日戴着清洁抛光都免费，随时来坐坐就好。",
+    "rationale": "回应取件后以天气与跑步作轻关怀，再补生日祝福，末尾的保养提示无压力、不涉产品推销。",
+    "issues": [],
+    "repaired": false
+   }
+  ],
+  "model": "deepseek:deepseek-chat",
+  "latency_s": 5.5
+ },
+ "judge": {
+  "candidates": [
+   {
+    "id": 1,
+    "unsupported_claims": [
+     "周六上午您说过来取手镯——不知后来是否顺利（把231天前的旧对话当作近期事件追问，且手镯是否已取无记录）",
+     "我给您留着（声称已为客户保留作品，输入中无此动作）"
+    ],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 2,
+     "goal": 4,
+     "faithfulness": 2
+    },
+    "hard_fail": true,
+    "hard_fail_reason": "把231天前已自然结束的旧对话当作正在进行的事来追问，并声称“我给您留着”这一输入中不存在的动作，属编造CA已做之事",
+    "comment": "生日祝福本身温润具体，但开头把半年前的取件对话当成刚发生的事，且虚构了留件动作。"
+   },
+   {
+    "id": 2,
+    "unsupported_claims": [
+     "周六上午您过来取手镯的事，还顺利吗（旧对话被当作近期事件追问）"
+    ],
+    "scores": {
+     "personalization": 3,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 2,
+     "goal": 3,
+     "faithfulness": 2
+    },
+    "hard_fail": true,
+    "hard_fail_reason": "将231天前已结束的对话当作正在进行的事来回应，违反对话状态要求",
+    "comment": "祝福句雅致克制，但开头仍误把半年前的取件当成近期话题，且祝福略偏泛。"
+   },
+   {
+    "id": 3,
+    "unsupported_claims": [
+     "周六上午您说过来取手镯，后来一切顺利吧（旧对话被当作近期事件追问）",
+     "平日戴着清洁抛光都免费（服务条款属实，但在生日祝福中提服务，违反场景禁止项）"
+    ],
+    "scores": {
+     "personalization": 3,
+     "brand_voice": 3,
+     "naturalness": 3,
+     "appropriateness": 1,
+     "goal": 2,
+     "faithfulness": 2
+    },
+    "hard_fail": true,
+    "hard_fail_reason": "生日祝福中提及清洁抛光服务，违反场景禁止项；且把231天前旧对话当作近期事件追问",
+    "comment": "把祝福变成了服务推销，还误将半年前的取件当成刚发生的事，分寸失当。"
+   }
+  ],
+  "set": {
+   "diversity": 2,
+   "best_id": 2,
+   "comment": "三条都犯了同一个错误——把231天前的取件对话当作近期事件追问，且都未明确那是过去的事；候选2祝福最克制，但仍需删掉开头追问、改为纯祝福才可用。"
+  },
+  "judge_model": "deepseek:deepseek-chat"
+ },
+ "judge_history": [
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "scores": {
+      "personalization": 5,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "先回应取手镯，再以Lierre自购生日礼物的细节祝福，跑与乐呼应兴趣，温润克制，无销售。"
+    },
+    {
+     "id": 2,
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 5,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "回应到位、语气雅致，但“像一件打磨得好的作品”略泛，缺少客户具体信息，换个名字也能用。"
+    },
+    {
+     "id": 3,
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 3,
+      "goal": 4,
+      "faithfulness": 5,
+      "hard_fail": false
+     },
+     "hard_fail_reason": "",
+     "comment": "祝福真诚，但“添件外套”涉及身体关怀略显越界，且末尾提清洁抛光服务，在纯祝福场景中带出服务信息，分寸稍弱。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 1,
+    "comment": "三条均先回应取手镯，路线分别为温情回忆、简洁雅致、轻关怀，差异清晰；候选1最贴合品牌与客户细节。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  }
+ ]
+}

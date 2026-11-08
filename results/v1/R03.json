@@ -1,0 +1,393 @@
+{
+ "case_id": "R03",
+ "meta": {
+  "type": "core",
+  "focus": "藏家：要讲机芯/珐琅干货，不要空泛赞美；正式语气"
+ },
+ "request": {
+  "case_id": "R03",
+  "scenario": "recommendation",
+  "today": "2026-11-10",
+  "ca_name": "Lina",
+  "client": {
+   "client_id": "C02",
+   "surname": "陈",
+   "gender": "M",
+   "preferred_name": null,
+   "age_band": "45-50",
+   "city": "北京",
+   "tier": "尊享 Privilege",
+   "birthday": null,
+   "occupation": "精密制造企业创始人",
+   "interests": [
+    "制表工艺",
+    "古董表收藏",
+    "高尔夫"
+   ],
+   "style_notes": "资深藏家，懂机芯，反感空洞的营销话术；偏好铂金、珐琅",
+   "purchases": [
+    {
+     "date": "2024-04-02",
+     "item": "Méridien 子午线 两地时腕表 41mm",
+     "note": "自购，常往返北京与日内瓦"
+    }
+   ],
+   "last_visit": "2026-09-12",
+   "preferences": [
+    "语气正式",
+    "只谈干货"
+   ],
+   "family": null,
+   "ca_notes": "曾问过万年历机芯的调校注意事项；对手工珐琅很感兴趣"
+  },
+  "history": [
+   {
+    "speaker": "client",
+    "time": "2026-09-12 16:02",
+    "text": "万年历那款下次去日内瓦时再看看实物"
+   }
+  ],
+  "products": [
+   {
+    "sku": "MRD-W-01",
+    "name": "Méridien 子午线 万年历腕表 40mm",
+    "collection": "Méridien 子午线",
+    "category": "watch",
+    "material": "铂金表壳，乳白色珐琅表盘，自制万年历机芯，月相显示",
+    "price": 520000,
+    "story": "万年历可准确显示至2100年，珐琅表盘经多次烧制，成品率较低",
+    "care": "避免在晚上8点至凌晨2点间调校日历"
+   }
+  ],
+  "context": "北京店刚到了一枚Méridien万年历展示表，客户可在北京先看实物"
+ },
+ "result": {
+  "case_id": "R03",
+  "version": "v1",
+  "analysis": {
+   "key_facts": [
+    "客户9月说过万年历那款下次去日内瓦时再看实物",
+    "客户常往返北京与日内瓦，自购Méridien子午线两地时41mm",
+    "曾问过万年历机芯调校注意事项，对珐琅有兴趣",
+    "北京店现有一枚万年历展示表，客户59天未到店"
+   ],
+   "risks": [
+    "客户最后一条消息尚未被回复，必须先接住“去日内瓦看实物”这句话",
+    "客户偏好正式、只谈干货，不可寒暄堆砌或营销话术",
+    "不制造稀缺感，仅平和说明展示表现状",
+    "不报价附加任何条件，不做保值类表述"
+   ],
+   "timing_ok": true,
+   "max_similarity": 0.39
+  },
+  "candidates": [
+   {
+    "angle": "懂你型",
+    "message": "陈先生，您上次提到万年历那款想留到去日内瓦时看实物，日内瓦那边安排上之前，北京店目前有一枚展示表。铂金壳配乳白珐琅盘，正是您关注的那款。您之前问过万年历的调校，这枚在手上看机芯结构会比图片清楚得多。若您近期到店，我可以提前把表准备好；不方便的话也不必特意跑一趟。",
+    "rationale": "先回应客户去日内瓦看表的计划，再以他问过调校、偏好铂金珐琅这两个真实细节为推荐理由。",
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "故事型",
+    "message": "陈先生，关于万年历那款，补充一点背景：它的珐琅表盘需多次烧制，成品率不高，乳白色调每一枚都略有差别，这大概也是您看实物才有意义的地方。机芯可准确显示至2100年。北京店这枚展示表到了，您若去日内瓦前想先上手，我可以安排。",
+    "rationale": "回应客户的日内瓦计划后，以珐琅烧制工艺和万年历跨度讲故事，贴合他懂机芯、喜珐琅的偏好。",
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "邀约体验型",
+    "message": "陈先生，万年历那款去日内瓦看实物的安排我记着。北京店刚到了一枚展示表，您若想先看看，我可以把表留出来，约一个您方便的时间，安静些的时段也行。不必急着定，您方便时告诉我就好。",
+    "rationale": "简短回应客户原话，重点放在低压力的到店试戴邀约，不催促、不制造紧迫感。",
+    "issues": [],
+    "repaired": false
+   }
+  ],
+  "model": "deepseek:deepseek-chat",
+  "latency_s": 5.1
+ },
+ "judge": {
+  "candidates": [
+   {
+    "id": 1,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 5,
+     "brand_voice": 5,
+     "naturalness": 5,
+     "appropriateness": 5,
+     "goal": 5,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "准确引用客户9月提到的日内瓦看表计划，结合北京展示表与调校关注点，干货足、无推销感，结尾轻松可拒绝。"
+   },
+   {
+    "id": 2,
+    "unsupported_claims": [
+     "乳白色调每一枚都略有差别（产品信息只写珐琅表盘经多次烧制、成品率较低，未提每枚色调差异）"
+    ],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 4,
+     "goal": 4,
+     "faithfulness": 3
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "工艺背景讲得克制，但“每枚色调略有差别”是产品信息外的补充，属轻微编造，需删去或改为成品率表述。"
+   },
+   {
+    "id": 3,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 3,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 4,
+     "goal": 3,
+     "faithfulness": 4
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "邀约自然，但“安静些的时段”属套话，且未体现客户懂机芯、关注调校的具体信息，个性化偏弱。"
+   }
+  ],
+  "set": {
+   "diversity": 4,
+   "best_id": 1,
+   "comment": "三条分别走懂你、工艺故事、邀约体验路线，差异清晰；候选1最贴合资深藏家偏好且事实最干净。"
+  },
+  "judge_model": "deepseek:deepseek-chat"
+ },
+ "judge_history": [
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "scores": {
+      "personalization": 5,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "先回应日内瓦看表的话，再引到北京展示表，并接上客户问过的调校细节，分寸与干货兼备。"
+    },
+    {
+     "id": 2,
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "珐琅成品率的故事贴合客户兴趣，但未直接回应日内瓦那句话，稍显绕。"
+    },
+    {
+     "id": 3,
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 3,
+      "faithfulness": 4
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "邀约自然，但“安静些的时段”属未提供的服务暗示，且缺少客户在意的机芯干货。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 1,
+    "comment": "三条分别走懂你、故事、邀约路线，差异清晰；候选1最贴合正式、只谈干货的偏好。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  },
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 5,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "准确引用客户9月提到的日内瓦看表计划，并自然衔接到北京展示表，干货充足、分寸得当。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "珐琅工艺背景符合客户兴趣，但“每一枚都略有差别”属产品信息外的补充描述，略有风险，整体可用。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [
+      "安静些的时段也行（暗示可安排私享时段，但输入未提供该服务依据）"
+     ],
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 3,
+      "goal": 3,
+      "faithfulness": 3
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "“安静些的时段”属套话且暗示未提供的私享安排，个性化弱于前两条。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 1,
+    "comment": "三条分别走懂你、工艺故事、邀约体验路线，差异明显；候选1最贴合客户“只谈干货”的偏好。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  },
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 5,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "准确引用客户9月提到的日内瓦看表计划，产品细节全部来自产品信息，结尾给足退路，正式而克制。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [
+      "乳白色调每一枚都略有差别（产品信息只说珐琅表盘经多次烧制、成品率较低，未提每枚色调差异）"
+     ],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 3
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "工艺背景讲得克制，但“每枚色调略有差别”是产品信息外的补充，属轻微编造，需删去。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 4,
+      "naturalness": 3,
+      "appropriateness": 4,
+      "goal": 3,
+      "faithfulness": 4
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "方向正确，但“安静些的时段”属套话，且未用上客户对机芯、珐琅的具体兴趣，略显群发感。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 1,
+    "comment": "三条分别走懂你、工艺故事、邀约体验路线，差异清晰；候选1最贴合客户“只谈干货”的偏好且无编造。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  },
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 5,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "准确引用客户9月提到的日内瓦看表计划，产品细节全部来自产品信息，结尾轻松可拒绝，正式且只谈干货。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [
+      "乳白色调每一枚都略有差别（产品信息只说珐琅表盘经多次烧制、成品率较低，未提及每枚色调差异）"
+     ],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 3
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "工艺背景讲得克制，但“每枚色调略有差别”是产品信息外的补充，需删去或改为成品率较低的表述。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [
+      "安静些的时段也行（套话，且客户偏好只谈干货）"
+     ],
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 3,
+      "naturalness": 3,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 4
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "邀约意图清楚，但“安静些的时段”属套话，对只谈干货的客户略显空泛，可换成具体到店安排。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 1,
+    "comment": "三条分别走懂你、工艺故事、邀约体验路线，差异明显；候选1最贴合客户正式、只谈干货的偏好且无编造。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  }
+ ]
+}

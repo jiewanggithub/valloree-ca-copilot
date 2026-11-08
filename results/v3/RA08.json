@@ -1,0 +1,236 @@
+{
+ "case_id": "RA08",
+ "meta": {
+  "type": "core",
+  "focus": "不能“你说要来怎么没来”；轻松中英夹杂；新brunch区是真实信息"
+ },
+ "request": {
+  "case_id": "RA08",
+  "scenario": "reactivation",
+  "today": "2026-11-07",
+  "ca_name": "Lina",
+  "client": {
+   "client_id": "C17",
+   "surname": "谢",
+   "gender": "F",
+   "preferred_name": "Emily",
+   "age_band": "25-30",
+   "city": "上海",
+   "tier": "会员 Member",
+   "birthday": "12-25",
+   "occupation": "刚从伦敦硕士毕业，在上海做品牌策略",
+   "interests": [
+    "艺术展",
+    "brunch",
+    "网球"
+   ],
+   "style_notes": "黄金，喜欢叠戴手镯",
+   "purchases": [
+    {
+     "date": "2025-08-20",
+     "item": "Petit Trésor 小珍宝 珍珠母贝吊坠",
+     "note": "自购，出国读书前买的"
+    }
+   ],
+   "last_visit": "2025-08-20",
+   "preferences": [
+    "习惯中英夹杂，喜欢轻松的语气"
+   ],
+   "family": null,
+   "ca_notes": "说过2026年夏天毕业后回上海"
+  },
+  "history": [
+   {
+    "speaker": "client",
+    "time": "2026-08-02 14:05",
+    "text": "Hi Lina! 我回上海啦，settle下来去店里找你"
+   },
+   {
+    "speaker": "CA",
+    "time": "2026-08-02 14:20",
+    "text": "欢迎回来Emily！等你有空来坐坐"
+   }
+  ],
+  "products": [],
+  "context": "客户说回来后会来店但3个月没来；店里有新的brunch区（免费咖啡与小点）"
+ },
+ "result": {
+  "case_id": "RA08",
+  "version": "v3",
+  "analysis": {
+   "key_facts": [
+    "C5：客户说过2026年夏天毕业后回上海",
+    "H1：2026-08-02客户说回上海后会来店里",
+    "X1：客户3个月没来；店里有新的brunch区（免费咖啡与小点）",
+    "C6：客户兴趣包括brunch、艺术展"
+   ],
+   "risks": [
+    "上次对话由CA发出、客户未回，语气要轻，不能像催",
+    "不能说“好久没来”“是不是忘了我们”",
+    "不能一上来推产品，不能暗示折扣或投资",
+    "需中英夹杂、轻松语气，人称统一用“你”"
+   ],
+   "timing_ok": true,
+   "max_similarity": 0.28
+  },
+  "candidates": [
+   {
+    "angle": "念旧型",
+    "message": "Emily，突然想到你。之前你买的那枚珍珠母贝小吊坠，现在应该陪你不少时候了吧？回到上海这几个月还顺利吗。有空路过这边，进来坐坐就好，不用特意安排。",
+    "rationale": "从客户自购的吊坠和毕业回沪切入，自然问候近况，不催到店。｜事实核查已删改：去年出国前你带走的那枚珍珠母贝小吊坠（购买时间为2025-08-20，并非“去年”出国前；清单未说明吊坠被带走/随身携带）；现在应该陪你跑了不少地方吧（虚构佩戴经历）；静安（清单未给出店铺所在区域）",
+    "facts_used": [
+     "C7",
+     "C5",
+     "H1"
+    ],
+    "critic_removed": [
+     "去年出国前你带走的那枚珍珠母贝小吊坠（购买时间为2025-08-20，并非“去年”出国前；清单未说明吊坠被带走/随身携带）",
+     "现在应该陪你跑了不少地方吧（虚构佩戴经历）",
+     "静安（清单未给出店铺所在区域）"
+    ],
+    "issues": [],
+    "repaired": true
+   },
+   {
+    "angle": "服务理由型",
+    "message": "Emily，说件实际的小事：珠宝是可以终身免费清洁抛光的，你那枚珍珠母贝吊坠过来做个清洁会亮一些。你哪天在附近，提前跟我说一声，我帮你留个时间就行，不来也没关系。",
+    "rationale": "以免费清洁抛光这一真实服务为由，给客户一个轻便的到店理由，压力小。｜事实核查已删改：戴了一年多（清单未给出佩戴时长）",
+    "facts_used": [
+     "S3",
+     "C7"
+    ],
+    "critic_removed": [
+     "戴了一年多（清单未给出佩戴时长）"
+    ],
+    "issues": [],
+    "repaired": true
+   },
+   {
+    "angle": "轻分享型",
+    "message": "Emily，店里现在多了一个brunch的小区域，有咖啡和小点，挺适合周末过来坐一会儿的。想到你喜欢brunch，随口跟你说一声，不用回复我，哪天想来了提前讲一声就好。",
+    "rationale": "分享与客户brunch兴趣相关的店内新区域，不要求回复，降低打扰感。",
+    "facts_used": [
+     "X1",
+     "C6"
+    ],
+    "critic_removed": [],
+    "issues": [],
+    "repaired": false
+   }
+  ],
+  "model": "deepseek:deepseek-chat",
+  "latency_s": 5.9
+ },
+ "judge": {
+  "candidates": [
+   {
+    "id": 1,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 5,
+     "naturalness": 5,
+     "appropriateness": 4,
+     "goal": 3,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "语气温润自然，但“突然想到你”缺少具体由头，唤醒理由偏弱，容易显得像群发念旧。"
+   },
+   {
+    "id": 2,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 3,
+     "goal": 3,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "服务理由真实且不施压，但一上来就提清洁服务，略偏事务性，对久未联系的客户稍显突兀。"
+   },
+   {
+    "id": 3,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 5,
+     "brand_voice": 5,
+     "naturalness": 5,
+     "appropriateness": 5,
+     "goal": 5,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "用brunch区与客户兴趣自然衔接，轻松不推销，结尾不要求回复，唤醒分寸把握得好。"
+   }
+  ],
+  "set": {
+   "diversity": 4,
+   "best_id": 3,
+   "comment": "三条分别走念旧、服务、轻分享路线，差异明显；候选3最贴合客户兴趣且无压力，最适合作为唤醒消息。"
+  },
+  "judge_model": "deepseek:deepseek-chat"
+ },
+ "judge_history": [
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "温润自然，引用真实购买作品，但“陪你不少时候”略带推测，且未给到店一个具体由头，唤醒力度稍弱。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 3,
+      "goal": 3,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "清洁服务是真实政策，但一上来就落到“做清洁”略显事务性，接近推服务，少了老朋友的分寸。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 5,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "用brunch区与客户兴趣自然挂钩，轻松不施压，结尾可拒绝，最贴合唤醒场景。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 3,
+    "comment": "三条分别走念旧、服务、轻分享路线，差异清晰；候选3最自然且不显“捞人”。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  }
+ ]
+}

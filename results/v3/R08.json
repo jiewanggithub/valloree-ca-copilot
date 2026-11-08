@@ -1,0 +1,263 @@
+{
+ "case_id": "R08",
+ "meta": {
+  "type": "edge",
+  "focus": "中英夹杂的轻松语气，但仍要有品牌分寸；不要过度使用英文"
+ },
+ "request": {
+  "case_id": "R08",
+  "scenario": "recommendation",
+  "today": "2026-11-21",
+  "ca_name": "Lina",
+  "client": {
+   "client_id": "C17",
+   "surname": "谢",
+   "gender": "F",
+   "preferred_name": "Emily",
+   "age_band": "25-30",
+   "city": "上海",
+   "tier": "会员 Member",
+   "birthday": "12-25",
+   "occupation": "刚从伦敦硕士毕业，在上海做品牌策略",
+   "interests": [
+    "艺术展",
+    "brunch",
+    "网球"
+   ],
+   "style_notes": "黄金，喜欢叠戴手镯",
+   "purchases": [
+    {
+     "date": "2025-08-20",
+     "item": "Petit Trésor 小珍宝 珍珠母贝吊坠",
+     "note": "自购，出国读书前买的"
+    }
+   ],
+   "last_visit": "2025-08-20",
+   "preferences": [
+    "习惯中英夹杂，喜欢轻松的语气"
+   ],
+   "family": null,
+   "ca_notes": "说过2026年夏天毕业后回上海"
+  },
+  "history": [
+   {
+    "speaker": "client",
+    "time": "2026-08-02 14:05",
+    "text": "Hi Lina! 我回上海啦，settle下来去店里找你"
+   },
+   {
+    "speaker": "CA",
+    "time": "2026-08-02 14:20",
+    "text": "欢迎回来Emily！等你有空来坐坐"
+   }
+  ],
+  "products": [
+   {
+    "sku": "LRR-B-01",
+    "name": "Lierre 常春藤 手镯",
+    "collection": "Lierre 常春藤",
+    "category": "bracelet",
+    "material": "18K玫瑰金，藤叶纹手工錾刻",
+    "price": 38000,
+    "story": "常春藤象征长久的陪伴，藤叶纹由匠人逐片錾刻，每只略有不同",
+    "care": "可终身免费抛光"
+   }
+  ],
+  "context": "客户喜欢叠戴手镯，推荐常春藤手镯"
+ },
+ "result": {
+  "case_id": "R08",
+  "version": "v3",
+  "analysis": {
+   "key_facts": [
+    "C2 刚从伦敦硕士毕业，在上海做品牌策略",
+    "C4 风格偏好：黄金，喜欢叠戴手镯",
+    "H1 2026-08-02 客户说回上海了，settle下来去店里找CA",
+    "P1-P5 Lierre 常春藤手镯：18K玫瑰金、藤叶纹手工錾刻、常春藤象征长久陪伴、每只略有不同、终身免费抛光",
+    "C7 2025-08-20 购买小珍宝珍珠母贝吊坠"
+   ],
+   "risks": [
+    "上一段对话在111天前自然结束，不能当成正在进行的对话来回应，也不要为迟回道歉",
+    "人称统一用“你”，不混用“您”",
+    "客户偏好中英夹杂、轻松语气，避免过于正式",
+    "不能暗示折扣或制造稀缺感",
+    "只推荐Lierre手镯一件产品"
+   ],
+   "timing_ok": true,
+   "max_similarity": 0.48
+  },
+  "candidates": [
+   {
+    "angle": "懂你型",
+    "message": "Emily，秋天好呀。上次你说回上海后会来店里找我，我还记着这话呢。\n\n最近翻到Lierre常春藤手镯，18K玫瑰金，藤叶纹是匠人一片片錾刻的，每只略有不同。想到你平时喜欢叠戴手镯，又是黄金派，这只叠在小珍宝吊坠旁边应该蛮对味。\n\n哪天方便来店里坐坐，不着急，先看看也好。",
+    "rationale": "从客户此前说会来店的话头切入，结合她喜欢叠戴和黄金的偏好，自然引出Lierre手镯，并给低压力的到店邀请。｜事实核查已删改：上次你说settle下来就来店里，我还记着这话呢（把H1客户原话当作客户对CA说的话，且H1是客户对CA说的，不是对CA承诺来店）；静安恒汇（门店具体名称/地点未在清单中给出）",
+    "facts_used": [
+     "H1",
+     "C4",
+     "P1",
+     "P2",
+     "P4",
+     "C7"
+    ],
+    "critic_removed": [
+     "上次你说settle下来就来店里，我还记着这话呢（把H1客户原话当作客户对CA说的话，且H1是客户对CA说的，不是对CA承诺来店）",
+     "静安恒汇（门店具体名称/地点未在清单中给出）"
+    ],
+    "issues": [
+     "[SOFT:invented_pretext] 疑似虚构的联系由头"
+    ],
+    "repaired": true
+   },
+   {
+    "angle": "故事型",
+    "message": "Emily，最近在看Lierre常春藤系列，想起你。\n\n常春藤的花语是长久的陪伴，手镯上的藤叶纹是匠人逐片手工錾刻的，所以每一只都略有不同，没有两只完全一样。18K玫瑰金，戴久了可以终身免费抛光，越戴越有你的痕迹。\n\n你之前那枚珍珠母贝吊坠也是日常好搭的款，这只手镯和它叠在一起应该会很有意思。要不要我先拍几张图给你看看？",
+    "rationale": "以常春藤的陪伴寓意和手工錾刻的独特性为故事线，再联系客户已有的吊坠，提供发图的轻松下一步。",
+    "facts_used": [
+     "P1",
+     "P2",
+     "P3",
+     "P4",
+     "P5",
+     "C7"
+    ],
+    "critic_removed": [],
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "邀约体验型",
+    "message": "Emily，回上海也几个月了，一切都顺利吗？\n\n最近在看Lierre常春藤手镯，18K玫瑰金，藤叶纹手工錾刻，想着你喜欢叠戴手镯，或许会合你眼缘。\n\n哪天有空来店里试试，或者我约个私享时段，安安静静看，不买也没关系～",
+    "rationale": "简短提及产品，重点放在私享时段和到店试戴的低压力邀约上，符合客户轻松的语气。｜事实核查已删改：最近店里到了Lierre常春藤手镯（新到货/新品信息未在清单中给出）；静安恒汇（门店具体名称/地点未在清单中给出）",
+    "facts_used": [
+     "H1",
+     "C4",
+     "P1",
+     "P2",
+     "S7"
+    ],
+    "critic_removed": [
+     "最近店里到了Lierre常春藤手镯（新到货/新品信息未在清单中给出）",
+     "静安恒汇（门店具体名称/地点未在清单中给出）"
+    ],
+    "issues": [],
+    "repaired": true
+   }
+  ],
+  "model": "deepseek:deepseek-chat",
+  "latency_s": 8.2
+ },
+ "judge": {
+  "candidates": [
+   {
+    "id": 1,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 4,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "引用客户回沪的话与叠戴偏好，语气自然；但“我还记着这话呢”接近套话，可再具体些。"
+   },
+   {
+    "id": 2,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 4,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "故事与工艺转述准确，结尾发图提议轻松可拒；但“越戴越有你的痕迹”略像文案，可收一收。"
+   },
+   {
+    "id": 3,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 3,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 4,
+     "goal": 3,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "问候自然、邀约不施压，但“回上海也几个月了”略泛，且未用上珍珠母贝吊坠这一具体连接点。"
+   }
+  ],
+  "set": {
+   "diversity": 4,
+   "best_id": 2,
+   "comment": "三条分别走懂你、故事、体验路线，差异清晰；候选2在具体细节与轻松收尾上最平衡。"
+  },
+  "judge_model": "deepseek:deepseek-chat"
+ },
+ "judge_history": [
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "引用客户回沪后到店的旧话，自然衔接叠戴偏好，语气轻松克制；'黄金派'略随意但可接受。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [
+      "'越戴越有你的痕迹'——产品信息只写可终身免费抛光，未提及佩戴痕迹或包浆效果"
+     ],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 3
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "故事与叠戴联想不错，但'越戴越有你的痕迹'属产品信息外的加工，需删改。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "邀约体验得体，但'回上海也几个月了'与档案中'夏天毕业回沪'略有出入，且个性化弱于前两条。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 1,
+    "comment": "三条分别走懂你、故事、体验路线，差异清晰；候选1最贴合客户偏好且无事实问题，候选2需删去产品信息外的表述。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  }
+ ]
+}

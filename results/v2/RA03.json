@@ -1,0 +1,289 @@
+{
+ "case_id": "RA03",
+ "meta": {
+  "type": "core",
+  "focus": "以天文兴趣+月相自然切入；正式；保养是次要信息"
+ },
+ "request": {
+  "case_id": "RA03",
+  "scenario": "reactivation",
+  "today": "2026-11-21",
+  "ca_name": "Lina",
+  "client": {
+   "client_id": "C09",
+   "surname": "吴",
+   "gender": "M",
+   "preferred_name": null,
+   "age_band": "55-60",
+   "city": "杭州",
+   "tier": "典藏 Heritage",
+   "birthday": null,
+   "occupation": "已退休，曾任大学教授",
+   "interests": [
+    "天文",
+    "古典音乐",
+    "书法"
+   ],
+   "style_notes": "只戴一块表，非常爱惜",
+   "purchases": [
+    {
+     "date": "2021-03-21",
+     "item": "Méridien 子午线 万年历腕表 40mm",
+     "note": "自购，纪念退休"
+    }
+   ],
+   "last_visit": "2025-04-10",
+   "preferences": [
+    "语气正式",
+    "不喜欢频繁打扰"
+   ],
+   "family": null,
+   "ca_notes": "对月相显示特别有感情，说过“退休后终于有时间看月亮”"
+  },
+  "history": [
+   {
+    "speaker": "client",
+    "time": "2025-04-10 15:30",
+    "text": "表走得很准，月相每天看着很安心"
+   }
+  ],
+  "products": [
+   {
+    "sku": "MRD-W-01",
+    "name": "Méridien 子午线 万年历腕表 40mm",
+    "collection": "Méridien 子午线",
+    "category": "watch",
+    "material": "铂金表壳，乳白色珐琅表盘，自制万年历机芯，月相显示",
+    "price": 520000,
+    "story": "万年历可准确显示至2100年，珐琅表盘经多次烧制，成品率较低",
+    "care": "避免在晚上8点至凌晨2点间调校日历"
+   }
+  ],
+  "context": "19个月未联系；表已到保养周期；本周六晚有月全食（虚构天象，可提及）"
+ },
+ "result": {
+  "case_id": "RA03",
+  "version": "v2",
+  "analysis": {
+   "key_facts": [
+    "吴先生2021年3月购入Méridien万年历腕表，作为退休纪念，只戴这一块表且非常爱惜",
+    "他上次到店是2025年4月，当时说表走得很准、月相每天看着很安心；他还说过“退休后终于有时间看月亮”",
+    "他偏好正式语气，不喜欢频繁打扰；上一段对话已在590天前自然结束",
+    "本周六晚有月全食，他的兴趣是天文学"
+   ],
+   "risks": [
+    "不能暗示他“好久没来”或“是不是把我们忘了”，也不提消费金额或等级",
+    "上一段对话已自然结束，不需为迟回道歉，也不能当作正在进行的对话来回应",
+    "语气要正式，不用 emoji，不频繁打扰，所以结尾要轻松、允许不回复",
+    "一上来不推销产品；保养提醒要平和，不制造紧迫感",
+    "不能虚构他未曾说过的细节，只能引用档案中已有的月相和“看月亮”的话"
+   ],
+   "timing_ok": true,
+   "max_similarity": 0.26
+  },
+  "candidates": [
+   {
+    "angle": "念旧型",
+    "message": "吴先生，去年四月您来店里时提到，月相每天看着很安心，还说退休后终于有时间看月亮。这句话我近来又想起。万年历的月相要调得准，才跟得上天上那一轮，您那块表现在还准吗？若哪天空了，来湖滨店坐坐，我帮您看看，也听您聊聊近况。",
+    "rationale": "以档案中真实存在的月相话题和他“看月亮”的话自然开场，问候近况，不催不推。",
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "服务理由型",
+    "message": "吴先生，您那块Méridien万年历自2021年入手，走时一直稳。这类机芯隔几年做一次例行保养会更稳妥，具体周期要看实际走时。您方便时把表带来湖滨店，我先帮您检测走时、做清洁；需要保养再谈，不必当天决定。",
+    "rationale": "以保养周期这一真实服务理由切入，给出可拒绝的下一步，语气正式而不施压。",
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "轻分享型",
+    "message": "吴先生，本周六晚有月全食。想起您说过退休后终于有时间看月亮，也想起您那块表的月相。若天气晴，倒是观月的好机会。顺带一提，万年历在晚上八点到凌晨两点之间不宜调校日历，观月时若顺手把玩，留意这一点就好。不用回复。",
+    "rationale": "借月全食与他天文兴趣轻量分享，附一条真实的保养提醒，明确不要求回复，符合他不喜打扰的偏好。",
+    "issues": [],
+    "repaired": false
+   }
+  ],
+  "model": "deepseek:deepseek-chat",
+  "latency_s": 5.5
+ },
+ "judge": {
+  "candidates": [
+   {
+    "id": 1,
+    "unsupported_claims": [
+     "去年四月您来店里时提到……还说退休后终于有时间看月亮（把CRM备注当作客户当面原话，并虚构了到店场景）"
+    ],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 3,
+     "goal": 3,
+     "faithfulness": 2
+    },
+    "hard_fail": true,
+    "hard_fail_reason": "虚构客户到店言行：将CRM备注内容编成客户当面原话，并添加“来店里时提到”的虚构场景",
+    "comment": "语气温润，但把CRM备注写成客户当面原话并虚构到店场景，属编造。"
+   },
+   {
+    "id": 2,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 3,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 3,
+     "goal": 3,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "事实稳妥、保养理由真实，但偏服务提醒，久未联系的唤醒感稍弱。"
+   },
+   {
+    "id": 3,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 5,
+     "brand_voice": 5,
+     "naturalness": 5,
+     "appropriateness": 5,
+     "goal": 5,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "以月全食自然接续月相话题，克制不推销，结尾不要求回复，分寸恰好。"
+   }
+  ],
+  "set": {
+   "diversity": 4,
+   "best_id": 3,
+   "comment": "三条分别走念旧、服务、轻分享路线，差异明显；候选3最贴合客户天文兴趣与不喜打扰的偏好。"
+  },
+  "judge_model": "deepseek:deepseek-chat"
+ },
+ "judge_history": [
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [
+      "去年四月您来店里时提到，月相每天看着很安心，还说退休后终于有时间看月亮（客户原话为2025-04-10消息“表走得很准，月相每天看着很安心”，ca_notes中有“退休后终于有时间看月亮”，但“来店里时提到”将消息场景虚构为到店当面交谈）"
+     ],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 3,
+      "goal": 3,
+      "faithfulness": 2
+     },
+     "hard_fail": true,
+     "hard_fail_reason": "编造客户经历：将2025-04-10的微信消息虚构为“来店里时提到”，输入中无此到店交谈记录",
+     "comment": "念旧角度贴合客户，但把线上消息写成到店对话属编造，且“我近来又想起”接近套话。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [
+      "走时一直稳（输入仅有2025-04-10客户说“表走得很准”，此后590天无信息，无法断言一直稳）",
+      "这类机芯隔几年做一次例行保养会更稳妥（产品保养信息中无保养周期条款）"
+     ],
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 3,
+      "goal": 3,
+      "faithfulness": 2
+     },
+     "hard_fail": true,
+     "hard_fail_reason": "编造服务条款与客户现状：保养周期无输入依据，且断言表“走时一直稳”超出已知信息",
+     "comment": "服务理由自然不施压，但保养周期与走时现状均无依据，属自造信息。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 5,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "以月全食与客户观月偏好自然搭话，保养提醒有产品信息依据，结尾不要求回复，分寸得当。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 3,
+    "comment": "三条分别走念旧、服务、轻分享路线，差异明显；仅第三条事实全部有据且不施压，可直接发送。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  },
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [
+      "去年四月您来店里时提到——客户原话是2025-04-10的消息，并非到店时所说，且距今已19个月，说“去年四月”不准确"
+     ],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 3,
+      "goal": 4,
+      "faithfulness": 3
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "引用真实对话与ca_notes，念旧自然；但把微信消息说成“来店里时提到”属细节偏差，且“我近来又想起”接近套话，需微调。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [
+      "走时一直稳——客户2025年说过走得很准，但19个月后的现状无从得知",
+      "这类机芯隔几年做一次例行保养会更稳妥——产品信息与政策中未给出保养周期"
+     ],
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 3,
+      "faithfulness": 2
+     },
+     "hard_fail": true,
+     "hard_fail_reason": "自造保养周期与保养建议，产品信息与政策内服务均未提供该内容，属编造服务条款",
+     "comment": "语气克制、给了可拒绝的下一步，但“隔几年例行保养”是输入中没有的服务说法，违反事实忠实。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 5,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "以月全食为真实由头，引用客户原话与产品保养信息，不推销、不要求回复，分寸最好。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 3,
+    "comment": "三条分别走念旧、服务、轻分享路线，差异明显；候选3最贴合“不被捞”的唤醒目标，候选2因自造保养周期不可用。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  }
+ ]
+}

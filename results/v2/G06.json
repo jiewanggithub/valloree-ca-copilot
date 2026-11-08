@@ -1,0 +1,279 @@
+{
+ "case_id": "G06",
+ "meta": {
+  "type": "edge",
+  "focus": "圣诞+生日双重节点；中英夹杂、轻松语气；客户说过要来店但未来——不要催"
+ },
+ "request": {
+  "case_id": "G06",
+  "scenario": "greeting",
+  "today": "2026-12-25",
+  "ca_name": "Lina",
+  "client": {
+   "client_id": "C17",
+   "surname": "谢",
+   "gender": "F",
+   "preferred_name": "Emily",
+   "age_band": "25-30",
+   "city": "上海",
+   "tier": "会员 Member",
+   "birthday": "12-25",
+   "occupation": "刚从伦敦硕士毕业，在上海做品牌策略",
+   "interests": [
+    "艺术展",
+    "brunch",
+    "网球"
+   ],
+   "style_notes": "黄金，喜欢叠戴手镯",
+   "purchases": [
+    {
+     "date": "2025-08-20",
+     "item": "Petit Trésor 小珍宝 珍珠母贝吊坠",
+     "note": "自购，出国读书前买的"
+    }
+   ],
+   "last_visit": "2025-08-20",
+   "preferences": [
+    "习惯中英夹杂，喜欢轻松的语气"
+   ],
+   "family": null,
+   "ca_notes": "说过2026年夏天毕业后回上海"
+  },
+  "history": [
+   {
+    "speaker": "client",
+    "time": "2026-08-02 14:05",
+    "text": "Hi Lina! 我回上海啦，settle下来去店里找你"
+   },
+   {
+    "speaker": "CA",
+    "time": "2026-08-02 14:20",
+    "text": "欢迎回来Emily！等你有空来坐坐"
+   }
+  ],
+  "products": [],
+  "context": "圣诞节，同时也是客户生日"
+ },
+ "result": {
+  "case_id": "G06",
+  "version": "v2",
+  "analysis": {
+   "key_facts": [
+    "Emily的生日是今天（12-25），同时也是圣诞节",
+    "她2026年夏天刚从伦敦硕士毕业回到上海，做品牌策略",
+    "2025-08-20出国读书前自购了Petit Trésor珍珠母贝吊坠",
+    "上一次对话是145天前（2026-08-02），她刚回上海时说会来店里找我，此后没有再来"
+   ],
+   "risks": [
+    "生日与圣诞节同日，祝福要两个都点到，但别写成堆砌的贺卡",
+    "上次说会来店里，之后一直没来——不要提这件事，不能让她觉得被催促或有负担",
+    "纯祝福，不提产品、价格、活动、清洁保养或到店邀约",
+    "不提及年龄",
+    "人称统一用“你”，中英夹杂、轻松语气，emoji最多1个"
+   ],
+   "timing_ok": true,
+   "max_similarity": 0.28
+  },
+  "candidates": [
+   {
+    "angle": "温情回忆",
+    "message": "Emily，生日快乐，圣诞快乐！\n想起去年夏天你回来时跟我说要settle好就来店里坐坐，那时候你刚落地不久，一转眼已经半年了。今天这个日子撞上圣诞，希望你是被朋友和家人围着过的。\n新的一岁，brand strategy那边顺顺利利，也留点时间给自己看展、打球。",
+    "rationale": "以她回上海时的原话切入，祝福落在她毕业后的新生活上，不提店也不提产品。",
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "简洁雅致",
+    "message": "Emily，圣诞快乐，也祝你生日快乐。\n一年里最亮的一个日子刚好落在你身上，愿新的一岁从容、明亮。",
+    "rationale": "两三句克制收住，用节日的“光”作意象，适合不喜冗长的时刻。",
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "轻关怀",
+    "message": "Emily，生日快乐，圣诞快乐！\n记得你说过在上海做品牌策略，这一行年底应该挺忙的吧？希望你今天能真的把工作放下，好好吃一顿。\n对了，最近有看到什么值得去的展吗，我这边也想找时间补一补。",
+    "rationale": "祝福之后落到她的工作和看展兴趣上，结尾用一个轻松的提问，回不回都自然。",
+    "issues": [],
+    "repaired": false
+   }
+  ],
+  "model": "deepseek:deepseek-chat",
+  "latency_s": 4.9
+ },
+ "judge": {
+  "candidates": [
+   {
+    "id": 1,
+    "unsupported_claims": [
+     "想起去年夏天你回来时跟我说要settle好就来店里坐坐——客户原话是2026-08-02说的，不是“去年夏天”，时间表述有误",
+     "那时候你刚落地不久——输入未提及客户具体落地时间"
+    ],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 3,
+     "goal": 4,
+     "faithfulness": 3
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "温情具体，但把今年8月的对话说成“去年夏天”，时间线有误，需修正。"
+   },
+   {
+    "id": 2,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 2,
+     "brand_voice": 5,
+     "naturalness": 4,
+     "appropriateness": 5,
+     "goal": 3,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "语气雅致克制，但几乎无个性化信息，换个名字也能发，祝福略显单薄。"
+   },
+   {
+    "id": 3,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 4,
+     "naturalness": 5,
+     "appropriateness": 4,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "轻松自然、有真实细节，结尾抛回一个展的话题也符合她的兴趣，只是祝福部分稍被对话冲淡。"
+   }
+  ],
+  "set": {
+   "diversity": 4,
+   "best_id": 3,
+   "comment": "三条风格区分明显：温情回忆、简洁雅致、轻关怀。候选3最贴合客户轻松中英夹杂的偏好且无事实问题；候选1需修正时间线。"
+  },
+  "judge_model": "deepseek:deepseek-chat"
+ },
+ "judge_history": [
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [
+      "想起去年夏天你回来时跟我说要settle好就来店里坐坐（客户原话是2026-08-02说“我回上海啦，settle下来去店里找你”，并非“去年夏天”，且时间表述与事实不符）",
+      "那时候你刚落地不久（输入未提及客户具体落地时间）"
+     ],
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 3,
+      "goal": 3,
+      "faithfulness": 2
+     },
+     "hard_fail": true,
+     "hard_fail_reason": "编造/错误引用客户经历：把2026年8月的对话说成“去年夏天”，并补充“刚落地不久”等输入中不存在的时间细节",
+     "comment": "语气温润，但对客户对话时间的引用出错，属于事实性编造。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 2,
+      "brand_voice": 5,
+      "naturalness": 4,
+      "appropriateness": 5,
+      "goal": 3,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "简洁雅致、无风险，但缺少客户具体信息，换个名字也能发，个性化偏弱。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 5,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "轻松中英夹杂的语气贴合客户偏好，结尾提问自然不施压，但生日祝福被工作话题稍抢焦点。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 3,
+    "comment": "三条风格区分明显：温情回忆、简洁雅致、轻关怀；候选1因时间引用错误不可用，候选3最贴合客户轻松语气与偏好。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  },
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [
+      "想起去年夏天你回来时跟我说要settle好就来店里坐坐——客户原话是2026-08-02说的，不是“去年夏天”，时间表述有误",
+      "一转眼已经半年了——从8月2日到12月25日约4个多月，不是半年"
+     ],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 3
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "引用真实对话但把“今年8月”说成“去年夏天”、把4个多月说成半年，时间细节失真，需修正。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 2,
+      "brand_voice": 5,
+      "naturalness": 4,
+      "appropriateness": 5,
+      "goal": 3,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "语气雅致克制，但几乎不含Emily的具体信息，换个名字也能发，个性化偏弱。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 5,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "中英夹杂、轻松语气贴合偏好，结尾抛回一个看展话题自然不施压，只是生日当天问工作略抢祝福的焦点。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 3,
+    "comment": "三条风格区分明显：回忆型、雅致型、轻聊型。候选3最贴合客户偏好且无事实问题；候选1需修正时间表述。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  }
+ ]
+}

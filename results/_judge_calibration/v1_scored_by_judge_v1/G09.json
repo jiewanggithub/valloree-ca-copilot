@@ -1,0 +1,148 @@
+{
+ "case_id": "G09",
+ "meta": {
+  "type": "core",
+  "focus": "一年未联系的节日问候；可温柔提及女儿；不推销"
+ },
+ "request": {
+  "case_id": "G09",
+  "scenario": "greeting",
+  "today": "2026-09-25",
+  "ca_name": "Lina",
+  "client": {
+   "client_id": "C19",
+   "surname": "冯",
+   "gender": "F",
+   "preferred_name": null,
+   "age_band": "40-45",
+   "city": "成都",
+   "tier": "会员 Member",
+   "birthday": null,
+   "occupation": "中学校长",
+   "interests": [],
+   "style_notes": null,
+   "purchases": [
+    {
+     "date": "2025-09-01",
+     "item": "Petit Trésor 小珍宝 珍珠母贝吊坠",
+     "note": "送女儿的升学礼物"
+    }
+   ],
+   "last_visit": "2025-09-01",
+   "preferences": [],
+   "family": "女儿今年读大一",
+   "ca_notes": "很温和，喜欢聊女儿"
+  },
+  "history": [
+   {
+    "speaker": "client",
+    "time": "2025-09-03 20:11",
+    "text": "女儿戴着去学校报到了，说同学都问是哪里买的"
+   },
+   {
+    "speaker": "CA",
+    "time": "2025-09-03 20:30",
+    "text": "真好冯女士，祝她大学生活顺利"
+   }
+  ],
+  "products": [],
+  "context": "中秋节；双方一年没有聊天"
+ },
+ "result": {
+  "case_id": "G09",
+  "version": "v1",
+  "analysis": {
+   "key_facts": [
+    "去年9月冯女士为女儿升学购买珍珠母贝吊坠，女儿戴去报到时同学都问起",
+    "女儿今年读大一",
+    "上一次对话停在CA的祝福，客户未再回复，已一年无聊天",
+    "今天是中秋节，成都"
+   ],
+   "risks": [
+    "一年未互动，语气过重会显得刻意",
+    "不可提及产品或价格，纯祝福",
+    "不评论女儿年龄以外的外貌等，不追问成绩",
+    "上一条是CA发出且客户未回，不能像没发过一样重复"
+   ],
+   "timing_ok": true,
+   "max_similarity": 0.31
+  },
+  "candidates": [
+   {
+    "angle": "温情回忆",
+    "message": "冯女士，中秋好。去年您说女儿戴着那枚珍珠母贝吊坠去报到、同学都来问，这句话我一直记着。一年过去，想来她已经很适应大学的日子了。愿你们一家人今晚能好好吃顿饭，月亮圆，心也圆。",
+    "rationale": "以客户亲口说过的报到细节切入，祝福落在女儿与团圆上，不带任何销售意味。",
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "简洁雅致",
+    "message": "冯女士，中秋安康。日内瓦的秋天也到了，月亮照到哪儿，都是同一轮。愿您和家人这一晚清静圆满。",
+    "rationale": "两三句克制收束，用月亮与两地意象代替寒暄，适合久未联系时的轻问候。",
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "轻关怀",
+    "message": "冯女士，中秋好。成都这几天若还热，晚上赏月记得添件薄衫。珍珠母贝怕香水和汗，戴久了用软布轻轻擦一擦就好。愿您和家人过个安稳的节。",
+    "rationale": "祝福为主，附一句天气与佩戴保养的小提示，无压力也不涉产品推荐。",
+    "issues": [],
+    "repaired": false
+   }
+  ],
+  "model": "deepseek:deepseek-chat",
+  "latency_s": 3.7
+ },
+ "judge": {
+  "candidates": [
+   {
+    "id": 1,
+    "scores": {
+     "personalization": 5,
+     "brand_voice": 5,
+     "naturalness": 5,
+     "appropriateness": 5,
+     "goal": 5,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "引用去年女儿报到那句真实细节，祝福落在家人与团圆上，克制不推销，是三条里最像“被记得”的一条。"
+   },
+   {
+    "id": 2,
+    "scores": {
+     "personalization": 2,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 4,
+     "goal": 3,
+     "faithfulness": 4
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "语气雅致，但“日内瓦的秋天”与客户无关联，换个名字也能发，群发感偏重。"
+   },
+   {
+    "id": 3,
+    "scores": {
+     "personalization": 3,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 3,
+     "goal": 3,
+     "faithfulness": 4
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "关怀具体但把节日祝福带向保养提醒，略偏事务性，纯祝福场景里显得不够干净。"
+   }
+  ],
+  "set": {
+   "diversity": 4,
+   "best_id": 1,
+   "comment": "三条分别走回忆、意境、实用关怀，方向确实不同；候选1以真实细节取胜，另两条可作备选但个性化不足。"
+  },
+  "judge_model": "deepseek:deepseek-chat"
+ }
+}

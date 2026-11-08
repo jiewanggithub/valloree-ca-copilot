@@ -1,0 +1,155 @@
+{
+ "case_id": "P08",
+ "meta": {
+  "type": "core",
+  "focus": "新客议价：温和拒绝、强调首次购买的体验（刻字、礼盒、终身清洁），不让客户尴尬"
+ },
+ "request": {
+  "case_id": "P08",
+  "scenario": "price_objection",
+  "today": "2026-11-08",
+  "ca_name": "Lina",
+  "client": {
+   "client_id": "C14",
+   "surname": "许",
+   "gender": "F",
+   "preferred_name": null,
+   "age_band": "25-30",
+   "city": "杭州",
+   "tier": "新客 New",
+   "birthday": null,
+   "occupation": null,
+   "interests": [],
+   "style_notes": null,
+   "purchases": [],
+   "last_visit": "2026-10-03",
+   "preferences": [],
+   "family": null,
+   "ca_notes": "国庆期间在杭州快闪店加的微信，试戴过小珍宝吊坠，说“再考虑一下”；其他信息不多"
+  },
+  "history": [
+   {
+    "speaker": "CA",
+    "time": "2026-11-07 15:00",
+    "text": "许女士，小珍宝吊坠的四叶造型来自瓦洛蕾1920年代的档案图稿，上次您试戴很好看"
+   },
+   {
+    "speaker": "client",
+    "time": "2026-11-08 09:40",
+    "text": "我挺喜欢的，第一次买你们家，能不能便宜点？"
+   }
+  ],
+  "products": [
+   {
+    "sku": "PTR-P-01",
+    "name": "Petit Trésor 小珍宝 珍珠母贝吊坠",
+    "collection": "Petit Trésor 小珍宝",
+    "category": "pendant",
+    "material": "18K黄金，白色珍珠母贝，0.05克拉钻石点缀",
+    "price": 12800,
+    "story": "四叶造型来自瓦洛蕾1920年代的档案图稿",
+    "care": "母贝避免接触香水与水"
+   }
+  ],
+  "context": "新客首次购买"
+ },
+ "result": {
+  "case_id": "P08",
+  "version": "v1",
+  "analysis": {
+   "key_facts": [
+    "客户10月3日在杭州快闪店试戴过Petit Trésor小珍宝珍珠母贝吊坠，说“再考虑一下”",
+    "客户最后一条消息直接问能否便宜点，首次购买瓦洛蕾",
+    "作品为18K黄金、白色珍珠母贝、0.05克拉钻石，价格12800元",
+    "客户与新客，尚无购买记录，距上次到店36天"
+   ],
+   "risks": [
+    "客户在等回复，必须先回应“能不能便宜点”这句话，不能回避",
+    "不能给折扣或暗示可申请更低价格，需温和明确说明全球统一价格",
+    "不贬低其他渠道，不做保值投资表述",
+    "不评论客户预算或让其感到买不起"
+   ],
+   "timing_ok": true,
+   "max_similarity": 0.21
+  },
+  "candidates": [
+   {
+    "angle": "共情+价值",
+    "message": "许女士，谢谢您愿意直说。初次买会想多比较，这很正常。小珍宝这枚吊坠的四叶造型来自1920年代的档案图稿，18K黄金托着白色珍珠母贝，边上一圈0.05克拉钻石点缀，母贝的弧面打磨和镶口都很费工时。价格上瓦洛蕾是统一的，我这边确实没有折扣空间，这点想先跟您讲清楚。您要是方便，可以再来店里把它戴在颈间看看，光线下的母贝和照片差别挺大。",
+    "rationale": "先共情客户首次购买想比价的心情，再具体讲工艺与材质，温和说明无折扣，末尾给轻松可拒绝的到店邀请。",
+    "issues": [
+     "[SOFT:long] 165字，偏长"
+    ],
+    "repaired": true
+   },
+   {
+    "angle": "政策+保障",
+    "message": "许女士，明白您的想法。瓦洛蕾实行全球统一价格体系，所以价格上没有浮动，我也不能帮您申请更低的价格，这一点如实告诉您。官方渠道购买会附作品证书，腕表之外的首饰也享受终身免费清洁抛光，后续改圈、保养都可以回店找我。您上次试戴的那枚小珍宝吊坠还在，需要的话我帮您留着，您再来看一眼也行。",
+    "rationale": "坦诚说明统一价格政策并回应客户，转而陈述官方渠道的证书与终身清洁等保障，不贬低其他渠道。",
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "替代方案",
+    "message": "许女士，价格这块我如实说：瓦洛蕾是统一价格，没有折扣。不过初次入手，我们可以把心思放在合适上。小珍宝吊坠目前就这一款珍珠母贝，12800；您如果想让整体更轻巧，也可以来店把不同尺寸和佩戴方式都试一遍再定。另外刻字、礼盒和手写卡片这些我们都可以免费帮您安排。您不急的话，改天来坐坐，我给您留个安静的时间。",
+    "rationale": "明确无折扣后，把话题引向合适的选择与政策内免费服务（刻字、礼盒、私人时段），保持关系不逼迫。",
+    "issues": [],
+    "repaired": true
+   }
+  ],
+  "model": "deepseek:deepseek-chat",
+  "latency_s": 9.2
+ },
+ "judge": {
+  "candidates": [
+   {
+    "id": 1,
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 5,
+     "naturalness": 5,
+     "appropriateness": 5,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "共情自然、工艺细节具体，坚守统一价格且不施压，结尾邀约轻松可拒绝，完成度高。"
+   },
+   {
+    "id": 2,
+    "scores": {
+     "personalization": 3,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 4,
+     "goal": 4,
+     "faithfulness": 4
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "政策与保障陈述清晰，但“作品证书”输入未提及，略有编造风险，个性化偏弱。"
+   },
+   {
+    "id": 3,
+    "scores": {
+     "personalization": 3,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 4,
+     "goal": 4,
+     "faithfulness": 4
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "转向合适选择与免费服务，方向正确，但“不同尺寸”输入未提供，存在轻微编造。"
+   }
+  ],
+  "set": {
+   "diversity": 4,
+   "best_id": 1,
+   "comment": "三条分别走共情价值、政策保障、替代方案路线，差异清晰；候选1最贴合品牌语气且事实最干净。"
+  },
+  "judge_model": "deepseek:deepseek-chat"
+ }
+}

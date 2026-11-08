@@ -1,0 +1,222 @@
+{
+ "case_id": "R08",
+ "meta": {
+  "type": "edge",
+  "focus": "中英夹杂的轻松语气，但仍要有品牌分寸；不要过度使用英文"
+ },
+ "request": {
+  "case_id": "R08",
+  "scenario": "recommendation",
+  "today": "2026-11-21",
+  "ca_name": "Lina",
+  "client": {
+   "client_id": "C17",
+   "surname": "谢",
+   "gender": "F",
+   "preferred_name": "Emily",
+   "age_band": "25-30",
+   "city": "上海",
+   "tier": "会员 Member",
+   "birthday": "12-25",
+   "occupation": "刚从伦敦硕士毕业，在上海做品牌策略",
+   "interests": [
+    "艺术展",
+    "brunch",
+    "网球"
+   ],
+   "style_notes": "黄金，喜欢叠戴手镯",
+   "purchases": [
+    {
+     "date": "2025-08-20",
+     "item": "Petit Trésor 小珍宝 珍珠母贝吊坠",
+     "note": "自购，出国读书前买的"
+    }
+   ],
+   "last_visit": "2025-08-20",
+   "preferences": [
+    "习惯中英夹杂，喜欢轻松的语气"
+   ],
+   "family": null,
+   "ca_notes": "说过2026年夏天毕业后回上海"
+  },
+  "history": [
+   {
+    "speaker": "client",
+    "time": "2026-08-02 14:05",
+    "text": "Hi Lina! 我回上海啦，settle下来去店里找你"
+   },
+   {
+    "speaker": "CA",
+    "time": "2026-08-02 14:20",
+    "text": "欢迎回来Emily！等你有空来坐坐"
+   }
+  ],
+  "products": [
+   {
+    "sku": "LRR-B-01",
+    "name": "Lierre 常春藤 手镯",
+    "collection": "Lierre 常春藤",
+    "category": "bracelet",
+    "material": "18K玫瑰金，藤叶纹手工錾刻",
+    "price": 38000,
+    "story": "常春藤象征长久的陪伴，藤叶纹由匠人逐片錾刻，每只略有不同",
+    "care": "可终身免费抛光"
+   }
+  ],
+  "context": "客户喜欢叠戴手镯，推荐常春藤手镯"
+ },
+ "result": {
+  "case_id": "R08",
+  "version": "v1",
+  "analysis": {
+   "key_facts": [
+    "Emily 是刚从伦敦硕士毕业回上海做品牌策略的客户",
+    "她喜欢黄金、习惯叠戴手镯",
+    "上次购买是出国读书前的 Petit Trésor 珍珠母贝吊坠",
+    "8月2日她主动说要 settle 下来去店里找 Lina，之后一直未到店"
+   ],
+   "risks": [
+    "CA 最后一条消息是8月2日自己发的，客户未回复已过111天，语气要轻、不要像催或重提旧约",
+    "避免制造稀缺或紧迫感，不要报价附加任何优惠",
+    "不要提客户年龄、外貌或消费金额",
+    "客户中英夹杂、语气轻松，避免太正式"
+   ],
+   "timing_ok": true,
+   "max_similarity": 0.54
+  },
+  "candidates": [
+   {
+    "angle": "懂你型",
+    "message": "Emily，想到你之前说喜欢叠戴手镯，最近看到 Lierre 常春藤手镯，18K玫瑰金、藤叶纹手工錾刻，想到你回来上海后应该会很合适。不急着决定，方便的话我发几张图给你看看？",
+    "rationale": "从她喜欢叠戴的偏好出发，自然引出产品，结尾低压力的发图邀约。",
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "故事型",
+    "message": "Emily，这支 Lierre 常春藤手镯想给你讲讲：藤叶纹是匠人一片片手工錾刻的，每只都略有不同，寓意长久的陪伴。你回国不久，感觉这种慢慢做出来的东西你会喜欢。方便的话我发个细节视频给你？",
+    "rationale": "以工艺与寓意作故事，短而有温度，贴合她重视细节的调性。",
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "邀约体验型",
+    "message": "Emily，最近店里有一支 Lierre 常春藤手镯，18K玫瑰金、手工錾刻的藤叶纹，觉得你叠戴会很合适。你哪天方便来试戴看看？也可以先约个私享时段，慢慢看。",
+    "rationale": "简短提及产品，重点放在轻松的到店或私享时段邀约上。",
+    "issues": [],
+    "repaired": false
+   }
+  ],
+  "model": "deepseek:deepseek-chat",
+  "latency_s": 4.1
+ },
+ "judge": {
+  "candidates": [
+   {
+    "id": 1,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 4,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "用到了叠戴偏好和回国信息，语气轻松，但“应该会很合适”略空泛，可再具体一点。"
+   },
+   {
+    "id": 2,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 5,
+     "naturalness": 4,
+     "appropriateness": 4,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "以工艺故事切入，克制有分寸，但“感觉你会喜欢”稍显主观，可换成更具体的连接。"
+   },
+   {
+    "id": 3,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 4,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "邀约自然、易拒绝，但“私享时段”与试戴两个下一步略多，可精简为一个。"
+   }
+  ],
+  "set": {
+   "diversity": 4,
+   "best_id": 2,
+   "comment": "三条分别走懂你、故事、邀约路线，差异清晰；候选2最贴合品牌气质，稍作微调即可发送。"
+  },
+  "judge_model": "deepseek:deepseek-chat"
+ },
+ "judge_history": [
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 4
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "抓住了叠戴偏好，语气轻松，但'回来上海后应该会很合适'略空，可换成更具体的细节。"
+    },
+    {
+     "id": 2,
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 5,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 4
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "故事讲得克制有温度，'慢慢做出来的东西你会喜欢'贴合她，但未提叠戴偏好，个性化稍弱。"
+    },
+    {
+     "id": 3,
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 3,
+      "faithfulness": 4
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "邀约自然，但'觉得你叠戴会很合适'未引用她说过的话，个性化偏弱，更像通用邀约。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 2,
+    "comment": "三条分别走懂你、故事、体验路线，差异清晰；候选2品牌气质最贴，若补一句叠戴偏好会更完整。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  }
+ ]
+}

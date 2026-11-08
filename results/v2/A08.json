@@ -1,0 +1,298 @@
+{
+ "case_id": "A08",
+ "meta": {
+  "type": "edge",
+  "focus": "客户只接受周末联系——工具应在analysis中标记 timing_ok=false 并建议周末发送；消息本身也应适合周末"
+ },
+ "request": {
+  "case_id": "A08",
+  "scenario": "aftercare",
+  "today": "2026-11-10",
+  "ca_name": "Lina",
+  "client": {
+   "client_id": "C06",
+   "surname": "刘",
+   "gender": "F",
+   "preferred_name": null,
+   "age_band": "40-45",
+   "city": "上海",
+   "tier": "尊享 Privilege",
+   "birthday": "11-04",
+   "occupation": "三甲医院外科医生",
+   "interests": [
+    "马拉松",
+    "古典乐"
+   ],
+   "style_notes": "工作时不能佩戴首饰，周末才戴",
+   "purchases": [
+    {
+     "date": "2025-11-01",
+     "item": "Lierre 常春藤 手镯",
+     "note": "自购，生日礼物"
+    }
+   ],
+   "last_visit": "2026-03-20",
+   "preferences": [
+    "只在周末联系",
+    "工作日不方便看消息"
+   ],
+   "family": null,
+   "ca_notes": null
+  },
+  "history": [
+   {
+    "speaker": "CA",
+    "time": "2026-03-20 15:00",
+    "text": "刘女士，手镯抛光好了，您周末方便时来取"
+   },
+   {
+    "speaker": "client",
+    "time": "2026-03-21 10:12",
+    "text": "好的，周六上午过来"
+   }
+  ],
+  "products": [
+   {
+    "sku": "LRR-B-01",
+    "name": "Lierre 常春藤 手镯",
+    "collection": "Lierre 常春藤",
+    "category": "bracelet",
+    "material": "18K玫瑰金，藤叶纹手工錾刻",
+    "price": 38000,
+    "story": "常春藤象征长久的陪伴，藤叶纹由匠人逐片錾刻，每只略有不同",
+    "care": "可终身免费抛光"
+   }
+  ],
+  "context": "手镯购买一年，可免费抛光。注意：今天是周二"
+ },
+ "result": {
+  "case_id": "A08",
+  "version": "v2",
+  "analysis": {
+   "key_facts": [
+    "刘女士于2025年11月1日自购Lierre常春藤手镯作为生日礼物，距今约一年",
+    "客户偏好只在周末联系，工作日不方便看消息",
+    "上次对话在234天前自然结束，最后一条消息来自客户（确认周六来取抛光好的手镯）",
+    "手镯材质为18K玫瑰金、藤叶纹手工錾刻，可终身免费抛光"
+   ],
+   "risks": [
+    "今天周二发送不合时宜，须等周末再发；消息内容按周末发送来写",
+    "不可把234天前的旧对话当成正在进行的对话来回应，也不要为迟回道歉",
+    "客户是外科医生，工作时不能佩戴首饰，周末才戴，措辞不要假设日常佩戴",
+    "不得借机推销新品，不得承诺输入中没有的服务"
+   ],
+   "timing_ok": false,
+   "max_similarity": 0.35
+  },
+  "candidates": [
+   {
+    "angle": "关心体验",
+    "message": "刘女士，周末好。Lierre手镯到您手上满一年了，去年是您给自己的生日礼物。记得您平时工作不能戴首饰，只有周末才戴上它，想问问这大半年用下来感觉如何？18K玫瑰金戴久了若想恢复光泽，随时可以拿来门店做免费抛光。",
+    "rationale": "结合自购生日礼物与周末佩戴的习惯问候体验，自然带出抛光服务，不推销。",
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "实用保养",
+    "message": "刘女士，周末好。顺便说一句Lierre手镯的日常保养：藤叶纹是手工錾刻的，纹路里容易积下细尘，用软布顺着纹路轻擦就能保持清晰的层次。若想让它回到刚买时的光泽，门店可以免费抛光，大约一个下午就好，您周末路过静安恒汇店时带来就行。",
+    "rationale": "给出与玫瑰金錾刻工艺相符的具体保养建议，并附政策内的免费抛光服务。",
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "专属服务",
+    "message": "刘女士，周末好。您那只Lierre手镯到今年秋天满一年了，18K玫瑰金常戴常新，做一次免费抛光会更透亮。您若周末方便，我可以帮您在静安恒汇店约个私享时段，安静些，也省得等；不方便的话改天再说都行。",
+    "rationale": "主动提供政策内的免费抛光与私人预约，结尾轻松可拒绝，无推销。",
+    "issues": [],
+    "repaired": false
+   }
+  ],
+  "model": "deepseek:deepseek-chat",
+  "latency_s": 4.9
+ },
+ "judge": {
+  "candidates": [
+   {
+    "id": 1,
+    "unsupported_claims": [
+     "去年是您给自己的生日礼物（购买记录 note 写的是“自购，生日礼物”，但未写明是“给自己的”，属轻微推断）"
+    ],
+    "scores": {
+     "personalization": 5,
+     "brand_voice": 5,
+     "naturalness": 5,
+     "appropriateness": 4,
+     "goal": 5,
+     "faithfulness": 4
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "引用工作不戴、周末才戴的偏好与生日自购，问体验自然不推销；仅“给自己的”略超出记录，可改为“您生日时入手的那只”。"
+   },
+   {
+    "id": 2,
+    "unsupported_claims": [
+     "用软布顺着纹路轻擦（保养信息只写“可终身免费抛光”，未提供清洁方法）",
+     "大约一个下午就好（自造抛光时长）"
+    ],
+    "scores": {
+     "personalization": 3,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 4,
+     "goal": 4,
+     "faithfulness": 2
+    },
+    "hard_fail": true,
+    "hard_fail_reason": "自造保养方法与服务时长（“软布顺纹路轻擦”“大约一个下午就好”），输入中无依据",
+    "comment": "保养建议具体但两处细节均为自造，违反不得编造服务条款与工艺保养信息。"
+   },
+   {
+    "id": 3,
+    "unsupported_claims": [
+     "18K玫瑰金常戴常新（泛化表述，产品信息未写）"
+    ],
+    "scores": {
+     "personalization": 3,
+     "brand_voice": 5,
+     "naturalness": 4,
+     "appropriateness": 4,
+     "goal": 4,
+     "faithfulness": 4
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "私享时段邀约分寸得当、可轻松拒绝，但个性化偏弱，未用到周末佩戴或马拉松等真实信息。"
+   }
+  ],
+  "set": {
+   "diversity": 4,
+   "best_id": 1,
+   "comment": "三条分别走关心体验、保养知识、预约服务，方向区分清晰；候选1最贴合客户真实生活节奏，候选2有编造需弃用。"
+  },
+  "judge_model": "deepseek:deepseek-chat"
+ },
+ "judge_history": [
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [
+      "去年是您给自己的生日礼物（购买记录写的是“自购，生日礼物”，但“去年”与购买日期2025-11-01、生日11-04的对应关系属于推断，且“给自己的”为推断）",
+      "记得您平时工作不能戴首饰，只有周末才戴上它（档案style_notes有依据，但“记得您”暗示客户曾亲口说过，属虚构对话细节）"
+     ],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 3,
+      "goal": 4,
+      "faithfulness": 2
+     },
+     "hard_fail": true,
+     "hard_fail_reason": "编造客户经历：“记得您平时工作不能戴首饰，只有周末才戴上它”暗示客户曾亲口告知，档案中仅为内部备注；且“去年是您给自己的生日礼物”为推断性陈述",
+     "comment": "开头自然、关怀到位，但把内部备注写成客户亲述，属编造，需改写。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [
+      "藤叶纹是手工錾刻的，纹路里容易积下细尘，用软布顺着纹路轻擦就能保持清晰的层次（产品信息仅写“藤叶纹手工錾刻”，未提供清洁方法或积尘说明）",
+      "大约一个下午就好（服务周期未在政策中给出）"
+     ],
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 3,
+      "goal": 4,
+      "faithfulness": 2
+     },
+     "hard_fail": true,
+     "hard_fail_reason": "编造服务周期“大约一个下午就好”及未提供的保养方法细节",
+     "comment": "保养知识具体但超出产品信息，服务时长属自造，需删改。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [
+      "到今年秋天满一年了（购买日期2025-11-01，满一年应为2026年11月，非秋天）",
+      "做一次免费抛光会更透亮（“更透亮”为效果承诺，政策仅写免费抛光）"
+     ],
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 3,
+      "goal": 3,
+      "faithfulness": 2
+     },
+     "hard_fail": true,
+     "hard_fail_reason": "时间陈述与购买记录不符（满一年在11月而非秋天），且含未提供的效果承诺",
+     "comment": "私享时段邀约得体，但时间点错误、效果承诺越界。"
+    }
+   ],
+   "set": {
+    "diversity": 3,
+    "best_id": 1,
+    "comment": "三条分别走关怀、保养、服务邀约，方向有区分；但均存在编造或越界陈述，且发送时机为周二、违反客户仅周末联系的偏好，需CA周末重写后再发。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  },
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 5,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "引用生日自购与周末佩戴的真实档案，关心体验并自然带出免费抛光，分寸得当。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [
+      "“大约一个下午就好”为自造的抛光时长"
+     ],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 3
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "保养知识实用，但“一个下午就好”是输入中没有的时长，需删去或改为不承诺时间。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "私享时段邀约得体、易拒绝，但未用到客户周末佩戴等具体信息，个性化略弱。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 1,
+    "comment": "三条分别走关心体验、保养知识、预约服务，方向清晰；候选1最贴合档案且无编造，候选2需修正自造时长。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  }
+ ]
+}

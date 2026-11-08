@@ -1,0 +1,379 @@
+{
+ "case_id": "E05",
+ "meta": {
+  "type": "edge",
+  "focus": "新客、信息少；不能显得太熟络；邀约应轻、无购买压力"
+ },
+ "request": {
+  "case_id": "E05",
+  "scenario": "event",
+  "today": "2026-11-28",
+  "ca_name": "Lina",
+  "client": {
+   "client_id": "C14",
+   "surname": "许",
+   "gender": "F",
+   "preferred_name": null,
+   "age_band": "25-30",
+   "city": "杭州",
+   "tier": "新客 New",
+   "birthday": null,
+   "occupation": null,
+   "interests": [],
+   "style_notes": null,
+   "purchases": [],
+   "last_visit": "2026-10-03",
+   "preferences": [],
+   "family": null,
+   "ca_notes": "国庆期间在杭州快闪店加的微信，试戴过小珍宝吊坠，说“再考虑一下”；其他信息不多"
+  },
+  "history": [
+   {
+    "speaker": "CA",
+    "time": "2026-10-03 18:40",
+    "text": "许女士您好，我是瓦洛蕾的Lina，今天很高兴认识您"
+   },
+   {
+    "speaker": "client",
+    "time": "2026-10-03 19:02",
+    "text": "你好，我再考虑一下"
+   }
+  ],
+  "products": [],
+  "context": "活动：杭州店冬日橱窗点亮夜\n时间：2026年12月12日（周六）18:30–20:30\n地点：杭州湖滨店\n内容：新橱窗揭幕、热红酒、小珍宝系列陈列"
+ },
+ "result": {
+  "case_id": "E05",
+  "version": "v1",
+  "analysis": {
+   "key_facts": [
+    "许女士在国庆快闪店试戴过小珍宝吊坠，说“再考虑一下”，此后56天未联系",
+    "最后一条消息来自客户，尚未被回应，必须先自然接住这句话",
+    "活动：12月12日周六18:30–20:30，杭州湖滨店，冬日橱窗点亮夜，含新橱窗揭幕、热红酒、小珍宝系列陈列",
+    "客户为杭州本地新客，仅有一次快闪店接触"
+   ],
+   "risks": [
+    "客户仍在考虑阶段，不能催促成交或暗示购买",
+    "必须先回应“我再考虑一下”，不能像没看到一样直接发邀约",
+    "不得编造嘉宾、礼品、名额等信息",
+    "不施压、不使用‘名额有限’类表述",
+    "不打折、不做投资承诺、不用极限词"
+   ],
+   "timing_ok": true,
+   "max_similarity": 0.57
+  },
+  "candidates": [
+   {
+    "angle": "专属感",
+    "message": "许女士您好，我是瓦洛蕾的Lina。您说的再考虑一下我一直记着，不着急，慢慢来。\n12月12日周六晚上6点半到8点半，杭州湖滨店有一场冬日橱窗点亮夜，新橱窗揭幕，现场也有小珍宝系列的陈列——您上次试戴的那枚吊坠就在这个系列里，所以想到您。\n如果那晚方便，回我一句就好；不方便也完全没关系。",
+    "rationale": "先接住客户的犹豫，再以她试戴过的小珍宝系列为联结说明为何特意邀请，结尾轻量、可拒绝。",
+    "issues": [],
+    "repaired": true
+   },
+   {
+    "angle": "信息清晰",
+    "message": "许女士您好，我是Lina。上次您说再考虑一下，我这边不催，您按自己的节奏就好。\n跟您说个事：12月12日周六18:30–20:30，杭州湖滨店办冬日橱窗点亮夜，新橱窗揭幕，备了热红酒，小珍宝系列也会一并陈列。\n想来的话微信回我一声就行；若带一位朋友同来，也提前告诉我，我好安排。",
+    "rationale": "简洁列出时间、地点、内容与携伴确认方式，方便客户快速判断，同时先回应她的犹豫。",
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "灵活型",
+    "message": "许女士您好，我是Lina。您说再考虑一下，我完全理解，不用急着回我。\n12月12日周六18:30–20:30杭州湖滨店有场冬日橱窗点亮夜，新橱窗揭幕，小珍宝系列也会陈列。您若那晚有空，来坐坐就好；若时间不凑巧，我也可以另约一个安静的时段陪您慢慢看，或先把相关信息发给您。\n哪种都行，您说了算。",
+    "rationale": "在邀约同时给出私人时段与先发资料两个替代选项，把决定权完全交给客户，契合她仍在考虑的状态。",
+    "issues": [],
+    "repaired": false
+   }
+  ],
+  "model": "deepseek:deepseek-chat",
+  "latency_s": 6.6
+ },
+ "judge": {
+  "candidates": [
+   {
+    "id": 1,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 4,
+     "naturalness": 3,
+     "appropriateness": 4,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "专属感做得不错，但开头“我一直记着/不着急，慢慢来”属于套话，建议换一个更自然的开头。"
+   },
+   {
+    "id": 2,
+    "unsupported_claims": [
+     "若带一位朋友同来，也提前告诉我，我好安排（活动信息未提及可携伴，属于自造安排）"
+    ],
+    "scores": {
+     "personalization": 3,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 3,
+     "goal": 4,
+     "faithfulness": 3
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "信息清楚，但“带一位朋友同来，我好安排”是活动信息里没有的安排，属于轻微自造，建议删去。"
+   },
+   {
+    "id": 3,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 3,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 5,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "分寸感好，给了客户轻松拒绝的出口，但“安静的时段”是规范里点名的套话，建议替换。"
+   }
+  ],
+  "set": {
+   "diversity": 4,
+   "best_id": 1,
+   "comment": "三条方向区分明显（专属感、信息清晰、灵活型），候选1最贴合“被特意挑选”的目标，只需把开头套话换掉即可发送。"
+  },
+  "judge_model": "deepseek:deepseek-chat"
+ },
+ "judge_history": [
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "scores": {
+      "personalization": 5,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "先回应“再考虑一下”，再自然带出试戴过的小珍宝吊坠，专属感与分寸都到位。"
+    },
+    {
+     "id": 2,
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 4
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "信息清楚，但“带一位朋友同来，我好安排”是输入未给出的安排，且个性化偏弱。"
+    },
+    {
+     "id": 3,
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 4
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "给了多个轻松选项，但“另约安静时段”“先把相关信息发给您”略超出输入范围，专属感不如候选1。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 1,
+    "comment": "三条方向不同：专属细节、信息清晰、灵活多选；候选1最贴合“被特意挑选”且忠实于输入。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  },
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [
+      "您上次试戴的那枚吊坠就在这个系列里（客户档案只写试戴过小珍宝吊坠，未说明该吊坠属于本次陈列的小珍宝系列——但小珍宝系列与小珍宝吊坠名称一致，属合理关联，不算编造）"
+     ],
+     "scores": {
+      "personalization": 5,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 4
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "专属感强，引用了试戴经历，但开头“我一直记着/不着急慢慢来”属规范明令避免的套话，需换开头。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [
+      "若带一位朋友同来，也提前告诉我，我好安排（输入未提供可带友人或需提前报备的安排，属自造服务细节）"
+     ],
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 3,
+      "goal": 4,
+      "faithfulness": 2
+     },
+     "hard_fail": true,
+     "hard_fail_reason": "编造输入中不存在的服务安排（带友人同来需提前告知以便安排），属自造服务条款。",
+     "comment": "信息清楚，但“带朋友同来提前告诉我，我好安排”是输入没有的安排，构成编造。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [
+      "另约一个安静的时段陪您慢慢看（“安静的时段”属规范明令避免的套话，且私人预约虽在政策内，但此处表述为套话）"
+     ],
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 4
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "灵活度好、易拒绝，但“安静的时段”是规范点名避免的套话，且个性化偏弱。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 1,
+    "comment": "三条方向不同（专属/清晰/灵活），候选1最贴合专属感目标，仅需替换开头套话；候选2因编造服务安排不可用。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  },
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [
+      "您上次试戴的那枚吊坠就在这个系列里（产品信息为空，且档案只说试戴过小珍宝吊坠，未确认“那枚”属于本次陈列）"
+     ],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 3,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 3
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "专属感自然，但“我一直记着/不着急慢慢来”属套话，且把试戴吊坠与本次陈列挂钩略超出输入。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [
+      "若带一位朋友同来，也提前告诉我，我好安排（输入未提供可带友或需安排的信息）"
+     ],
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 5,
+      "faithfulness": 3
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "时间地点内容清楚，但“带朋友同来”是自造安排，超出活动信息。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 5,
+      "naturalness": 4,
+      "appropriateness": 5,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "信息完整、语气克制，给了轻松拒绝与替代方案，未编造细节。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 3,
+    "comment": "三条角度不同；候选3最稳，无编造且分寸好，候选1、2各有轻微越界。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  },
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 3,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "专属感做得不错，但开头“我一直记着，不着急，慢慢来”是规范里点名的套话，建议换个自己的开头。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [
+      "“若带一位朋友同来，也提前告诉我，我好安排”——活动信息未提及可携伴或需安排，属自造服务细节"
+     ],
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 3,
+      "goal": 4,
+      "faithfulness": 3
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "信息清楚、语气得体，但“带朋友同来我来安排”是输入中没有的服务承诺，删掉即可。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "给了到店与另约两种轻松选择，分寸好；但“安静的时段”是规范点名的套话，且未点出小珍宝与她试戴的关联，专属感稍弱。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 1,
+    "comment": "三条方向区分明显（专属/信息/灵活）。候选1唯一把活动与她试戴过的小珍宝吊坠连起来，最像“特意想到您”，只需替换开头套话；候选2需删去携伴安排；候选3可补一句系列关联。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  }
+ ]
+}

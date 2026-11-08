@@ -1,0 +1,603 @@
+# 50 test cases. `focus` documents what the case is designed to test (not shown to the generator).
+# `type`: core = typical case, edge = harder/rare context, adversarial = invites a rule violation.
+
+# ───────────── 1 GREETING (9) ─────────────
+- id: G01
+  scenario: greeting
+  type: core
+  client: C01
+  today: "2026-11-07"
+  history:
+    - {speaker: client, time: "2026-10-30 22:41", text: 表很喜欢，下个月去维也纳看歌剧就戴它}
+    - {speaker: CA, time: "2026-10-31 09:15", text: 太好了Vivian，蓝色母贝在剧院的灯光下会很好看。祝旅途愉快}
+  context: 今天是客户生日
+  focus: 生日当天；用维也纳歌剧细节个性化；典藏客户不用emoji；客户偏好简短
+
+- id: G02
+  scenario: greeting
+  type: core
+  client: C02
+  today: "2027-02-05"
+  history:
+    - {speaker: client, time: "2026-09-12 16:02", text: 万年历那款下次去日内瓦时再看看实物}
+    - {speaker: CA, time: "2026-09-12 16:10", text: 好的陈先生，您行程确定后告诉我，我请日内瓦同事提前安排}
+  context: 今天是除夕，春节问候
+  focus: 正式语气的春节问候；藏家不喜欢空话；不能顺势推万年历
+
+- id: G03
+  scenario: greeting
+  type: core
+  client: C03
+  today: "2026-09-25"
+  history:
+    - {speaker: CA, time: "2026-09-10 20:30", text: 林女士，恭喜升职！戒指戴着如果有任何不合适随时告诉我}
+    - {speaker: client, time: "2026-09-10 21:02", text: 谢谢～很喜欢，每天都戴着}
+  context: 中秋节
+  focus: 新关系的节日问候；轻松但有分寸；可提每天佩戴的戒指但不推销
+
+- id: G04
+  scenario: greeting
+  type: edge
+  client: C05
+  today: "2026-11-12"
+  history:
+    - {speaker: client, time: "2026-10-28 21:10", text: 家母走了，最近不太想出门，谢谢你的花}
+    - {speaker: CA, time: "2026-10-28 21:30", text: 周女士，请您节哀，多保重身体。有任何需要我都在}
+  context: 今天是客户生日
+  focus: 客户服丧期间的生日——不能用“生日快乐”式喜庆语气；应体贴、简短，甚至不强调“快乐”
+
+- id: G05
+  scenario: greeting
+  type: core
+  client: C04
+  today: "2026-11-20"
+  history:
+    - {speaker: client, time: "2026-10-15 21:20", text: 纪念日礼物太太很喜欢，谢谢你的建议}
+    - {speaker: CA, time: "2026-10-15 21:35", text: 太好了赵先生，能帮上忙很开心}
+  context: 今天是客户本人生日（工作日）
+  focus: 男性客户本人生日；不要把话题转向太太或再买礼物；客户工作日白天忙
+
+- id: G06
+  scenario: greeting
+  type: edge
+  client: C17
+  today: "2026-12-25"
+  history:
+    - {speaker: client, time: "2026-08-02 14:05", text: Hi Lina! 我回上海啦，settle下来去店里找你}
+    - {speaker: CA, time: "2026-08-02 14:20", text: 欢迎回来Emily！等你有空来坐坐}
+  context: 圣诞节，同时也是客户生日
+  focus: 圣诞+生日双重节点；中英夹杂、轻松语气；客户说过要来店但未来——不要催
+
+- id: G07
+  scenario: greeting
+  type: edge
+  client: C14
+  today: "2027-01-01"
+  history:
+    - {speaker: CA, time: "2026-10-03 18:40", text: 许女士您好，我是瓦洛蕾的Lina，今天很高兴认识您}
+    - {speaker: client, time: "2026-10-03 19:02", text: 你好，我再考虑一下}
+  context: 元旦
+  focus: 信息极少的新客；不能编造关系细节；不提吊坠或“考虑得怎么样”
+
+- id: G08
+  scenario: greeting
+  type: edge
+  client: C06
+  today: "2026-11-07"
+  history:
+    - {speaker: CA, time: "2026-03-20 15:00", text: 刘女士，手镯抛光好了，您周末方便时来取}
+    - {speaker: client, time: "2026-03-21 10:12", text: 好的，周六上午过来}
+  context: 客户生日是11月4日（周三），因客户只接受周末联系，今天（周六）才发
+  focus: 迟到的生日祝福——要自然说明并尊重客户“只在周末联系”的偏好，不能假装是当天
+
+- id: G09
+  scenario: greeting
+  type: core
+  client: C19
+  today: "2026-09-25"
+  history:
+    - {speaker: client, time: "2025-09-03 20:11", text: 女儿戴着去学校报到了，说同学都问是哪里买的}
+    - {speaker: CA, time: "2025-09-03 20:30", text: 真好冯女士，祝她大学生活顺利}
+  context: 中秋节；双方一年没有聊天
+  focus: 一年未联系的节日问候；可温柔提及女儿；不推销
+
+# ───────────── 2 RECOMMENDATION (9) ─────────────
+- id: R01
+  scenario: recommendation
+  type: core
+  client: C03
+  today: "2026-11-14"
+  history:
+    - {speaker: client, time: "2026-09-25 21:00", text: 中秋快乐呀，戒指一直戴着}
+  products: [LRR-R-02]
+  context: 想推荐另一种颜色（白金或黄金）的叠戴戒指，与她现有玫瑰金款叠戴
+  focus: 基于“想再叠一只不同颜色”的旧对话推荐；不施压
+
+- id: R02
+  scenario: recommendation
+  type: core
+  client: C04
+  today: "2026-09-28"
+  history:
+    - {speaker: client, time: "2026-09-27 21:45", text: 纪念日快到了，今年送什么好？去年那个吊坠她很喜欢，这次想要不一样一点的}
+  products: [CST-N-02, PTR-P-01]
+  context: 结婚纪念日10月18日；客户主动询问
+  focus: 回应客户问题并给明确建议（客户喜欢明确）；星图可定制为结婚月份；最多推荐两件
+
+- id: R03
+  scenario: recommendation
+  type: core
+  client: C02
+  today: "2026-11-10"
+  history:
+    - {speaker: client, time: "2026-09-12 16:02", text: 万年历那款下次去日内瓦时再看看实物}
+  products: [MRD-W-01]
+  context: 北京店刚到了一枚Méridien万年历展示表，客户可在北京先看实物
+  focus: 藏家：要讲机芯/珐琅干货，不要空泛赞美；正式语气
+
+- id: R04
+  scenario: recommendation
+  type: edge
+  client: C11
+  today: "2026-11-10"
+  history:
+    - {speaker: client, time: "2026-11-09 22:30", text: Lina，我想找一块能日常戴的表，工地和办公室来回跑，不要太娇气的，有推荐吗}
+  products: [HBL-W-01, HBL-W-02]
+  context: 客户昨晚提问，今天上午回复
+  focus: 必须回应客户的具体需求；HBL-W-02（镶钻、晚宴款）不适合日常——好的回复应只推荐或优先推荐HBL-W-01
+
+- id: R05
+  scenario: recommendation
+  type: core
+  client: C16
+  today: "2026-11-05"
+  history:
+    - {speaker: client, time: "2026-07-18 17:20", text: 上次说的珐琅表盘多次烧制，有机会想看看}
+  products: [MRD-W-01]
+  context: 推荐万年历的珐琅表盘，客户可预约私人观赏
+  focus: 以工艺深度打动艺术藏家；不提投资/保值
+
+- id: R06
+  scenario: recommendation
+  type: edge
+  client: C14
+  today: "2026-11-07"
+  history:
+    - {speaker: CA, time: "2026-10-03 18:40", text: 许女士您好，我是瓦洛蕾的Lina，今天很高兴认识您}
+    - {speaker: client, time: "2026-10-03 19:02", text: 你好，我再考虑一下}
+  products: [PTR-P-01]
+  context: 新客一个月前试戴过小珍宝吊坠后没有下文
+  focus: 信息极少；不能编造客户喜好；不能“催单”
+
+- id: R07
+  scenario: recommendation
+  type: adversarial
+  client: C07
+  today: "2026-10-23"
+  history:
+    - {speaker: CA, time: "2026-10-20 19:30", text: 孙先生您好，今天谢谢您到店，我是Lina}
+    - {speaker: client, time: "2026-10-20 20:10", text: 你好，两地时那款挺喜欢，回头再看看}
+  products: [MRD-W-02, MRD-S-01, MRD-W-01]
+  context: 客户预算敏感，对两地时感兴趣
+  focus: 提供了三件产品（含52万万年历）——不应向预算敏感客户推万年历；最多两件；不提折扣
+
+- id: R08
+  scenario: recommendation
+  type: edge
+  client: C17
+  today: "2026-11-21"
+  history:
+    - {speaker: client, time: "2026-08-02 14:05", text: Hi Lina! 我回上海啦，settle下来去店里找你}
+    - {speaker: CA, time: "2026-08-02 14:20", text: 欢迎回来Emily！等你有空来坐坐}
+  products: [LRR-B-01]
+  context: 客户喜欢叠戴手镯，推荐常春藤手镯
+  focus: 中英夹杂的轻松语气，但仍要有品牌分寸；不要过度使用英文
+
+- id: R09
+  scenario: recommendation
+  type: core
+  client: C01
+  today: "2026-11-21"
+  history:
+    - {speaker: client, time: "2026-11-18 23:50", text: 维也纳回来了，12月有个慈善晚宴，在想戴什么}
+    - {speaker: CA, time: "2026-11-19 09:00", text: 欢迎回来Vivian！晚宴的造型我帮您想想}
+  products: [HBL-W-02]
+  context: 回应客户晚宴需求，推荐28mm玫瑰金镶钻款
+  focus: 跟进CA承诺；客户偏爱白金冷色调，而推荐款是玫瑰金——好的回复应诚实提及或巧妙衔接，而非忽略
+
+# ───────────── 3 AFTERCARE (8) ─────────────
+- id: A01
+  scenario: aftercare
+  type: core
+  client: C03
+  today: "2026-10-08"
+  history:
+    - {speaker: client, time: "2026-09-25 21:00", text: 中秋快乐呀，戒指一直戴着，就是感觉有一点点松}
+    - {speaker: CA, time: "2026-09-25 21:10", text: 中秋快乐林女士！}
+  products: [LRR-R-02]
+  context: 购买第28天，30天免费改圈即将到期
+  focus: 抓住客户之前提到“有点松”但CA没回应的细节；改圈期限是真实时效（不算施压）
+
+- id: A02
+  scenario: aftercare
+  type: adversarial
+  client: C10
+  today: "2026-11-05"
+  history:
+    - {speaker: client, time: "2026-11-04 21:15", text: 买了不到两周，表扣就有点松，开会的时候差点滑下来。这个价位不应该吧}
+  products: [HBL-W-02]
+  context: 客户投诉表扣问题；门店可安排免费检测调整，CA可上门取送
+  focus: 投诉：先致歉共情、给出明确方案；不能轻松愉快；不能承诺赔偿或折扣
+
+- id: A03
+  scenario: aftercare
+  type: core
+  client: C04
+  today: "2026-10-10"
+  history:
+    - {speaker: client, time: "2025-10-20 21:00", text: 她很喜欢，几乎天天戴}
+  products: [PTR-P-01]
+  context: 吊坠购买一周年，提醒珍珠母贝保养，可回店免费清洁
+  focus: 礼物在太太手里：保养建议要通过赵先生转达，语气自然
+
+- id: A04
+  scenario: aftercare
+  type: core
+  client: C09
+  today: "2026-11-10"
+  history:
+    - {speaker: client, time: "2025-04-10 15:30", text: 表走得很准，月相每天看着很安心}
+  products: [MRD-W-01]
+  context: 购买已5年半，建议保养；会员计划首次保养免费；可上门取表
+  focus: 典藏、正式、不喜欢打扰；以爱惜表的心情切入保养；记住他看月亮的细节
+
+- id: A05
+  scenario: aftercare
+  type: edge
+  client: C18
+  today: "2026-11-04"
+  history:
+    - {speaker: CA, time: "2026-10-28 17:00", text: 唐先生，礼盒和卡片都按您的要求准备好了}
+    - {speaker: client, time: "2026-10-28 17:05", text: 好，谢谢}
+  products: [LRR-B-01]
+  context: 购买一周后跟进
+  focus: 隐私：不提收礼人；消息简短；可告知终身免费抛光等服务
+
+- id: A06
+  scenario: aftercare
+  type: core
+  client: C01
+  today: "2026-11-02"
+  history:
+    - {speaker: client, time: "2026-10-30 22:41", text: 表很喜欢，下个月去维也纳看歌剧就戴它}
+    - {speaker: CA, time: "2026-10-31 09:15", text: 太好了Vivian，蓝色母贝在剧院的灯光下会很好看。祝旅途愉快}
+  products: [HBL-W-01]
+  context: 提醒客户注册会员计划，保修可由2年延长至8年；注册只需扫码1分钟
+  focus: 简短（客户偏好）；实用信息；不与上一条消息重复
+
+- id: A07
+  scenario: aftercare
+  type: core
+  client: C11
+  today: "2026-11-04"
+  history:
+    - {speaker: client, time: "2026-05-02 18:00", text: 戒指太美了，婚礼那天一定闪闪的}
+  products: [CST-R-01]
+  context: 戒指购买已半年，建议回店免费清洁并检查镶爪
+  focus: 镶爪检查的具体理由；可提婚礼但不评论婚姻；客户是建筑师可呼应工作场景
+
+- id: A08
+  scenario: aftercare
+  type: edge
+  client: C06
+  today: "2026-11-10"
+  history:
+    - {speaker: CA, time: "2026-03-20 15:00", text: 刘女士，手镯抛光好了，您周末方便时来取}
+    - {speaker: client, time: "2026-03-21 10:12", text: 好的，周六上午过来}
+  products: [LRR-B-01]
+  context: 手镯购买一年，可免费抛光。注意：今天是周二
+  focus: 客户只接受周末联系——工具应在analysis中标记 timing_ok=false 并建议周末发送；消息本身也应适合周末
+
+# ───────────── 4 REACTIVATION (8) ─────────────
+- id: RA01
+  scenario: reactivation
+  type: core
+  client: C08
+  today: "2026-11-10"
+  history:
+    - {speaker: client, time: "2024-03-09 12:00", text: 好喜欢这个档案故事，谢谢Lina}
+  products: [PTR-P-01]
+  context: 2年半未联系；瓦洛蕾档案馆刚出版了一本1920年代设计手稿画册，门店可赠送给会员
+  focus: 用“档案/vintage”兴趣自然重连；不指责；画册是输入中的真实信息
+
+- id: RA02
+  scenario: reactivation
+  type: edge
+  client: C12
+  today: "2026-11-10"
+  history:
+    - {speaker: CA, time: "2023-01-15 18:00", text: 马先生，祝新加坡的新店开业顺利}
+    - {speaker: client, time: "2023-01-15 18:30", text: 谢谢，有空回成都再聚}
+  context: 近4年未联系，无具体活动或新品可分享
+  focus: 没有“理由”时如何自然重连；不能编造新品；可问候新加坡生意/两地时表
+
+- id: RA03
+  scenario: reactivation
+  type: core
+  client: C09
+  today: "2026-11-21"
+  history:
+    - {speaker: client, time: "2025-04-10 15:30", text: 表走得很准，月相每天看着很安心}
+  products: [MRD-W-01]
+  context: 19个月未联系；表已到保养周期；本周六晚有月全食（虚构天象，可提及）
+  focus: 以天文兴趣+月相自然切入；正式；保养是次要信息
+
+- id: RA04
+  scenario: reactivation
+  type: adversarial
+  client: C20
+  today: "2026-11-10"
+  history:
+    - {speaker: CA, time: "2026-06-01 10:00", text: 韩先生您好，6月18日北京店有一场制表师交流会，诚邀您参加}
+    - {speaker: client, time: "2026-06-01 21:00", text: 谢谢，最近忙，不参加了}
+    - {speaker: CA, time: "2026-10-20 10:00", text: 韩先生，好久不见，最近一切都好吗？}
+  context: CA上一条消息3周未获回复；客户不喜欢频繁消息
+  focus: 连续未回复+反感打扰——应极轻、可不需回复，甚至建议暂缓；绝不能再追问“为什么没回”
+
+- id: RA05
+  scenario: reactivation
+  type: adversarial
+  client: C13
+  today: "2026-11-10"
+  history:
+    - {speaker: client, time: "2025-10-05 20:00", text: 表很好，谢谢}
+  products: [HBL-W-01]
+  context: 一年多未联系。CA本想顺便提11月28日上海店的高级珠宝预览会
+  focus: 陷阱：客户偏好“不接受活动邀约”——不能邀请活动，应改为私人预约
+
+- id: RA06
+  scenario: reactivation
+  type: core
+  client: C19
+  today: "2026-11-14"
+  history:
+    - {speaker: client, time: "2025-09-03 20:11", text: 女儿戴着去学校报到了，说同学都问是哪里买的}
+    - {speaker: CA, time: "2025-09-03 20:30", text: 真好冯女士，祝她大学生活顺利}
+  products: [PTR-P-01]
+  context: 14个月未联系；母贝吊坠可免费清洁
+  focus: 以女儿上大学一年为情感切入；不推销
+
+- id: RA07
+  scenario: reactivation
+  type: adversarial
+  client: C15
+  today: "2026-11-05"
+  history:
+    - {speaker: client, time: "2025-11-08 14:00", text: 双十一都不打折？那算了}
+    - {speaker: CA, time: "2025-11-08 14:10", text: 高先生抱歉，我们全年都是统一价格。您有需要随时找我}
+  context: 去年因不打折不欢而散；今年双十一前夕
+  focus: 高风险：不能暗示今年有折扣；不提双十一；以戒指保养/服务等无压力理由重连
+
+- id: RA08
+  scenario: reactivation
+  type: core
+  client: C17
+  today: "2026-11-07"
+  history:
+    - {speaker: client, time: "2026-08-02 14:05", text: Hi Lina! 我回上海啦，settle下来去店里找你}
+    - {speaker: CA, time: "2026-08-02 14:20", text: 欢迎回来Emily！等你有空来坐坐}
+  context: 客户说回来后会来店但3个月没来；店里有新的brunch区（免费咖啡与小点）
+  focus: 不能“你说要来怎么没来”；轻松中英夹杂；新brunch区是真实信息
+
+# ───────────── 5 EVENT (8) ─────────────
+- id: E01
+  scenario: event
+  type: core
+  client: C16
+  today: "2026-11-05"
+  history:
+    - {speaker: client, time: "2026-07-18 17:20", text: 上次说的珐琅表盘多次烧制，有机会想看看}
+  context: |
+    活动：「火与时间——瓦洛蕾珐琅工艺之夜」
+    时间：2026年11月21日（周六）19:00–21:00
+    地点：北京国贸丽庭店二楼沙龙
+    内容：日内瓦珐琅匠人现场演示大明火珐琅烧制，展出Méridien万年历珐琅表盘
+    可携一位同伴；请于11月15日前回复
+  focus: 与客户兴趣精准匹配；信息完整准确；正式
+
+- id: E02
+  scenario: event
+  type: core
+  client: C02
+  today: "2026-11-10"
+  history:
+    - {speaker: client, time: "2026-09-12 16:02", text: 万年历那款下次去日内瓦时再看看实物}
+  context: |
+    活动：Méridien万年历机芯拆解课，由日内瓦制表师主讲
+    时间：2026年11月28日（周六）14:00–16:30
+    地点：北京国贸丽庭店
+    本场仅设8个座位（真实信息）
+  focus: 名额有限是真实信息，可平和告知，不能“先到先得”施压；藏家干货
+
+- id: E03
+  scenario: event
+  type: adversarial
+  client: C13
+  today: "2026-11-10"
+  history:
+    - {speaker: client, time: "2025-10-05 20:00", text: 表很好，谢谢}
+  context: |
+    活动：Constellation高级珠宝私享预览
+    时间：2026年11月28日（周六）15:00–18:00
+    地点：上海静安恒汇店
+    CA被要求邀请所有尊享客户
+  focus: 陷阱：客户明确“不接受活动邀约”——应改为提供一对一私人预约观看同批作品，而不是邀请参加活动
+
+- id: E04
+  scenario: event
+  type: core
+  client: C01
+  today: "2026-11-21"
+  history:
+    - {speaker: client, time: "2026-11-18 23:50", text: 维也纳回来了，12月有个慈善晚宴，在想戴什么}
+    - {speaker: CA, time: "2026-11-19 09:00", text: 欢迎回来Vivian！晚宴的造型我帮您想想}
+  context: |
+    活动：Constellation高级珠宝私享预览
+    时间：2026年12月5日（周六）15:00–18:00
+    地点：上海静安恒汇店VIP沙龙
+    可携一位同伴；现场可试戴，适合为晚宴挑选
+  focus: 与客户晚宴需求结合；简短；不用emoji
+
+- id: E05
+  scenario: event
+  type: edge
+  client: C14
+  today: "2026-11-28"
+  history:
+    - {speaker: CA, time: "2026-10-03 18:40", text: 许女士您好，我是瓦洛蕾的Lina，今天很高兴认识您}
+    - {speaker: client, time: "2026-10-03 19:02", text: 你好，我再考虑一下}
+  context: |
+    活动：杭州店冬日橱窗点亮夜
+    时间：2026年12月12日（周六）18:30–20:30
+    地点：杭州湖滨店
+    内容：新橱窗揭幕、热红酒、小珍宝系列陈列
+  focus: 新客、信息少；不能显得太熟络；邀约应轻、无购买压力
+
+- id: E06
+  scenario: event
+  type: edge
+  client: C06
+  today: "2026-11-14"
+  history:
+    - {speaker: CA, time: "2026-11-07 10:00", text: 刘女士，迟到的生日祝福，祝您新的一岁一切顺遂}
+    - {speaker: client, time: "2026-11-07 12:30", text: 谢谢Lina，有心了}
+  context: |
+    活动：古典乐与腕表——室内乐沙龙
+    时间：2026年11月26日（周四）19:30–21:00
+    地点：上海静安恒汇店
+    今天是周六
+  focus: 客户是古典乐爱好者但工作日是手术日——活动在周四，应给出替代方案（周末私人时段）
+
+- id: E07
+  scenario: event
+  type: adversarial
+  client: C20
+  today: "2026-11-21"
+  history:
+    - {speaker: CA, time: "2026-06-01 10:00", text: 韩先生您好，6月18日北京店有一场制表师交流会，诚邀您参加}
+    - {speaker: client, time: "2026-06-01 21:00", text: 谢谢，最近忙，不参加了}
+  context: |
+    活动：Méridien万年历机芯拆解课
+    时间：2026年11月28日（周六）14:00–16:30
+    地点：北京国贸丽庭店
+  focus: 已两次婉拒活动+反感打扰——邀约应极简、明确“不必回复”、提供私下看表的替代
+
+- id: E08
+  scenario: event
+  type: core
+  client: C11
+  today: "2026-11-19"
+  history:
+    - {speaker: client, time: "2026-05-02 18:00", text: 戒指太美了，婚礼那天一定闪闪的}
+  context: |
+    活动：冬日香槟品鉴暨常春藤錾刻工坊体验
+    时间：2026年12月19日（周六）14:00–17:00
+    地点：上海静安恒汇店
+    可携一位同伴；体验匠人錾刻藤叶纹
+  focus: 可邀请先生同来（客户自己分享过），但不要过度假设；结合建筑师对手工的兴趣
+
+# ───────────── 6 PRICE OBJECTION (8) ─────────────
+- id: P01
+  scenario: price_objection
+  type: core
+  client: C07
+  today: "2026-10-24"
+  history:
+    - {speaker: CA, time: "2026-10-23 19:00", text: 孙先生，两地时这周到了一枚石板灰表盘的现货，您有空可以再来试试}
+    - {speaker: client, time: "2026-10-24 12:30", text: 我查了一下香港好像便宜一万多，下个月正好去香港出差}
+  products: [MRD-W-02]
+  context: 瓦洛蕾实行全球统一价格体系，各地差异主要来自汇率与税费；内地购买享官方保修与会员计划
+  focus: 不能否认香港价格、不能贬低；说明价格体系与保障；尊重客户在香港购买的选择
+
+- id: P02
+  scenario: price_objection
+  type: adversarial
+  client: C15
+  today: "2026-11-09"
+  history:
+    - {speaker: client, time: "2026-11-09 13:00", text: 双十一了，有没有活动？或者你们员工价能不能帮我拿一个，想送女朋友常春藤手镯}
+  products: [LRR-B-01, LRR-R-02]
+  context: 客户去年因不打折离开；今年又来问
+  focus: 明确不能提供员工价/活动，但要积极帮他完成送礼；可提供刻字/礼盒；可提叠戴戒指作为预算内选择
+
+- id: P03
+  scenario: price_objection
+  type: core
+  client: C03
+  today: "2026-11-15"
+  history:
+    - {speaker: CA, time: "2026-11-14 20:00", text: 林女士，常春藤手镯和您的戒指是同一个藤叶纹，叠在一起很有呼应感}
+    - {speaker: client, time: "2026-11-15 10:20", text: 好看是好看，但3万8对我来说有点超预算了}
+  products: [LRR-B-01, LRR-R-02]
+  context: 客户第一次买高级珠宝，预算有限
+  focus: 不让客户觉得“买不起”；提供叠戴戒指作为替代；不催促
+
+- id: P04
+  scenario: price_objection
+  type: adversarial
+  client: C04
+  today: "2026-10-02"
+  history:
+    - {speaker: CA, time: "2026-09-28 21:00", text: 赵先生，星宿项链的吊坠背面可以刻上你们结婚那个月的星图，很有纪念意义}
+    - {speaker: client, time: "2026-10-01 22:10", text: 我在小红书上看到有代购便宜七八千，是正品吗？}
+  products: [CST-N-02]
+  context: 官方渠道：真品证书、全球保修、终身清洁、星图定制只在官方渠道提供
+  focus: 不贬低代购、不评判真伪；陈述官方价值（星图定制只有官方能做）；纪念日时间临近但不施压
+
+- id: P05
+  scenario: price_objection
+  type: adversarial
+  client: C02
+  today: "2026-11-12"
+  history:
+    - {speaker: CA, time: "2026-11-10 10:00", text: 陈先生，北京店到了一枚Méridien万年历展示表，乳白珐琅表盘，您方便时可以来看}
+    - {speaker: client, time: "2026-11-11 22:00", text: 看了，确实漂亮。不过同级别的德系万年历便宜将近十万}
+  products: [MRD-W-01]
+  context: 客户提到另一品牌（未具名）的万年历更便宜
+  focus: 藏家对比竞品——不贬低对方；用自制机芯、大明火珐琅、成品率等干货回应；正式
+
+- id: P06
+  scenario: price_objection
+  type: edge
+  client: C17
+  today: "2026-11-22"
+  history:
+    - {speaker: CA, time: "2026-11-21 18:00", text: Emily，常春藤手镯叠戴起来很有层次，你戴金色系一定好看}
+    - {speaker: client, time: "2026-11-22 11:00", text: 好看！但我在伦敦的时候看过，退税后便宜挺多的 hmm}
+  products: [LRR-B-01]
+  context: 客户已回国定居
+  focus: 中英夹杂；承认海外退税现实；强调国内售后便利（终身抛光在上海店即可）
+
+- id: P07
+  scenario: price_objection
+  type: adversarial
+  client: C10
+  today: "2026-11-12"
+  history:
+    - {speaker: CA, time: "2026-11-06 18:00", text: 郑女士，表扣已经调整好并做了全面检测，再次抱歉给您带来不便}
+    - {speaker: client, time: "2026-11-11 21:00", text: 表扣问题这件事挺影响体验的。我还想再买一条星宿项链，能不能给我个补偿价？}
+  products: [CST-N-02]
+  context: 不能给补偿价；可提供：免费刻字、礼盒、CA亲自送达、优先服务
+  focus: 合理诉求+不能打折的两难；真诚致歉、不能打折、给出政策内诚意
+
+- id: P08
+  scenario: price_objection
+  type: core
+  client: C14
+  today: "2026-11-08"
+  history:
+    - {speaker: CA, time: "2026-11-07 15:00", text: 许女士，小珍宝吊坠的四叶造型来自瓦洛蕾1920年代的档案图稿，上次您试戴很好看}
+    - {speaker: client, time: "2026-11-08 09:40", text: 我挺喜欢的，第一次买你们家，能不能便宜点？}
+  products: [PTR-P-01]
+  context: 新客首次购买
+  focus: 新客议价：温和拒绝、强调首次购买的体验（刻字、礼盒、终身清洁），不让客户尴尬

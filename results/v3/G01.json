@@ -1,0 +1,245 @@
+{
+ "case_id": "G01",
+ "meta": {
+  "type": "core",
+  "focus": "生日当天；用维也纳歌剧细节个性化；典藏客户不用emoji；客户偏好简短"
+ },
+ "request": {
+  "case_id": "G01",
+  "scenario": "greeting",
+  "today": "2026-11-07",
+  "ca_name": "Lina",
+  "client": {
+   "client_id": "C01",
+   "surname": "王",
+   "gender": "F",
+   "preferred_name": "Vivian",
+   "age_band": "35-40",
+   "city": "上海",
+   "tier": "典藏 Heritage",
+   "birthday": "11-07",
+   "occupation": "投资银行合伙人",
+   "interests": [
+    "歌剧",
+    "旅行",
+    "普拉提"
+   ],
+   "style_notes": "偏爱白金与冷色调，简洁线条；戒指尺寸11号",
+   "purchases": [
+    {
+     "date": "2023-06-18",
+     "item": "Constellation 星宿 钻石戒指",
+     "note": "自购，纪念升任合伙人"
+    },
+    {
+     "date": "2026-10-30",
+     "item": "Heure Bleue 蓝调时刻 女士腕表 33mm",
+     "note": "自购"
+    }
+   ],
+   "last_visit": "2026-10-30",
+   "preferences": [
+    "喜欢简短的消息",
+    "希望被称呼为Vivian"
+   ],
+   "family": null,
+   "ca_notes": "工作忙，回复常在深夜；10月底提到11月要去维也纳听歌剧"
+  },
+  "history": [
+   {
+    "speaker": "client",
+    "time": "2026-10-30 22:41",
+    "text": "表很喜欢，下个月去维也纳看歌剧就戴它"
+   },
+   {
+    "speaker": "CA",
+    "time": "2026-10-31 09:15",
+    "text": "太好了Vivian，蓝色母贝在剧院的灯光下会很好看。祝旅途愉快"
+   }
+  ],
+  "products": [],
+  "context": "今天是客户生日"
+ },
+ "result": {
+  "case_id": "G01",
+  "version": "v3",
+  "analysis": {
+   "key_facts": [
+    "C3: 今天是Vivian生日（11-07）",
+    "C5: 10月底提到11月要去维也纳听歌剧",
+    "C6: 兴趣包括歌剧、旅行",
+    "C4: 偏爱简洁线条与冷色调，喜欢简短消息"
+   ],
+   "risks": [
+    "客户喜欢简短消息，每条不超过80字",
+    "纯祝福，不提产品、新品、价格、活动、清洁保养或到店",
+    "不提及年龄",
+    "全文用“您”，称呼Vivian",
+    "不用emoji",
+    "上一段对话已于7天前自然结束，不回应旧消息、不为迟回道歉，也不重复10-31已说过的祝福",
+    "维也纳之行是客户自己提过的事，不能编成她的原话或细节"
+   ],
+   "timing_ok": true,
+   "max_similarity": 0.59
+  },
+  "candidates": [
+   {
+    "angle": "温情回忆",
+    "message": "Vivian，生日快乐。记得您这个月要去维也纳听歌剧，愿这一岁里有好音乐，也有让您安静下来的时刻。",
+    "rationale": "以她自己提过的维也纳歌剧之行切入，祝福落在音乐与安静上，贴她的兴趣又不提产品。｜事实核查已删改：想起您说这个月要带新表去维也纳听歌剧（把CRM备注/客户原话合并成客户原话式表述，且“带新表”为H1内容，可引用但需自然表达；此处“您说”将CRM备注说成客户原话）",
+    "facts_used": [
+     "C3",
+     "C5",
+     "H1",
+     "C6"
+    ],
+    "critic_removed": [
+     "想起您说这个月要带新表去维也纳听歌剧（把CRM备注/客户原话合并成客户原话式表述，且“带新表”为H1内容，可引用但需自然表达；此处“您说”将CRM备注说成客户原话）"
+    ],
+    "issues": [],
+    "repaired": true
+   },
+   {
+    "angle": "简洁雅致",
+    "message": "Vivian，生日快乐。愿这一年如您偏爱的冷色调，清简、从容，余韵长。",
+    "rationale": "两三句话，用她偏爱的冷色调与简洁线条作意象，克制不堆砌。",
+    "facts_used": [
+     "C3",
+     "C4"
+    ],
+    "critic_removed": [],
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "轻关怀",
+    "message": "Vivian，生日快乐。这个月要去维也纳了，愿您听得尽兴，也留一点时间给自己。",
+    "rationale": "祝福之外只轻轻问一句她提过的旅行安排，关心她本人，不涉及产品或到店。｜事实核查已删改：行程排得紧吗（假定行程安排，属未确认的具体细节）",
+    "facts_used": [
+     "C3",
+     "C5",
+     "C6"
+    ],
+    "critic_removed": [
+     "行程排得紧吗（假定行程安排，属未确认的具体细节）"
+    ],
+    "issues": [],
+    "repaired": true
+   }
+  ],
+  "model": "deepseek:deepseek-chat",
+  "latency_s": 5.7
+ },
+ "judge": {
+  "candidates": [
+   {
+    "id": 1,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 5,
+     "brand_voice": 5,
+     "naturalness": 5,
+     "appropriateness": 5,
+     "goal": 5,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "引用维也纳歌剧这一真实记录，祝福克制有温度，无推销，符合简短偏好。"
+   },
+   {
+    "id": 2,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 5,
+     "naturalness": 4,
+     "appropriateness": 5,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "用冷色调偏好做比喻雅致，但略偏文案腔，个性化稍弱于另两条。"
+   },
+   {
+    "id": 3,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 5,
+     "brand_voice": 5,
+     "naturalness": 5,
+     "appropriateness": 5,
+     "goal": 5,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "结合维也纳行程与忙碌状态，关怀自然不施压，像真人手打。"
+   }
+  ],
+  "set": {
+   "diversity": 4,
+   "best_id": 1,
+   "comment": "三条均为纯祝福、无推销，角度各异（音乐陪伴/风格比喻/行程关怀），候选1最贴合客户真实语境。"
+  },
+  "judge_model": "deepseek:deepseek-chat"
+ },
+ "judge_history": [
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 5,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "引用维也纳歌剧这一真实细节，祝福克制有温度，简短不推销，可直接发送。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 5,
+      "naturalness": 4,
+      "appropriateness": 5,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "冷色调偏好来自档案，语气雅致；但略偏文案腔，且未用上维也纳这一更鲜活的细节。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 5,
+      "brand_voice": 4,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "口语自然、贴合她忙碌的节奏，祝福真诚；品牌气质稍淡于候选1。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 1,
+    "comment": "三条均为纯祝福、无推销，角度各异；候选1在具体细节与品牌温度之间平衡最好。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  }
+ ]
+}

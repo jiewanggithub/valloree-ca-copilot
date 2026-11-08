@@ -1,0 +1,238 @@
+{
+ "case_id": "RA04",
+ "meta": {
+  "type": "adversarial",
+  "focus": "连续未回复+反感打扰——应极轻、可不需回复，甚至建议暂缓；绝不能再追问“为什么没回”"
+ },
+ "request": {
+  "case_id": "RA04",
+  "scenario": "reactivation",
+  "today": "2026-11-10",
+  "ca_name": "Lina",
+  "client": {
+   "client_id": "C20",
+   "surname": "韩",
+   "gender": "M",
+   "preferred_name": null,
+   "age_band": "40-45",
+   "city": "北京",
+   "tier": "尊享 Privilege",
+   "birthday": null,
+   "occupation": "律师",
+   "interests": [],
+   "style_notes": null,
+   "purchases": [
+    {
+     "date": "2025-05-10",
+     "item": "Méridien 子午线 两地时腕表 41mm",
+     "note": "自购"
+    }
+   ],
+   "last_visit": "2025-05-10",
+   "preferences": [
+    "不喜欢频繁收到消息"
+   ],
+   "family": null,
+   "ca_notes": "话少，曾两次婉拒活动邀请"
+  },
+  "history": [
+   {
+    "speaker": "CA",
+    "time": "2026-06-01 10:00",
+    "text": "韩先生您好，6月18日北京店有一场制表师交流会，诚邀您参加"
+   },
+   {
+    "speaker": "client",
+    "time": "2026-06-01 21:00",
+    "text": "谢谢，最近忙，不参加了"
+   },
+   {
+    "speaker": "CA",
+    "time": "2026-10-20 10:00",
+    "text": "韩先生，好久不见，最近一切都好吗？"
+   }
+  ],
+  "products": [],
+  "context": "CA上一条消息3周未获回复；客户不喜欢频繁消息"
+ },
+ "result": {
+  "case_id": "RA04",
+  "version": "v3",
+  "analysis": {
+   "key_facts": [
+    "C4：2025年5月购入Méridien子午线两地时腕表41mm",
+    "S6：腕表建议每4-5年保养一次",
+    "X1：CA上一条消息3周未获回复，客户不喜欢频繁消息",
+    "C3：话少，曾两次婉拒活动邀请"
+   ],
+   "risks": [
+    "上一条问候未获回复，不能像没发过一样重复问候",
+    "客户不喜欢频繁消息，三条都要短、低压、明确无需回复",
+    "不能暗示客户久未到店",
+    "不推产品、不提活动邀约"
+   ],
+   "timing_ok": true,
+   "max_similarity": 0.39
+  },
+  "candidates": [
+   {
+    "angle": "念旧型",
+    "message": "韩先生，上次那句问候就不必回了。想起您那只子午线两地时，走时还稳吗？不用特意回，我在这边，需要时说一声就好。",
+    "rationale": "先替客户卸下未回复的压力，再以他手上的表自然起话，短而轻。｜事实核查已删改：戴了一年半（购买日期为2025-05-10，至今天2026-11-10约一年半，属可推算，但“戴了一年半”假定持续佩戴，属未确认事实）",
+    "facts_used": [
+     "C4",
+     "X1"
+    ],
+    "critic_removed": [
+     "戴了一年半（购买日期为2025-05-10，至今天2026-11-10约一年半，属可推算，但“戴了一年半”假定持续佩戴，属未确认事实）"
+    ],
+    "issues": [],
+    "repaired": true
+   },
+   {
+    "angle": "服务理由型",
+    "message": "韩先生，打扰一句。您那只子午线两地时按建议四到五年保养一次，现在还早，等走时有什么变化，我帮您安排检测就行。无需回复。",
+    "rationale": "以保养周期这一真实服务条款切入，给的是方便而非推销，并明确不必回复。",
+    "facts_used": [
+     "C4",
+     "S6",
+     "X1"
+    ],
+    "critic_removed": [],
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "轻分享型",
+    "message": "韩先生，一句闲话：腕表注册会员计划后保修可延到八年，首次保养也免。您那只子午线若还没注册，我把步骤发您，不回复也没关系。",
+    "rationale": "分享一条与他已购腕表相关的实用信息，不涉新品不要求回复，分寸轻。",
+    "facts_used": [
+     "C4",
+     "S5",
+     "S6"
+    ],
+    "critic_removed": [],
+    "issues": [],
+    "repaired": false
+   }
+  ],
+  "model": "deepseek:deepseek-chat",
+  "latency_s": 5.1
+ },
+ "judge": {
+  "candidates": [
+   {
+    "id": 1,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 5,
+     "naturalness": 5,
+     "appropriateness": 5,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "以旧问候收尾、以腕表走时为由头，克制不施压，符合话少客户的节奏；目标上略偏被动，但作为唤醒可接受。"
+   },
+   {
+    "id": 2,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 4,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "保养周期引用准确、明确说“现在还早”不推销，分寸得当；开头“打扰一句”稍显模板，可再自然些。"
+   },
+   {
+    "id": 3,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 3,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 3,
+     "goal": 3,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "会员计划信息准确，但对明确不喜欢频繁消息、且刚婉拒过活动的客户，主动提出“发步骤”略显推动，且未确认是否已注册，稍欠分寸。"
+   }
+  ],
+  "set": {
+   "diversity": 4,
+   "best_id": 1,
+   "comment": "三条分别走念旧、保养、会员权益三条不同路径，差异清晰；候选1最贴合该客户话少、不喜打扰的偏好，可直接发送。"
+  },
+  "judge_model": "deepseek:deepseek-chat"
+ },
+ "judge_history": [
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "以客户实际拥有的子午线腕表为话题，语气克制不施压，明确不要求回复，符合低频偏好；只是重新建立联系的理由略弱。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [
+      "按建议四到五年保养一次（输入未给出保养周期）"
+     ],
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 3,
+      "faithfulness": 2
+     },
+     "hard_fail": true,
+     "hard_fail_reason": "自造保养周期“四到五年保养一次”，输入中无此服务条款",
+     "comment": "服务理由方向可行，但编造了保养周期，属自造服务条款，不可发送。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [
+      "首次保养也免（输入政策中无此条款）"
+     ],
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 3,
+      "goal": 3,
+      "faithfulness": 2
+     },
+     "hard_fail": true,
+     "hard_fail_reason": "虚构“首次保养免费”政策，输入中无此条款",
+     "comment": "会员计划延保八年有依据，但“首次保养免费”为编造，且对不喜欢频繁消息的客户略显推销。"
+    }
+   ],
+   "set": {
+    "diversity": 3,
+    "best_id": 1,
+    "comment": "三条分别走念旧、保养、会员计划三个方向，差异尚可；候选1最贴合低频偏好与克制语气，另两条均因编造服务条款不可用。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  }
+ ]
+}

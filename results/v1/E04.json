@@ -1,0 +1,399 @@
+{
+ "case_id": "E04",
+ "meta": {
+  "type": "core",
+  "focus": "与客户晚宴需求结合；简短；不用emoji"
+ },
+ "request": {
+  "case_id": "E04",
+  "scenario": "event",
+  "today": "2026-11-21",
+  "ca_name": "Lina",
+  "client": {
+   "client_id": "C01",
+   "surname": "王",
+   "gender": "F",
+   "preferred_name": "Vivian",
+   "age_band": "35-40",
+   "city": "上海",
+   "tier": "典藏 Heritage",
+   "birthday": "11-07",
+   "occupation": "投资银行合伙人",
+   "interests": [
+    "歌剧",
+    "旅行",
+    "普拉提"
+   ],
+   "style_notes": "偏爱白金与冷色调，简洁线条；戒指尺寸11号",
+   "purchases": [
+    {
+     "date": "2023-06-18",
+     "item": "Constellation 星宿 钻石戒指",
+     "note": "自购，纪念升任合伙人"
+    },
+    {
+     "date": "2026-10-30",
+     "item": "Heure Bleue 蓝调时刻 女士腕表 33mm",
+     "note": "自购"
+    }
+   ],
+   "last_visit": "2026-10-30",
+   "preferences": [
+    "喜欢简短的消息",
+    "希望被称呼为Vivian"
+   ],
+   "family": null,
+   "ca_notes": "工作忙，回复常在深夜；10月底提到11月要去维也纳听歌剧"
+  },
+  "history": [
+   {
+    "speaker": "client",
+    "time": "2026-11-18 23:50",
+    "text": "维也纳回来了，12月有个慈善晚宴，在想戴什么"
+   },
+   {
+    "speaker": "CA",
+    "time": "2026-11-19 09:00",
+    "text": "欢迎回来Vivian！晚宴的造型我帮您想想"
+   }
+  ],
+  "products": [],
+  "context": "活动：Constellation高级珠宝私享预览\n时间：2026年12月5日（周六）15:00–18:00\n地点：上海静安恒汇店VIP沙龙\n可携一位同伴；现场可试戴，适合为晚宴挑选"
+ },
+ "result": {
+  "case_id": "E04",
+  "version": "v1",
+  "analysis": {
+   "key_facts": [
+    "Vivian 10月底自购 Heure Bleue 腕表，11月去了维也纳听歌剧，回来说12月有慈善晚宴在想戴什么",
+    "CA 两天前只回了“欢迎回来，晚宴造型我帮您想想”，她的问题尚未真正被回应，需先接上",
+    "她喜欢简短消息、被称呼 Vivian，回复常在深夜，风格偏爱白金冷色调与简洁线条",
+    "活动：12月5日周六15:00–18:00，上海静安恒汇店VIP沙龙，可携一位同伴，现场可试戴"
+   ],
+   "risks": [
+    "她上一条消息在等回应，不能像没说过一样直接发活动",
+    "她偏好简短，消息不宜长；不用emoji",
+    "不编造嘉宾、礼品、名额等信息；不用“名额有限”施压",
+    "不评论晚宴造型以外的外貌话题，不打折、不做投资承诺"
+   ],
+   "timing_ok": true,
+   "max_similarity": 0.58
+  },
+  "candidates": [
+   {
+    "angle": "专属感",
+    "message": "Vivian，晚宴的事我一直记着。12月5日周六下午三点到六点，静安恒汇店VIP沙龙有一场Constellation高级珠宝私享预览，现场可以试戴。您偏爱白金和简洁线条，我想借这个机会陪您把晚宴的搭配定下来。可以带一位同伴来。方便的话回我一声就好。",
+    "rationale": "先回应她挂在心上的晚宴，再把活动与她的白金偏好、试戴需求连起来，显得是为她而约。",
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "信息清晰",
+    "message": "Vivian，接着上次说的晚宴：12月5日周六15:00–18:00，静安恒汇店VIP沙龙有一场Constellation高级珠宝私享预览，现场可试戴，也能带一位同伴。时间是下午，不影响您白天安排。想来告诉我一声，我提前留好位置。",
+    "rationale": "时间、地点、内容、能否携伴一次说清，方便她快速判断，结尾留出轻松拒绝的空间。",
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "灵活型",
+    "message": "Vivian，12月5日周六下午静安恒汇店有场Constellation私享预览，本想着晚宴正好用得上。知道您日程紧，若那天不方便，我可以另约一个安静的时段陪您慢慢试；也可以先把资料发您。您看哪种省心。",
+    "rationale": "给出到场、另约、先看资料三种选择，尊重她忙碌的节奏，不施加任何压力。",
+    "issues": [],
+    "repaired": false
+   }
+  ],
+  "model": "deepseek:deepseek-chat",
+  "latency_s": 4.6
+ },
+ "judge": {
+  "candidates": [
+   {
+    "id": 1,
+    "unsupported_claims": [
+     "“晚宴的事我一直记着”——套话，且“一直记着”属于规范中明确列出的套话"
+    ],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 4,
+     "naturalness": 3,
+     "appropriateness": 4,
+     "goal": 4,
+     "faithfulness": 4
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "信息完整、引用风格偏好得当，但开头“我一直记着”是规范点名的套话，建议换成更具体的由头。"
+   },
+   {
+    "id": 2,
+    "unsupported_claims": [
+     "“时间是下午，不影响您白天安排”——对客户日程的推测，输入中无依据（客户工作忙，下午未必空闲）"
+    ],
+    "scores": {
+     "personalization": 3,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 3,
+     "goal": 4,
+     "faithfulness": 3
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "时间地点清楚，但“不影响您白天安排”是对客户日程的无依据揣测，且“提前留好位置”暗示已占位，建议删去。"
+   },
+   {
+    "id": 3,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 5,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "回应了晚宴需求，给出活动与备选方案，轻松可拒绝，符合客户喜欢简短、日程紧的特点；仅“安静的时段”属规范点名的套话，可微调。"
+   }
+  ],
+  "set": {
+   "diversity": 4,
+   "best_id": 3,
+   "comment": "三条分别走专属感、信息清晰、灵活备选路线，差异明显；候选3分寸最好、无编造，仅需替换“安静的时段”这一套话。"
+  },
+  "judge_model": "deepseek:deepseek-chat"
+ },
+ "judge_history": [
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "scores": {
+      "personalization": 5,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "以晚宴为线索串联客户偏好与活动信息，专属感自然，结尾轻松不施压。"
+    },
+    {
+     "id": 2,
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "信息清楚完整，但“不影响您白天安排”略显多余，个性化稍弱于候选1。"
+    },
+    {
+     "id": 3,
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 3,
+      "faithfulness": 4
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "灵活备选贴心，但“先把资料发您”暗示了输入中未提及的资料，且活动时间信息不够完整。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 1,
+    "comment": "三条分别侧重专属感、信息清晰与灵活备选，方向有区分；候选1最贴合客户偏好与场景目标。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  },
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 5,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "专属感强，引用了客户偏好与晚宴需求，信息完整；开头“我一直记着”属套话，建议换一个更自然的开头。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "时间地点内容清楚，衔接晚宴自然；“不影响您白天安排”略多余，可删。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 3,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "灵活体贴，但“另约安静时段”“先发资料”弱化了活动邀约本身，且“安静的时段”属套话，目标完成度稍低。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 1,
+    "comment": "三条分别侧重专属感、信息清晰与灵活备选，差异明显；候选1最贴合场景目标，微调开头即可发送。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  },
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [
+      "晚宴的事我一直记着（套话，且暗示持续跟进，但对话历史中CA仅说过'帮您想想'，属轻微问题）"
+     ],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 3,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 4
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "信息完整、引用客户偏好，但开头'我一直记着'是规范明令避免的套话，需换开头。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [
+      "我提前留好位置（暗示已可预留，属CA正常动作范畴，可接受）"
+     ],
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 5,
+      "faithfulness": 4
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "时间地点内容清楚，衔接晚宴自然，但个性化偏弱，未用到白金偏好等具体信息。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [
+      "另约一个安静的时段（'安静的时段'为规范明令避免的套话）"
+     ],
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 3,
+      "naturalness": 3,
+      "appropriateness": 4,
+      "goal": 3,
+      "faithfulness": 4
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "给了灵活退路，但活动时间只说'下午'不够清楚，且用了被禁的'安静的时段'套话。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 2,
+    "comment": "三条角度不同（专属/清晰/灵活），候选2信息最完整且无套话，微调补一句白金偏好即可发送。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  },
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [
+      "晚宴的事我一直记着（套话，且暗示持续跟进，输入中CA仅说过'帮您想想'）"
+     ],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 3,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 4
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "信息完整、专属感尚可，但开头'我一直记着'属套话，且客户偏好简短，可再压缩。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [
+      "时间是下午，不影响您白天安排（对客户日程的推测，输入无依据）",
+      "我提前留好位置（暗示已能预留，属CA未做的动作）"
+     ],
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 3,
+      "goal": 4,
+      "faithfulness": 3
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "时间地点内容清楚，但'不影响您白天安排'是无依据的日程推测，'留好位置'也略越界。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [
+      "另约一个安静的时段（套话'安静的时段'，且属可提供的私人预约，尚可）"
+     ],
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 3,
+      "faithfulness": 4
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "灵活、易拒绝，但活动信息偏简（未写具体时段与VIP沙龙），专属感弱，目标完成度一般。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 1,
+    "comment": "三条分别走专属、清晰、灵活路线，差异明显；候选1最贴合场景，去掉套话开头并精简即可发送。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  }
+ ]
+}

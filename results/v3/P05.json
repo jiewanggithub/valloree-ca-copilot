@@ -1,0 +1,258 @@
+{
+ "case_id": "P05",
+ "meta": {
+  "type": "adversarial",
+  "focus": "藏家对比竞品——不贬低对方；用自制机芯、大明火珐琅、成品率等干货回应；正式"
+ },
+ "request": {
+  "case_id": "P05",
+  "scenario": "price_objection",
+  "today": "2026-11-12",
+  "ca_name": "Lina",
+  "client": {
+   "client_id": "C02",
+   "surname": "陈",
+   "gender": "M",
+   "preferred_name": null,
+   "age_band": "45-50",
+   "city": "北京",
+   "tier": "尊享 Privilege",
+   "birthday": null,
+   "occupation": "精密制造企业创始人",
+   "interests": [
+    "制表工艺",
+    "古董表收藏",
+    "高尔夫"
+   ],
+   "style_notes": "资深藏家，懂机芯，反感空洞的营销话术；偏好铂金、珐琅",
+   "purchases": [
+    {
+     "date": "2024-04-02",
+     "item": "Méridien 子午线 两地时腕表 41mm",
+     "note": "自购，常往返北京与日内瓦"
+    }
+   ],
+   "last_visit": "2026-09-12",
+   "preferences": [
+    "语气正式",
+    "只谈干货"
+   ],
+   "family": null,
+   "ca_notes": "曾问过万年历机芯的调校注意事项；对手工珐琅很感兴趣"
+  },
+  "history": [
+   {
+    "speaker": "CA",
+    "time": "2026-11-10 10:00",
+    "text": "陈先生，北京店到了一枚Méridien万年历展示表，乳白珐琅表盘，您方便时可以来看"
+   },
+   {
+    "speaker": "client",
+    "time": "2026-11-11 22:00",
+    "text": "看了，确实漂亮。不过同级别的德系万年历便宜将近十万"
+   }
+  ],
+  "products": [
+   {
+    "sku": "MRD-W-01",
+    "name": "Méridien 子午线 万年历腕表 40mm",
+    "collection": "Méridien 子午线",
+    "category": "watch",
+    "material": "铂金表壳，乳白色珐琅表盘，自制万年历机芯，月相显示",
+    "price": 520000,
+    "story": "万年历可准确显示至2100年，珐琅表盘经多次烧制，成品率较低",
+    "care": "避免在晚上8点至凌晨2点间调校日历"
+   }
+  ],
+  "context": "客户提到另一品牌（未具名）的万年历更便宜"
+ },
+ "result": {
+  "case_id": "P05",
+  "version": "v3",
+  "analysis": {
+   "key_facts": [
+    "客户1天前说德系万年历便宜将近十万，需先回应",
+    "客户懂机芯、反感营销话术，语气正式、只谈干货",
+    "客户偏好铂金与珐琅，曾问万年历调校注意事项",
+    "作品为铂金表壳、乳白珐琅盘、自制万年历机芯，价格52万"
+   ],
+   "risks": [
+    "客户在等回复，必须先回应比价，不能直接推价值",
+    "不能给折扣或暗示可申请更低价格",
+    "不能贬低德系品牌或其他渠道",
+    "不能提保值升值或投资",
+    "不要用营销话术，客户反感",
+    "不要说超出预算这类话"
+   ],
+   "timing_ok": true,
+   "max_similarity": 0.19
+  },
+  "candidates": [
+   {
+    "angle": "共情+价值",
+    "message": "陈先生，这个差价我理解您为什么会提。铂金表壳本身成本就高，珐琅盘要多次烧制、成品率低，加上自制万年历机芯到2100年，这些是价格差的大头。您之前问过万年历调校，这枚的调校逻辑我可以当面给您讲清楚。方便时来上手看看，感受一下再判断。",
+    "rationale": "先接住比价，用材质与工艺的具体事实解释差价，再给一个轻松的到店邀请。",
+    "facts_used": [
+     "H2",
+     "P2",
+     "P4",
+     "C3",
+     "C4"
+    ],
+    "critic_removed": [],
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "政策+保障",
+    "message": "陈先生，您说的这个对比我明白。瓦洛蕾实行全球统一价格，这枚52万是统一的，没有折扣空间，这点我得跟您直说。您常往返北京和日内瓦，官方渠道给的是真品证书和全球保修，腕表注册会员计划后保修延到8年，首次保养也免费。这些是价格之外实际能落到的保障。",
+    "rationale": "坦诚说明统一价格不能打折，再用官方渠道保障回应客户对差价的顾虑，不贬低他方。",
+    "facts_used": [
+     "H2",
+     "P3",
+     "S1",
+     "S9",
+     "S5",
+     "S6"
+    ],
+    "critic_removed": [],
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "替代方案（增值服务）",
+    "message": "陈先生，差价的事我记下了，价格体系是统一的，我这边确实没法动。不过您要是来店里上手，我可以安排一个安静些的时段，把机芯调校和珐琅盘的做法当面聊透。若您愿意，刻字、礼盒和手写卡片这些也都可以安排。看您时间。",
+    "rationale": "不争辩差价，明确价格立场后转向私人预约与增值服务，保持关系且容易拒绝。",
+    "facts_used": [
+     "H2",
+     "S1",
+     "S7",
+     "S2",
+     "C3",
+     "C4"
+    ],
+    "critic_removed": [],
+    "issues": [
+     "[SOFT:cliche] 套话:一直记着"
+    ],
+    "repaired": false
+   }
+  ],
+  "model": "deepseek:deepseek-chat",
+  "latency_s": 6.1
+ },
+ "judge": {
+  "candidates": [
+   {
+    "id": 1,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 5,
+     "brand_voice": 5,
+     "naturalness": 5,
+     "appropriateness": 5,
+     "goal": 5,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "直接回应差价，用铂金、珐琅成品率、自制机芯等产品事实解释价值，并接上客户问过的调校话题，克制不推销。"
+   },
+   {
+    "id": 2,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 4,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "坚守统一价格并转向官方证书与保修保障，合规；但“52万”直接报价格略显生硬，且保障话术偏政策清单，干货感稍弱。"
+   },
+   {
+    "id": 3,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 3,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 4,
+     "goal": 3,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "回应了价格并邀约面谈，但“差价的事我记下了”偏套话，刻字礼盒在此价格异议语境下像补偿性赠礼，分寸略偏。"
+   }
+  ],
+  "set": {
+   "diversity": 4,
+   "best_id": 1,
+   "comment": "三条分别走价值解释、政策保障、面谈邀约三条路，差异清晰；候选1最贴合懂机芯的藏家，用产品事实回应差价，最推荐。"
+  },
+  "judge_model": "deepseek:deepseek-chat"
+ },
+ "judge_history": [
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 5,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "直接回应比价，用产品信息中的铂金、珐琅、自制机芯解释差价，并引用客户问过调校的真实档案，克制不争辩。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [
+      "首次保养也免费（政策内只写终身免费清洁抛光，未提首次保养免费）"
+     ],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 3
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "坚守统一价格并陈述官方保障，方向正确，但“首次保养免费”超出政策条款，需删去。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 3,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "价格立场清楚，但未正面回应德系比价，且刻字礼盒与万年历腕表关联牵强，价值引导偏弱。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 1,
+    "comment": "三条分别走价值解释、政策保障、到店体验，路径不同；候选1最贴合资深藏家只谈干货的偏好。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  }
+ ]
+}

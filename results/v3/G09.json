@@ -1,0 +1,232 @@
+{
+ "case_id": "G09",
+ "meta": {
+  "type": "core",
+  "focus": "一年未联系的节日问候；可温柔提及女儿；不推销"
+ },
+ "request": {
+  "case_id": "G09",
+  "scenario": "greeting",
+  "today": "2026-09-25",
+  "ca_name": "Lina",
+  "client": {
+   "client_id": "C19",
+   "surname": "冯",
+   "gender": "F",
+   "preferred_name": null,
+   "age_band": "40-45",
+   "city": "成都",
+   "tier": "会员 Member",
+   "birthday": null,
+   "occupation": "中学校长",
+   "interests": [],
+   "style_notes": null,
+   "purchases": [
+    {
+     "date": "2025-09-01",
+     "item": "Petit Trésor 小珍宝 珍珠母贝吊坠",
+     "note": "送女儿的升学礼物"
+    }
+   ],
+   "last_visit": "2025-09-01",
+   "preferences": [],
+   "family": "女儿今年读大一",
+   "ca_notes": "很温和，喜欢聊女儿"
+  },
+  "history": [
+   {
+    "speaker": "client",
+    "time": "2025-09-03 20:11",
+    "text": "女儿戴着去学校报到了，说同学都问是哪里买的"
+   },
+   {
+    "speaker": "CA",
+    "time": "2025-09-03 20:30",
+    "text": "真好冯女士，祝她大学生活顺利"
+   }
+  ],
+  "products": [],
+  "context": "中秋节；双方一年没有聊天"
+ },
+ "result": {
+  "case_id": "G09",
+  "version": "v3",
+  "analysis": {
+   "key_facts": [
+    "C3 女儿今年读大一",
+    "H1 2025-09-03客户说女儿戴着吊坠去学校报到、同学都问是哪里买的",
+    "C4 CA备注：很温和，喜欢聊女儿",
+    "X1 中秋节；双方一年没有聊天"
+   ],
+   "risks": [
+    "上一段对话已在387天前自然结束，不能当成进行中的对话，也不要为迟回道歉",
+    "最后一条消息来自CA，语气要更轻，不能像没发过一样重复",
+    "纯祝福，不推荐产品、不提价格活动、不提供服务或保养",
+    "不提年龄，不写群发模板感的话",
+    "不虚构女儿近况细节，只能引用H1中已有的报到与同学询问"
+   ],
+   "timing_ok": true,
+   "max_similarity": 0.33
+  },
+  "candidates": [
+   {
+    "angle": "温情回忆",
+    "message": "冯女士，中秋快乐。我记得您之前提过，女儿戴着那枚珍珠母贝吊坠去学校报到，同学都问是哪里买的。一年过去，想来她的大学生活一切顺利。愿您和家人这晚吃得安稳，月色也好。",
+    "rationale": "以客户曾提过的报到细节切入，祝福落在女儿与家人身上，不涉产品与服务。｜事实核查已删改：去年您说女儿戴着那枚珍珠母贝吊坠去报到，同学都问是哪里买的，这句我一直记着（把H1的客户原话当作客户对CA说的话引用，且“我一直记着”属虚构由头）；她已是大一的第二个秋天了（时间推算有误：女儿2025年读大一，2026年9月应已是大二，且“第二个秋天”为推断性具体细节）",
+    "facts_used": [
+     "H1",
+     "C3",
+     "X1"
+    ],
+    "critic_removed": [
+     "去年您说女儿戴着那枚珍珠母贝吊坠去报到，同学都问是哪里买的，这句我一直记着（把H1的客户原话当作客户对CA说的话引用，且“我一直记着”属虚构由头）",
+     "她已是大一的第二个秋天了（时间推算有误：女儿2025年读大一，2026年9月应已是大二，且“第二个秋天”为推断性具体细节）"
+    ],
+    "issues": [],
+    "repaired": true
+   },
+   {
+    "angle": "简洁雅致",
+    "message": "冯女士，中秋快乐。月圆之时，愿您和家人围坐一处，清闲自在。",
+    "rationale": "两三句干净克制，用月色意象，适合一年未联系的分寸。",
+    "facts_used": [
+     "X1"
+    ],
+    "critic_removed": [],
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "轻关怀",
+    "message": "冯女士，中秋快乐。这一年学校的事想必不轻，您做校长操心不少。女儿上了大学，家里安静些了吧？愿这个节日您能歇一歇。",
+    "rationale": "祝福之外轻轻问一句她本人和家里的近况，不提产品、服务或到店。｜事实核查已删改：您做校长又带毕业班似的操心（“带毕业班”为清单外虚构细节）",
+    "facts_used": [
+     "C2",
+     "C3",
+     "X1"
+    ],
+    "critic_removed": [
+     "您做校长又带毕业班似的操心（“带毕业班”为清单外虚构细节）"
+    ],
+    "issues": [],
+    "repaired": true
+   }
+  ],
+  "model": "deepseek:deepseek-chat",
+  "latency_s": 6.7
+ },
+ "judge": {
+  "candidates": [
+   {
+    "id": 1,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 5,
+     "brand_voice": 5,
+     "naturalness": 4,
+     "appropriateness": 5,
+     "goal": 5,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "引用的是客户真实说过的话，并明确是过去的事，祝福克制具体，只是“我记得您之前提过”略近套话，可再自然些。"
+   },
+   {
+    "id": 2,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 2,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 5,
+     "goal": 3,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "语气雅致得体，但换个姓氏就能群发，没有用到任何客户信息，祝福目标完成得平淡。"
+   },
+   {
+    "id": 3,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 3,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "“学校的事想必不轻”属合理推测，但连问两句把祝福变成探询，分寸略过，客户不回复会有压力。"
+   }
+  ],
+  "set": {
+   "diversity": 4,
+   "best_id": 1,
+   "comment": "三条路线区分明显：回忆型、极简型、关怀型；候选1最贴合“被记得”的目标，候选3需减少提问。"
+  },
+  "judge_model": "deepseek:deepseek-chat"
+ },
+ "judge_history": [
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 5,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "引用真实对话细节并明确是过去的事，祝福克制温润，无推销。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 2,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 3,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "语气雅致但换个名字即可群发，缺少与冯女士的具体连接。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [
+      "女儿上了大学，家里安静些了吧（推测家庭氛围，档案未提及）"
+     ],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 3,
+      "goal": 4,
+      "faithfulness": 4
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "关怀真诚，但“家里安静些了吧”略带探问，分寸稍欠。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 1,
+    "comment": "三条风格区分明显：回忆型、雅致型、关怀型；候选1最贴合“被记得”的目标。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  }
+ ]
+}

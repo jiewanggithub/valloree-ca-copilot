@@ -1,0 +1,282 @@
+{
+ "case_id": "RA01",
+ "meta": {
+  "type": "core",
+  "focus": "用“档案/vintage”兴趣自然重连；不指责；画册是输入中的真实信息"
+ },
+ "request": {
+  "case_id": "RA01",
+  "scenario": "reactivation",
+  "today": "2026-11-10",
+  "ca_name": "Lina",
+  "client": {
+   "client_id": "C08",
+   "surname": "黄",
+   "gender": "F",
+   "preferred_name": "Coco",
+   "age_band": "25-30",
+   "city": "深圳",
+   "tier": "会员 Member",
+   "birthday": null,
+   "occupation": "时尚买手",
+   "interests": [
+    "vintage",
+    "设计档案",
+    "旅行"
+   ],
+   "style_notes": "喜欢有历史感的设计，黄金",
+   "purchases": [
+    {
+     "date": "2024-03-08",
+     "item": "Petit Trésor 小珍宝 珍珠母贝吊坠",
+     "note": "自购，喜欢它来自1920年代档案图稿的故事"
+    }
+   ],
+   "last_visit": "2024-03-08",
+   "preferences": [
+    "希望被称呼为Coco"
+   ],
+   "family": null,
+   "ca_notes": null
+  },
+  "history": [
+   {
+    "speaker": "client",
+    "time": "2024-03-09 12:00",
+    "text": "好喜欢这个档案故事，谢谢Lina"
+   }
+  ],
+  "products": [
+   {
+    "sku": "PTR-P-01",
+    "name": "Petit Trésor 小珍宝 珍珠母贝吊坠",
+    "collection": "Petit Trésor 小珍宝",
+    "category": "pendant",
+    "material": "18K黄金，白色珍珠母贝，0.05克拉钻石点缀",
+    "price": 12800,
+    "story": "四叶造型来自瓦洛蕾1920年代的档案图稿",
+    "care": "母贝避免接触香水与水"
+   }
+  ],
+  "context": "2年半未联系；瓦洛蕾档案馆刚出版了一本1920年代设计手稿画册，门店可赠送给会员"
+ },
+ "result": {
+  "case_id": "RA01",
+  "version": "v2",
+  "analysis": {
+   "key_facts": [
+    "Coco 2024年3月8日购入 Petit Trésor 珍珠母贝吊坠，喜欢它源自1920年代档案图稿的故事",
+    "她是时尚买手，兴趣是 vintage、设计档案、旅行",
+    "最后一条消息是她2024年3月9日说喜欢这个档案故事、谢谢Lina",
+    "瓦洛蕾档案馆刚出版1920年代设计手稿画册，门店可赠送给会员"
+   ],
+   "risks": [
+    "距上次联系已近两年半，不能暗示她久未到店",
+    "她最后一条是致谢，属自然结束，不要当未回复处理",
+    "不推产品、不提消费与等级",
+    "她可能忙于出差，需给她不回复的空间"
+   ],
+   "timing_ok": true,
+   "max_similarity": 0.25
+  },
+  "candidates": [
+   {
+    "angle": "念旧型",
+    "message": "Coco，好久不见。前两天翻到自己存的一份1920年代手稿影印页，四叶的那张，就想起您当时说喜欢小珍宝背后的档案故事。最近还好吗，还在满世界跑选货？不用急着回，看到了说声就行。",
+    "rationale": "以她购买时明确表达过的档案故事为共同记忆，轻问候近况，不要求回复。",
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "服务理由型",
+    "message": "Coco，我是Lina。珍珠母贝平时戴着好看，但怕香水和汗，容易失光。您那枚小珍宝要是想让它亮回来，拿来店里做次清洁就好，这项是终身的，不用预约很久。哪天路过深圳店，提前跟我说一声就行。",
+    "rationale": "用产品保养信息里写明的母贝忌香水与水、以及终身免费清洁的现有服务，提供一个方便且不勉强的理由。",
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "轻分享型",
+    "message": "Coco，跟您分享一件事：瓦洛蕾档案馆刚出了一本1920年代设计手稿画册，里面有不少当年的图稿，您做买手应该会看得进去。门店这边可以留给会员，您要是感兴趣，我给您留一本。不回复也没关系。",
+    "rationale": "以场景背景中确实存在的档案画册切入，贴合她对设计档案的兴趣，只分享不强求。",
+    "issues": [],
+    "repaired": false
+   }
+  ],
+  "model": "deepseek:deepseek-chat",
+  "latency_s": 4.4
+ },
+ "judge": {
+  "candidates": [
+   {
+    "id": 1,
+    "unsupported_claims": [
+     "前两天翻到自己存的一份1920年代手稿影印页（虚构CA个人动作/由头）"
+    ],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 4,
+     "goal": 4,
+     "faithfulness": 3
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "念旧开场自然，引用了客户真实说过的档案故事，但“翻到自己存的影印页”是虚构小由头，建议改为不依赖虚构动作的开头。"
+   },
+   {
+    "id": 2,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 3,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 3,
+     "goal": 2,
+     "faithfulness": 4
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "保养提醒本身合规，但沉睡唤醒一上来就引导到店做服务，目的性偏强，缺少与客户兴趣相关的真实理由。"
+   },
+   {
+    "id": 3,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 5,
+     "brand_voice": 5,
+     "naturalness": 5,
+     "appropriateness": 5,
+     "goal": 5,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "以档案馆画册为真实理由，贴合客户买手与设计档案兴趣，结尾轻松可拒绝，分寸得当。"
+   }
+  ],
+  "set": {
+   "diversity": 4,
+   "best_id": 3,
+   "comment": "三条分别走念旧、保养服务、轻分享路线，差异明显；候选3最贴合客户兴趣且无编造，是首选。"
+  },
+  "judge_model": "deepseek:deepseek-chat"
+ },
+ "judge_history": [
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [
+      "前两天翻到自己存的一份1920年代手稿影印页（输入中无此动作）",
+      "还在满世界跑选货（客户档案只说旅行/买手，未提及此说法）"
+     ],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 3,
+      "faithfulness": 2
+     },
+     "hard_fail": true,
+     "hard_fail_reason": "编造CA自身动作（翻到影印页）及客户言行（满世界跑选货）",
+     "comment": "念旧角度好，但虚构了CA的动作和客户近况，需改为可核实的事实。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 3,
+      "goal": 2,
+      "faithfulness": 4
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "清洁服务属实且克制，但更像售后提醒，缺少重新建立联系的真实理由，唤醒感弱。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "以档案馆画册为真实理由，贴合买手与档案兴趣，结尾轻松可拒绝，分寸得当。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 3,
+    "comment": "三条分别走念旧、服务、分享路线，差异明显；候选3事实干净、目标达成最好。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  },
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [
+      "前两天翻到自己存的一份1920年代手稿影印页（虚构的小由头，输入中无此动作）"
+     ],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 3
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "念旧自然、引用了客户真实说过的档案故事，但“翻到手稿影印页”是虚构小由头，建议改为不编造动作的表述。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 3,
+      "goal": 2,
+      "faithfulness": 4
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "保养提醒本身合规，但一上来就指向到店服务，唤醒理由偏弱，容易让久未联系的客户感到被“捞”。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "以档案馆画册这一真实由头轻分享，贴合买手兴趣，结尾轻松可拒绝，分寸与目标都到位。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 3,
+    "comment": "三条分别走念旧、服务、分享路线，差异明显；候选3最自然、最有依据，也最不显“捞人”。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  }
+ ]
+}

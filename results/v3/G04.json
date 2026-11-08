@@ -1,0 +1,251 @@
+{
+ "case_id": "G04",
+ "meta": {
+  "type": "edge",
+  "focus": "客户服丧期间的生日——不能用“生日快乐”式喜庆语气；应体贴、简短，甚至不强调“快乐”"
+ },
+ "request": {
+  "case_id": "G04",
+  "scenario": "greeting",
+  "today": "2026-11-12",
+  "ca_name": "Lina",
+  "client": {
+   "client_id": "C05",
+   "surname": "周",
+   "gender": "F",
+   "preferred_name": null,
+   "age_band": "50-55",
+   "city": "成都",
+   "tier": "典藏 Heritage",
+   "birthday": "11-12",
+   "occupation": "家族企业董事长",
+   "interests": [
+    "茶",
+    "书法",
+    "慈善"
+   ],
+   "style_notes": "收藏多件高级珠宝，偏爱黄金与传统意象",
+   "purchases": [
+    {
+     "date": "2025-12-20",
+     "item": "Lierre 常春藤 手镯",
+     "note": "自购"
+    },
+    {
+     "date": "2024-02-08",
+     "item": "Constellation 星宿 钻石项链",
+     "note": "送母亲的生日礼物"
+    }
+   ],
+   "last_visit": "2026-08-15",
+   "preferences": [
+    "母亲于2026年10月下旬过世，近期请避免喜庆、热闹的语气",
+    "语气正式"
+   ],
+   "family": null,
+   "ca_notes": "与CA关系很好，曾一起喝茶"
+  },
+  "history": [
+   {
+    "speaker": "client",
+    "time": "2026-10-28 21:10",
+    "text": "家母走了，最近不太想出门，谢谢你的花"
+   },
+   {
+    "speaker": "CA",
+    "time": "2026-10-28 21:30",
+    "text": "周女士，请您节哀，多保重身体。有任何需要我都在"
+   }
+  ],
+  "products": [],
+  "context": "今天是客户生日"
+ },
+ "result": {
+  "case_id": "G04",
+  "version": "v3",
+  "analysis": {
+   "key_facts": [
+    "今天是周女士生日（X1/C3）",
+    "母亲于2026年10月下旬过世，客户说最近不太想出门（H1）",
+    "CA在10月28日已表达过节哀（H2）",
+    "与CA曾一起喝茶，关系很好（C5）",
+    "兴趣：茶、书法（C6）",
+    "偏爱黄金与传统意象（C4）"
+   ],
+   "risks": [
+    "服丧期：不可用快乐、喜庆字眼，不邀约到店，不提产品与服务",
+    "上一段对话已自然结束，不为迟回道歉，也不当成进行中的对话",
+    "语气正式，不用emoji",
+    "生日当天提及母亲需极轻，不能变成客套的安慰"
+   ],
+   "timing_ok": true,
+   "max_similarity": 0.32
+  },
+  "candidates": [
+   {
+    "angle": "温情回忆",
+    "message": "周女士，今天是您的生日。愿这一年，笔下有从容，心里有安宁。母亲的事，我一直在心里放着，不敢多扰，只想让您知道，我记挂着您。",
+    "rationale": "以书法这一真实兴趣落在生日祝福上，对母亲的事只轻轻带过，不喜庆也不客套。｜事实核查已删改：我记得您说过，写字是您静心的方式",
+    "facts_used": [
+     "X1",
+     "C6",
+     "H1",
+     "C5"
+    ],
+    "critic_removed": [
+     "我记得您说过，写字是您静心的方式"
+    ],
+    "issues": [],
+    "repaired": true
+   },
+   {
+    "angle": "简洁雅致",
+    "message": "周女士，今天是您的生日。愿您如常写字、饮茶，日子平顺安稳。您若想说话，随时都在。",
+    "rationale": "三句话，克制干净，以茶与书法作意象，收尾给一个不必回复的陪伴。｜事实核查已删改：我在成都",
+    "facts_used": [
+     "X1",
+     "C6",
+     "C1"
+    ],
+    "critic_removed": [
+     "我在成都"
+    ],
+    "issues": [],
+    "repaired": true
+   },
+   {
+    "angle": "轻关怀",
+    "message": "周女士，生日这天，愿您今日有一盏安静的茶，也有一方自在的纸。近来不便出门的事，我明白，不必回我，只愿您身体好些，心也松些。",
+    "rationale": "把祝福落在茶与写字的日常上，对近况只说一句明白，不提产品、不邀约、不劝出门。｜事实核查已删改：我想起您说过茶能定神",
+    "facts_used": [
+     "X1",
+     "C6",
+     "H1"
+    ],
+    "critic_removed": [
+     "我想起您说过茶能定神"
+    ],
+    "issues": [],
+    "repaired": true
+   }
+  ],
+  "model": "deepseek:deepseek-chat",
+  "latency_s": 5.9
+ },
+ "judge": {
+  "candidates": [
+   {
+    "id": 1,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 4,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "“笔下有从容”贴合书法偏好，语气克制；但“我一直在心里放着”略近套话，可再收一点。"
+   },
+   {
+    "id": 2,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 4,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "简洁得体，写字饮茶呼应兴趣；但“随时都在”与上条CA消息重复，稍显模板。"
+   },
+   {
+    "id": 3,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 5,
+     "brand_voice": 5,
+     "naturalness": 5,
+     "appropriateness": 5,
+     "goal": 5,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "茶与纸的意象具体，明确“不必回我”给足空间，哀悼语境下分寸最好。"
+   }
+  ],
+  "set": {
+   "diversity": 4,
+   "best_id": 3,
+   "comment": "三条分别走温情、简洁、轻关怀路线，差异清晰；第三条在服丧语境下最稳，不施压也不空泛。"
+  },
+  "judge_model": "deepseek:deepseek-chat"
+ },
+ "judge_history": [
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [
+      "母亲的事，我一直在心里放着（客户档案与对话历史中无此依据，属虚构CA内心活动）"
+     ],
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 4,
+      "naturalness": 3,
+      "appropriateness": 3,
+      "goal": 4,
+      "faithfulness": 3
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "“笔下有从容”贴合书法偏好，但“我一直在心里放着”是虚构的CA内心活动，且“不敢多扰”略显套话，建议改为更克制的表达。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "以书法与茶呼应客户兴趣，语气正式克制，结尾轻松不施压，完全符合服丧期的分寸。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [
+      "近来不便出门的事（客户仅说“最近不太想出门”，属合理转述，非编造）"
+     ],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 4
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "茶与纸的意象贴合客户偏好，但“身体好些”暗示健康状态，稍越分寸，建议删去。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 2,
+    "comment": "三条分别走温情回忆、简洁雅致、轻关怀路线，差异明显；候选2最贴合服丧期的克制与正式语气，且无虚构。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  }
+ ]
+}

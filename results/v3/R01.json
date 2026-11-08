@@ -1,0 +1,253 @@
+{
+ "case_id": "R01",
+ "meta": {
+  "type": "core",
+  "focus": "基于“想再叠一只不同颜色”的旧对话推荐；不施压"
+ },
+ "request": {
+  "case_id": "R01",
+  "scenario": "recommendation",
+  "today": "2026-11-14",
+  "ca_name": "Lina",
+  "client": {
+   "client_id": "C03",
+   "surname": "林",
+   "gender": "F",
+   "preferred_name": null,
+   "age_band": "25-30",
+   "city": "杭州",
+   "tier": "会员 Member",
+   "birthday": "03-14",
+   "occupation": "互联网公司产品经理",
+   "interests": [
+    "瑜伽",
+    "咖啡",
+    "极简设计"
+   ],
+   "style_notes": "玫瑰金，喜欢叠戴，日常通勤佩戴；戒指尺寸9号",
+   "purchases": [
+    {
+     "date": "2026-09-10",
+     "item": "Lierre 常春藤 叠戴戒指（玫瑰金）",
+     "note": "自购，庆祝升职"
+    }
+   ],
+   "last_visit": "2026-09-10",
+   "preferences": [],
+   "family": null,
+   "ca_notes": "第一次买高级珠宝，挑选时很认真；说过以后想再叠一只不同颜色的"
+  },
+  "history": [
+   {
+    "speaker": "client",
+    "time": "2026-09-25 21:00",
+    "text": "中秋快乐呀，戒指一直戴着"
+   }
+  ],
+  "products": [
+   {
+    "sku": "LRR-R-02",
+    "name": "Lierre 常春藤 叠戴戒指",
+    "collection": "Lierre 常春藤",
+    "category": "ring",
+    "material": "18K黄金/玫瑰金/白金三色可选",
+    "price": 16800,
+    "story": "设计为可叠戴，适合日常",
+    "care": "30天内免费改圈"
+   }
+  ],
+  "context": "想推荐另一种颜色（白金或黄金）的叠戴戒指，与她现有玫瑰金款叠戴"
+ },
+ "result": {
+  "case_id": "R01",
+  "version": "v3",
+  "analysis": {
+   "key_facts": [
+    "C4：喜欢玫瑰金、喜欢叠戴、日常通勤佩戴、9号",
+    "C5：之前提过想再叠一只不同颜色的",
+    "C7：2026-09-10 自购 Lierre 常春藤 叠戴戒指（玫瑰金），庆祝升职",
+    "P2：Lierre 18K黄金/玫瑰金/白金三色可选",
+    "P4：设计为可叠戴，适合日常",
+    "S7：可发图片或视频；私人预约"
+   ],
+   "risks": [
+    "上一段对话50天前已自然结束，不能装作在回应旧消息，也不要为迟回道歉",
+    "不能报价时附加任何优惠暗示（S1全球统一价）",
+    "不能制造稀缺或紧迫感",
+    "一次只推荐一件（另一颜色的同款戒指）",
+    "人称全文用“您”"
+   ],
+   "timing_ok": true,
+   "max_similarity": 0.36
+  },
+  "candidates": [
+   {
+    "angle": "懂你型",
+    "message": "林女士，上次您提到想再叠一只不同颜色的，我最近把这件事又想起来。Lierre 常春藤那款除了玫瑰金，还有18K黄金和白金两种颜色，三色本来就是为了叠戴设计的，配您手上那只玫瑰金，通勤戴也不会显得刻意。您方便的话，我把另外两色的实拍图发给您看看，先不急着定。",
+    "rationale": "从客户曾说过的“想叠另一色”切入，直接对应三色可选与叠戴设计，下一步只需看图、可轻松拒绝。",
+    "facts_used": [
+     "C5",
+     "P2",
+     "P4",
+     "C4"
+    ],
+    "critic_removed": [],
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "故事型",
+    "message": "林女士，想起您九月挑Lierre时看得很仔细。这枚常春藤设计为可叠戴，适合日常。您那只玫瑰金一直戴着，若再加一只黄金或白金，叠起来会更有层次。哪天方便，可以上手比一比两色的效果。",
+    "rationale": "以可叠戴的设计思路为主，讲清颜色搭配的层次感，结尾是顺路试戴的低压力邀约。｜事实核查已删改：这枚常春藤的叠戴思路，是让几条藤蔓在指间错落缠绕，单戴干净，叠起来才有层次（未给出的产品设计工艺细节）；您那只玫瑰金已经戴了两个月（具体佩戴时长未确认，仅知9月25日说一直戴着）；颜色之间的落差会让藤蔓的线条更清楚（未给出的产品效果描述）；哪天路过湖滨（湖滨为虚构地点，清单仅有城市杭州）",
+    "facts_used": [
+     "C5",
+     "P4",
+     "P2",
+     "C7"
+    ],
+    "critic_removed": [
+     "这枚常春藤的叠戴思路，是让几条藤蔓在指间错落缠绕，单戴干净，叠起来才有层次（未给出的产品设计工艺细节）",
+     "您那只玫瑰金已经戴了两个月（具体佩戴时长未确认，仅知9月25日说一直戴着）",
+     "颜色之间的落差会让藤蔓的线条更清楚（未给出的产品效果描述）",
+     "哪天路过湖滨（湖滨为虚构地点，清单仅有城市杭州）"
+    ],
+    "issues": [],
+    "repaired": true
+   },
+   {
+    "angle": "邀约体验型",
+    "message": "林女士，Lierre 常春藤还有黄金和白金两色，和您那只玫瑰金叠在一起是另一种味道。要不要我拍段短视频发您，看看三色放在一起的样子？您哪天方便，我留个安静些的时段，您慢慢试。",
+    "rationale": "简短提产品，重点放在发视频或到店试戴的下一步，9号尺寸让客户觉得被记得。｜事实核查已删改：您哪天方便来湖滨（湖滨为虚构地点，清单仅有城市杭州）；9号这边都有（未确认的库存信息）",
+    "facts_used": [
+     "P2",
+     "C4",
+     "S7"
+    ],
+    "critic_removed": [
+     "您哪天方便来湖滨（湖滨为虚构地点，清单仅有城市杭州）",
+     "9号这边都有（未确认的库存信息）"
+    ],
+    "issues": [],
+    "repaired": true
+   }
+  ],
+  "model": "deepseek:deepseek-chat",
+  "latency_s": 7.8
+ },
+ "judge": {
+  "candidates": [
+   {
+    "id": 1,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 5,
+     "brand_voice": 5,
+     "naturalness": 4,
+     "appropriateness": 5,
+     "goal": 5,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "准确引用CRM中“想再叠一只不同颜色”的偏好，产品信息转述无误，结尾轻松可拒绝；仅“最近把这件事又想起来”略套话。"
+   },
+   {
+    "id": 2,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 5,
+     "naturalness": 4,
+     "appropriateness": 5,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "“九月挑Lierre时看得很仔细”有ca_notes依据，语气克制；但未点出客户想叠不同颜色这一关键偏好，推荐力度稍弱。"
+   },
+   {
+    "id": 3,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 3,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 4,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "短视频与到店试戴都在政策内，但“留个安静些的时段”属套话，且未用到客户任何具体信息，换个名字也能发。"
+   }
+  ],
+  "set": {
+   "diversity": 4,
+   "best_id": 1,
+   "comment": "三条分别走懂你、故事、体验路线，差异清晰；候选1最贴合客户“想叠不同颜色”的真实偏好，可直接发送。"
+  },
+  "judge_model": "deepseek:deepseek-chat"
+ },
+ "judge_history": [
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 5,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "准确引用客户档案中“想再叠一只不同颜色”的偏好，语气克制，结尾轻松可拒绝，完成度高。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [
+      "想起您九月挑Lierre时看得很仔细——ca_notes写的是“挑选时很认真”，属合理转述，但“看得很仔细”略作场景化"
+     ],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 4
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "整体可用，但未用上客户“想再叠一只不同颜色”这一关键偏好，个性化略弱于候选1。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [
+      "我留个安静些的时段——套话“安静的时段”，属轻微问题"
+     ],
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 3,
+      "naturalness": 3,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 4
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "邀约体验方向不错，但出现“安静的时段”套话，且未引用客户具体偏好，稍显模板。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 1,
+    "comment": "三条分别走懂你、故事、邀约体验路线，差异清晰；候选1最贴合客户档案且无套话，可直接发送。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  }
+ ]
+}

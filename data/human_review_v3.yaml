@@ -1,0 +1,8 @@
+# Manual review of v3 outputs. Same rubric as human_review_v1.yaml. Unlisted = OK.
+A08-3: {verdict: UNACCEPTABLE, code: stale_history, note: “上次说好周六上午来取手镯，一晃大半年了”——暗示客户没来取，误导}
+A06-1: {verdict: EDIT, code: critic_damage, note: 事实核查删掉内容后，“见个面”没有了目的}
+R08-1: {verdict: EDIT, code: invented_pretext, note: “最近翻到”由头；手镯与吊坠“叠”在一起说法别扭}
+RA02-3: {verdict: EDIT, code: critic_damage, note: 删改后变成“顺手分享一句”却没有分享内容}
+RA03-2: {verdict: EDIT, code: date_error, note: “已四年多”——实为5年8个月}
+RA05-3: {verdict: EDIT, code: invented_pretext, note: “前阵子看当代艺术的东西”}
+RA06-1: {verdict: EDIT, code: other, note: “人会清爽”语义不通}

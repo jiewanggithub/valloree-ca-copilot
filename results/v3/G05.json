@@ -1,0 +1,233 @@
+{
+ "case_id": "G05",
+ "meta": {
+  "type": "core",
+  "focus": "男性客户本人生日；不要把话题转向太太或再买礼物；客户工作日白天忙"
+ },
+ "request": {
+  "case_id": "G05",
+  "scenario": "greeting",
+  "today": "2026-11-20",
+  "ca_name": "Lina",
+  "client": {
+   "client_id": "C04",
+   "surname": "赵",
+   "gender": "M",
+   "preferred_name": null,
+   "age_band": "30-35",
+   "city": "深圳",
+   "tier": "会员 Member",
+   "birthday": "11-20",
+   "occupation": "科技公司工程总监",
+   "interests": [],
+   "style_notes": null,
+   "purchases": [
+    {
+     "date": "2025-10-12",
+     "item": "Petit Trésor 小珍宝 珍珠母贝吊坠",
+     "note": "送太太的结婚纪念日礼物"
+    }
+   ],
+   "last_visit": "2025-10-12",
+   "preferences": [
+    "工作日白天很忙，晚上回复"
+   ],
+   "family": "已婚，太太喜欢珍珠和小巧的款式；结婚纪念日10月18日",
+   "ca_notes": "选礼物时希望CA给明确建议，不喜欢绕弯子"
+  },
+  "history": [
+   {
+    "speaker": "client",
+    "time": "2026-10-15 21:20",
+    "text": "纪念日礼物太太很喜欢，谢谢你的建议"
+   },
+   {
+    "speaker": "CA",
+    "time": "2026-10-15 21:35",
+    "text": "太好了赵先生，能帮上忙很开心"
+   }
+  ],
+  "products": [],
+  "context": "今天是客户本人生日（工作日）"
+ },
+ "result": {
+  "case_id": "G05",
+  "version": "v3",
+  "analysis": {
+   "key_facts": [
+    "C3/X1：今天是赵先生本人生日（2026-11-20，工作日）",
+    "C2：科技公司工程总监，工作日白天很忙、习惯晚上回复",
+    "C6/H1：去年10月为太太选过Petit Trésor珍珠母贝吊坠作纪念日礼物，太太很喜欢",
+    "C5：选礼物时希望CA给明确建议，不喜欢绕弯子"
+   ],
+   "risks": [
+    "纯粹生日祝福，不得推荐产品或提及任何服务、到店、活动",
+    "不提及年龄",
+    "全文用“您”，不混用你",
+    "不写群发式套话，不虚构客户生活细节",
+    "客户白天忙，语气轻，不要求回复",
+    "上一段对话自然结束于36天前，不装作在回应旧消息，也不为迟回道歉"
+   ],
+   "timing_ok": true,
+   "max_similarity": 0.41
+  },
+  "candidates": [
+   {
+    "angle": "温情回忆",
+    "message": "赵先生，生日快乐。想到您之前选的那枚珍珠母贝吊坠，是为十月纪念日准备的，后来您说太太很喜欢，我印象一直很深。今天这日子，愿是您自己的。",
+    "rationale": "以去年为太太选礼的真实细节切入，把祝福落在客户本人身上，温度足而不涉销售。｜事实核查已删改：想到去年您来选那枚珍珠母贝吊坠，是为十月纪念日做准备（清单仅记录2025-10-12购买该吊坠作为结婚纪念日礼物，未记录客户到店选货的场景）；后来听您说太太很喜欢（H1为2026-10-15客户说，非“后来听您说”的转述，且时间表述与事实不符）；您挑礼物时的那份认真（对客户行为的评价，清单无依据）",
+    "facts_used": [
+     "C3",
+     "C6",
+     "H1"
+    ],
+    "critic_removed": [
+     "想到去年您来选那枚珍珠母贝吊坠，是为十月纪念日做准备（清单仅记录2025-10-12购买该吊坠作为结婚纪念日礼物，未记录客户到店选货的场景）",
+     "后来听您说太太很喜欢（H1为2026-10-15客户说，非“后来听您说”的转述，且时间表述与事实不符）",
+     "您挑礼物时的那份认真（对客户行为的评价，清单无依据）"
+    ],
+    "issues": [],
+    "repaired": true
+   },
+   {
+    "angle": "简洁雅致",
+    "message": "赵先生，生日快乐。愿这一年手头的事都顺，也留得出闲下来的时间。",
+    "rationale": "两句克制收束，适合忙碌、偏好简短回复的客户，不带任何附加请求。",
+    "facts_used": [
+     "C3"
+    ],
+    "critic_removed": [],
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "轻关怀",
+    "message": "赵先生，生日快乐。这条不必急着回。只愿今天能早一点收工，把这一晚留给自己。",
+    "rationale": "顺着客户工作忙、晚上才回消息的习惯给一句轻关怀，不提产品与服务，也不要回复。｜事实核查已删改：您平时工作节奏快，白天多半顾不上看消息（对客户日常作息的具体描述，清单无依据）",
+    "facts_used": [
+     "C3",
+     "C2"
+    ],
+    "critic_removed": [
+     "您平时工作节奏快，白天多半顾不上看消息（对客户日常作息的具体描述，清单无依据）"
+    ],
+    "issues": [],
+    "repaired": true
+   }
+  ],
+  "model": "deepseek:deepseek-chat",
+  "latency_s": 6.2
+ },
+ "judge": {
+  "candidates": [
+   {
+    "id": 1,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 5,
+     "brand_voice": 5,
+     "naturalness": 4,
+     "appropriateness": 4,
+     "goal": 5,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "引用真实购买与客户反馈，祝福收在“愿是您自己的”，克制有温度；仅“我印象一直很深”略近套话，可再轻一点。"
+   },
+   {
+    "id": 2,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 3,
+     "brand_voice": 5,
+     "naturalness": 5,
+     "appropriateness": 5,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "语气干净得体，但换个名字也能发，个性化偏弱，适合作为最简版本。"
+   },
+   {
+    "id": 3,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 3,
+     "brand_voice": 5,
+     "naturalness": 5,
+     "appropriateness": 5,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "“不必急着回”体贴且尊重客户晚上回复的习惯，分寸好；同样偏通用，缺一个属于赵先生的细节。"
+   }
+  ],
+  "set": {
+   "diversity": 4,
+   "best_id": 1,
+   "comment": "三条分别走回忆、简洁、轻关怀，方向清晰不重复；候选1最贴合“被记得”的目标，另两条可作备选语气。"
+  },
+  "judge_model": "deepseek:deepseek-chat"
+ },
+ "judge_history": [
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 5,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "引用真实对话与购买记录，祝福落点自然；但生日当天再提“为纪念日准备的礼物”略偏礼物话题，可再收一点。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "语气克制得体，但缺少客户具体信息，换个名字也能发，个性化偏弱。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "“不必急着回”体贴且符合晚间回复偏好，但同样偏通用，未用到客户真实细节。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 1,
+    "comment": "三条分别走回忆、简洁、轻关怀路线，差异清晰；候选1最有“被记得”的感觉，稍作收束即可发送。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  }
+ ]
+}

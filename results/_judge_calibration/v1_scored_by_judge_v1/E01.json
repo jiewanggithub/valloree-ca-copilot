@@ -1,0 +1,148 @@
+{
+ "case_id": "E01",
+ "meta": {
+  "type": "core",
+  "focus": "与客户兴趣精准匹配；信息完整准确；正式"
+ },
+ "request": {
+  "case_id": "E01",
+  "scenario": "event",
+  "today": "2026-11-05",
+  "ca_name": "Lina",
+  "client": {
+   "client_id": "C16",
+   "surname": "罗",
+   "gender": "F",
+   "preferred_name": null,
+   "age_band": "45-50",
+   "city": "北京",
+   "tier": "典藏 Heritage",
+   "birthday": null,
+   "occupation": "艺术基金会理事",
+   "interests": [
+    "珐琅艺术",
+    "当代艺术收藏",
+    "古籍"
+   ],
+   "style_notes": "收藏珐琅器，喜欢有工艺深度的作品",
+   "purchases": [
+    {
+     "date": "2025-06-06",
+     "item": "Constellation 星宿 钻石项链",
+     "note": "自购，定制了出生月星图"
+    }
+   ],
+   "last_visit": "2026-07-18",
+   "preferences": [
+    "语气正式"
+   ],
+   "family": null,
+   "ca_notes": "对珐琅表盘的多次烧制工艺非常感兴趣"
+  },
+  "history": [
+   {
+    "speaker": "client",
+    "time": "2026-07-18 17:20",
+    "text": "上次说的珐琅表盘多次烧制，有机会想看看"
+   }
+  ],
+  "products": [],
+  "context": "活动：「火与时间——瓦洛蕾珐琅工艺之夜」\n时间：2026年11月21日（周六）19:00–21:00\n地点：北京国贸丽庭店二楼沙龙\n内容：日内瓦珐琅匠人现场演示大明火珐琅烧制，展出Méridien万年历珐琅表盘\n可携一位同伴；请于11月15日前回复"
+ },
+ "result": {
+  "case_id": "E01",
+  "version": "v1",
+  "analysis": {
+   "key_facts": [
+    "客户7月18日提出想看珐琅表盘多次烧制工艺，至今未回复",
+    "客户收藏珐琅器，对工艺深度感兴趣",
+    "客户偏好正式语气，不使用emoji",
+    "活动：11月21日19:00–21:00，北京国贸丽庭店二楼沙龙，可携一位同伴，11月15日前回复"
+   ],
+   "risks": [
+    "必须先回应客户关于珐琅表盘烧制的旧消息，不能当作没说过",
+    "客户等待回复已110天，语气需自然承接，不宜过度热络",
+    "语气须正式，避免口语化网络用语"
+   ],
+   "timing_ok": true,
+   "max_similarity": 0.73
+  },
+  "candidates": [
+   {
+    "angle": "专属感",
+    "message": "罗女士，您七月提到想看看珐琅表盘的多次烧制，这句话我一直记着。11月21日周六19:00至21:00，日内瓦的珐琅匠人会到北京国贸丽庭店二楼沙龙，现场演示大明火珐琅的烧制，并展出Méridien万年历珐琅表盘。想到您收藏珐琅器，这场活动我首先想到了您。若您愿意来，回复我即可，也可携一位同伴。",
+    "rationale": "先接住客户七月的期待，再说明为何特意想到她，专属感来自她本人的收藏与那句话。",
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "信息清晰",
+    "message": "罗女士，您上次说想看看珐琅表盘的多次烧制，正好有了合适的机会。11月21日周六19:00至21:00，「火与时间——瓦洛蕾珐琅工艺之夜」在北京国贸丽庭店二楼沙龙举行，日内瓦珐琅匠人现场演示大明火珐琅烧制，并展出Méridien万年历珐琅表盘。可携一位同伴，烦请于11月15日前回复我确认。",
+    "rationale": "用简洁的要点把时间、地点、内容、携伴与截止日一次说清，方便客户快速决定。",
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "灵活型",
+    "message": "罗女士，您七月提到想看看珐琅表盘的多次烧制，这件事我没有忘。11月21日周六19:00至21:00，日内瓦珐琅匠人会在北京国贸丽庭店二楼沙龙现场演示大明火珐琅烧制，并展出Méridien万年历珐琅表盘。若那天不便，我也可以为您另约一个安静的私人时段，或先把相关资料整理给您。您看怎样方便，回复我即可。",
+    "rationale": "在正式邀约之外给出私人时段与资料两个替代选项，把决定权留给客户，不造成压力。",
+    "issues": [],
+    "repaired": false
+   }
+  ],
+  "model": "deepseek:deepseek-chat",
+  "latency_s": 4.2
+ },
+ "judge": {
+  "candidates": [
+   {
+    "id": 1,
+    "scores": {
+     "personalization": 5,
+     "brand_voice": 5,
+     "naturalness": 5,
+     "appropriateness": 5,
+     "goal": 5,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "先回应客户七月的话，再自然引出活动，专属感与分寸都到位。"
+   },
+   {
+    "id": 2,
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 4,
+     "goal": 5,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "信息完整清楚，但“正好有了合适的机会”略显模板，专属感稍弱。"
+   },
+   {
+    "id": 3,
+    "scores": {
+     "personalization": 5,
+     "brand_voice": 5,
+     "naturalness": 5,
+     "appropriateness": 5,
+     "goal": 4,
+     "faithfulness": 4
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "回应到位且给出私人时段备选，但“整理相关资料”属输入未提及的服务，略有越界。"
+   }
+  ],
+  "set": {
+   "diversity": 4,
+   "best_id": 1,
+   "comment": "三条分别侧重专属感、信息清晰与灵活备选，差异明显；候选1最贴合品牌语气与场景目标。"
+  },
+  "judge_model": "deepseek:deepseek-chat"
+ }
+}

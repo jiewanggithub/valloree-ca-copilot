@@ -1,0 +1,241 @@
+{
+ "case_id": "RA02",
+ "meta": {
+  "type": "edge",
+  "focus": "没有“理由”时如何自然重连；不能编造新品；可问候新加坡生意/两地时表"
+ },
+ "request": {
+  "case_id": "RA02",
+  "scenario": "reactivation",
+  "today": "2026-11-10",
+  "ca_name": "Lina",
+  "client": {
+   "client_id": "C12",
+   "surname": "马",
+   "gender": "M",
+   "preferred_name": null,
+   "age_band": "40-45",
+   "city": "成都",
+   "tier": "会员 Member",
+   "birthday": null,
+   "occupation": "餐饮集团创始人",
+   "interests": [
+    "美食",
+    "摄影"
+   ],
+   "style_notes": null,
+   "purchases": [
+    {
+     "date": "2023-01-15",
+     "item": "Méridien 子午线 两地时腕表 41mm",
+     "note": "自购，当时说要去新加坡开分店"
+    }
+   ],
+   "last_visit": "2023-01-15",
+   "preferences": [],
+   "family": null,
+   "ca_notes": "2023年后很少联系，朋友圈显示常在新加坡和成都两地"
+  },
+  "history": [
+   {
+    "speaker": "CA",
+    "time": "2023-01-15 18:00",
+    "text": "马先生，祝新加坡的新店开业顺利"
+   },
+   {
+    "speaker": "client",
+    "time": "2023-01-15 18:30",
+    "text": "谢谢，有空回成都再聚"
+   }
+  ],
+  "products": [],
+  "context": "近4年未联系，无具体活动或新品可分享"
+ },
+ "result": {
+  "case_id": "RA02",
+  "version": "v3",
+  "analysis": {
+   "key_facts": [
+    "C2 餐饮集团创始人",
+    "C3 常在新加坡和成都两地",
+    "C5 Méridien 子午线 两地时腕表 41mm，2023年自购",
+    "H2 客户曾说“有空回成都再聚”",
+    "S3 珠宝终身免费清洁抛光",
+    "S6 腕表建议每4-5年保养一次"
+   ],
+   "risks": [
+    "近4年未联系，不能暗示客户疏远或指责其不来",
+    "无活动/新品，不能编造由头或推产品",
+    "客户最后一条是“有空回成都再聚”，不能当作正在进行的对话来回应，也不要为迟回道谢",
+    "不得提消费金额、等级、折扣、保值",
+    "人称统一用“您”"
+   ],
+   "timing_ok": true,
+   "max_similarity": 0.31
+  },
+  "candidates": [
+   {
+    "angle": "念旧型",
+    "message": "马先生，想起2023年初您提过要去新加坡开分店，那时我还祝您新店顺利。这几年您应该常在新加坡和成都两头跑吧，一切都还顺当吗？不用特意回，看到了就好。",
+    "rationale": "以餐饮相关的轻触记忆引出新加坡开店这段过往，自然问候近况，结尾明确不要求回复。｜事实核查已删改：前些天路过一家做南洋菜的馆子；忽然想起",
+    "facts_used": [
+     "C2",
+     "C3",
+     "C5",
+     "H1"
+    ],
+    "critic_removed": [
+     "前些天路过一家做南洋菜的馆子",
+     "忽然想起"
+    ],
+    "issues": [],
+    "repaired": true
+   },
+   {
+    "angle": "服务理由型",
+    "message": "马先生，您那只Méridien两地时是2023年初入的，按腕表的节奏，四到五年正好可以看看走时和密封状态。我这边可以帮您约个私享时段，您回成都方便的时候把表带来就行；顺带珠宝清洁抛光也是终身免费的。时间您定，不方便就先放着。",
+    "rationale": "以腕表保养周期这一真实服务理由切入，给出容易拒绝的预约选项，不推产品。",
+    "facts_used": [
+     "C5",
+     "S6",
+     "S7",
+     "S3"
+    ],
+    "critic_removed": [],
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "轻分享型",
+    "message": "马先生，您平时爱拍照，倒想起您也玩摄影。没什么事，就是顺手分享一句。您在新加坡还是成都，都祝安好。",
+    "rationale": "以客户摄影兴趣为轻量分享点，不要求回复、不带销售意图，语气最轻。｜事实核查已删改：成都这两天光线难得清透；我路过合江亭一带随手拍了几张",
+    "facts_used": [
+     "C4",
+     "C3"
+    ],
+    "critic_removed": [
+     "成都这两天光线难得清透",
+     "我路过合江亭一带随手拍了几张"
+    ],
+    "issues": [],
+    "repaired": true
+   }
+  ],
+  "model": "deepseek:deepseek-chat",
+  "latency_s": 6.7
+ },
+ "judge": {
+  "candidates": [
+   {
+    "id": 1,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 5,
+     "naturalness": 5,
+     "appropriateness": 5,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "自然引用过往对话，语气温润克制，不施压，但唤醒理由稍弱。"
+   },
+   {
+    "id": 2,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 4,
+     "goal": 5,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "以腕表保养为真实理由，服务信息准确，但稍偏服务提醒，可更轻巧。"
+   },
+   {
+    "id": 3,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 3,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 4,
+     "goal": 2,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "轻分享但缺乏具体由头，唤醒目标较弱，显得略空泛。"
+   }
+  ],
+  "set": {
+   "diversity": 4,
+   "best_id": 1,
+   "comment": "三条分别从念旧、服务、轻分享切入，差异明显；候选1最自然不打扰。"
+  },
+  "judge_model": "deepseek:deepseek-chat"
+ },
+ "judge_history": [
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 5,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "以2023年真实对话为引，明确是过去的事，语气温润不施压，结尾轻松可拒，完成唤醒目标。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [
+      "按腕表的节奏，四到五年正好可以看看走时和密封状态（输入未给出该保养周期建议）"
+     ],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 3,
+      "goal": 3,
+      "faithfulness": 2
+     },
+     "hard_fail": true,
+     "hard_fail_reason": "自造“四到五年看走时和密封状态”的保养周期，输入中无此依据；且一上来即推服务，唤醒感偏“捞”。",
+     "comment": "服务理由虽具体，但保养周期为编造，且开场即邀约，易让客户觉得被推销。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 2,
+      "brand_voice": 4,
+      "naturalness": 3,
+      "appropriateness": 4,
+      "goal": 2,
+      "faithfulness": 4
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "语气温和但内容空泛，未用上真实购买或对话细节，换个名字也能发，唤醒力度弱。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 1,
+    "comment": "三条分别走念旧、服务、轻分享路线，差异明显；候选1最贴合场景，候选2有编造且推销感强，候选3过于空泛。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  }
+ ]
+}

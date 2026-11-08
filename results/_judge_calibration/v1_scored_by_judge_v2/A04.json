@@ -1,0 +1,220 @@
+{
+ "case_id": "A04",
+ "meta": {
+  "type": "core",
+  "focus": "典藏、正式、不喜欢打扰；以爱惜表的心情切入保养；记住他看月亮的细节"
+ },
+ "request": {
+  "case_id": "A04",
+  "scenario": "aftercare",
+  "today": "2026-11-10",
+  "ca_name": "Lina",
+  "client": {
+   "client_id": "C09",
+   "surname": "吴",
+   "gender": "M",
+   "preferred_name": null,
+   "age_band": "55-60",
+   "city": "杭州",
+   "tier": "典藏 Heritage",
+   "birthday": null,
+   "occupation": "已退休，曾任大学教授",
+   "interests": [
+    "天文",
+    "古典音乐",
+    "书法"
+   ],
+   "style_notes": "只戴一块表，非常爱惜",
+   "purchases": [
+    {
+     "date": "2021-03-21",
+     "item": "Méridien 子午线 万年历腕表 40mm",
+     "note": "自购，纪念退休"
+    }
+   ],
+   "last_visit": "2025-04-10",
+   "preferences": [
+    "语气正式",
+    "不喜欢频繁打扰"
+   ],
+   "family": null,
+   "ca_notes": "对月相显示特别有感情，说过“退休后终于有时间看月亮”"
+  },
+  "history": [
+   {
+    "speaker": "client",
+    "time": "2025-04-10 15:30",
+    "text": "表走得很准，月相每天看着很安心"
+   }
+  ],
+  "products": [
+   {
+    "sku": "MRD-W-01",
+    "name": "Méridien 子午线 万年历腕表 40mm",
+    "collection": "Méridien 子午线",
+    "category": "watch",
+    "material": "铂金表壳，乳白色珐琅表盘，自制万年历机芯，月相显示",
+    "price": 520000,
+    "story": "万年历可准确显示至2100年，珐琅表盘经多次烧制，成品率较低",
+    "care": "避免在晚上8点至凌晨2点间调校日历"
+   }
+  ],
+  "context": "购买已5年半，建议保养；会员计划首次保养免费；可上门取表"
+ },
+ "result": {
+  "case_id": "A04",
+  "version": "v1",
+  "analysis": {
+   "key_facts": [
+    "吴先生最后一条消息：「表走得很准，月相每天看着很安心」（2025-04-10）",
+    "佩戴 Méridien 万年历腕表 40mm 已五年半，只戴这一块，非常爱惜",
+    "曾说退休后终于有时间看月亮，对月相有感情",
+    "会员计划首次保养免费，可上门取表；距上次到店579天"
+   ],
+   "risks": [
+    "必须首先回应客户关于走时和月相的留言，不能忽略直接进入保养话题",
+    "客户偏好正式语气、不喜欢频繁打扰，距上次对话已久，措辞不宜热络过度",
+    "不得提及价格、折扣或任何保值说法",
+    "保养信息须与铂金表壳、珐琅表盘、万年历机芯相符；不得编造未给出的服务或承诺",
+    "不趁机推荐新品"
+   ],
+   "timing_ok": true,
+   "max_similarity": 0.36
+  },
+  "candidates": [
+   {
+    "angle": "关心体验",
+    "message": "吴先生，读到您说月相每天看着安心，我很高兴。您当初说退休后终于有时间看月亮，这块子午线陪着您也有五年半了。走时一直准，说明您平日很爱惜。若哪天想让我看看它的状态，随时告诉我，我提前替您安排好，不必赶时间。",
+    "rationale": "先回应客户的留言，再引用他退休看月相的原话与爱惜习惯，语气平和，不催不扰。",
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "实用保养",
+    "message": "吴先生，谢谢您告诉我走时和月相都让您安心。有一点想提醒：这块万年历在晚上八点到凌晨两点之间不宜调校日历，机芯正在换日，避开这段时间更稳妥。珐琅表盘平日用软布轻拭即可。五年半下来，若哪天想做个整体检查，我这边可以为您安排。",
+    "rationale": "先回应留言，再给出一条与该万年历机芯和珐琅表盘相符的具体保养建议，落在可拒绝的检查邀约上。",
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "专属服务",
+    "message": "吴先生，看到您说月相每天看着安心，我想起您退休后看月亮的那句话。这块表已陪您五年半，按会员计划，首次保养是免费的；若您觉得方便，我也可以安排上门取表，省您一趟路。您不急，什么时候想办，说一声就好。",
+    "rationale": "先回应留言并带回月相细节，再主动提供会员首次保养与上门取表这项政策内服务，把决定权交给客户。",
+    "issues": [],
+    "repaired": false
+   }
+  ],
+  "model": "deepseek:deepseek-chat",
+  "latency_s": 4.9
+ },
+ "judge": {
+  "candidates": [
+   {
+    "id": 1,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 5,
+     "brand_voice": 5,
+     "naturalness": 5,
+     "appropriateness": 5,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "引用客户原话自然，语气温润克制，但未提供具体保养知识或服务，目标完成度略低。"
+   },
+   {
+    "id": 2,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 5,
+     "naturalness": 5,
+     "appropriateness": 5,
+     "goal": 5,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "保养知识准确实用，分寸得当，但个性化略弱于另两条。"
+   },
+   {
+    "id": 3,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 5,
+     "brand_voice": 5,
+     "naturalness": 5,
+     "appropriateness": 5,
+     "goal": 5,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "结合客户原话与会员权益，服务具体且轻松可拒绝，完成度最高。"
+   }
+  ],
+  "set": {
+   "diversity": 5,
+   "best_id": 3,
+   "comment": "三条分别侧重情感关怀、实用知识、专属服务，差异清晰；候选3在个性化与服务落地上最均衡。"
+  },
+  "judge_model": "deepseek:deepseek-chat"
+ },
+ "judge_history": [
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "scores": {
+      "personalization": 5,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "回应了月相那句话，引用退休看月亮的细节，语气温润克制，但未提及保养服务，目标完成度略低。"
+    },
+    {
+     "id": 2,
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 5,
+      "faithfulness": 5,
+      "comment": "先回应客户消息，再给实用保养知识，符合售后关怀目标，但个性化略弱于另两条。"
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "先回应客户消息，再给实用保养知识，符合售后关怀目标，但个性化略弱于另两条。"
+    },
+    {
+     "id": 3,
+     "scores": {
+      "personalization": 5,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "回应月相并引用退休细节，提供会员首次保养免费与上门取表，轻松可拒绝，目标完成度高。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 3,
+    "comment": "三条分别侧重情感关怀、保养知识、专属服务，差异清晰；候选3在回应客户、个性化与服务落地上最完整。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  }
+ ]
+}

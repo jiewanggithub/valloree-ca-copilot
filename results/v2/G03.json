@@ -1,0 +1,271 @@
+{
+ "case_id": "G03",
+ "meta": {
+  "type": "core",
+  "focus": "新关系的节日问候；轻松但有分寸；可提每天佩戴的戒指但不推销"
+ },
+ "request": {
+  "case_id": "G03",
+  "scenario": "greeting",
+  "today": "2026-09-25",
+  "ca_name": "Lina",
+  "client": {
+   "client_id": "C03",
+   "surname": "林",
+   "gender": "F",
+   "preferred_name": null,
+   "age_band": "25-30",
+   "city": "杭州",
+   "tier": "会员 Member",
+   "birthday": "03-14",
+   "occupation": "互联网公司产品经理",
+   "interests": [
+    "瑜伽",
+    "咖啡",
+    "极简设计"
+   ],
+   "style_notes": "玫瑰金，喜欢叠戴，日常通勤佩戴；戒指尺寸9号",
+   "purchases": [
+    {
+     "date": "2026-09-10",
+     "item": "Lierre 常春藤 叠戴戒指（玫瑰金）",
+     "note": "自购，庆祝升职"
+    }
+   ],
+   "last_visit": "2026-09-10",
+   "preferences": [],
+   "family": null,
+   "ca_notes": "第一次买高级珠宝，挑选时很认真；说过以后想再叠一只不同颜色的"
+  },
+  "history": [
+   {
+    "speaker": "CA",
+    "time": "2026-09-10 20:30",
+    "text": "林女士，恭喜升职！戒指戴着如果有任何不合适随时告诉我"
+   },
+   {
+    "speaker": "client",
+    "time": "2026-09-10 21:02",
+    "text": "谢谢～很喜欢，每天都戴着"
+   }
+  ],
+  "products": [],
+  "context": "中秋节"
+ },
+ "result": {
+  "case_id": "G03",
+  "version": "v2",
+  "analysis": {
+   "key_facts": [
+    "林女士于9月10日自购Lierre常春藤叠戴戒指庆祝升职，说过很喜欢、每天都戴着",
+    "她第一次购买高级珠宝，挑选认真，偏好玫瑰金与叠戴、极简设计",
+    "今天是2026年中秋（9月25日），距上次对话15天，上一段对话已自然结束",
+    "她住在杭州，职业是产品经理"
+   ],
+   "risks": [
+    "上一条是客户的回复，已自然收尾，不能当作仍在进行的对话去接话或为迟回道歉",
+    "纯祝福，不推荐产品、不提新品价格活动，也不提清洁抛光保养等服务",
+    "不提年龄、消费金额、会员等级",
+    "全文统一用“您”"
+   ],
+   "timing_ok": true,
+   "max_similarity": 0.33
+  },
+  "candidates": [
+   {
+    "angle": "温情回忆",
+    "message": "林女士，中秋快乐。前些日子您说那只常春藤戒指每天都戴着，我一直觉得，能被人日日戴在手上的东西，才算真正有了自己的样子。\n愿您今晚也有闲心看看月亮，吃块合口的月饼。",
+    "rationale": "以她提过的“每天都戴着”为真实切口，把祝福落在她与作品的日常关系上，不涉产品与服务。",
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "简洁雅致",
+    "message": "林女士，中秋快乐。月色清朗，愿您与家人围坐一桌，安心吃顿饭。",
+    "rationale": "两三句克制收住，只留节日意象与团圆，适合关系尚新、偏好简短的她。",
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "轻关怀",
+    "message": "林女士，中秋快乐。想起您平时工作节奏快，今天若能早些收工，泡杯咖啡、安安静静过一晚，也挺好。\n祝您和家人都顺遂。",
+    "rationale": "从她的职业节奏与咖啡爱好出发给一句关心，不提到店、不提作品，祝福仍是主体。",
+    "issues": [],
+    "repaired": false
+   }
+  ],
+  "model": "deepseek:deepseek-chat",
+  "latency_s": 3.9
+ },
+ "judge": {
+  "candidates": [
+   {
+    "id": 1,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 4,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "引用客户“每天都戴着”是真实对话内容，语气温润克制，只是“我一直觉得”稍显文艺，可再口语一点。"
+   },
+   {
+    "id": 2,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 2,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 4,
+     "goal": 3,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "干净得体，但换个名字就能群发，缺少与林女士的具体连接。"
+   },
+   {
+    "id": 3,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 4,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "用到了咖啡兴趣与工作节奏，关怀自然不推销，分寸合适。"
+   }
+  ],
+  "set": {
+   "diversity": 4,
+   "best_id": 3,
+   "comment": "三条分别走回忆、简洁、轻关怀路线，差异明显；候选3最贴合客户兴趣且不显刻意。"
+  },
+  "judge_model": "deepseek:deepseek-chat"
+ },
+ "judge_history": [
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 5,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "引用客户真实说过的“每天都戴着”，祝福克制有温度，无推销。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 2,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 3,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "语气雅致但换个名字即可群发，缺少客户具体信息。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 4
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "咖啡呼应客户兴趣，但“工作节奏快”属推测，稍显越界。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 1,
+    "comment": "三条风格各异，候选1最贴合真实细节与品牌分寸。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  },
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [
+      "前些日子您说那只常春藤戒指每天都戴着——客户原话是“很喜欢，每天都戴着”，属可引用范围，但“前些日子您说”把15天前的对话当作可引用的过去事，尚可；不过“我一直觉得”属套话边缘"
+     ],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 3,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 4
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "引用客户原话有依据，但“我一直觉得”略显套话，且祝福段与前半段衔接稍显文艺腔。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 2,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 5,
+      "goal": 3,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "语气干净克制，但换个名字即可群发，缺少与林女士的具体连接。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [
+      "想起您平时工作节奏快——档案写的是产品经理，属合理推测，但“工作节奏快”未在输入中明确"
+     ],
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 3,
+      "faithfulness": 4
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "咖啡细节贴合兴趣，但“工作节奏快”属推测，祝福略偏生活建议。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 1,
+    "comment": "三条风格区分明显；候选1最有个人连接，但需删去“我一直觉得”这类套话，让引用更自然。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  }
+ ]
+}

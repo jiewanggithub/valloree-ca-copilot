@@ -1,0 +1,282 @@
+{
+ "case_id": "RA08",
+ "meta": {
+  "type": "core",
+  "focus": "不能“你说要来怎么没来”；轻松中英夹杂；新brunch区是真实信息"
+ },
+ "request": {
+  "case_id": "RA08",
+  "scenario": "reactivation",
+  "today": "2026-11-07",
+  "ca_name": "Lina",
+  "client": {
+   "client_id": "C17",
+   "surname": "谢",
+   "gender": "F",
+   "preferred_name": "Emily",
+   "age_band": "25-30",
+   "city": "上海",
+   "tier": "会员 Member",
+   "birthday": "12-25",
+   "occupation": "刚从伦敦硕士毕业，在上海做品牌策略",
+   "interests": [
+    "艺术展",
+    "brunch",
+    "网球"
+   ],
+   "style_notes": "黄金，喜欢叠戴手镯",
+   "purchases": [
+    {
+     "date": "2025-08-20",
+     "item": "Petit Trésor 小珍宝 珍珠母贝吊坠",
+     "note": "自购，出国读书前买的"
+    }
+   ],
+   "last_visit": "2025-08-20",
+   "preferences": [
+    "习惯中英夹杂，喜欢轻松的语气"
+   ],
+   "family": null,
+   "ca_notes": "说过2026年夏天毕业后回上海"
+  },
+  "history": [
+   {
+    "speaker": "client",
+    "time": "2026-08-02 14:05",
+    "text": "Hi Lina! 我回上海啦，settle下来去店里找你"
+   },
+   {
+    "speaker": "CA",
+    "time": "2026-08-02 14:20",
+    "text": "欢迎回来Emily！等你有空来坐坐"
+   }
+  ],
+  "products": [],
+  "context": "客户说回来后会来店但3个月没来；店里有新的brunch区（免费咖啡与小点）"
+ },
+ "result": {
+  "case_id": "RA08",
+  "version": "v2",
+  "analysis": {
+   "key_facts": [
+    "Emily 2026年8月2日说回上海了、想 settle 下来来店里找 Lina",
+    "上次购买是2025-08-20出国前买的 Petit Trésor 珍珠母贝吊坠",
+    "上次对话已在97天前自然结束，最后一条是CA发的",
+    "门店新设了brunch区，提供免费咖啡与小点"
+   ],
+   "risks": [
+    "不能说'好久没来''是不是把我们忘了'，避免让对方有被捞的感觉",
+    "不要一上来推产品，也不要提消费金额或等级",
+    "人称统一用'你'，中英夹杂、语气轻松",
+    "上一段对话已结束，不要当成进行中的对话来回应，也不要道歉"
+   ],
+   "timing_ok": true,
+   "max_similarity": 0.25
+  },
+  "candidates": [
+   {
+    "angle": "念旧型",
+    "message": "Emily，前两天翻到你的档案，看到你出国前买的那条珍珠母贝小吊坠，忽然想起你八月说回来要来找我。现在 settle 得怎么样啦？工作忙的话也不用特意跑一趟，有空路过静安这边跟我说一声就好。",
+    "rationale": "用她自购的那件作品做由头，回忆是真实的，语气轻且允许不回复。",
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "服务理由型",
+    "message": "Emily，上周店里做秋冬的清洁保养，我想起你那条珍珠母贝吊坠戴了一年多，mother-of-pearl 其实定期擦一擦会更有光泽。你哪天来静安附近的话，我帮你做个免费的清洁抛光，很快的，顺路就行。",
+    "rationale": "以终身免费清洁为真实服务理由切入，提供方便而不推销。",
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "轻分享型",
+    "message": "Emily，店里最近新做了一个 brunch 区，咖啡和点心是免费的，氛围还挺适合周末坐坐。你平时喜欢 brunch 的话，哪天想来我这边喝杯咖啡、顺便看看新东西都行，不来也没关系，先跟你说一声。",
+    "rationale": "分享与客户兴趣相关的轻量信息，明确不要求回复，降低压力。",
+    "issues": [],
+    "repaired": false
+   }
+  ],
+  "model": "deepseek:deepseek-chat",
+  "latency_s": 4.0
+ },
+ "judge": {
+  "candidates": [
+   {
+    "id": 1,
+    "unsupported_claims": [
+     "翻到你的档案（轻微由头，档案确实存在，但“翻到”是虚构动作）"
+    ],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 4,
+     "goal": 4,
+     "faithfulness": 4
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "引用八月约定与吊坠，自然不施压；开头“翻到档案”略套路，可换成更随意的由头。"
+   },
+   {
+    "id": 2,
+    "unsupported_claims": [
+     "上周店里做秋冬的清洁保养（虚构门店活动）",
+     "珍珠母贝戴了一年多（购买日期可推算，但“戴了一年多”是推测客户佩戴习惯）"
+    ],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 3,
+     "goal": 3,
+     "faithfulness": 2
+    },
+    "hard_fail": true,
+    "hard_fail_reason": "虚构“上周店里做秋冬清洁保养”这一门店活动，输入中无此信息",
+    "comment": "清洁服务本身合规，但用虚构的门店活动做由头，属编造。"
+   },
+   {
+    "id": 3,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 4,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "用brunch区与客户兴趣自然搭桥，结尾轻松可拒绝，事实全部有据。"
+   }
+  ],
+  "set": {
+   "diversity": 4,
+   "best_id": 3,
+   "comment": "三条分别走念旧、服务、轻分享路线，差异明显；候选3事实最干净、分寸最好，候选2因虚构门店活动不可用。"
+  },
+  "judge_model": "deepseek:deepseek-chat"
+ },
+ "judge_history": [
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [
+      "前两天翻到你的档案（CA声称的动作，输入中无依据）"
+     ],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 2
+     },
+     "hard_fail": true,
+     "hard_fail_reason": "编造CA动作“前两天翻到你的档案”，输入中无此依据",
+     "comment": "引用八月约定和吊坠很贴切，但“翻档案”是虚构动作，需换成真实由头。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [
+      "上周店里做秋冬的清洁保养（活动/CA动作，输入中无依据）"
+     ],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 2
+     },
+     "hard_fail": true,
+     "hard_fail_reason": "编造“上周店里做秋冬清洁保养”这一事件，输入中无依据",
+     "comment": "免费清洁抛光属政策内服务，但开头的“上周保养”是编造，需删。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "comment": "brunch区是背景中真实信息，语气轻松、给足退路，符合中英夹杂偏好。",
+     "hard_fail": false
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 3,
+    "comment": "三条思路各异（念旧/服务/轻分享），但前两条均因编造CA动作或事件不可用，仅第三条可直接发送。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  },
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [
+      "前两天翻到你的档案（虚构的小由头，属轻微问题）"
+     ],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 3
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "引用八月原话和吊坠都真实，语气轻松不施压；开头“翻到档案”是轻微虚构由头，可换成更自然的引子。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [
+      "上周店里做秋冬的清洁保养（虚构的活动由头）",
+      "珍珠母贝定期擦一擦会更有光泽（保养说法未在输入中给出）"
+     ],
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 3,
+      "goal": 3,
+      "faithfulness": 2
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "免费清洁抛光属政策内服务，但“上周店里做保养”是虚构由头，且一上来就落到保养服务，唤醒感偏工具化。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 3,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "brunch区是场景背景里真实存在的，结尾轻松可拒绝；但个性化偏弱，换个名字也能发，且没接上她八月说回来找我的那条线。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 1,
+    "comment": "三条分别走念旧、服务、轻分享，方向区分清楚；候选1最贴合她的真实经历，只需把“翻档案”换成更自然的开头即可发送。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  }
+ ]
+}

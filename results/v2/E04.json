@@ -1,0 +1,278 @@
+{
+ "case_id": "E04",
+ "meta": {
+  "type": "core",
+  "focus": "与客户晚宴需求结合；简短；不用emoji"
+ },
+ "request": {
+  "case_id": "E04",
+  "scenario": "event",
+  "today": "2026-11-21",
+  "ca_name": "Lina",
+  "client": {
+   "client_id": "C01",
+   "surname": "王",
+   "gender": "F",
+   "preferred_name": "Vivian",
+   "age_band": "35-40",
+   "city": "上海",
+   "tier": "典藏 Heritage",
+   "birthday": "11-07",
+   "occupation": "投资银行合伙人",
+   "interests": [
+    "歌剧",
+    "旅行",
+    "普拉提"
+   ],
+   "style_notes": "偏爱白金与冷色调，简洁线条；戒指尺寸11号",
+   "purchases": [
+    {
+     "date": "2023-06-18",
+     "item": "Constellation 星宿 钻石戒指",
+     "note": "自购，纪念升任合伙人"
+    },
+    {
+     "date": "2026-10-30",
+     "item": "Heure Bleue 蓝调时刻 女士腕表 33mm",
+     "note": "自购"
+    }
+   ],
+   "last_visit": "2026-10-30",
+   "preferences": [
+    "喜欢简短的消息",
+    "希望被称呼为Vivian"
+   ],
+   "family": null,
+   "ca_notes": "工作忙，回复常在深夜；10月底提到11月要去维也纳听歌剧"
+  },
+  "history": [
+   {
+    "speaker": "client",
+    "time": "2026-11-18 23:50",
+    "text": "维也纳回来了，12月有个慈善晚宴，在想戴什么"
+   },
+   {
+    "speaker": "CA",
+    "time": "2026-11-19 09:00",
+    "text": "欢迎回来Vivian！晚宴的造型我帮您想想"
+   }
+  ],
+  "products": [],
+  "context": "活动：Constellation高级珠宝私享预览\n时间：2026年12月5日（周六）15:00–18:00\n地点：上海静安恒汇店VIP沙龙\n可携一位同伴；现场可试戴，适合为晚宴挑选"
+ },
+ "result": {
+  "case_id": "E04",
+  "version": "v2",
+  "analysis": {
+   "key_facts": [
+    "Vivian 11月18日深夜提到12月有慈善晚宴，在想戴什么，CA已回复会帮她想造型，此话题尚未展开",
+    "她10月底刚自购 Heure Bleue 蓝调时刻腕表33mm，喜欢白金与冷色调、简洁线条",
+    "她工作忙、回复常在深夜，喜欢简短消息，称呼用Vivian",
+    "她有歌剧、旅行等兴趣，11月刚从维也纳回来"
+   ],
+   "risks": [
+    "客户最后一条消息（晚宴造型）CA已简单回应但尚未给出实质内容，三条都需先接住这个话题再发邀约",
+    "CA上一条消息客户未回复，语气要轻，不要像没发过一样重复",
+    "客户工作忙、消息简短，三条都不宜过长",
+    "不做任何价格、折扣、保值暗示；不编造活动嘉宾、礼品、名额",
+    "周末活动与她工作日繁忙无冲突，但需留拒绝余地"
+   ],
+   "timing_ok": true,
+   "max_similarity": 0.52
+  },
+  "candidates": [
+   {
+    "angle": "专属感",
+    "message": "Vivian，晚宴的事我想到一个更直接的办法。12月5日周六下午3点到6点，店里有一场Constellation高级珠宝私享预览，在静安恒汇店的VIP沙龙，现场可以试戴。您平时偏爱白金和利落的线条，这类作品和您的腕表放在一起应该很顺，正好为晚宴比对几套。想邀请您来看看，也可以带一位同伴。不方便的话跟我说一声，我们另约时间。",
+    "rationale": "把活动与她的晚宴需求和已知的白金冷色调偏好挂钩，说明为何特意想到她，再给信息与拒绝余地。",
+    "issues": [
+     "[SOFT:long] 162字，偏长"
+    ],
+    "repaired": false
+   },
+   {
+    "angle": "信息清晰",
+    "message": "Vivian，接上次说的晚宴造型——12月5日周六15:00到18:00，静安恒汇店VIP沙龙有一场Constellation高级珠宝私享预览，现场可试戴，也适合为晚宴做搭配参考，可携一位同伴。您看这个时间方便吗？回复我一句就好，不方便也完全没关系。",
+    "rationale": "先回应晚宴话题，再用最短篇幅列出时间、地点、内容、携伴，方便她快速决定。",
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "灵活型",
+    "message": "Vivian，晚宴的搭配我还在想。12月5日周六下午店里有一场Constellation私享预览，15:00到18:00，在静安恒汇店VIP沙龙，可以试戴，也能带一位同伴。您若那天抽不开身，我可以另约一个私人时段陪您慢慢看，或者先把相关资料发给您，您空了再看。",
+    "rationale": "以她的忙碌为前提，给出到场、另约、先看资料三种选择，尊重时间且不施压。",
+    "issues": [],
+    "repaired": false
+   }
+  ],
+  "model": "deepseek:deepseek-chat",
+  "latency_s": 5.1
+ },
+ "judge": {
+  "candidates": [
+   {
+    "id": 1,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 5,
+     "brand_voice": 5,
+     "naturalness": 5,
+     "appropriateness": 5,
+     "goal": 5,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "用到了白金冷调偏好与腕表搭配，信息完整，结尾轻松可拒绝，可直接发送。"
+   },
+   {
+    "id": 2,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 5,
+     "naturalness": 5,
+     "appropriateness": 5,
+     "goal": 5,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "信息清楚、语气克制，但个性化略弱于候选1，未用到风格偏好。"
+   },
+   {
+    "id": 3,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 5,
+     "naturalness": 4,
+     "appropriateness": 5,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "给了私人时段与资料两个备选，灵活贴心，但选项略多、稍长，邀约焦点不如前两条集中。"
+   }
+  ],
+  "set": {
+   "diversity": 4,
+   "best_id": 1,
+   "comment": "三条分别走专属感、简洁清晰、灵活备选路线，差异明显；候选1在个性化与邀约清晰度上最平衡。"
+  },
+  "judge_model": "deepseek:deepseek-chat"
+ },
+ "judge_history": [
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 5,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "引用客户偏好的白金与利落线条，自然衔接腕表与晚宴，信息完整且不施压，可直接发送。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "信息清晰、结尾轻松，但个性化略弱于候选1，未用到风格偏好。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "给出多个备选显得体贴，但“先把相关资料发给您”略含糊，且选项偏多，与客户喜欢简短消息的偏好稍有出入。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 1,
+    "comment": "三条分别侧重专属感、信息清晰与灵活备选，差异明显；候选1在个性化与分寸上最均衡。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  },
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 5,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "以晚宴为引，引用客户白金偏好与腕表，信息完整，结尾轻松可拒，符合简短偏好。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 5,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "信息清晰、分寸得当，但个性化略弱，未用到白金偏好等具体细节。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 5,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "给出多种灵活选项，体贴不施压，但略长且专属感稍弱。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 1,
+    "comment": "三条分别侧重专属感、信息清晰与灵活备选，差异明显；候选1最贴合客户偏好与场景目标。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  }
+ ]
+}

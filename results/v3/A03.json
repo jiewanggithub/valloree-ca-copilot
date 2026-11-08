@@ -1,0 +1,248 @@
+{
+ "case_id": "A03",
+ "meta": {
+  "type": "core",
+  "focus": "礼物在太太手里：保养建议要通过赵先生转达，语气自然"
+ },
+ "request": {
+  "case_id": "A03",
+  "scenario": "aftercare",
+  "today": "2026-10-10",
+  "ca_name": "Lina",
+  "client": {
+   "client_id": "C04",
+   "surname": "赵",
+   "gender": "M",
+   "preferred_name": null,
+   "age_band": "30-35",
+   "city": "深圳",
+   "tier": "会员 Member",
+   "birthday": "11-20",
+   "occupation": "科技公司工程总监",
+   "interests": [],
+   "style_notes": null,
+   "purchases": [
+    {
+     "date": "2025-10-12",
+     "item": "Petit Trésor 小珍宝 珍珠母贝吊坠",
+     "note": "送太太的结婚纪念日礼物"
+    }
+   ],
+   "last_visit": "2025-10-12",
+   "preferences": [
+    "工作日白天很忙，晚上回复"
+   ],
+   "family": "已婚，太太喜欢珍珠和小巧的款式；结婚纪念日10月18日",
+   "ca_notes": "选礼物时希望CA给明确建议，不喜欢绕弯子"
+  },
+  "history": [
+   {
+    "speaker": "client",
+    "time": "2025-10-20 21:00",
+    "text": "她很喜欢，几乎天天戴"
+   }
+  ],
+  "products": [
+   {
+    "sku": "PTR-P-01",
+    "name": "Petit Trésor 小珍宝 珍珠母贝吊坠",
+    "collection": "Petit Trésor 小珍宝",
+    "category": "pendant",
+    "material": "18K黄金，白色珍珠母贝，0.05克拉钻石点缀",
+    "price": 12800,
+    "story": "四叶造型来自瓦洛蕾1920年代的档案图稿",
+    "care": "母贝避免接触香水与水"
+   }
+  ],
+  "context": "吊坠购买一周年，提醒珍珠母贝保养，可回店免费清洁"
+ },
+ "result": {
+  "case_id": "A03",
+  "version": "v3",
+  "analysis": {
+   "key_facts": [
+    "C6：2025-10-12 购买 Petit Trésor 珍珠母贝吊坠，送太太的结婚纪念日礼物",
+    "H1：2025-10-20 客户说太太很喜欢，几乎天天戴",
+    "C4：结婚纪念日10月18日，太太喜欢珍珠和小巧的款式",
+    "P5：母贝避免接触香水与水；S3：珠宝终身免费清洁抛光"
+   ],
+   "risks": [
+    "上一段对话已在355天前自然结束，不要当正在进行的对话回应，不要为迟回道谢",
+    "客户工作日白天忙，宜晚间发送",
+    "不能暗示折扣或投资，不推销新品",
+    "不虚构客户经历，只引用 H1 与档案内容"
+   ],
+   "timing_ok": true,
+   "max_similarity": 0.45
+  },
+  "candidates": [
+   {
+    "angle": "关心体验",
+    "message": "赵先生，去年十月您为结婚纪念日选的那枚小珍宝珍珠母贝吊坠，到今年正好一年了。母贝平时要避免接触香水和水。方便的话让她带来店里，我做一次免费清洁，看看状态。您晚上有空回我就行。",
+    "rationale": "以购买一周年为切入点，回应客户此前“天天戴”的反馈，语气平实。｜事实核查已删改：您当时说她几乎天天戴（把H1的客户反馈说成客户原话，且H1是客户说“她很喜欢，几乎天天戴”，不是“您当时说”）；母贝常贴身佩戴，会慢慢沾上香水和汗，光泽也就没那么透（清单只写母贝避免接触香水与水，未给出光泽变暗的工艺细节）",
+    "facts_used": [
+     "C6",
+     "H1",
+     "P5",
+     "S3"
+    ],
+    "critic_removed": [
+     "您当时说她几乎天天戴（把H1的客户反馈说成客户原话，且H1是客户说“她很喜欢，几乎天天戴”，不是“您当时说”）",
+     "母贝常贴身佩戴，会慢慢沾上香水和汗，光泽也就没那么透（清单只写母贝避免接触香水与水，未给出光泽变暗的工艺细节）"
+    ],
+    "issues": [],
+    "repaired": true
+   },
+   {
+    "angle": "实用保养",
+    "message": "赵先生，想到那枚小珍宝吊坠也戴了一年了。珍珠母贝比较娇气，平时要避免接触香水和水。要是光泽不如从前，带来店里做次清洁就好，这项一直是免费的。",
+    "rationale": "给出一条与母贝材质相符的具体保养建议，并自然带出免费清洁。｜事实核查已删改：香水、化妆水沾多了容易发雾（未给出的工艺细节）；平时最好在喷完香水之后再戴，回家用软布轻轻擦一下收起来（清单只写避免接触香水与水，未给出软布擦拭等具体养护方法）",
+    "facts_used": [
+     "P1",
+     "P5",
+     "S3"
+    ],
+    "critic_removed": [
+     "香水、化妆水沾多了容易发雾（未给出的工艺细节）",
+     "平时最好在喷完香水之后再戴，回家用软布轻轻擦一下收起来（清单只写避免接触香水与水，未给出软布擦拭等具体养护方法）"
+    ],
+    "issues": [],
+    "repaired": true
+   },
+   {
+    "angle": "专属服务",
+    "message": "赵先生，十月的纪念日快到了。那枚小珍宝戴满一年，可以拿来店里做一次免费清洁，母贝的日常养护我也当面和您说清楚。您工作日晚间方便的话，我帮您约个安静些的时段，不合适也没关系。",
+    "rationale": "借纪念日临近提出一项政策内服务，给客户容易拒绝的下一步。｜事实核查已删改：免费清洁抛光（清单中母贝对应的是免费清洁，抛光未针对母贝确认；X1为免费清洁）",
+    "facts_used": [
+     "C4",
+     "C6",
+     "S3",
+     "S7"
+    ],
+    "critic_removed": [
+     "免费清洁抛光（清单中母贝对应的是免费清洁，抛光未针对母贝确认；X1为免费清洁）"
+    ],
+    "issues": [],
+    "repaired": true
+   }
+  ],
+  "model": "deepseek:deepseek-chat",
+  "latency_s": 7.5
+ },
+ "judge": {
+  "candidates": [
+   {
+    "id": 1,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 5,
+     "brand_voice": 5,
+     "naturalness": 5,
+     "appropriateness": 5,
+     "goal": 5,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "准确引用购买背景与母贝保养要点，结尾轻松且尊重晚间回复偏好，可直接发送。"
+   },
+   {
+    "id": 2,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 5,
+     "naturalness": 5,
+     "appropriateness": 5,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "保养信息准确、语气克制，但未点明纪念日背景，个性化略弱于候选1。"
+   },
+   {
+    "id": 3,
+    "unsupported_claims": [
+     "“我帮您约个安静些的时段”中“安静些的时段”属套话式表述，且暗示可代为预约具体时段，输入仅提供私人预约/私享时段，未说明可代约"
+    ],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 4,
+     "naturalness": 3,
+     "appropriateness": 4,
+     "goal": 4,
+     "faithfulness": 4
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "提到纪念日与清洁服务尚可，但“安静些的时段”偏套话，且代约表述略超出输入依据，需微调。"
+   }
+  ],
+  "set": {
+   "diversity": 4,
+   "best_id": 1,
+   "comment": "三条分别侧重体验关怀、保养提醒与预约服务，角度有区分；候选1最贴合场景且事实最稳。"
+  },
+  "judge_model": "deepseek:deepseek-chat"
+ },
+ "judge_history": [
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 5,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "准确引用去年十月纪念日礼物与母贝保养要点，免费清洁有政策依据，结尾轻松可拒绝，语气温润克制。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "保养信息准确、语气自然，但未点明纪念日与太太这一具体背景，个性化略弱于候选1。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [
+      "“我帮您约个安静些的时段”中“安静些的时段”属套话式表述，且暗示可安排特定时段，输入未明确提供该服务细节"
+     ],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 3,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 4
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "提到纪念日与清洁服务，但“安静些的时段”偏套话，且未回应客户上条“她很喜欢”的反馈，稍显模板。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 1,
+    "comment": "三条分别侧重体验关怀、实用保养与预约服务，角度有区分；候选1最贴合客户档案与场景目标，可直接发送。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  }
+ ]
+}

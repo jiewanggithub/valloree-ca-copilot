@@ -1,0 +1,247 @@
+{
+ "case_id": "E04",
+ "meta": {
+  "type": "core",
+  "focus": "与客户晚宴需求结合；简短；不用emoji"
+ },
+ "request": {
+  "case_id": "E04",
+  "scenario": "event",
+  "today": "2026-11-21",
+  "ca_name": "Lina",
+  "client": {
+   "client_id": "C01",
+   "surname": "王",
+   "gender": "F",
+   "preferred_name": "Vivian",
+   "age_band": "35-40",
+   "city": "上海",
+   "tier": "典藏 Heritage",
+   "birthday": "11-07",
+   "occupation": "投资银行合伙人",
+   "interests": [
+    "歌剧",
+    "旅行",
+    "普拉提"
+   ],
+   "style_notes": "偏爱白金与冷色调，简洁线条；戒指尺寸11号",
+   "purchases": [
+    {
+     "date": "2023-06-18",
+     "item": "Constellation 星宿 钻石戒指",
+     "note": "自购，纪念升任合伙人"
+    },
+    {
+     "date": "2026-10-30",
+     "item": "Heure Bleue 蓝调时刻 女士腕表 33mm",
+     "note": "自购"
+    }
+   ],
+   "last_visit": "2026-10-30",
+   "preferences": [
+    "喜欢简短的消息",
+    "希望被称呼为Vivian"
+   ],
+   "family": null,
+   "ca_notes": "工作忙，回复常在深夜；10月底提到11月要去维也纳听歌剧"
+  },
+  "history": [
+   {
+    "speaker": "client",
+    "time": "2026-11-18 23:50",
+    "text": "维也纳回来了，12月有个慈善晚宴，在想戴什么"
+   },
+   {
+    "speaker": "CA",
+    "time": "2026-11-19 09:00",
+    "text": "欢迎回来Vivian！晚宴的造型我帮您想想"
+   }
+  ],
+  "products": [],
+  "context": "活动：Constellation高级珠宝私享预览\n时间：2026年12月5日（周六）15:00–18:00\n地点：上海静安恒汇店VIP沙龙\n可携一位同伴；现场可试戴，适合为晚宴挑选"
+ },
+ "result": {
+  "case_id": "E04",
+  "version": "v3",
+  "analysis": {
+   "key_facts": [
+    "C1 客户在上海，CA也在上海静安恒汇店",
+    "C7 客户2023年购买过Constellation星宿钻石戒指",
+    "H1 客户11月18日提到12月有慈善晚宴，在想戴什么",
+    "X1-X4 活动为Constellation高级珠宝私享预览，12月5日周六15:00-18:00，静安恒汇店VIP沙龙，可携一位同伴，现场可试戴"
+   ],
+   "risks": [
+    "客户偏好简短消息，每条不超过80字",
+    "客户工作忙、回复常在深夜，活动为周六下午，需确认是否与作息冲突",
+    "客户最后一条消息（晚宴造型）尚未被实质回应，三条候选需先自然衔接晚宴话题",
+    "CA已发过消息客户未回复，语气要更轻，不要像没发过一样重复",
+    "不使用emoji，称呼Vivian，人称统一用您"
+   ],
+   "timing_ok": true,
+   "max_similarity": 0.72
+  },
+  "candidates": [
+   {
+    "angle": "专属感",
+    "message": "Vivian，晚宴的事我一直放在心上。12月5日周六15:00到18:00，静安恒汇店VIP沙龙有一场Constellation高级珠宝私享预览，您那枚星宿戒指正是这个系列，现场可试戴，为晚宴挑一挑也合适。方便的话回我一声。",
+    "rationale": "以客户已有的Constellation作品与晚宴需求建立专属联系，再给出活动信息。",
+    "facts_used": [
+     "C7",
+     "H1",
+     "X1",
+     "X2",
+     "X3",
+     "X4"
+    ],
+    "critic_removed": [],
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "信息清晰",
+    "message": "Vivian，晚宴的造型我想到一个去处：12月5日周六15:00到18:00，静安恒汇店VIP沙龙有Constellation高级珠宝私享预览，可带一位同伴，现场能试戴。您若来，回我一声就好。",
+    "rationale": "用最短篇幅把时间、地点、亮点、携伴说清楚，方便客户快速决定。",
+    "facts_used": [
+     "H1",
+     "X1",
+     "X2",
+     "X3",
+     "X4"
+    ],
+    "critic_removed": [],
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "灵活型",
+    "message": "Vivian，晚宴造型的事我记着。12月5日周六下午静安恒汇店有Constellation私享预览，可试戴、可带同伴；若那天不便，我另约私人时段，或先拍些图片给您看。您觉得哪种方便？",
+    "rationale": "先给活动信息，再给出私人时段与发图两种替代，尊重客户忙碌的作息。",
+    "facts_used": [
+     "H1",
+     "X1",
+     "X2",
+     "X3",
+     "X4",
+     "S7"
+    ],
+    "critic_removed": [],
+    "issues": [],
+    "repaired": false
+   }
+  ],
+  "model": "deepseek:deepseek-chat",
+  "latency_s": 5.2
+ },
+ "judge": {
+  "candidates": [
+   {
+    "id": 1,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 4,
+     "naturalness": 3,
+     "appropriateness": 4,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "信息完整、专属感自然，但开头“一直放在心上”接近套话，可换成更具体的由头。"
+   },
+   {
+    "id": 2,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 4,
+     "goal": 5,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "时间地点内容清楚，结尾轻松易拒绝，符合客户喜欢简短消息的偏好。"
+   },
+   {
+    "id": 3,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 4,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "给了三种参与方式，灵活不施压；但未写具体时段，信息略欠清楚。"
+   }
+  ],
+  "set": {
+   "diversity": 4,
+   "best_id": 2,
+   "comment": "三条角度不同（专属/清晰/灵活），候选2信息最完整且最贴合客户简短偏好。"
+  },
+  "judge_model": "deepseek:deepseek-chat"
+ },
+ "judge_history": [
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 5,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "用星宿戒指与晚宴需求做钩子，信息完整；开头“一直放在心上”略套话，可微调。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "简洁克制，时间地点内容与同伴信息清楚，结尾轻松易拒，符合客户喜欢简短消息的偏好。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "给了三种选择较灵活，但未写具体时段，且“我记着”偏套话，信息清晰度略逊。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 2,
+    "comment": "三条分别偏专属感、简洁清晰、灵活备选，差异明显；候选2最贴合客户简短偏好且信息完整。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  }
+ ]
+}

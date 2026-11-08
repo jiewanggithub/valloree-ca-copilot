@@ -1,0 +1,147 @@
+{
+ "case_id": "RA07",
+ "meta": {
+  "type": "adversarial",
+  "focus": "高风险：不能暗示今年有折扣；不提双十一；以戒指保养/服务等无压力理由重连"
+ },
+ "request": {
+  "case_id": "RA07",
+  "scenario": "reactivation",
+  "today": "2026-11-05",
+  "ca_name": "Lina",
+  "client": {
+   "client_id": "C15",
+   "surname": "高",
+   "gender": "M",
+   "preferred_name": null,
+   "age_band": "35-40",
+   "city": "深圳",
+   "tier": "会员 Member",
+   "birthday": null,
+   "occupation": "跨境电商创业者",
+   "interests": [],
+   "style_notes": null,
+   "purchases": [
+    {
+     "date": "2024-11-11",
+     "item": "Lierre 常春藤 叠戴戒指（黄金）",
+     "note": "送女友"
+    }
+   ],
+   "last_visit": "2025-11-08",
+   "preferences": [],
+   "family": null,
+   "ca_notes": "习惯比价，2025年11月曾要求双十一折扣被婉拒，之后未再联系"
+  },
+  "history": [
+   {
+    "speaker": "client",
+    "time": "2025-11-08 14:00",
+    "text": "双十一都不打折？那算了"
+   },
+   {
+    "speaker": "CA",
+    "time": "2025-11-08 14:10",
+    "text": "高先生抱歉，我们全年都是统一价格。您有需要随时找我"
+   }
+  ],
+  "products": [],
+  "context": "去年因不打折不欢而散；今年双十一前夕"
+ },
+ "result": {
+  "case_id": "RA07",
+  "version": "v1",
+  "analysis": {
+   "key_facts": [
+    "距上次对话362天，客户最后一条消息是“双十一都不打折？那算了”",
+    "最后一条消息来自CA，客户未回复，属CA已发消息而客户未回复的情形",
+    "客户2024年11月购Lierre常春藤叠戴戒指（送女友）",
+    "客户曾要求双十一折扣被婉拒，习惯比价"
+   ],
+   "risks": [
+    "客户在等回复的语境不存在，但CA已发消息客户未回，不能像没发过一样重复",
+    "不可提及折扣、价格体系，不可暗示客户因不打折而离开",
+    "避免暴露礼物为第三方购买，送礼语境需谨慎",
+    "不推产品、不提消费金额或等级",
+    "正值双十一前夕，语气不能有促销暗示"
+   ],
+   "timing_ok": true,
+   "max_similarity": 0.31
+  },
+  "candidates": [
+   {
+    "angle": "念旧型",
+    "message": "高先生，去年您选的那枚Lierre常春藤叠戴戒指，黄金的藤蔓线条我一直记得。最近整理作品资料时看到它，想起您。这阵子还好吗？不用特意回复，我就在这儿。",
+    "rationale": "以客户买过的作品为共同记忆切入，轻问近况，明确允许不回复，降低压力。",
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "服务理由型",
+    "message": "高先生，之前您那枚Lierre常春藤戒指，若日常佩戴多，可以拿来做个免费清洁抛光，藤蔓的细节会亮一些。您方便的话我帮您留个时间，不方便也没关系。",
+    "rationale": "以珠宝终身免费清洁抛光的真实服务为由，提供方便，不推产品，结尾易拒绝。",
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "轻分享型",
+    "message": "高先生，最近店里在做一些关于黄金工艺的整理，看到常春藤那种细藤缠绕的做法，想起您选过的那枚。随手和您说一声，不必回复。",
+    "rationale": "分享与客户所购作品相关的轻量工艺信息，不要求回复，避免促销感。",
+    "issues": [],
+    "repaired": false
+   }
+  ],
+  "model": "deepseek:deepseek-chat",
+  "latency_s": 4.1
+ },
+ "judge": {
+  "candidates": [
+   {
+    "id": 1,
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 3,
+     "goal": 3,
+     "faithfulness": 4
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "念旧有温度，但“整理作品资料时看到它”略显刻意，且未回应去年不欢而散的语境，唤醒理由偏弱。"
+   },
+   {
+    "id": 2,
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 4,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "comment": "以免费清洁抛光为真实服务理由，轻松可拒绝，不施压，是三条中最自然的重新联系切口。"
+   },
+   {
+    "id": 3,
+    "scores": {
+     "personalization": 3,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 4,
+     "goal": 3,
+     "faithfulness": 4
+    },
+    "hard_fail": false,
+    "comment": "轻分享克制得体，但“黄金工艺整理”略空泛，联系理由不如服务型具体，唤醒力度偏弱。"
+   }
+  ],
+  "set": {
+   "diversity": 4,
+   "best_id": 2,
+   "comment": "三条分别走念旧、服务、轻分享路线，差异清晰；候选2以真实可提供的服务为理由，最贴合场景且不显被“捞”。"
+  },
+  "judge_model": "deepseek:deepseek-chat"
+ }
+}

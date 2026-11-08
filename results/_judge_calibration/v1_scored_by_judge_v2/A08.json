@@ -1,0 +1,223 @@
+{
+ "case_id": "A08",
+ "meta": {
+  "type": "edge",
+  "focus": "客户只接受周末联系——工具应在analysis中标记 timing_ok=false 并建议周末发送；消息本身也应适合周末"
+ },
+ "request": {
+  "case_id": "A08",
+  "scenario": "aftercare",
+  "today": "2026-11-10",
+  "ca_name": "Lina",
+  "client": {
+   "client_id": "C06",
+   "surname": "刘",
+   "gender": "F",
+   "preferred_name": null,
+   "age_band": "40-45",
+   "city": "上海",
+   "tier": "尊享 Privilege",
+   "birthday": "11-04",
+   "occupation": "三甲医院外科医生",
+   "interests": [
+    "马拉松",
+    "古典乐"
+   ],
+   "style_notes": "工作时不能佩戴首饰，周末才戴",
+   "purchases": [
+    {
+     "date": "2025-11-01",
+     "item": "Lierre 常春藤 手镯",
+     "note": "自购，生日礼物"
+    }
+   ],
+   "last_visit": "2026-03-20",
+   "preferences": [
+    "只在周末联系",
+    "工作日不方便看消息"
+   ],
+   "family": null,
+   "ca_notes": null
+  },
+  "history": [
+   {
+    "speaker": "CA",
+    "time": "2026-03-20 15:00",
+    "text": "刘女士，手镯抛光好了，您周末方便时来取"
+   },
+   {
+    "speaker": "client",
+    "time": "2026-03-21 10:12",
+    "text": "好的，周六上午过来"
+   }
+  ],
+  "products": [
+   {
+    "sku": "LRR-B-01",
+    "name": "Lierre 常春藤 手镯",
+    "collection": "Lierre 常春藤",
+    "category": "bracelet",
+    "material": "18K玫瑰金，藤叶纹手工錾刻",
+    "price": 38000,
+    "story": "常春藤象征长久的陪伴，藤叶纹由匠人逐片錾刻，每只略有不同",
+    "care": "可终身免费抛光"
+   }
+  ],
+  "context": "手镯购买一年，可免费抛光。注意：今天是周二"
+ },
+ "result": {
+  "case_id": "A08",
+  "version": "v1",
+  "analysis": {
+   "key_facts": [
+    "客户最后说「好的，周六上午过来」，取抛光好的 Lierre 常春藤手镯",
+    "今天是周二，客户只在周末联系，工作日不方便看消息",
+    "手镯为18K玫瑰金、藤叶纹手工錾刻，可终身免费抛光",
+    "上次到店为2026-03-20，即原定取件的那次"
+   ],
+   "risks": [
+    "今天是周二，属工作日，客户不方便看消息，发送时机不合适",
+    "必须先回应「周六上午过来」，避免像没看到一样另起话题",
+    "不催、不追问未到店的取件，语气要轻",
+    "不趁机推销新品，不谈价格与保值",
+    "保养建议须与18K玫瑰金錾刻材质相符"
+   ],
+   "timing_ok": false,
+   "max_similarity": 0.39
+  },
+  "candidates": [
+   {
+    "angle": "关心体验",
+    "message": "刘女士，周六上午我在，您到了提前说一声就好。手镯戴回去这段，藤叶纹的錾刻凹处如果觉得不如从前透亮，是正常的。\n周末见。",
+    "rationale": "先接住客户周六到店的约定，再以錾刻凹处的实际使用感受展开，语气轻、不催。",
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "实用保养",
+    "message": "刘女士，周六上午等您。抛好之后，藤叶纹那些手工錾刻的细缝，平时用软布顺着纹路擦一擦就好，不必沾水或清洁剂，纹路会一直清爽。",
+    "rationale": "回应到店约定后，给出一条与18K玫瑰金手工錾刻相符的保养建议（软布顺纹擦、避水与清洁剂）。",
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "专属服务",
+    "message": "刘女士，周六上午我在店里，您过来就好。手镯抛光是终身免费的，之后若想再清一清，周末来前跟我说一声，我提前安排。",
+    "rationale": "先确认周六到店，再主动提供终身免费抛光与预约安排这一政策内服务，不推销。",
+    "issues": [],
+    "repaired": false
+   }
+  ],
+  "model": "deepseek:deepseek-chat",
+  "latency_s": 4.1
+ },
+ "judge": {
+  "candidates": [
+   {
+    "id": 1,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 3,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 2,
+     "goal": 3,
+     "faithfulness": 4
+    },
+    "hard_fail": true,
+    "hard_fail_reason": "把234天前已自然结束的旧对话（周六来取手镯）当作正在进行的约定来回应，违反对话状态规则",
+    "comment": "语气温润，但把半年前的取件约定当成当下的安排，时机与语境都错位。"
+   },
+   {
+    "id": 2,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 3,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 2,
+     "goal": 3,
+     "faithfulness": 4
+    },
+    "hard_fail": true,
+    "hard_fail_reason": "同样把234天前的旧对话当作进行中的约定（“周六上午等您”），违反对话状态规则",
+    "comment": "保养建议具体实用，但开头仍误接旧约定，需改为周末发送并重写开头。"
+   },
+   {
+    "id": 3,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 3,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 2,
+     "goal": 3,
+     "faithfulness": 4
+    },
+    "hard_fail": true,
+    "hard_fail_reason": "把234天前的旧对话当作进行中的约定（“周六上午我在店里，您过来就好”），违反对话状态规则",
+    "comment": "终身免费抛光信息准确，但同样误将旧约定当现在，需重写为周末发送的独立关怀。"
+   }
+  ],
+  "set": {
+   "diversity": 2,
+   "best_id": 2,
+   "comment": "三条都误接旧对话，差异仅在保养内容；候选2的保养知识最具体，改写开头后可优先采用。"
+  },
+  "judge_model": "deepseek:deepseek-chat"
+ },
+ "judge_history": [
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 3,
+      "faithfulness": 4
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "回应了周六到店，但“不如从前透亮是正常的”略像预先解释，关怀感偏弱。"
+    },
+    {
+     "id": 2,
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "先回应到店，再给具体保养方法，温润实用，分寸得当。"
+    },
+    {
+     "id": 3,
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "回应到店并说明终身免费抛光，服务感清楚，但保养知识略少。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 2,
+    "comment": "三条分别偏关心、保养、服务，差异清楚；候选2最贴合售后关怀目标。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  }
+ ]
+}

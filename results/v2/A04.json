@@ -1,0 +1,279 @@
+{
+ "case_id": "A04",
+ "meta": {
+  "type": "core",
+  "focus": "典藏、正式、不喜欢打扰；以爱惜表的心情切入保养；记住他看月亮的细节"
+ },
+ "request": {
+  "case_id": "A04",
+  "scenario": "aftercare",
+  "today": "2026-11-10",
+  "ca_name": "Lina",
+  "client": {
+   "client_id": "C09",
+   "surname": "吴",
+   "gender": "M",
+   "preferred_name": null,
+   "age_band": "55-60",
+   "city": "杭州",
+   "tier": "典藏 Heritage",
+   "birthday": null,
+   "occupation": "已退休，曾任大学教授",
+   "interests": [
+    "天文",
+    "古典音乐",
+    "书法"
+   ],
+   "style_notes": "只戴一块表，非常爱惜",
+   "purchases": [
+    {
+     "date": "2021-03-21",
+     "item": "Méridien 子午线 万年历腕表 40mm",
+     "note": "自购，纪念退休"
+    }
+   ],
+   "last_visit": "2025-04-10",
+   "preferences": [
+    "语气正式",
+    "不喜欢频繁打扰"
+   ],
+   "family": null,
+   "ca_notes": "对月相显示特别有感情，说过“退休后终于有时间看月亮”"
+  },
+  "history": [
+   {
+    "speaker": "client",
+    "time": "2025-04-10 15:30",
+    "text": "表走得很准，月相每天看着很安心"
+   }
+  ],
+  "products": [
+   {
+    "sku": "MRD-W-01",
+    "name": "Méridien 子午线 万年历腕表 40mm",
+    "collection": "Méridien 子午线",
+    "category": "watch",
+    "material": "铂金表壳，乳白色珐琅表盘，自制万年历机芯，月相显示",
+    "price": 520000,
+    "story": "万年历可准确显示至2100年，珐琅表盘经多次烧制，成品率较低",
+    "care": "避免在晚上8点至凌晨2点间调校日历"
+   }
+  ],
+  "context": "购买已5年半，建议保养；会员计划首次保养免费；可上门取表"
+ },
+ "result": {
+  "case_id": "A04",
+  "version": "v2",
+  "analysis": {
+   "key_facts": [
+    "吴先生于2021年3月自购Méridien万年历腕表纪念退休，至今约5年半",
+    "上一次到店是2025年4月，当时他提到月相每天看着很安心",
+    "客户偏好正式语气、不喜欢频繁打扰，距上次对话已579天",
+    "产品保养要点：避免晚上8点至凌晨2点调校日历；会员计划首次保养免费，可上门取表"
+   ],
+   "risks": [
+    "客户不喜欢频繁打扰，579天未联系，消息需轻、不要显得突兀",
+    "不得暗示折扣或推销新品",
+    "保养信息必须与铂金表壳、珐琅表盘、万年历机芯相符，不编造工艺细节",
+    "不承诺输入中没有的服务，如保养周期不得自造时长",
+    "不提及消费金额或会员等级，仅以会员计划权益陈述"
+   ],
+   "timing_ok": true,
+   "max_similarity": 0.31
+  },
+  "candidates": [
+   {
+    "angle": "关心体验",
+    "message": "吴先生，您好。距您上次来店里已有一年半，想问候一声：这枚子午线万年历戴得还顺心吗？记得您退休时买下它，说月相每天看着很安心，这句话我一直有印象。若走时或月相有任何需要留意的地方，随时告诉我。",
+    "rationale": "以过去购买纪念退休为切入口，温和问候使用体验，引用客户原话但不生硬，符合正式语气且不频繁打扰。",
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "实用保养",
+    "message": "吴先生，您好。这枚子午线万年历已陪伴您五年多，提醒一个日常细节：晚上8点到凌晨2点之间避免调校日历，此时机芯齿轮正在咬合，避开这段时间对万年历更稳妥。珐琅表盘平时用软布轻拭即可。",
+    "rationale": "给出一条与万年历机芯直接相关的具体保养建议，实用、克制，不推销。",
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "专属服务",
+    "message": "吴先生，您好。这枚子午线万年历使用已五年半，若您愿意，可以安排一次保养检查。按会员计划，首次保养免费，我也可以上门取表，省去您往返。您方便时回复即可，不着急。",
+    "rationale": "主动提供政策内首次保养免费与上门取表服务，给出轻松可拒绝的下一步，语气正式。",
+    "issues": [],
+    "repaired": false
+   }
+  ],
+  "model": "deepseek:deepseek-chat",
+  "latency_s": 4.2
+ },
+ "judge": {
+  "candidates": [
+   {
+    "id": 1,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 5,
+     "brand_voice": 5,
+     "naturalness": 5,
+     "appropriateness": 5,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "引用客户原话与退休购表背景自然，语气温润克制，不施压；仅售后跟进略偏轻，未触及保养提示。"
+   },
+   {
+    "id": 2,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 3,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 4,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "保养知识准确且实用，但“机芯齿轮正在咬合”属产品信息外的解释性补充，且整体偏通用提醒，个性化稍弱。"
+   },
+   {
+    "id": 3,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 5,
+     "naturalness": 5,
+     "appropriateness": 5,
+     "goal": 5,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "紧扣五年半保养节点，会员首次免费与上门取表均合规，结尾轻松可拒绝，分寸得当。"
+   }
+  ],
+  "set": {
+   "diversity": 5,
+   "best_id": 3,
+   "comment": "三条分别覆盖情感问候、日常保养知识、保养服务邀约，方向清晰不重复；候选3最贴合售后关怀目标且合规。"
+  },
+  "judge_model": "deepseek:deepseek-chat"
+ },
+ "judge_history": [
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [
+      "记得您退休时买下它，说月相每天看着很安心（客户原话是“月相每天看着很安心”，但“退休时买下”是档案中的购买备注，并非客户在对话中说过的话，此处将档案信息与客户原话合并引用，略有偏差）"
+     ],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 3,
+      "faithfulness": 3
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "问候自然、引用真实对话，但把档案备注当作客户原话稍显不严谨，且未提供保养服务，目标完成度一般。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "保养知识准确、语气克制，但个性化偏弱，更像通用提醒，未提及客户对月相的感情。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "结合使用年限提出保养建议，会员免费与上门取表均符合政策，结尾轻松可拒绝，目标完成度高。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 3,
+    "comment": "三条分别侧重情感问候、保养知识、服务邀约，方向清晰不同；候选3最贴合售后关怀目标且事实无误。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  },
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 5,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "引用客户原话与退休购表背景，温润克制，但仅问候体验，未提供保养知识或服务，目标略欠完整。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 5,
+      "naturalness": 4,
+      "appropriateness": 5,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "保养知识准确且实用，但偏通用，换个名字也能发，个性化稍弱。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "结合使用年限给出保养建议，会员首次保养免费与上门取表均有依据，结尾轻松可拒绝，完成场景目标。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 3,
+    "comment": "三条分别侧重情感问候、保养知识、专属服务，方向清晰；候选3在个性化与目标完成度上最均衡。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  }
+ ]
+}

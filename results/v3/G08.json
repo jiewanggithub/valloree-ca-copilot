@@ -1,0 +1,237 @@
+{
+ "case_id": "G08",
+ "meta": {
+  "type": "edge",
+  "focus": "迟到的生日祝福——要自然说明并尊重客户“只在周末联系”的偏好，不能假装是当天"
+ },
+ "request": {
+  "case_id": "G08",
+  "scenario": "greeting",
+  "today": "2026-11-07",
+  "ca_name": "Lina",
+  "client": {
+   "client_id": "C06",
+   "surname": "刘",
+   "gender": "F",
+   "preferred_name": null,
+   "age_band": "40-45",
+   "city": "上海",
+   "tier": "尊享 Privilege",
+   "birthday": "11-04",
+   "occupation": "三甲医院外科医生",
+   "interests": [
+    "马拉松",
+    "古典乐"
+   ],
+   "style_notes": "工作时不能佩戴首饰，周末才戴",
+   "purchases": [
+    {
+     "date": "2025-11-01",
+     "item": "Lierre 常春藤 手镯",
+     "note": "自购，生日礼物"
+    }
+   ],
+   "last_visit": "2026-03-20",
+   "preferences": [
+    "只在周末联系",
+    "工作日不方便看消息"
+   ],
+   "family": null,
+   "ca_notes": null
+  },
+  "history": [
+   {
+    "speaker": "CA",
+    "time": "2026-03-20 15:00",
+    "text": "刘女士，手镯抛光好了，您周末方便时来取"
+   },
+   {
+    "speaker": "client",
+    "time": "2026-03-21 10:12",
+    "text": "好的，周六上午过来"
+   }
+  ],
+  "products": [],
+  "context": "客户生日是11月4日（周三），因客户只接受周末联系，今天（周六）才发"
+ },
+ "result": {
+  "case_id": "G08",
+  "version": "v3",
+  "analysis": {
+   "key_facts": [
+    "C3 生日11-04，三天前已过",
+    "C6 2025-11-01 自购 Lierre 常春藤手镯作为生日礼物",
+    "C4 工作时不能佩戴首饰，周末才戴",
+    "C2 三甲医院外科医生；C5 兴趣为马拉松、古典乐"
+   ],
+   "risks": [
+    "生日已过三天，措辞不说道歉，平和地补上祝福",
+    "客户只接受周末联系，今天周六发送合适",
+    "纯祝福，不推荐产品、不提新品价格活动，也不提供服务（清洁抛光等）",
+    "不提及年龄；不虚构场景细节；不以群发模板口吻"
+   ],
+   "timing_ok": true,
+   "max_similarity": 0.38
+  },
+  "candidates": [
+   {
+    "angle": "温情回忆",
+    "message": "刘女士，生日是四号，那天是周三，等到周末才把这句话送到：生日快乐。想起去年您把手镯留作给自己的生日礼物，这份心意我一直觉得很好。祝新的一岁顺遂，周末戴得上它的时候，都过得舒展。",
+    "rationale": "以手镯作为生日礼物这一真实细节切入，祝福落在其中，解释周末才发但不道歉。｜事实核查已删改：怕打扰您工作（客户只接受周末联系，未说明原因是怕打扰工作——属推测性理由，可保留为合理推测？此处为具体归因，改为中性表述）",
+    "facts_used": [
+     "C3",
+     "C6",
+     "C4"
+    ],
+    "critic_removed": [
+     "怕打扰您工作（客户只接受周末联系，未说明原因是怕打扰工作——属推测性理由，可保留为合理推测？此处为具体归因，改为中性表述）"
+    ],
+    "issues": [],
+    "repaired": true
+   },
+   {
+    "angle": "简洁雅致",
+    "message": "刘女士，生日刚过，补一句：祝您生日快乐。愿这一年，忙碌之外也有让您安静下来的时刻。",
+    "rationale": "两三句，克制干净，不堆砌辞藻，适合偏好简短的客户。",
+    "facts_used": [
+     "C3"
+    ],
+    "critic_removed": [],
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "轻关怀",
+    "message": "刘女士，四号是您的生日，赶上工作日，今天才补上祝福：生日快乐。不知今年还跑不跑马拉松？手术和赛程之间，也给自己留些听音乐的时间。",
+    "rationale": "祝福之外关心客户提过的马拉松与古典乐兴趣，不提产品服务和到店。",
+    "facts_used": [
+     "C3",
+     "C2",
+     "C5"
+    ],
+    "critic_removed": [],
+    "issues": [],
+    "repaired": false
+   }
+  ],
+  "model": "deepseek:deepseek-chat",
+  "latency_s": 6.3
+ },
+ "judge": {
+  "candidates": [
+   {
+    "id": 1,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 5,
+     "brand_voice": 5,
+     "naturalness": 4,
+     "appropriateness": 5,
+     "goal": 5,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "引用去年自购生日手镯的档案事实，祝福具体克制；仅“这份心意我一直觉得很好”略近套话，可再收一点。"
+   },
+   {
+    "id": 2,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 3,
+     "brand_voice": 5,
+     "naturalness": 5,
+     "appropriateness": 5,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "语气温润得体，但除称呼外几乎无客户专属信息，换个名字也能发，个性化偏弱。"
+   },
+   {
+    "id": 3,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 5,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 4,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "马拉松与古典乐取自档案，关怀自然；但连问赛程又提手术，分寸略越，祝福被问句冲淡。"
+   }
+  ],
+  "set": {
+   "diversity": 4,
+   "best_id": 1,
+   "comment": "三条分别走回忆、简洁、关怀路线，区分清晰；候选1最贴合“被记得”的目标且事实有据。"
+  },
+  "judge_model": "deepseek:deepseek-chat"
+ },
+ "judge_history": [
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [
+      "“想起去年您把手镯留作给自己的生日礼物”——购买记录写的是“自购，生日礼物”，但“留作给自己的生日礼物”这一具体心意/场景是推断出来的，档案里没有明说"
+     ],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 3
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "温情且具体，但“留作给自己的生日礼物”略微越过了档案事实，改成“去年生日前您选了这只手镯”更稳。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 2,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 5,
+      "goal": 3,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "语气干净得体，但换个名字也能发，缺少刘女士的具体信息，祝福略显泛。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [
+      "“不知今年还跑不跑马拉松”——档案兴趣里有马拉松，但“今年还跑不跑”暗示往年跑过，属于合理推测，可接受",
+      "“手术和赛程之间”——把马拉松称为“赛程”属轻微延伸"
+     ],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 4
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "用兴趣做关怀很自然，但连问马拉松又提手术，稍显打探，收一句会更克制。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 1,
+    "comment": "三条风格区分明显；候选1最有“被记得”的温度，只需把“留作给自己的生日礼物”改为档案可支撑的表述即可发送。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  }
+ ]
+}

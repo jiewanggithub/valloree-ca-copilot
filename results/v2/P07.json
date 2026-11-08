@@ -1,0 +1,276 @@
+{
+ "case_id": "P07",
+ "meta": {
+  "type": "adversarial",
+  "focus": "合理诉求+不能打折的两难；真诚致歉、不能打折、给出政策内诚意"
+ },
+ "request": {
+  "case_id": "P07",
+  "scenario": "price_objection",
+  "today": "2026-11-12",
+  "ca_name": "Lina",
+  "client": {
+   "client_id": "C10",
+   "surname": "郑",
+   "gender": "F",
+   "preferred_name": null,
+   "age_band": "35-40",
+   "city": "北京",
+   "tier": "尊享 Privilege",
+   "birthday": null,
+   "occupation": "律师事务所合伙人",
+   "interests": [],
+   "style_notes": "偏好玫瑰金，正式场合佩戴腕表",
+   "purchases": [
+    {
+     "date": "2026-10-25",
+     "item": "Heure Bleue 蓝调时刻 女士腕表 28mm 玫瑰金镶钻",
+     "note": "自购"
+    }
+   ],
+   "last_visit": "2026-10-25",
+   "preferences": [
+    "说话直接，重效率"
+   ],
+   "family": null,
+   "ca_notes": null
+  },
+  "history": [
+   {
+    "speaker": "CA",
+    "time": "2026-11-06 18:00",
+    "text": "郑女士，表扣已经调整好并做了全面检测，再次抱歉给您带来不便"
+   },
+   {
+    "speaker": "client",
+    "time": "2026-11-11 21:00",
+    "text": "表扣问题这件事挺影响体验的。我还想再买一条星宿项链，能不能给我个补偿价？"
+   }
+  ],
+  "products": [
+   {
+    "sku": "CST-N-02",
+    "name": "Constellation 星宿 钻石项链",
+    "collection": "Constellation 星宿",
+    "category": "necklace",
+    "material": "18K白金，0.3克拉主钻",
+    "price": 46000,
+    "story": "吊坠背面刻有出生当月的星图，可定制",
+    "care": "避免与硬物碰撞，睡前取下"
+   }
+  ],
+  "context": "不能给补偿价；可提供：免费刻字、礼盒、CA亲自送达、优先服务"
+ },
+ "result": {
+  "case_id": "P07",
+  "version": "v2",
+  "analysis": {
+   "key_facts": [
+    "郑女士1天前提出：表扣问题影响体验，想再买星宿项链，要求补偿价",
+    "10月25日自购Heure Bleue蓝调时刻28mm玫瑰金镶钻腕表",
+    "表扣已于11月6日调整好并做了全面检测",
+    "郑女士说话直接，重效率"
+   ],
+   "risks": [
+    "客户在等回复，必须第一句就回应表扣体验与补偿价请求",
+    "不能给折扣、补偿价或任何变相抵价，需明确说明全球统一价格",
+    "不能贬低其他渠道，不能承诺保值",
+    "郑女士偏好直接，回复不宜绕弯或过长"
+   ],
+   "timing_ok": true,
+   "max_similarity": 0.3
+  },
+  "candidates": [
+   {
+    "angle": "共情+价值",
+    "message": "郑女士，表扣反复确实影响佩戴感受，您的意见我明白。补偿价这件事我做不到，瓦洛蕾全球是统一价格，没有例外，我不想给您不准确的答复。星宿项链是18K白金镶0.3克拉主钻，吊坠背面可按出生当月星图定制，这条的工夫主要在定制和镶嵌上。您如果愿意，我可以先安排您在店里上手看看效果。",
+    "rationale": "先正面回应表扣体验，再直接说明不能给补偿价，用作品本身的定制与工艺把话题转向价值。",
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "政策+保障",
+    "message": "郑女士，表扣的事让您费心了，这确实不该发生。关于补偿价，我坦诚和您说：瓦洛蕾实行全球统一价格，我这边没有办法给到折扣，也不能申请特殊价格。走官方渠道的好处是保修、证书和终身免费清洁抛光都有据可查，后续服务我直接对您负责。星宿项链您想看的话，我随时安排。",
+    "rationale": "直接说明统一价格政策，用官方渠道的保障作为回应，不贬低其他渠道，保持关系不显拒绝。",
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "替代方案/增值服务",
+    "message": "郑女士，表扣的问题我理解，体验上确实打了折扣。补偿价我给不了，价格这块没有空间，这点先跟您说清楚。星宿项链如果您确定，我可以帮您安排免费刻字、礼盒和手写卡片，也可以我个人送到您手上，省得您再跑一趟。您方便的话，我把细节和您对一下。",
+    "rationale": "先明确回应不能给补偿价，再用政策内的刻字、礼盒、CA送达作为可提供的服务，给出轻松的下一步。",
+    "issues": [],
+    "repaired": false
+   }
+  ],
+  "model": "deepseek:deepseek-chat",
+  "latency_s": 4.5
+ },
+ "judge": {
+  "candidates": [
+   {
+    "id": 1,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 5,
+     "naturalness": 5,
+     "appropriateness": 5,
+     "goal": 5,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "先共情表扣、明确拒绝补偿价并说明统一价格，再落到星宿的定制与镶嵌价值，收尾是轻松的上手邀约，分寸与价值引导都到位。"
+   },
+   {
+    "id": 2,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 3,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 4,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "政策与官方渠道保障讲得清楚，但“保修、证书”偏泛，未用到星宿的定制细节，个性化略弱。"
+   },
+   {
+    "id": 3,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 3,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 3,
+     "goal": 3,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "拒绝补偿价干脆，但把刻字、礼盒、亲自送达打包成“补偿”式增值，略像用服务抵价，且未回应表扣体验，价值引导偏弱。"
+   }
+  ],
+  "set": {
+   "diversity": 4,
+   "best_id": 1,
+   "comment": "三条分别走价值定制、政策保障、服务增值三条路，差异明显；候选1在共情、守价与价值引导上最平衡，可直接发送。"
+  },
+  "judge_model": "deepseek:deepseek-chat"
+ },
+ "judge_history": [
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "先共情表扣、明确拒绝补偿价并说明统一价格，再落到星宿的定制与镶嵌价值，收尾是轻松的上手邀约，分寸与价值引导都到位。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "政策陈述清晰、官方渠道保障说得平和，但“保修、证书”略偏泛，且对星宿项链本身着墨少，价值引导稍弱。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 3,
+      "goal": 3,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "服务项都在政策内，但把免费刻字、礼盒、亲自送达紧接在拒绝补偿价之后，容易被读成变相补偿，且未触及项链本身价值。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 1,
+    "comment": "三条分别走价值、政策保障、服务增值三条路，差异明显；候选1最贴合“共情—守价—引向价值”的目标，候选3需注意服务项不要显得像补偿。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  },
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "先共情表扣问题，明确拒绝补偿价并说明全球统一价格，再落到星宿项链的定制与镶嵌价值，结尾邀约轻松可拒，分寸到位。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "政策与官方渠道保障陈述准确，但“保修、证书、终身清洁”偏泛，对星宿项链本身着墨少，价值引导略弱。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 3,
+      "goal": 3,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "拒绝补偿价清楚，但用刻字礼盒送达等增值服务回应价格异议，略有以服务抵价的暗示，且未触及项链本身价值。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 1,
+    "comment": "三条分别走价值、政策保障、增值服务路线，差异明显；候选1最贴合场景目标，先回应表扣再谈价值，克制不施压。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  }
+ ]
+}

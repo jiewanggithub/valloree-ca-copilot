@@ -1,0 +1,274 @@
+{
+ "case_id": "E07",
+ "meta": {
+  "type": "adversarial",
+  "focus": "已两次婉拒活动+反感打扰——邀约应极简、明确“不必回复”、提供私下看表的替代"
+ },
+ "request": {
+  "case_id": "E07",
+  "scenario": "event",
+  "today": "2026-11-21",
+  "ca_name": "Lina",
+  "client": {
+   "client_id": "C20",
+   "surname": "韩",
+   "gender": "M",
+   "preferred_name": null,
+   "age_band": "40-45",
+   "city": "北京",
+   "tier": "尊享 Privilege",
+   "birthday": null,
+   "occupation": "律师",
+   "interests": [],
+   "style_notes": null,
+   "purchases": [
+    {
+     "date": "2025-05-10",
+     "item": "Méridien 子午线 两地时腕表 41mm",
+     "note": "自购"
+    }
+   ],
+   "last_visit": "2025-05-10",
+   "preferences": [
+    "不喜欢频繁收到消息"
+   ],
+   "family": null,
+   "ca_notes": "话少，曾两次婉拒活动邀请"
+  },
+  "history": [
+   {
+    "speaker": "CA",
+    "time": "2026-06-01 10:00",
+    "text": "韩先生您好，6月18日北京店有一场制表师交流会，诚邀您参加"
+   },
+   {
+    "speaker": "client",
+    "time": "2026-06-01 21:00",
+    "text": "谢谢，最近忙，不参加了"
+   }
+  ],
+  "products": [],
+  "context": "活动：Méridien万年历机芯拆解课\n时间：2026年11月28日（周六）14:00–16:30\n地点：北京国贸丽庭店"
+ },
+ "result": {
+  "case_id": "E07",
+  "version": "v2",
+  "analysis": {
+   "key_facts": [
+    "客户拥有 Méridien 子午线 两地时腕表 41mm，2025年5月自购",
+    "客户不喜欢频繁收到消息，曾两次婉拒活动邀请",
+    "上次对话在173天前，客户以忙为由婉拒制表师交流会",
+    "本次为11月28日周六14:00–16:30 北京国贸丽庭店 机芯拆解课"
+   ],
+   "risks": [
+    "客户话少且两次婉拒活动，需给足拒绝余地，不可施压",
+    "距离上次购买已560天、上次到店560天，久未联系，不宜显得突兀",
+    "偏好不喜欢频繁消息，语气要轻",
+    "不得提及折扣、保值或编造活动细节"
+   ],
+   "timing_ok": true,
+   "max_similarity": 0.44
+  },
+  "candidates": [
+   {
+    "angle": "专属感",
+    "message": "韩先生，许久未打扰。您那块Méridien两地时戴了这些日子，机芯里的两地时结构想必您也好奇过。11月28日周六下午两点到四点半，国贸丽庭店有一场Méridien万年历机芯拆解课，我想着您或许会有兴趣。如能来，回我一句就好；不方便也完全无妨。",
+    "rationale": "借客户拥有的Méridien腕表与机芯结构建立联系，说明为何特意想到他，再给活动信息并留拒绝余地。",
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "信息清晰",
+    "message": "韩先生，跟您说一场活动：11月28日周六14:00–16:30，在国贸丽庭店，Méridien万年历机芯拆解课，现场看机芯逐层拆开讲解。您若想来，直接回我确认即可；这次不方便也没关系，我不多扰。",
+    "rationale": "把时间、地点、内容一眼说清，方便话少的客户快速决定，结尾明确不追问。",
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "灵活型",
+    "message": "韩先生，11月28日周六下午国贸丽庭店有一场Méridien万年历机芯拆解课，14:00开始。知道您时间紧，若不巧赶不上，我可以另约一个您方便的时段单独看，或先把相关内容发给您。您看哪种合适，回一句就行。",
+    "rationale": "先给活动要点，随即提供私人时段与先发资料两个替代，尊重客户作息且不施压。",
+    "issues": [],
+    "repaired": false
+   }
+  ],
+  "model": "deepseek:deepseek-chat",
+  "latency_s": 4.1
+ },
+ "judge": {
+  "candidates": [
+   {
+    "id": 1,
+    "unsupported_claims": [
+     "机芯里的两地时结构想必您也好奇过（虚构客户兴趣/心理）"
+    ],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 5,
+     "naturalness": 5,
+     "appropriateness": 4,
+     "goal": 4,
+     "faithfulness": 3
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "语气温润克制，但“想必您也好奇过”替客户预设了兴趣，属轻微编造，建议改为邀请式表达。"
+   },
+   {
+    "id": 2,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 3,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 4,
+     "goal": 5,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "时间地点内容清楚、无施压，但几乎没用客户信息，换个名字即可群发，专属感偏弱。"
+   },
+   {
+    "id": 3,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 3,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 4,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "给出多种轻松选项、尊重客户时间紧，但“单独看”与“发内容”略偏离活动邀约目标，且同样缺少客户专属细节。"
+   }
+  ],
+  "set": {
+   "diversity": 4,
+   "best_id": 2,
+   "comment": "三条分别走专属感、信息清晰、灵活备选，差异明显；候选2最干净可直接发送，候选1需去掉对客户兴趣的预设。"
+  },
+  "judge_model": "deepseek:deepseek-chat"
+ },
+ "judge_history": [
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [
+      "您那块Méridien两地时戴了这些日子，机芯里的两地时结构想必您也好奇过（客户从未表达过对机芯结构的好奇，属虚构客户兴趣/经历）"
+     ],
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 3,
+      "goal": 3,
+      "faithfulness": 2
+     },
+     "hard_fail": true,
+     "hard_fail_reason": "编造客户经历/兴趣：客户档案与对话历史中无任何客户对机芯结构好奇的表述",
+     "comment": "语气温润，但“想必您也好奇过”是无依据的客户心理揣测，属编造。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 2,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "信息清楚、克制不施压，但缺少与韩先生的真实连接点，略偏群发感。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [
+      "我可以另约一个您方便的时段单独看（政策内无“单独看机芯拆解课”的服务，属自造服务）",
+      "先把相关内容发给您（无依据的额外服务承诺）"
+     ],
+     "scores": {
+      "personalization": 2,
+      "brand_voice": 3,
+      "naturalness": 3,
+      "appropriateness": 3,
+      "goal": 3,
+      "faithfulness": 2
+     },
+     "hard_fail": true,
+     "hard_fail_reason": "自造服务：单独约时段看拆解课、发送相关内容均无政策或输入依据",
+     "comment": "看似灵活，实则承诺了输入中不存在的服务，且对不喜欢频繁消息的客户略显啰嗦。"
+    }
+   ],
+   "set": {
+    "diversity": 3,
+    "best_id": 2,
+    "comment": "三条角度不同（专属感/信息清晰/灵活），但1和3均有编造；2最稳妥可用，仅需补一个真实细节增强专属感。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  },
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [
+      "您那块Méridien两地时戴了这些日子，机芯里的两地时结构想必您也好奇过（客户从未表达过对机芯结构的好奇，属虚构客户兴趣/心理）"
+     ],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 3,
+      "goal": 4,
+      "faithfulness": 2
+     },
+     "hard_fail": true,
+     "hard_fail_reason": "虚构客户对机芯结构的好奇，属编造客户经历/偏好",
+     "comment": "语气温润、信息清楚，但“想必您也好奇过”是无依据的客户心理虚构，需删。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "comment": "信息最清楚、克制不施压，但个性化偏弱，换个名字也能发。",
+     "hard_fail": false
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [
+      "我可以另约一个您方便的时段单独看（另约时段属政策内CA动作，可接受）"
+     ],
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 4
+     },
+     "comment": "给了轻松拒绝的出口，符合客户不爱频繁被打扰的偏好，但“单独看”略超出活动本身，且个性化一般。",
+     "hard_fail": false
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 2,
+    "comment": "三条角度不同（专属感/清晰/灵活），但候选1有虚构客户心理的硬伤；候选2最稳妥可直接发，候选3可作备选。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  }
+ ]
+}

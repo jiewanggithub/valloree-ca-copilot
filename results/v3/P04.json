@@ -1,0 +1,251 @@
+{
+ "case_id": "P04",
+ "meta": {
+  "type": "adversarial",
+  "focus": "不贬低代购、不评判真伪；陈述官方价值（星图定制只有官方能做）；纪念日时间临近但不施压"
+ },
+ "request": {
+  "case_id": "P04",
+  "scenario": "price_objection",
+  "today": "2026-10-02",
+  "ca_name": "Lina",
+  "client": {
+   "client_id": "C04",
+   "surname": "赵",
+   "gender": "M",
+   "preferred_name": null,
+   "age_band": "30-35",
+   "city": "深圳",
+   "tier": "会员 Member",
+   "birthday": "11-20",
+   "occupation": "科技公司工程总监",
+   "interests": [],
+   "style_notes": null,
+   "purchases": [
+    {
+     "date": "2025-10-12",
+     "item": "Petit Trésor 小珍宝 珍珠母贝吊坠",
+     "note": "送太太的结婚纪念日礼物"
+    }
+   ],
+   "last_visit": "2025-10-12",
+   "preferences": [
+    "工作日白天很忙，晚上回复"
+   ],
+   "family": "已婚，太太喜欢珍珠和小巧的款式；结婚纪念日10月18日",
+   "ca_notes": "选礼物时希望CA给明确建议，不喜欢绕弯子"
+  },
+  "history": [
+   {
+    "speaker": "CA",
+    "time": "2026-09-28 21:00",
+    "text": "赵先生，星宿项链的吊坠背面可以刻上你们结婚那个月的星图，很有纪念意义"
+   },
+   {
+    "speaker": "client",
+    "time": "2026-10-01 22:10",
+    "text": "我在小红书上看到有代购便宜七八千，是正品吗？"
+   }
+  ],
+  "products": [
+   {
+    "sku": "CST-N-02",
+    "name": "Constellation 星宿 钻石项链",
+    "collection": "Constellation 星宿",
+    "category": "necklace",
+    "material": "18K白金，0.3克拉主钻",
+    "price": 46000,
+    "story": "吊坠背面刻有出生当月的星图，可定制",
+    "care": "避免与硬物碰撞，睡前取下"
+   }
+  ],
+  "context": "官方渠道：真品证书、全球保修、终身清洁、星图定制只在官方渠道提供"
+ },
+ "result": {
+  "case_id": "P04",
+  "version": "v3",
+  "analysis": {
+   "key_facts": [
+    "C6：2025-10-12 购买 Petit Trésor 珍珠母贝吊坠（送太太的结婚纪念日礼物）",
+    "H2：客户提到小红书代购便宜七八千，问是否正品",
+    "X1：真品证书、全球保修、终身清洁、星图定制只在官方渠道提供",
+    "S1：全球统一价格体系，不打折",
+    "P2/P4：18K白金、0.3克拉主钻；背面可刻出生当月星图"
+   ],
+   "risks": [
+    "客户最后一条消息未回复，必须先回应代购与正品的问题",
+    "不能贬低代购或小红书，只平和陈述官方渠道事实",
+    "不能暗示可申请更低价格或员工价",
+    "不能说保值、升值、投资",
+    "客户偏好晚上回复，今天是周五白天，发送时间需在晚间"
+   ],
+   "timing_ok": true,
+   "max_similarity": 0.3
+  },
+  "candidates": [
+   {
+    "angle": "共情+价值",
+    "message": "赵先生，看到您问代购的事，这个差价确实会让人多想一想。我这边能说的是：星宿的星图定制、真品证书和全球保修，只在官方渠道才有，这几样是跟着作品走的。18K白金镶0.3克拉主钻，吊坠背面刻上您和太太结婚那个月的星图，这份心思代购那边给不了。您方便的话，晚上我拍段实物视频给您看看细节。",
+    "rationale": "先接住客户对差价的疑虑，再把价值落在星图定制与证书上，不以价格争辩。",
+    "facts_used": [
+     "H2",
+     "X1",
+     "P2",
+     "P4"
+    ],
+    "critic_removed": [],
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "政策+保障",
+    "message": "赵先生，代购便宜七八千这个事，我只能如实说：瓦洛蕾全球统一价格，深圳店和别的城市都是一个价，没有折扣空间，这点我不绕弯子。官方渠道给的是真品证书、全球保修和终身免费清洁抛光，星图定制也只在官方做。去年您选的那件珍珠母贝吊坠，清洁抛光随时拿来就行。您要是想再确认，我把证书样本发您看看。",
+    "rationale": "坦诚说明统一价格，用证书与售后保障回应正品疑问，并引用过往购买建立信任。",
+    "facts_used": [
+     "H2",
+     "S1",
+     "S9",
+     "S3",
+     "X1",
+     "C6"
+    ],
+    "critic_removed": [],
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "替代方案（增值服务）",
+    "message": "赵先生，正品这事我给您一个明确的答复：星宿只在官方渠道有真品证书和全球保修，星图定制也是官方才做，代购那边的来源我没法替它保证。价格上全球统一，我这边确实没有折扣。如果您在考虑，可以把结婚那个月的星图先定下来，刻字和礼盒都是免费的；我约个晚上您方便的时间，到店上手看看再决定。",
+    "rationale": "不提供替代款，改为用免费刻字、礼盒与私人预约等政策内服务推进，并给出轻松可拒绝的下一步。｜事实核查已删改：十月的纪念日也快到了（客户结婚纪念日为10月18日，但“纪念日快到了”属于对客户私人时间的推测性提醒，清单中未给出可引用依据；且消息3中“把结婚那个月的星图先定下来”与“十月的纪念日”混用，易被理解为十月即纪念日，事实依据不足）",
+    "facts_used": [
+     "H2",
+     "X1",
+     "S1",
+     "S2",
+     "P4",
+     "C4"
+    ],
+    "critic_removed": [
+     "十月的纪念日也快到了（客户结婚纪念日为10月18日，但“纪念日快到了”属于对客户私人时间的推测性提醒，清单中未给出可引用依据；且消息3中“把结婚那个月的星图先定下来”与“十月的纪念日”混用，易被理解为十月即纪念日，事实依据不足）"
+    ],
+    "issues": [],
+    "repaired": true
+   }
+  ],
+  "model": "deepseek:deepseek-chat",
+  "latency_s": 7.2
+ },
+ "judge": {
+  "candidates": [
+   {
+    "id": 1,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 4,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "共情到位、价值讲得克制，但未正面说明统一价格政策，价格异议的核心回应略欠一句。"
+   },
+   {
+    "id": 2,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 5,
+     "brand_voice": 5,
+     "naturalness": 5,
+     "appropriateness": 5,
+     "goal": 5,
+     "faithfulness": 5
+    },
+    "comment": "直接回应代购疑问，明确统一价格不绕弯子，用证书与保修讲价值，并自然衔接去年购买记录，符合客户要明确建议的偏好。",
+    "hard_fail": false
+   },
+   {
+    "id": 3,
+    "unsupported_claims": [
+     "把结婚那个月的星图先定下来——暗示可先行锁定定制，输入中无此服务依据"
+    ],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 3,
+     "goal": 4,
+     "faithfulness": 3
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "回应了正品与价格，但“先把星图定下来”属自造动作，且结尾邀约略偏推进，需删改。"
+   }
+  ],
+  "set": {
+   "diversity": 4,
+   "best_id": 2,
+   "comment": "三条分别走共情价值、政策保障、定制邀约路线，差异清晰；候选2最贴合客户要明确答复的偏好，可直接发送。"
+  },
+  "judge_model": "deepseek:deepseek-chat"
+ },
+ "judge_history": [
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "共情到位、价值讲得克制，但未正面回应“是否正品”这一核心疑问，且“代购那边给不了”略有贬低他渠道之嫌，建议改为平和陈述官方渠道事实。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 5,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "直接回应正品疑问、坚守统一价格不绕弯，并自然衔接去年珍珠母贝吊坠的清洁服务，分寸与目标都稳。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 4,
+      "naturalness": 3,
+      "appropriateness": 3,
+      "goal": 3,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "回应了正品与价格，但“先把星图定下来”在客户尚未决定时略显推进过快，且未用上客户档案中的具体信息，个性化偏弱。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 2,
+    "comment": "三条分别走共情价值、政策保障、增值服务路线，差异清晰；候选2最贴合赵先生“不喜欢绕弯子”的偏好，先答正品再谈价格政策，最可直接发送。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  }
+ ]
+}

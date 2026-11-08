@@ -1,0 +1,168 @@
+{
+ "case_id": "P02",
+ "meta": {
+  "type": "adversarial",
+  "focus": "明确不能提供员工价/活动，但要积极帮他完成送礼；可提供刻字/礼盒；可提叠戴戒指作为预算内选择"
+ },
+ "request": {
+  "case_id": "P02",
+  "scenario": "price_objection",
+  "today": "2026-11-09",
+  "ca_name": "Lina",
+  "client": {
+   "client_id": "C15",
+   "surname": "高",
+   "gender": "M",
+   "preferred_name": null,
+   "age_band": "35-40",
+   "city": "深圳",
+   "tier": "会员 Member",
+   "birthday": null,
+   "occupation": "跨境电商创业者",
+   "interests": [],
+   "style_notes": null,
+   "purchases": [
+    {
+     "date": "2024-11-11",
+     "item": "Lierre 常春藤 叠戴戒指（黄金）",
+     "note": "送女友"
+    }
+   ],
+   "last_visit": "2025-11-08",
+   "preferences": [],
+   "family": null,
+   "ca_notes": "习惯比价，2025年11月曾要求双十一折扣被婉拒，之后未再联系"
+  },
+  "history": [
+   {
+    "speaker": "client",
+    "time": "2026-11-09 13:00",
+    "text": "双十一了，有没有活动？或者你们员工价能不能帮我拿一个，想送女朋友常春藤手镯"
+   }
+  ],
+  "products": [
+   {
+    "sku": "LRR-B-01",
+    "name": "Lierre 常春藤 手镯",
+    "collection": "Lierre 常春藤",
+    "category": "bracelet",
+    "material": "18K玫瑰金，藤叶纹手工錾刻",
+    "price": 38000,
+    "story": "常春藤象征长久的陪伴，藤叶纹由匠人逐片錾刻，每只略有不同",
+    "care": "可终身免费抛光"
+   },
+   {
+    "sku": "LRR-R-02",
+    "name": "Lierre 常春藤 叠戴戒指",
+    "collection": "Lierre 常春藤",
+    "category": "ring",
+    "material": "18K黄金/玫瑰金/白金三色可选",
+    "price": 16800,
+    "story": "设计为可叠戴，适合日常",
+    "care": "30天内免费改圈"
+   }
+  ],
+  "context": "客户去年因不打折离开；今年又来问"
+ },
+ "result": {
+  "case_id": "P02",
+  "version": "v1",
+  "analysis": {
+   "key_facts": [
+    "高先生今天主动来问双十一活动和员工价，想送女朋友Lierre常春藤手镯（LRR-B-01，38000元）",
+    "2024年11月11日他曾购买Lierre常春藤叠戴戒指（黄金）送女友，距最近一次购买728天",
+    "2025年11月曾要求双十一折扣被婉拒，之后一年未联系",
+    "手镯为18K玫瑰金、藤叶纹手工錾刻，可终身免费抛光"
+   ],
+   "risks": [
+    "客户在等回复，必须先正面回应活动与员工价的问题，不能回避",
+    "绝不能给折扣、暗示可申请更低价格、员工价或返现",
+    "不能贬低双十一或其他渠道，只平和说明统一价格体系",
+    "不能提保值、投资，也不能让客户觉得被拒绝或买不起",
+    "送女友是礼物语境，措辞需注意分寸，不暴露价格负担等敏感信息"
+   ],
+   "timing_ok": true,
+   "max_similarity": 0.31
+  },
+  "candidates": [
+   {
+    "angle": "共情+价值",
+    "message": "高先生，您问得直接，我也直说：瓦洛蕾全球统一价格，双十一没有活动，员工价也确实没有，这点我不能含糊。\n常春藤手镯是18K玫瑰金，藤叶纹由匠人一片片手工錾刻，每只的走势都不太一样，工时不短。您上次挑的那只叠戴戒指，也是这个系列的细腻劲儿。\n如果方便，我把手镯实拍的细节发您看看，您先感受一下工艺再决定，不着急。",
+    "rationale": "先正面回应活动和员工价，再用錾刻工艺与他在意的系列细节支撑价值，结尾给一个轻量的看图邀约。",
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "政策+保障",
+    "message": "高先生，双十一我们这边没有活动，员工价也没有，瓦洛蕾实行的是全球统一价格，我不能在这件事上给您留余地，还请您理解。\n不过走官方这边，手镯会有证书，终身免费清洁抛光，日常佩戴的养护都能交给我们。您送女朋友的戒指若需要清洁，也可以一起带过来。\n您哪天路过深圳这边，提前跟我说一声，我给您留个安静的时间慢慢看。",
+    "rationale": "坦诚说明统一价格体系，不贬低其他渠道，用证书与终身养护等官方保障回应比价心理，并以预约收尾保持关系。",
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "替代方案",
+    "message": "高先生，活动和员工价这边确实都没有，瓦洛蕾是全球统一价格，我不绕弯子。\n不过选择上可以再商量：同系列叠戴戒指16800，三色可选，和您之前那只凑成一对也好看；若还是想选手镯，我陪您到店上手比较一下再定。礼盒和手写卡片我都可以帮您备好。\n您方便的话告诉我大概什么时候来，我把时间留出来。",
+    "rationale": "在明确无折扣的前提下给出同系列戒指的预算内替代，并附政策内的礼盒与手写卡片服务，把对话引向到店比较。",
+    "issues": [
+     "[HARD:discount] 疑似提供折扣/优惠「员工价」"
+    ],
+    "repaired": true
+   }
+  ],
+  "model": "deepseek:deepseek-chat",
+  "latency_s": 7.5
+ },
+ "judge": {
+  "candidates": [
+   {
+    "id": 1,
+    "scores": {
+     "personalization": 5,
+     "brand_voice": 5,
+     "naturalness": 5,
+     "appropriateness": 5,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "直接回应活动与员工价，用錾刻工艺与上次戒指建立具体连接，结尾轻松可拒绝，唯价值引导略偏软。"
+   },
+   {
+    "id": 2,
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 4,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "政策表述清楚、服务保障具体，但“不能留余地”稍显生硬，且未提及手镯本身价值点。"
+   },
+   {
+    "id": 3,
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 4,
+     "naturalness": 5,
+     "appropriateness": 4,
+     "goal": 5,
+     "faithfulness": 5,
+     "comment": ""
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "先守住价格再给同系列替代与到店比较，目标完成度高，但替代方案略像推销，分寸稍紧。"
+   }
+  ],
+  "set": {
+   "diversity": 4,
+   "best_id": 1,
+   "comment": "三条分别走工艺共情、服务保障、替代选择，路径清晰不同；候选1最贴合品牌温润分寸，候选3目标最完整可作备选。"
+  },
+  "judge_model": "deepseek:deepseek-chat"
+ }
+}

@@ -1,0 +1,285 @@
+{
+ "case_id": "P02",
+ "meta": {
+  "type": "adversarial",
+  "focus": "明确不能提供员工价/活动，但要积极帮他完成送礼；可提供刻字/礼盒；可提叠戴戒指作为预算内选择"
+ },
+ "request": {
+  "case_id": "P02",
+  "scenario": "price_objection",
+  "today": "2026-11-09",
+  "ca_name": "Lina",
+  "client": {
+   "client_id": "C15",
+   "surname": "高",
+   "gender": "M",
+   "preferred_name": null,
+   "age_band": "35-40",
+   "city": "深圳",
+   "tier": "会员 Member",
+   "birthday": null,
+   "occupation": "跨境电商创业者",
+   "interests": [],
+   "style_notes": null,
+   "purchases": [
+    {
+     "date": "2024-11-11",
+     "item": "Lierre 常春藤 叠戴戒指（黄金）",
+     "note": "送女友"
+    }
+   ],
+   "last_visit": "2025-11-08",
+   "preferences": [],
+   "family": null,
+   "ca_notes": "习惯比价，2025年11月曾要求双十一折扣被婉拒，之后未再联系"
+  },
+  "history": [
+   {
+    "speaker": "client",
+    "time": "2026-11-09 13:00",
+    "text": "双十一了，有没有活动？或者你们员工价能不能帮我拿一个，想送女朋友常春藤手镯"
+   }
+  ],
+  "products": [
+   {
+    "sku": "LRR-B-01",
+    "name": "Lierre 常春藤 手镯",
+    "collection": "Lierre 常春藤",
+    "category": "bracelet",
+    "material": "18K玫瑰金，藤叶纹手工錾刻",
+    "price": 38000,
+    "story": "常春藤象征长久的陪伴，藤叶纹由匠人逐片錾刻，每只略有不同",
+    "care": "可终身免费抛光"
+   },
+   {
+    "sku": "LRR-R-02",
+    "name": "Lierre 常春藤 叠戴戒指",
+    "collection": "Lierre 常春藤",
+    "category": "ring",
+    "material": "18K黄金/玫瑰金/白金三色可选",
+    "price": 16800,
+    "story": "设计为可叠戴，适合日常",
+    "care": "30天内免费改圈"
+   }
+  ],
+  "context": "客户去年因不打折离开；今年又来问"
+ },
+ "result": {
+  "case_id": "P02",
+  "version": "v2",
+  "analysis": {
+   "key_facts": [
+    "客户0天前问双十一活动和员工价，想买常春藤手镯送女友",
+    "客户2024年11月11日买过Lierre常春藤叠戴戒指（黄金）送女友",
+    "客户2025年11月曾要求双十一折扣被婉拒，之后一年未联系",
+    "常春藤手镯为18K玫瑰金、藤叶纹手工錾刻，可终身免费抛光"
+   ],
+   "risks": [
+    "客户在等回复，必须先正面回应活动和员工价两个问题",
+    "去年因折扣被拒后流失，语气不能生硬或显得说教",
+    "不能暗示可申请更低价格或以赠品抵价",
+    "客户是送礼，注意分寸，不暴露购买细节给第三方"
+   ],
+   "timing_ok": true,
+   "max_similarity": 0.28
+  },
+  "candidates": [
+   {
+    "angle": "共情+价值",
+    "message": "高先生，明白您想趁双十一看看有没有优惠，这点我不绕弯子：瓦洛蕾全球统一价格，活动价和员工价都没有，这点还请您理解。\n手镯是18K玫瑰金，藤叶纹由匠人一片一片手工錾刻，每只的叶纹都不完全一样，常春藤的寓意也适合送人。您去年选的那枚叠戴戒指，和它是一套的。\n哪天方便来店里上手戴一下？不合适也没关系。",
+    "rationale": "先坦诚回应活动与员工价，再用錾刻工艺和与旧作的成套关系说明价值，结尾邀约可轻松拒绝。",
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "政策+保障",
+    "message": "高先生，双十一我们没有活动，员工价这条渠道也不存在，瓦洛蕾实行的是全球统一价格体系，线上线下一致，所以价格上没有可谈的空间。\n能为您做的是官方渠道的这些事：作品附证书，注册会员后腕表保修可延长至8年，珠宝终身免费清洁抛光，这只手镯就适用。您在深圳，需要的话我可以同城给您送到。\n手镯要不要先上手看看？",
+    "rationale": "直接说明统一价格政策，用证书、保修、终身抛光等官方保障回应比价心理，不贬低其他渠道。",
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "替代方案（增值服务）",
+    "message": "高先生，活动和员工价这边确实没有，价格全球统一，我不能给您一个不一样的数。\n不过送礼这件事我可以帮上忙：手镯可以免费刻字，配礼盒和手写卡片，也可以同城给您送过去。想先看看实物的话，我给您留一个私人预约的时段，慢慢试。\n您方便的话告诉我大概哪天。",
+    "rationale": "温和守住价格底线后，把话题转到刻字、礼盒、送达和私人预约等政策内服务，保持关系。",
+    "issues": [],
+    "repaired": false
+   }
+  ],
+  "model": "deepseek:deepseek-chat",
+  "latency_s": 5.2
+ },
+ "judge": {
+  "candidates": [
+   {
+    "id": 1,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 5,
+     "brand_voice": 5,
+     "naturalness": 5,
+     "appropriateness": 5,
+     "goal": 5,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "直接回应折扣请求、不绕弯子，引用去年戒指与手镯同属一套，价值与关系兼顾，结尾轻松可拒绝。"
+   },
+   {
+    "id": 2,
+    "unsupported_claims": [
+     "注册会员后腕表保修可延长至8年——客户问的是手镯，此处引入腕表保修，与场景无关且易造成误解"
+    ],
+    "scores": {
+     "personalization": 3,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 3,
+     "goal": 3,
+     "faithfulness": 4
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "政策陈述清楚，但腕表保修条款与手镯场景错位，显得像在罗列政策清单，个性化不足。"
+   },
+   {
+    "id": 3,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 5,
+     "naturalness": 5,
+     "appropriateness": 5,
+     "goal": 5,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "守住价格政策后转向送礼增值服务（刻字、礼盒、同城送达、私人预约），分寸得当，下一步明确。"
+   }
+  ],
+  "set": {
+   "diversity": 4,
+   "best_id": 1,
+   "comment": "三条分别走共情价值、政策保障、送礼增值三条路，差异明显；候选1最贴合'懂行老朋友'的语气，候选3次之，候选2的腕表保修属错位信息。"
+  },
+  "judge_model": "deepseek:deepseek-chat"
+ },
+ "judge_history": [
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 5,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "直接回应双十一与员工价，用去年戒指建立联系，价值陈述克制，结尾轻松可拒绝。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [
+      "注册会员后腕表保修可延长至8年（客户问的是手镯，此处引入腕表保修，与场景无关且易误导）"
+     ],
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 3,
+      "goal": 3,
+      "faithfulness": 3
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "政策说明清楚，但腕表保修条款与手镯无关，显得答非所问，削弱精准度。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "守住价格政策后转向刻字、礼盒与预约等真实服务，把对话引向送礼场景，分寸得当。"
+    }
+   ],
+   "set": {
+    "diversity": 5,
+    "best_id": 3,
+    "comment": "三条分别走价值、政策保障、增值服务路线，差异明显；候选3最贴合送礼需求且不施压。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  },
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 5,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "直接回应双十一与员工价，不绕弯子，用去年那枚叠戴戒指建立关联，结尾轻松可拒绝，分寸到位。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [
+      "注册会员后腕表保修可延长至8年——客户问的是手镯，此处引入腕表保修，与场景无关且易造成误解"
+     ],
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 4,
+      "naturalness": 3,
+      "appropriateness": 3,
+      "goal": 3,
+      "faithfulness": 3
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "政策陈述清楚，但腕表保修条款与手镯无关，读起来像在罗列条款，偏离送礼语境。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "守住价格政策后转向刻字、礼盒与私人预约，把对话引向送礼价值，未施压，符合品牌语气。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 1,
+    "comment": "三条都守住统一价格，候选1最贴合客户本人（引用去年作品），候选3在送礼服务上更具体；候选2的腕表保修属跑题，建议弃用。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  }
+ ]
+}

@@ -1,0 +1,238 @@
+{
+ "case_id": "R06",
+ "meta": {
+  "type": "edge",
+  "focus": "信息极少；不能编造客户喜好；不能“催单”"
+ },
+ "request": {
+  "case_id": "R06",
+  "scenario": "recommendation",
+  "today": "2026-11-07",
+  "ca_name": "Lina",
+  "client": {
+   "client_id": "C14",
+   "surname": "许",
+   "gender": "F",
+   "preferred_name": null,
+   "age_band": "25-30",
+   "city": "杭州",
+   "tier": "新客 New",
+   "birthday": null,
+   "occupation": null,
+   "interests": [],
+   "style_notes": null,
+   "purchases": [],
+   "last_visit": "2026-10-03",
+   "preferences": [],
+   "family": null,
+   "ca_notes": "国庆期间在杭州快闪店加的微信，试戴过小珍宝吊坠，说“再考虑一下”；其他信息不多"
+  },
+  "history": [
+   {
+    "speaker": "CA",
+    "time": "2026-10-03 18:40",
+    "text": "许女士您好，我是瓦洛蕾的Lina，今天很高兴认识您"
+   },
+   {
+    "speaker": "client",
+    "time": "2026-10-03 19:02",
+    "text": "你好，我再考虑一下"
+   }
+  ],
+  "products": [
+   {
+    "sku": "PTR-P-01",
+    "name": "Petit Trésor 小珍宝 珍珠母贝吊坠",
+    "collection": "Petit Trésor 小珍宝",
+    "category": "pendant",
+    "material": "18K黄金，白色珍珠母贝，0.05克拉钻石点缀",
+    "price": 12800,
+    "story": "四叶造型来自瓦洛蕾1920年代的档案图稿",
+    "care": "母贝避免接触香水与水"
+   }
+  ],
+  "context": "新客一个月前试戴过小珍宝吊坠后没有下文"
+ },
+ "result": {
+  "case_id": "R06",
+  "version": "v3",
+  "analysis": {
+   "key_facts": [
+    "C2：国庆期间在杭州快闪店加微信，试戴过小珍宝吊坠，说“再考虑一下”",
+    "P1/P2/P4：小珍宝吊坠，18K黄金、白色珍珠母贝、0.05克拉钻石点缀，四叶造型来自1920年代档案图稿",
+    "S2：免费刻字，配礼盒与手写卡片",
+    "S7：可发图片或视频、私人预约、同城CA送达"
+   ],
+   "risks": [
+    "客户上次是“再考虑一下”，一个多月无下文，语气要轻，不催、不制造紧迫感",
+    "不得暗示任何优惠或折扣（S1全球统一价格）",
+    "不做投资、保值类表述",
+    "人称统一用“您”",
+    "不要写成正在回应旧对话，也不要为迟回道歉"
+   ],
+   "timing_ok": true,
+   "max_similarity": 0.38
+  },
+  "candidates": [
+   {
+    "angle": "懂你型",
+    "message": "许女士，想起国庆时您在快闪店试过小珍宝那枚珍珠母贝吊坠。当时您说再考虑一下，我没有再打扰。这枚四叶的造型取自1920年代的档案图稿，白色母贝配一点钻石，日常戴很安静。如果还想再看看，我可以拍段实物视频发给您，您方便时看就好。",
+    "rationale": "从客户试戴过的作品切入，解释记得她的原因，并给一个无需回复的轻下一步。",
+    "facts_used": [
+     "C2",
+     "P1",
+     "P2",
+     "P4",
+     "S7"
+    ],
+    "critic_removed": [],
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "故事型",
+    "message": "许女士，前阵子您试过的小珍宝吊坠，我后来常想到它的来历——四叶的线条是从瓦洛蕾1920年代的档案图稿里来的，隔了一百年还是这个样子。18K黄金托着白色珍珠母贝，点缀0.05克拉钻石。您上次说再考虑一下，我就想把这个故事讲给您听，不急着有答案。",
+    "rationale": "以档案图稿的工艺故事为主，再轻轻落到客户身上，不施压。",
+    "facts_used": [
+     "C2",
+     "P2",
+     "P4"
+    ],
+    "critic_removed": [],
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "邀约体验型",
+    "message": "许女士，国庆在快闪店见过一面，您试过的那枚小珍宝珍珠母贝吊坠，要是愿意，可以约个安静些的时间再来戴戴看；不方便出门的话，我拍几张实物图给您也行。另外这枚可以免费刻字，配手写卡片，只是提一句，您慢慢想。",
+    "rationale": "重点放在低压力到店试戴或看图，附上可选的刻字服务，收尾留白。｜事实核查已删改：店里现在还有；湖滨店",
+    "facts_used": [
+     "C2",
+     "P1",
+     "S2",
+     "S7"
+    ],
+    "critic_removed": [
+     "店里现在还有",
+     "湖滨店"
+    ],
+    "issues": [],
+    "repaired": true
+   }
+  ],
+  "model": "deepseek:deepseek-chat",
+  "latency_s": 6.6
+ },
+ "judge": {
+  "candidates": [
+   {
+    "id": 1,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 5,
+     "brand_voice": 5,
+     "naturalness": 5,
+     "appropriateness": 5,
+     "goal": 5,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "准确引用国庆试戴与'再考虑一下'，产品描述忠于信息，结尾轻松可拒绝，是可直接发送的范本。"
+   },
+   {
+    "id": 2,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 4,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "故事讲得克制有分寸，但'我后来常想到它的来历'略显文艺，且未给客户任何下一步，目标完成度稍弱。"
+   },
+   {
+    "id": 3,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 4,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "邀约与刻字服务均合规，但'安静些的时间'接近套话，且刻字信息略像附加推销，可再收一点。"
+   }
+  ],
+  "set": {
+   "diversity": 4,
+   "best_id": 1,
+   "comment": "三条分别走懂你、故事、邀约路线，差异清晰；候选1最贴合'记得我、懂我'且不施压，为首选。"
+  },
+  "judge_model": "deepseek:deepseek-chat"
+ },
+ "judge_history": [
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 5,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "准确引用国庆试戴与“再考虑一下”，产品描述忠于信息，结尾轻松可拒绝，分寸得当。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "故事讲得克制，但“我后来常想到它的来历”略显刻意，且未给客户轻松的下一步。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "邀约与刻字服务均合规，但“安静些的时间”接近套话，且信息略多稍显堆叠。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 1,
+    "comment": "三条分别走懂你、故事、体验路线，差异清晰；候选1最贴合新客分寸，可直接发送。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  }
+ ]
+}

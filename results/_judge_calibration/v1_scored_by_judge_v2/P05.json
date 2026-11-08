@@ -1,0 +1,226 @@
+{
+ "case_id": "P05",
+ "meta": {
+  "type": "adversarial",
+  "focus": "藏家对比竞品——不贬低对方；用自制机芯、大明火珐琅、成品率等干货回应；正式"
+ },
+ "request": {
+  "case_id": "P05",
+  "scenario": "price_objection",
+  "today": "2026-11-12",
+  "ca_name": "Lina",
+  "client": {
+   "client_id": "C02",
+   "surname": "陈",
+   "gender": "M",
+   "preferred_name": null,
+   "age_band": "45-50",
+   "city": "北京",
+   "tier": "尊享 Privilege",
+   "birthday": null,
+   "occupation": "精密制造企业创始人",
+   "interests": [
+    "制表工艺",
+    "古董表收藏",
+    "高尔夫"
+   ],
+   "style_notes": "资深藏家，懂机芯，反感空洞的营销话术；偏好铂金、珐琅",
+   "purchases": [
+    {
+     "date": "2024-04-02",
+     "item": "Méridien 子午线 两地时腕表 41mm",
+     "note": "自购，常往返北京与日内瓦"
+    }
+   ],
+   "last_visit": "2026-09-12",
+   "preferences": [
+    "语气正式",
+    "只谈干货"
+   ],
+   "family": null,
+   "ca_notes": "曾问过万年历机芯的调校注意事项；对手工珐琅很感兴趣"
+  },
+  "history": [
+   {
+    "speaker": "CA",
+    "time": "2026-11-10 10:00",
+    "text": "陈先生，北京店到了一枚Méridien万年历展示表，乳白珐琅表盘，您方便时可以来看"
+   },
+   {
+    "speaker": "client",
+    "time": "2026-11-11 22:00",
+    "text": "看了，确实漂亮。不过同级别的德系万年历便宜将近十万"
+   }
+  ],
+  "products": [
+   {
+    "sku": "MRD-W-01",
+    "name": "Méridien 子午线 万年历腕表 40mm",
+    "collection": "Méridien 子午线",
+    "category": "watch",
+    "material": "铂金表壳，乳白色珐琅表盘，自制万年历机芯，月相显示",
+    "price": 520000,
+    "story": "万年历可准确显示至2100年，珐琅表盘经多次烧制，成品率较低",
+    "care": "避免在晚上8点至凌晨2点间调校日历"
+   }
+  ],
+  "context": "客户提到另一品牌（未具名）的万年历更便宜"
+ },
+ "result": {
+  "case_id": "P05",
+  "version": "v1",
+  "analysis": {
+   "key_facts": [
+    "客户看过Méridien万年历展示表后，认为同级别德系万年历便宜近十万",
+    "客户是资深藏家，懂机芯，曾询问万年历调校注意事项，对珐琅感兴趣",
+    "客户偏好正式语气、只谈干货，不使用emoji",
+    "客户已有Méridien两地时腕表，常往返北京与日内瓦"
+   ],
+   "risks": [
+    "客户在等回复，必须先回应比价说法",
+    "不能贬低德系品牌，只平和陈述事实",
+    "不能暗示折扣或申请价格，需明确全球统一价格体系",
+    "不空洞夸赞，保持正式、干货风格"
+   ],
+   "timing_ok": true,
+   "max_similarity": 0.23
+  },
+  "candidates": [
+   {
+    "angle": "共情+价值",
+    "message": "陈先生，您这个比较很实际。这枚的价差主要落在铂金表壳和珐琅盘上：乳白珐琅要多次烧制，成品率低，盘面质感与普通漆面不同；万年历机芯可准确显示至2100年。您之前问过调校，晚上8点到凌晨2点之间避开就好。价值这件事，还是上手看最直接。",
+    "rationale": "先认同客户比价合理，再用材质与工艺的具体细节回应价差，并衔接他此前问过的调校问题。",
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "政策+保障",
+    "message": "陈先生，理解您的比较。瓦洛蕾实行全球统一价格体系，我这边没有折扣空间，这一点先跟您说明。官方渠道的价格对应的是铂金材质、珐琅烧制与自制机芯的工艺标准，以及证书、终身免费清洁抛光和会员计划下延长的保修。德系万年历各有做法，您看的是不同取向。方便时来店里把两枚放在一起看，比看参数清楚。",
+    "rationale": "坦诚说明不能打折，平和回应比较对象，用官方渠道的保障与工艺标准说明价格构成，不贬低对方。",
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "替代方案",
+    "message": "陈先生，明白您的考量。如果这枚的价位超出您这次的预算范围，我可以按您的预算再梳理几款，包括不同材质与尺寸的选择，您来定方向。另外刻字、礼盒与手写卡片这些服务都可以安排。您哪天方便，我把几款放在一起给您看，不合适也随时可以放下。",
+    "rationale": "在预算内提供替代选择，并给出政策内的增值服务，结尾轻松、可拒绝，不让客户感到被拒绝。",
+    "issues": [],
+    "repaired": false
+   }
+  ],
+  "model": "deepseek:deepseek-chat",
+  "latency_s": 5.4
+ },
+ "judge": {
+  "candidates": [
+   {
+    "id": 1,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 5,
+     "naturalness": 5,
+     "appropriateness": 4,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "回应比价，用产品细节支撑价值，语气克制，但未明确坚守统一价格政策，可能让客户觉得价格可议。"
+   },
+   {
+    "id": 2,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 5,
+     "naturalness": 5,
+     "appropriateness": 5,
+     "goal": 5,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "先共情，明确统一价格无折扣，平和陈述官方渠道保障，不贬低德系，邀请到店对比，分寸得当。"
+   },
+   {
+    "id": 3,
+    "unsupported_claims": [
+     "包括不同材质与尺寸的选择（产品信息未列出其他材质/尺寸）",
+     "刻字、礼盒与手写卡片这些服务都可以安排（未确认客户需要，且未在政策内明确适用于此场景）"
+    ],
+    "scores": {
+     "personalization": 2,
+     "brand_voice": 3,
+     "naturalness": 4,
+     "appropriateness": 2,
+     "goal": 2,
+     "faithfulness": 2
+    },
+    "hard_fail": true,
+    "hard_fail_reason": "编造产品信息中未列出的不同材质与尺寸选择，并提及未确认的服务安排。",
+    "comment": "暗示预算不足，编造替代款式，偏离坚守价格政策的目标。"
+   }
+  ],
+  "set": {
+   "diversity": 4,
+   "best_id": 2,
+   "comment": "三条分别侧重价值、政策保障和替代方案，差异明显；候选2最符合场景目标，坚守价格并引导到店。"
+  },
+  "judge_model": "deepseek:deepseek-chat"
+ },
+ "judge_history": [
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "scores": {
+      "personalization": 5,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "用客户问过的调校细节和珐琅工艺回应价差，干货扎实；但未正面说明统一价格政策，价值论证略偏技术、对'贵十万'的回应不够完整。"
+    },
+    {
+     "id": 2,
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 5,
+      "naturalness": 4,
+      "appropriateness": 5,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "先平和说明统一价格、不争辩，再落到材质工艺与官方服务，并邀约实物对比，完整回应比价且不贬低德系，分寸到位。"
+    },
+    {
+     "id": 3,
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 3,
+      "goal": 3,
+      "faithfulness": 4
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "语气得体，但把话题引向'预算范围'易让客户觉得被判定买不起，且未回应德系比价的核心，刻字礼盒在此语境略显推销。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 2,
+    "comment": "三条分别走工艺价值、政策+保障、替代方案三条路，差异清晰；候选2最稳，既守住统一价格又回应比价，候选1可作补充但需补一句价格政策。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  }
+ ]
+}

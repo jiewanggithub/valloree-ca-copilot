@@ -1,0 +1,290 @@
+{
+ "case_id": "P06",
+ "meta": {
+  "type": "edge",
+  "focus": "中英夹杂；承认海外退税现实；强调国内售后便利（终身抛光在上海店即可）"
+ },
+ "request": {
+  "case_id": "P06",
+  "scenario": "price_objection",
+  "today": "2026-11-22",
+  "ca_name": "Lina",
+  "client": {
+   "client_id": "C17",
+   "surname": "谢",
+   "gender": "F",
+   "preferred_name": "Emily",
+   "age_band": "25-30",
+   "city": "上海",
+   "tier": "会员 Member",
+   "birthday": "12-25",
+   "occupation": "刚从伦敦硕士毕业，在上海做品牌策略",
+   "interests": [
+    "艺术展",
+    "brunch",
+    "网球"
+   ],
+   "style_notes": "黄金，喜欢叠戴手镯",
+   "purchases": [
+    {
+     "date": "2025-08-20",
+     "item": "Petit Trésor 小珍宝 珍珠母贝吊坠",
+     "note": "自购，出国读书前买的"
+    }
+   ],
+   "last_visit": "2025-08-20",
+   "preferences": [
+    "习惯中英夹杂，喜欢轻松的语气"
+   ],
+   "family": null,
+   "ca_notes": "说过2026年夏天毕业后回上海"
+  },
+  "history": [
+   {
+    "speaker": "CA",
+    "time": "2026-11-21 18:00",
+    "text": "Emily，常春藤手镯叠戴起来很有层次，你戴金色系一定好看"
+   },
+   {
+    "speaker": "client",
+    "time": "2026-11-22 11:00",
+    "text": "好看！但我在伦敦的时候看过，退税后便宜挺多的 hmm"
+   }
+  ],
+  "products": [
+   {
+    "sku": "LRR-B-01",
+    "name": "Lierre 常春藤 手镯",
+    "collection": "Lierre 常春藤",
+    "category": "bracelet",
+    "material": "18K玫瑰金，藤叶纹手工錾刻",
+    "price": 38000,
+    "story": "常春藤象征长久的陪伴，藤叶纹由匠人逐片錾刻，每只略有不同",
+    "care": "可终身免费抛光"
+   }
+  ],
+  "context": "客户已回国定居"
+ },
+ "result": {
+  "case_id": "P06",
+  "version": "v2",
+  "analysis": {
+   "key_facts": [
+    "客户刚回应上一条手镯消息，提到在伦敦看过、退税后便宜挺多",
+    "客户2025年8月自购Petit Trésor珍珠母贝吊坠，出国读书前买的",
+    "客户今年夏天刚从伦敦硕士毕业回上海，现做品牌策略",
+    "Lierre常春藤手镯：18K玫瑰金、藤叶纹手工錾刻、每只略有不同，可终身免费抛光"
+   ],
+   "risks": [
+    "客户在等回复，必须先自然接住伦敦退税这句话，不能跳过",
+    "不能贬低海外渠道或代购，只平和说明官方渠道的保障",
+    "不能暗示任何折扣或员工价，也不能说保值投资",
+    "人称统一用“你”，中英夹杂、轻松语气，emoji最多1个"
+   ],
+   "timing_ok": true,
+   "max_similarity": 0.19
+  },
+  "candidates": [
+   {
+    "angle": "共情+价值",
+    "message": "Emily，伦敦退税的价格我记得是挺有吸引力的，你这么一比也正常。不过这只Lierre的藤叶是一小片一小片手工錾出来的，每只走得都不太一样，这种手上的功夫在价格里占的分量其实不小。你平时喜欢叠戴，它的层次感上手才看得出来。",
+    "rationale": "先接住比价感受不争辩，再用手工錾刻的具体工艺说明价格构成，落回她的叠戴偏好。",
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "政策+保障",
+    "message": "嗯，退税之后确实会便宜一截，这点我不跟你绕。瓦洛蕾是全球统一价格，上海这边没有折扣空间，这点也跟你直说。差别在于官方渠道的证书、保修和终身免费抛光都在，手镯日常戴久了想让它亮回来，随时拿来就行。",
+    "rationale": "坦诚回应比价，温和明确说明无折扣，用保修与终身抛光等官方保障回应价值，不贬低其他渠道。",
+    "issues": [
+     "[SOFT:no_name] 未使用称呼，可能显得像群发"
+    ],
+    "repaired": false
+   },
+   {
+    "angle": "替代方案",
+    "message": "退税那笔差得确实明显，我理解你会犹豫一下。价格这块我没有办法动，但可以让你先戴上手感受一下藤叶的錾刻——周末人少的时候过来，我给你留个位置慢慢试。要是定了，刻字和手写卡片我都可以帮你安排上。",
+    "rationale": "承认价差、明确无折扣，转而提供私人预约上手与刻字礼盒等政策内服务，给一个容易拒绝的下一步。",
+    "issues": [
+     "[SOFT:no_name] 未使用称呼，可能显得像群发"
+    ],
+    "repaired": false
+   }
+  ],
+  "model": "deepseek:deepseek-chat",
+  "latency_s": 4.7
+ },
+ "judge": {
+  "candidates": [
+   {
+    "id": 1,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 4,
+     "goal": 3,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "共情到位、工艺转述准确，但没把统一价格政策说清，价值论证略虚，目标完成度一般。"
+   },
+   {
+    "id": 2,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 3,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 4,
+     "goal": 5,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "坦诚回应比价、明确统一价格并落到官方保障，克制不争辩，只是个性化稍弱。"
+   },
+   {
+    "id": 3,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 4,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "共情自然、给出轻松可拒的到店试戴，刻字礼盒属政策内服务，但价格政策表述偏软。"
+   }
+  ],
+  "set": {
+   "diversity": 4,
+   "best_id": 2,
+   "comment": "三条分别走价值、政策保障、到店体验三条路，差异清晰；候选2最贴合价格异议场景，政策与保障说得最实。"
+  },
+  "judge_model": "deepseek:deepseek-chat"
+ },
+ "judge_history": [
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [
+      "伦敦退税的价格我记得是挺有吸引力的（客户只说了退税后便宜挺多，CA并未在场，说“我记得”缺乏依据）"
+     ],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 3,
+      "goal": 3,
+      "faithfulness": 2
+     },
+     "hard_fail": true,
+     "hard_fail_reason": "编造客户经历：CA声称“我记得”伦敦退税价格，输入中无此依据；且未正面回应统一价格政策，回避了客户的价格异议核心",
+     "comment": "工艺价值讲得好，但“我记得退税价格”属虚构，且绕开了价格政策本身。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 5,
+      "naturalness": 4,
+      "appropriateness": 5,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "坦诚回应退税差价，平和陈述统一价格与官方渠道保障，分寸到位。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [
+      "周末人少的时候过来，我给你留个位置（“人少”与“留位置”属未提供的门店情况/已做动作）"
+     ],
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 3
+     },
+     "hard_fail": true,
+     "hard_fail_reason": "编造：声称“周末人少”并“给你留个位置”，输入中无门店客流信息，也未确认已留位；刻字与手写卡片属政策内服务，可用",
+     "comment": "邀约自然，但“留位置”“人少”是无依据的具体承诺。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 2,
+    "comment": "三条分别走工艺价值、政策保障、到店体验，方向区分清晰；候选2最稳，可直接发送。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  },
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [
+      "伦敦退税的价格我记得是挺有吸引力的（客户只说了退税后便宜挺多，CA未参与伦敦比价，'我记得'无依据）"
+     ],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 3,
+      "goal": 3,
+      "faithfulness": 3
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "价值转述不错，但'我记得'虚构了CA对伦敦价格的了解，且未正面回应统一价格政策，客户可能仍觉得有议价空间。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 5,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "政策讲得干脆不绕，保障点也落在实处，只是个性化略弱，可再带一句她的叠戴偏好。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "把对话引向试戴体验，刻字礼盒属政策内服务，结尾轻松可拒绝，整体可用。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 2,
+    "comment": "三条分别走价值、政策、体验三条路，差异清晰；候选2最稳，候选1的'我记得'需删，候选3可作备选。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  }
+ ]
+}

@@ -1,0 +1,264 @@
+{
+ "case_id": "R02",
+ "meta": {
+  "type": "core",
+  "focus": "回应客户问题并给明确建议（客户喜欢明确）；星图可定制为结婚月份；最多推荐两件"
+ },
+ "request": {
+  "case_id": "R02",
+  "scenario": "recommendation",
+  "today": "2026-09-28",
+  "ca_name": "Lina",
+  "client": {
+   "client_id": "C04",
+   "surname": "赵",
+   "gender": "M",
+   "preferred_name": null,
+   "age_band": "30-35",
+   "city": "深圳",
+   "tier": "会员 Member",
+   "birthday": "11-20",
+   "occupation": "科技公司工程总监",
+   "interests": [],
+   "style_notes": null,
+   "purchases": [
+    {
+     "date": "2025-10-12",
+     "item": "Petit Trésor 小珍宝 珍珠母贝吊坠",
+     "note": "送太太的结婚纪念日礼物"
+    }
+   ],
+   "last_visit": "2025-10-12",
+   "preferences": [
+    "工作日白天很忙，晚上回复"
+   ],
+   "family": "已婚，太太喜欢珍珠和小巧的款式；结婚纪念日10月18日",
+   "ca_notes": "选礼物时希望CA给明确建议，不喜欢绕弯子"
+  },
+  "history": [
+   {
+    "speaker": "client",
+    "time": "2026-09-27 21:45",
+    "text": "纪念日快到了，今年送什么好？去年那个吊坠她很喜欢，这次想要不一样一点的"
+   }
+  ],
+  "products": [
+   {
+    "sku": "CST-N-02",
+    "name": "Constellation 星宿 钻石项链",
+    "collection": "Constellation 星宿",
+    "category": "necklace",
+    "material": "18K白金，0.3克拉主钻",
+    "price": 46000,
+    "story": "吊坠背面刻有出生当月的星图，可定制",
+    "care": "避免与硬物碰撞，睡前取下"
+   },
+   {
+    "sku": "PTR-P-01",
+    "name": "Petit Trésor 小珍宝 珍珠母贝吊坠",
+    "collection": "Petit Trésor 小珍宝",
+    "category": "pendant",
+    "material": "18K黄金，白色珍珠母贝，0.05克拉钻石点缀",
+    "price": 12800,
+    "story": "四叶造型来自瓦洛蕾1920年代的档案图稿",
+    "care": "母贝避免接触香水与水"
+   }
+  ],
+  "context": "结婚纪念日10月18日；客户主动询问"
+ },
+ "result": {
+  "case_id": "R02",
+  "version": "v3",
+  "analysis": {
+   "key_facts": [
+    "C4: 太太喜欢珍珠和小巧的款式；结婚纪念日10月18日",
+    "H1: 客户问今年送什么，想要不一样一点的",
+    "C6: 去年送的是Petit Trésor珍珠母贝吊坠",
+    "C5: 客户希望CA给明确建议，不喜欢绕弯子",
+    "P4: Constellation吊坠背面可刻出生当月星图，可定制",
+    "P1/P2/P3: Constellation为18K白金、0.3克拉主钻，¥46000"
+   ],
+   "risks": [
+    "客户1天前的消息必须被自然回应，不能像没看到",
+    "客户偏好晚上回复，工作日白天忙——消息适合晚间发送",
+    "不能暗示折扣或优惠，全球统一价格",
+    "不能承诺保值/升值",
+    "只能推荐Constellation一款，不要一次推两件",
+    "不要虚构客户经历或太太的言行",
+    "结尾给轻松可拒绝的下一步"
+   ],
+   "timing_ok": true,
+   "max_similarity": 0.46
+  },
+  "candidates": [
+   {
+    "angle": "懂你型",
+    "message": "赵先生，去年那枚珍珠母贝吊坠太太喜欢，今年想换个方向，我想到的是Constellation星宿钻石项链。18K白金配0.3克拉主钻，线条干净，跟珍珠的温润是两种气质；吊坠背面还能刻出生当月的星图，做成只属于她的一件。纪念日10月18日之前时间够。要不要我先把实物图和上手视频发您看看？",
+    "rationale": "直接回应'不一样'的诉求，用太太的珍珠偏好做对照，并给出明确建议与低压力下一步。",
+    "facts_used": [
+     "C4",
+     "H1",
+     "C6",
+     "C5",
+     "P1",
+     "P2",
+     "P4"
+    ],
+    "critic_removed": [],
+    "issues": [],
+    "repaired": true
+   },
+   {
+    "angle": "故事型",
+    "message": "赵先生，关于纪念日，我想跟您说说Constellation星宿这条项链：吊坠背面可以刻上出生当月的星图，定制成她一个人的那片天，正面是18K白金托一颗0.3克拉主钻。去年您选的是珍珠母贝的温润，今年换成星图，像是把同一个人换一种方式记下来。您若觉得合适，我拍段实物给您。",
+    "rationale": "以星图定制的工艺故事为主，与去年的选择形成温和对照，结尾轻巧不需立刻决定。",
+    "facts_used": [
+     "H1",
+     "C6",
+     "P1",
+     "P2",
+     "P4"
+    ],
+    "critic_removed": [],
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "邀约体验型",
+    "message": "赵先生，纪念日的事我记着呢。想给您看一条Constellation星宿钻石项链，18K白金配0.3克拉主钻，背面能刻出生当月的星图，跟去年的珍珠母贝是完全不同的路数。您晚上方便的话，我把图片和视频发过去；或者哪天您到附近，约个安静时段来试戴也行，先看看不急。",
+    "rationale": "重点放在发图、试戴的轻松下一步，照顾客户工作日忙、晚上回复的习惯。",
+    "facts_used": [
+     "H1",
+     "C6",
+     "P1",
+     "P2",
+     "P4",
+     "S7"
+    ],
+    "critic_removed": [],
+    "issues": [
+     "[SOFT:cliche] 套话:安静的时段"
+    ],
+    "repaired": false
+   }
+  ],
+  "model": "deepseek:deepseek-chat",
+  "latency_s": 8.3
+ },
+ "judge": {
+  "candidates": [
+   {
+    "id": 1,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 5,
+     "brand_voice": 5,
+     "naturalness": 5,
+     "appropriateness": 5,
+     "goal": 5,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "直接回应客户“想要不一样”，用去年吊坠作对照，给出明确建议并附轻松下一步，完全符合赵先生要明确建议的偏好。"
+   },
+   {
+    "id": 2,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 5,
+     "naturalness": 4,
+     "appropriateness": 4,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "星图故事讲得温润，但“把同一个人换一种方式记下来”略文艺，且未直接回应“今年送什么好”的明确建议需求。"
+   },
+   {
+    "id": 3,
+    "unsupported_claims": [
+     "“我记着呢”属套话式开头，且“约个安静时段”为规范中明令避免的套话"
+    ],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 4,
+     "naturalness": 3,
+     "appropriateness": 4,
+     "goal": 4,
+     "faithfulness": 4
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "邀约体验方向不错，但开头套话与“安静时段”措辞落入模板，需改写开头。"
+   }
+  ],
+  "set": {
+   "diversity": 4,
+   "best_id": 1,
+   "comment": "三条分别走明确建议、故事、到店体验三条路，差异清晰；候选1最贴合客户要明确建议的偏好，可直接发送。"
+  },
+  "judge_model": "deepseek:deepseek-chat"
+ },
+ "judge_history": [
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 5,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "直接回应客户'想要不一样'，用去年珍珠母贝作对比，给出明确建议，结尾轻松可拒绝，完全符合CA笔记中'给明确建议'的偏好。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "星图故事讲得温润，但'把同一个人换一种方式记下来'略偏文案腔，且未提时间是否来得及，建议性稍弱于候选1。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [
+      "'纪念日的事我记着呢'属于套话式开头，且'安静时段'为规范中明确列出的套话"
+     ],
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 3,
+      "naturalness": 3,
+      "appropriateness": 4,
+      "goal": 3,
+      "faithfulness": 4
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "内容可用，但开头'我记着呢'和'安静时段'都是规范点名的套话，显得模板化，需改写开头。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 1,
+    "comment": "三条分别走'明确建议''故事共鸣''体验邀约'路线，差异清晰；候选1最贴合客户'不喜欢绕弯子'的偏好，可直接发送。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  }
+ ]
+}

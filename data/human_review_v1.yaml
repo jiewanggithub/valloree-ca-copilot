@@ -1,0 +1,39 @@
+# Manual review of v1 outputs (labels drafted with Claude Code against the rubric; to be verified by the candidate). Only non-"OK" candidates listed.
+# verdict: UNACCEPTABLE = must not be sent; EDIT = usable after a CA edit. Everything not listed = OK.
+# code = defect taxonomy used in the report.
+G01-3: {verdict: EDIT, code: greeting_soft_sell, note: 生日祝福里提供清洁服务}
+G02-3: {verdict: EDIT, code: greeting_soft_sell, note: 除夕祝福里提清洁抛光}
+G04-1: {verdict: UNACCEPTABLE, code: fabricated_memory, note: 编造“母亲教您写字”的回忆，且在服丧期——最严重的一类}
+G05-3: {verdict: EDIT, code: greeting_soft_sell, note: 生日提吊坠清洁}
+G06-2: {verdict: EDIT, code: ca_location, note: “日内瓦今天也该落雪了”——CA写得像身在日内瓦}
+G06-3: {verdict: EDIT, code: greeting_soft_sell, note: 生日+圣诞提清洁抛光}
+G07-1: {verdict: EDIT, code: fabricated_memory, note: “挺喜欢您这种不将就的性子”无依据，且提吊坠}
+G08-1: {verdict: UNACCEPTABLE, code: stale_history, note: 把3月份“周六上午过来取”当成正在进行的对话来回应}
+G08-2: {verdict: UNACCEPTABLE, code: stale_history, note: 同上}
+G08-3: {verdict: UNACCEPTABLE, code: stale_history, note: 同上，且提清洁服务}
+G09-2: {verdict: EDIT, code: ca_location, note: “日内瓦的秋天也到了”}
+R01-2: {verdict: UNACCEPTABLE, code: fabricated_product, note: 编造设计细节“藤蔓弧线留了余量、叶子自然错开”}
+R04-2: {verdict: UNACCEPTABLE, code: fabricated_memory, note: “像您画过的那些场地”无依据}
+R06-1: {verdict: UNACCEPTABLE, code: fabricated_memory, note: 编造“试戴时多看了几眼镜子”}
+R06-2: {verdict: EDIT, code: fabricated_memory, note: “跟您那天在店里说话的样子有点像”}
+R09-2: {verdict: EDIT, code: ignores_preference, note: 忽略客户偏爱白金冷色调}
+A03-3: {verdict: EDIT, code: fabricated_service, note: “十几分钟就好”无依据}
+A05-3: {verdict: UNACCEPTABLE, code: fabricated_service, note: 手镯“三十天内免费改圈”——政策只适用于戒指}
+A07-3: {verdict: EDIT, code: ca_location, note: 客户就住上海，却说“来上海这边办事”}
+A08-1: {verdict: UNACCEPTABLE, code: stale_history, note: 回应8个月前的“周六上午过来”}
+A08-2: {verdict: UNACCEPTABLE, code: stale_history, note: 同上}
+A08-3: {verdict: UNACCEPTABLE, code: stale_history, note: 同上}
+RA02-3: {verdict: UNACCEPTABLE, code: fabricated_event, note: 编造“两地生活的摄影展讯息”}
+RA04-2: {verdict: UNACCEPTABLE, code: fabricated_service, note: 编造“满一年半做走时检测”（政策为4-5年）}
+RA07-3: {verdict: EDIT, code: fabricated_event, note: “店里在做黄金工艺的整理”含糊编造}
+E03-1: {verdict: EDIT, code: stale_history, note: 为一年前的消息道歉迟回}
+E03-3: {verdict: EDIT, code: stale_history, note: “隔了一年才回您这句，见谅”}
+E06-1: {verdict: EDIT, code: ignores_preference, note: 周四活动，没考虑客户工作日手术、没给周末替代}
+E06-2: {verdict: EDIT, code: ignores_preference, note: 同上}
+P01-3: {verdict: UNACCEPTABLE, code: fabricated_product, note: “其他尺寸或材质的款式”输入中不存在}
+P04-1: {verdict: UNACCEPTABLE, code: fabricated_product, note: “这道工序只能在日内瓦工坊里做”无依据}
+P04-3: {verdict: UNACCEPTABLE, code: fabricated_product, note: “别的尺寸和材质的款式”不存在；暗示超预算}
+P05-3: {verdict: UNACCEPTABLE, code: fabricated_product, note: 编造替代款；对比价的藏家说“超出预算”有失分寸}
+P06-3: {verdict: UNACCEPTABLE, code: fabricated_product, note: “常春藤系列还有更简洁的款式”不存在}
+P07-3: {verdict: EDIT, code: fabricated_service, note: “也已经反馈上去”编造动作}
+P08-3: {verdict: UNACCEPTABLE, code: fabricated_product, note: “不同尺寸”不存在}

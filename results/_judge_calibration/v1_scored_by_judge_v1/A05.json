@@ -1,0 +1,162 @@
+{
+ "case_id": "A05",
+ "meta": {
+  "type": "edge",
+  "focus": "隐私：不提收礼人；消息简短；可告知终身免费抛光等服务"
+ },
+ "request": {
+  "case_id": "A05",
+  "scenario": "aftercare",
+  "today": "2026-11-04",
+  "ca_name": "Lina",
+  "client": {
+   "client_id": "C18",
+   "surname": "唐",
+   "gender": "M",
+   "preferred_name": null,
+   "age_band": "50-55",
+   "city": "杭州",
+   "tier": "尊享 Privilege",
+   "birthday": null,
+   "occupation": "企业家",
+   "interests": [],
+   "style_notes": null,
+   "purchases": [
+    {
+     "date": "2026-10-28",
+     "item": "Lierre 常春藤 手镯",
+     "note": "礼物，客户嘱咐保密，不要主动提及收礼人"
+    }
+   ],
+   "last_visit": "2026-10-28",
+   "preferences": [
+    "注重隐私",
+    "消息简短"
+   ],
+   "family": null,
+   "ca_notes": null
+  },
+  "history": [
+   {
+    "speaker": "CA",
+    "time": "2026-10-28 17:00",
+    "text": "唐先生，礼盒和卡片都按您的要求准备好了"
+   },
+   {
+    "speaker": "client",
+    "time": "2026-10-28 17:05",
+    "text": "好，谢谢"
+   }
+  ],
+  "products": [
+   {
+    "sku": "LRR-B-01",
+    "name": "Lierre 常春藤 手镯",
+    "collection": "Lierre 常春藤",
+    "category": "bracelet",
+    "material": "18K玫瑰金，藤叶纹手工錾刻",
+    "price": 38000,
+    "story": "常春藤象征长久的陪伴，藤叶纹由匠人逐片錾刻，每只略有不同",
+    "care": "可终身免费抛光"
+   }
+  ],
+  "context": "购买一周后跟进"
+ },
+ "result": {
+  "case_id": "A05",
+  "version": "v1",
+  "analysis": {
+   "key_facts": [
+    "唐先生一周前购买了 Lierre 常春藤手镯，为礼物，已嘱咐保密",
+    "客户最后说「好，谢谢」，需先回应这句话",
+    "客户偏好：注重隐私、消息简短",
+    "作品材质为18K玫瑰金，藤叶纹手工錾刻，可终身免费抛光"
+   ],
+   "risks": [
+    "不可提及收礼人、送礼对象或任何暗示第三方购买的语境",
+    "客户消息简短、注重隐私，消息不宜长、不宜追问",
+    "不做推销、不引导新品，仅售后关怀",
+    "语气需克制，避免显得刻意套近乎"
+   ],
+   "timing_ok": true,
+   "max_similarity": 0.28
+  },
+  "candidates": [
+   {
+    "angle": "关心体验",
+    "message": "唐先生，不客气。手镯到家有一周了，想跟您确认一下佩戴是否顺手，尺寸松紧合适吗。有任何需要我这边处理的，您说一声就好，不用特意回复。",
+    "rationale": "先回应「好，谢谢」，再轻问佩戴体验，不涉及收礼人，结尾不要求回复，符合简短偏好。",
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "实用保养",
+    "message": "唐先生，不客气。顺带提一句，Lierre 手镯的藤叶纹是手工錾刻的，凹处容易积细尘，平时用软布轻拭即可，不必用力。这类抛光我们终身免费，需要时提前跟我说，我给您留出时间。",
+    "rationale": "先回应致谢，给出一条与18K玫瑰金錾刻工艺相符的具体保养建议，并自然带出终身免费抛光服务。",
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "专属服务",
+    "message": "唐先生，不客气。手镯若有需要调整的地方，三十天内可以免费改圈；往后清洁抛光也不收费用。您方便的时候提前告诉我，我安排一个安静时段，不必等。",
+    "rationale": "先回应致谢，主动提供政策内服务，并以「安静时段」呼应客户注重隐私的偏好。",
+    "issues": [],
+    "repaired": false
+   }
+  ],
+  "model": "deepseek:deepseek-chat",
+  "latency_s": 3.9
+ },
+ "judge": {
+  "candidates": [
+   {
+    "id": 1,
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 5,
+     "naturalness": 5,
+     "appropriateness": 5,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "先回应“谢谢”，再轻问佩戴体验，分寸得当；但未提供保养知识，关怀略单薄。"
+   },
+   {
+    "id": 2,
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 5,
+     "naturalness": 5,
+     "appropriateness": 5,
+     "goal": 5,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "回应致谢后给出具体保养知识与终身抛光服务，实用且克制，符合售后关怀目标。"
+   },
+   {
+    "id": 3,
+    "scores": {
+     "personalization": 3,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 4,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "服务信息准确，但“安静时段”对消息简短的客户略显铺陈，且未涉及使用体验。"
+   }
+  ],
+  "set": {
+   "diversity": 4,
+   "best_id": 2,
+   "comment": "三条分别侧重体验询问、保养知识、服务安排，差异清晰；候选2最贴合售后关怀且信息实用。"
+  },
+  "judge_model": "deepseek:deepseek-chat"
+ }
+}

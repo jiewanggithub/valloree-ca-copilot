@@ -1,0 +1,256 @@
+{
+ "case_id": "A06",
+ "meta": {
+  "type": "core",
+  "focus": "简短（客户偏好）；实用信息；不与上一条消息重复"
+ },
+ "request": {
+  "case_id": "A06",
+  "scenario": "aftercare",
+  "today": "2026-11-02",
+  "ca_name": "Lina",
+  "client": {
+   "client_id": "C01",
+   "surname": "王",
+   "gender": "F",
+   "preferred_name": "Vivian",
+   "age_band": "35-40",
+   "city": "上海",
+   "tier": "典藏 Heritage",
+   "birthday": "11-07",
+   "occupation": "投资银行合伙人",
+   "interests": [
+    "歌剧",
+    "旅行",
+    "普拉提"
+   ],
+   "style_notes": "偏爱白金与冷色调，简洁线条；戒指尺寸11号",
+   "purchases": [
+    {
+     "date": "2023-06-18",
+     "item": "Constellation 星宿 钻石戒指",
+     "note": "自购，纪念升任合伙人"
+    },
+    {
+     "date": "2026-10-30",
+     "item": "Heure Bleue 蓝调时刻 女士腕表 33mm",
+     "note": "自购"
+    }
+   ],
+   "last_visit": "2026-10-30",
+   "preferences": [
+    "喜欢简短的消息",
+    "希望被称呼为Vivian"
+   ],
+   "family": null,
+   "ca_notes": "工作忙，回复常在深夜；10月底提到11月要去维也纳听歌剧"
+  },
+  "history": [
+   {
+    "speaker": "client",
+    "time": "2026-10-30 22:41",
+    "text": "表很喜欢，下个月去维也纳看歌剧就戴它"
+   },
+   {
+    "speaker": "CA",
+    "time": "2026-10-31 09:15",
+    "text": "太好了Vivian，蓝色母贝在剧院的灯光下会很好看。祝旅途愉快"
+   }
+  ],
+  "products": [
+   {
+    "sku": "HBL-W-01",
+    "name": "Heure Bleue 蓝调时刻 女士腕表 33mm",
+    "collection": "Heure Bleue 蓝调时刻",
+    "category": "watch",
+    "material": "精钢表壳，蓝色珍珠母贝表盘，钻石时标，自动上链机芯，动力储存70小时",
+    "price": 86000,
+    "story": "表盘的蓝来自日内瓦湖黄昏的“蓝调时刻”，每片母贝纹理独一无二",
+    "care": "建议每4-5年保养一次；加入瓦洛蕾会员计划保修延长至8年"
+   }
+  ],
+  "context": "提醒客户注册会员计划，保修可由2年延长至8年；注册只需扫码1分钟"
+ },
+ "result": {
+  "case_id": "A06",
+  "version": "v3",
+  "analysis": {
+   "key_facts": [
+    "C8/H1：10月30日购买Heure Bleue腕表33mm，客户说喜欢，11月去维也纳看歌剧要戴它",
+    "H2：CA已回复过，客户此后未再回复",
+    "X1/S5：注册会员计划可把保修从2年延长到8年，扫码1分钟",
+    "C3：生日11月7日，5天后；C5：11月去维也纳"
+   ],
+   "risks": [
+    "客户偏好简短，每条不超过80字",
+    "最后一条是CA发的，客户未回，语气要轻，不能像没发过一样重复",
+    "生日临近但不宜借生日做推销由头，只做服务提醒",
+    "不打折、不暗示优惠；不给投资/保值说法"
+   ],
+   "timing_ok": true,
+   "max_similarity": 0.46
+  },
+  "candidates": [
+   {
+    "angle": "关心体验",
+    "message": "Vivian，蓝色母贝在剧院灯光下确实耐看。您出发维也纳前若有空，我们可以见个面，几分钟就好。",
+    "rationale": "先轻问使用感受，接住她说的剧院场景，再给一个低门槛的到店服务。｜事实核查已删改：表戴了这几天还顺手吗（假定客户已佩戴数日，未确认）；我帮您把表带调到合手的位置（表带调节服务未在清单中）",
+    "facts_used": [
+     "C8",
+     "H1",
+     "P2",
+     "S7"
+    ],
+    "critic_removed": [
+     "表戴了这几天还顺手吗（假定客户已佩戴数日，未确认）",
+     "我帮您把表带调到合手的位置（表带调节服务未在清单中）"
+    ],
+    "issues": [],
+    "repaired": true
+   },
+   {
+    "angle": "实用保养",
+    "message": "Vivian，想到一件事：这枚蓝调时刻每4-5年做一次保养比较稳妥。另外注册会员计划，保修可从2年延到8年，扫码约1分钟，我把步骤发您？",
+    "rationale": "给一条与该表相符的保养建议，顺势提出会员注册这一实际益处。",
+    "facts_used": [
+     "P5",
+     "X1",
+     "S5"
+    ],
+    "critic_removed": [],
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "专属服务",
+    "message": "Vivian，去维也纳前如果想省点事，我可以约个私享时段。另外会员计划注册只需扫码1分钟，保修延到8年，需要我把二维码发您吗？",
+    "rationale": "以她11月的行程为切入点提供预约与清洁服务，并把注册做成可拒绝的小请求。｜事实核查已删改：顺带帮您把腕表做一次清洁（腕表清洁服务未在清单中）",
+    "facts_used": [
+     "C5",
+     "S7",
+     "X1",
+     "S5"
+    ],
+    "critic_removed": [
+     "顺带帮您把腕表做一次清洁（腕表清洁服务未在清单中）"
+    ],
+    "issues": [],
+    "repaired": true
+   }
+  ],
+  "model": "deepseek:deepseek-chat",
+  "latency_s": 5.9
+ },
+ "judge": {
+  "candidates": [
+   {
+    "id": 1,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 3,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 3,
+     "goal": 2,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "语气自然，但见面邀约目的含糊，未完成提醒注册会员的售后目标。"
+   },
+   {
+    "id": 2,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 4,
+     "goal": 5,
+     "faithfulness": 5
+    },
+    "comment": "保养周期与会员延保均来自产品信息，简洁实用，结尾易拒绝，完成目标。",
+    "hard_fail": false,
+    "hard_fail_reason": ""
+   },
+   {
+    "id": 3,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 3,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 3,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "comment": "私享时段与会员提醒都合规，但把两件事并置略显推销感，且未提保养知识。",
+    "hard_fail": false,
+    "hard_fail_reason": ""
+   }
+  ],
+  "set": {
+   "diversity": 4,
+   "best_id": 2,
+   "comment": "三条方向不同：见面、保养+会员、私享+会员；候选2最贴合售后关怀目标且信息有据。"
+  },
+  "judge_model": "deepseek:deepseek-chat"
+ },
+ "judge_history": [
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 3,
+      "goal": 2,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "语气自然、引用了剧院细节，但没提会员注册这一场景目标，见面邀约也略空泛。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "保养周期与会员延保均来自产品信息，目标清晰，结尾易拒绝；个性化稍弱但合规。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "私享时段与会员注册都合规，但两条信息并列略显堆叠，客户偏好简短。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 2,
+    "comment": "三条方向不同（关怀/保养/服务），候选2最贴合售后关怀目标且信息有据、结尾轻松。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  }
+ ]
+}

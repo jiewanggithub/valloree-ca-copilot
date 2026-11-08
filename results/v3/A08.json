@@ -1,0 +1,261 @@
+{
+ "case_id": "A08",
+ "meta": {
+  "type": "edge",
+  "focus": "客户只接受周末联系——工具应在analysis中标记 timing_ok=false 并建议周末发送；消息本身也应适合周末"
+ },
+ "request": {
+  "case_id": "A08",
+  "scenario": "aftercare",
+  "today": "2026-11-10",
+  "ca_name": "Lina",
+  "client": {
+   "client_id": "C06",
+   "surname": "刘",
+   "gender": "F",
+   "preferred_name": null,
+   "age_band": "40-45",
+   "city": "上海",
+   "tier": "尊享 Privilege",
+   "birthday": "11-04",
+   "occupation": "三甲医院外科医生",
+   "interests": [
+    "马拉松",
+    "古典乐"
+   ],
+   "style_notes": "工作时不能佩戴首饰，周末才戴",
+   "purchases": [
+    {
+     "date": "2025-11-01",
+     "item": "Lierre 常春藤 手镯",
+     "note": "自购，生日礼物"
+    }
+   ],
+   "last_visit": "2026-03-20",
+   "preferences": [
+    "只在周末联系",
+    "工作日不方便看消息"
+   ],
+   "family": null,
+   "ca_notes": null
+  },
+  "history": [
+   {
+    "speaker": "CA",
+    "time": "2026-03-20 15:00",
+    "text": "刘女士，手镯抛光好了，您周末方便时来取"
+   },
+   {
+    "speaker": "client",
+    "time": "2026-03-21 10:12",
+    "text": "好的，周六上午过来"
+   }
+  ],
+  "products": [
+   {
+    "sku": "LRR-B-01",
+    "name": "Lierre 常春藤 手镯",
+    "collection": "Lierre 常春藤",
+    "category": "bracelet",
+    "material": "18K玫瑰金，藤叶纹手工錾刻",
+    "price": 38000,
+    "story": "常春藤象征长久的陪伴，藤叶纹由匠人逐片錾刻，每只略有不同",
+    "care": "可终身免费抛光"
+   }
+  ],
+  "context": "手镯购买一年，可免费抛光。注意：今天是周二"
+ },
+ "result": {
+  "case_id": "A08",
+  "version": "v3",
+  "analysis": {
+   "key_facts": [
+    "C6：2025-11-01 自购 Lierre 常春藤 手镯，作生日礼物",
+    "C4：工作时不能佩戴首饰，周末才戴",
+    "P5/S3：18K玫瑰金藤叶纹手镯可终身免费抛光",
+    "H1/H2：2026年3月曾为手镯做过抛光，客户周六上午到店取回"
+   ],
+   "risks": [
+    "今天周二，客户只接受周末联系——timing_ok 为 false，建议周末再发",
+    "上一段对话已在234天前自然结束，不要当作进行中的对话，也不要为迟回道歉",
+    "不推销新品，不打折，不提价格与保值",
+    "不虚构佩戴场景或客户言行，只引用清单内事实"
+   ],
+   "timing_ok": false,
+   "max_similarity": 0.28
+  },
+  "candidates": [
+   {
+    "angle": "关心体验",
+    "message": "刘女士，您生日刚过，想到这只常春藤手镯是去年生日给自己的，戴了快一年了，藤叶纹的錾刻还清晰吗？您平时周末才戴，如果觉得光泽不如从前，可以带来做一次免费抛光。方便的话周末过来，我提前帮您安排。",
+    "rationale": "借生日这个时间点轻轻问候一年来的佩戴感受，不催促，落到可拒绝的下一步。｜事实核查已删改：戴满一年了（今天2026-11-10，购买2025-11-01，尚未满一年）；藤叶纹的錾刻还清晰吗（假定使用状况的询问，属合理关心，但结合'戴满一年'不成立）",
+    "facts_used": [
+     "C3",
+     "C6",
+     "C4",
+     "P2",
+     "P5",
+     "S3"
+    ],
+    "critic_removed": [
+     "戴满一年了（今天2026-11-10，购买2025-11-01，尚未满一年）",
+     "藤叶纹的錾刻还清晰吗（假定使用状况的询问，属合理关心，但结合'戴满一年'不成立）"
+    ],
+    "issues": [],
+    "repaired": true
+   },
+   {
+    "angle": "实用保养",
+    "message": "刘女士，18K玫瑰金的藤叶纹是逐片錾刻的，凹处容易积灰，平时用软布顺着纹路擦一擦就好。您这只戴了一年，若想让它恢复亮泽，终身免费抛光随时可以做，周末带来交给我们就行。",
+    "rationale": "给出一条与玫瑰金錾刻工艺相符的保养建议，再自然带出免费抛光服务。",
+    "facts_used": [
+     "P2",
+     "P4",
+     "P5",
+     "S3"
+    ],
+    "critic_removed": [],
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "专属服务",
+    "message": "刘女士，上次说好周六上午来取手镯，一晃大半年了。手镯若想再做一次清洁抛光，周末我可以帮您约个私享时段，安静些，也方便您慢慢看。您看哪个周末合适，告诉我就好。",
+    "rationale": "以过去的抛光取件为引子，主动提供私人预约服务，语气轻、易拒绝。｜事实核查已删改：上次抛光后您周六上午来取，一晃大半年了（H1/H2为2026-03-20/21，距今约8个月，'大半年'可接受；但'上次抛光后您周六上午来取'将H2的'周六上午过来'说成已发生取件，属假定未确认的事已发生）",
+    "facts_used": [
+     "H1",
+     "H2",
+     "S3",
+     "S7"
+    ],
+    "critic_removed": [
+     "上次抛光后您周六上午来取，一晃大半年了（H1/H2为2026-03-20/21，距今约8个月，'大半年'可接受；但'上次抛光后您周六上午来取'将H2的'周六上午过来'说成已发生取件，属假定未确认的事已发生）"
+    ],
+    "issues": [],
+    "repaired": true
+   }
+  ],
+  "model": "deepseek:deepseek-chat",
+  "latency_s": 7.1
+ },
+ "judge": {
+  "candidates": [
+   {
+    "id": 1,
+    "unsupported_claims": [
+     "您生日刚过（今天2026-11-10，生日11-04，属合理推断，但客户未提及，作为开场由头略牵强）"
+    ],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 3,
+     "goal": 4,
+     "faithfulness": 4
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "引用生日与周末佩戴习惯较贴切，但发送时机为周二违反客户偏好，且“生日刚过”作为由头稍显刻意。"
+   },
+   {
+    "id": 2,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 3,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 3,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "保养知识实用且无编造，但个性化偏弱，且周二发送违反客户周末联系偏好。"
+   },
+   {
+    "id": 3,
+    "unsupported_claims": [
+     "上次说好周六上午来取手镯（引用234天前已结束的对话，当作进行中的事来回应）"
+    ],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 2,
+     "goal": 3,
+     "faithfulness": 2
+    },
+    "hard_fail": true,
+    "hard_fail_reason": "把234天前已自然结束的对话当作进行中的事来回应（“上次说好周六上午来取手镯，一晃大半年了”），属旧对话当作进行中；且周二发送违反客户周末联系偏好。",
+    "comment": "将半年前已结束的取件约定当作未完成事项重提，既编造了对话状态又显得失分寸。"
+   }
+  ],
+  "set": {
+   "diversity": 4,
+   "best_id": 2,
+   "comment": "三条分别走关心体验、实用保养、专属服务路线，差异明显；候选2最稳妥无编造，但三条均需改为周末发送。"
+  },
+  "judge_model": "deepseek:deepseek-chat"
+ },
+ "judge_history": [
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [
+      "您生日刚过（档案生日11-04，今天11-10，属合理推断，但客户未提及，作为开场由头略牵强）"
+     ],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 3,
+      "goal": 4,
+      "faithfulness": 4
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "细节贴合，但发送时机为周二违反客户“只在周末联系”的偏好，需周末再发；生日由头略牵强。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 3,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "保养知识实用、事实准确，但个性化偏弱，且周二发送违反周末联系偏好。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [
+      "上次说好周六上午来取手镯，一晃大半年了（把234天前已自然结束的旧对话当作进行中的约定来回应）"
+     ],
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 3,
+      "naturalness": 3,
+      "appropriateness": 2,
+      "goal": 3,
+      "faithfulness": 2
+     },
+     "hard_fail": true,
+     "hard_fail_reason": "把234天前已结束的取件对话当作仍在进行的约定来回应，属旧对话当作进行中；且周二发送违反周末联系偏好。",
+     "comment": "将早已结束的取件约定说成“说好周六来取”，让客户困惑，不可发送。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 2,
+    "comment": "三条角度各异（体验关怀/保养知识/专属服务），但均需改为周末发送；候选2事实最干净，候选3有旧对话误用问题。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  }
+ ]
+}

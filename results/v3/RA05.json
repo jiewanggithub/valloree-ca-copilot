@@ -1,0 +1,247 @@
+{
+ "case_id": "RA05",
+ "meta": {
+  "type": "adversarial",
+  "focus": "陷阱：客户偏好“不接受活动邀约”——不能邀请活动，应改为私人预约"
+ },
+ "request": {
+  "case_id": "RA05",
+  "scenario": "reactivation",
+  "today": "2026-11-10",
+  "ca_name": "Lina",
+  "client": {
+   "client_id": "C13",
+   "surname": "杨",
+   "gender": "F",
+   "preferred_name": null,
+   "age_band": "45-50",
+   "city": "上海",
+   "tier": "尊享 Privilege",
+   "birthday": null,
+   "occupation": "私募基金创始人",
+   "interests": [
+    "当代艺术",
+    "骑马"
+   ],
+   "style_notes": "喜欢独处式的购物体验",
+   "purchases": [
+    {
+     "date": "2025-09-30",
+     "item": "Heure Bleue 蓝调时刻 女士腕表 33mm",
+     "note": "自购"
+    }
+   ],
+   "last_visit": "2025-09-30",
+   "preferences": [
+    "不接受活动邀约",
+    "偏好一对一私人预约"
+   ],
+   "family": null,
+   "ca_notes": null
+  },
+  "history": [
+   {
+    "speaker": "client",
+    "time": "2025-10-05 20:00",
+    "text": "表很好，谢谢"
+   }
+  ],
+  "products": [
+   {
+    "sku": "HBL-W-01",
+    "name": "Heure Bleue 蓝调时刻 女士腕表 33mm",
+    "collection": "Heure Bleue 蓝调时刻",
+    "category": "watch",
+    "material": "精钢表壳，蓝色珍珠母贝表盘，钻石时标，自动上链机芯，动力储存70小时",
+    "price": 86000,
+    "story": "表盘的蓝来自日内瓦湖黄昏的“蓝调时刻”，每片母贝纹理独一无二",
+    "care": "建议每4-5年保养一次；加入瓦洛蕾会员计划保修延长至8年"
+   }
+  ],
+  "context": "一年多未联系。CA本想顺便提11月28日上海店的高级珠宝预览会"
+ },
+ "result": {
+  "case_id": "RA05",
+  "version": "v3",
+  "analysis": {
+   "key_facts": [
+    "C5：2025-09-30 客户自购 Heure Bleue 蓝调时刻 33mm",
+    "H1：2025-10-05 客户回复「表很好，谢谢」",
+    "P5/S6：腕表建议每4-5年保养一次；会员计划首次保养免费",
+    "S3：珠宝终身免费清洁抛光",
+    "C3/C4：喜欢独处式购物；兴趣为当代艺术、骑马"
+   ],
+   "risks": [
+    "客户明确不接受活动邀约，任何形式的活动邀请都不可出现（包括11月28日预览会）",
+    "偏好一对一私人预约，涉及到店只能以此方式提出",
+    "上一段对话已自然结束，不可当作进行中的对话来回应，也不必为久未联系道歉",
+    "不可暗示客户久未光顾，不可推产品，不可提及价格或等级"
+   ],
+   "timing_ok": true,
+   "max_similarity": 0.37
+  },
+  "candidates": [
+   {
+    "angle": "念旧型",
+    "message": "杨女士，2025年10月您回我一句「表很好，谢谢」，我一直觉得这句话比任何夸奖都实在。Heure Bleue 的蓝色珍珠母贝每片纹理都不一样，您那一枚现在看着还顺眼吗？不用特意回我，只是想到您，问候一声。",
+    "rationale": "以客户自己说过的一句话作切入点，念旧而不催促，结尾明确不要求回复。｜事实核查已删改：去年十月您回我一句「表很好，谢谢」——CRM记录为2025-10-05客户说「表很好，谢谢」，可引用，但“去年十月”与今天2026-11-10不符（应为前年十月/2025年10月）；“您那一枚戴了一年多”属未确认的使用情况推测，清单无依据",
+    "facts_used": [
+     "H1",
+     "C5",
+     "P4",
+     "P1"
+    ],
+    "critic_removed": [
+     "去年十月您回我一句「表很好，谢谢」——CRM记录为2025-10-05客户说「表很好，谢谢」，可引用，但“去年十月”与今天2026-11-10不符（应为前年十月/2025年10月）；“您那一枚戴了一年多”属未确认的使用情况推测，清单无依据"
+    ],
+    "issues": [],
+    "repaired": true
+   },
+   {
+    "angle": "服务理由型",
+    "message": "杨女士，Heure Bleue 的机芯建议每4到5年做一次保养，您那枚是2025年秋天入的，时间上还宽裕，我只是先把这件事替您记个位置。如果您有珠宝想清洁抛光，随时可以拿来，我给您留一段安静的时间，一对一就行。",
+    "rationale": "以保养周期这一真实服务理由切入，同时提供珠宝清洁，落到客户偏好的私人预约，不构成邀请。｜事实核查已删改：您那枚是去年秋天入的——购买日期为2025-09-30，今天2026-11-10，应为前年秋天；“这一年里”同样基于错误时间；其余（4-5年保养、清洁抛光、一对一安静时段）有依据",
+    "facts_used": [
+     "C5",
+     "P5",
+     "S3",
+     "S7"
+    ],
+    "critic_removed": [
+     "您那枚是去年秋天入的——购买日期为2025-09-30，今天2026-11-10，应为前年秋天；“这一年里”同样基于错误时间；其余（4-5年保养、清洁抛光、一对一安静时段）有依据"
+    ],
+    "issues": [
+     "[SOFT:cliche] 套话:安静的时段"
+    ],
+    "repaired": true
+   },
+   {
+    "angle": "轻分享型",
+    "message": "杨女士，前阵子看当代艺术的东西，忽然想到 Heure Bleue 表盘那片蓝——日内瓦湖黄昏的蓝调时刻，每片母贝纹理都不同，跟看画时的感觉有点像。您那枚现在读起来，应该又是另一种光。不用回我，看到就好。",
+    "rationale": "从客户对当代艺术的兴趣出发做轻量分享，把作品故事与她的兴趣连起来，不要求回应。",
+    "facts_used": [
+     "C4",
+     "P4",
+     "C5"
+    ],
+    "critic_removed": [],
+    "issues": [],
+    "repaired": false
+   }
+  ],
+  "model": "deepseek:deepseek-chat",
+  "latency_s": 7.3
+ },
+ "judge": {
+  "candidates": [
+   {
+    "id": 1,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 4,
+     "goal": 3,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "引用真实旧消息作话题，分寸得当，但“想到您问候一声”略空，重连理由偏弱。"
+   },
+   {
+    "id": 2,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 3,
+     "brand_voice": 4,
+     "naturalness": 3,
+     "appropriateness": 3,
+     "goal": 3,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "保养提醒有真实依据，但“替您记个位置”略套近乎，且客户明确不接受活动邀约、偏好独处，主动提清洁服务稍显推销。"
+   },
+   {
+    "id": 3,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 5,
+     "brand_voice": 5,
+     "naturalness": 5,
+     "appropriateness": 5,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "以客户当代艺术兴趣自然切入，产品故事转述准确，不施压不推销，最贴合沉睡唤醒的分寸。"
+   }
+  ],
+  "set": {
+   "diversity": 4,
+   "best_id": 3,
+   "comment": "三条分别走念旧、服务、兴趣分享路线，差异清晰；候选3最自然且最贴合客户偏好。"
+  },
+  "judge_model": "deepseek:deepseek-chat"
+ },
+ "judge_history": [
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 5,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "引用客户真实原话作由头，克制不施压，但“比任何夸奖都实在”略像评价客户，可再收一点。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 3,
+      "appropriateness": 3,
+      "goal": 3,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "保养提醒有真实依据，但“替您记个位置”略套近乎，且一上来谈服务，唤醒感偏弱。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 5,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "以当代艺术兴趣自然搭桥，产品故事转述准确，不推销不施压，最像懂行的老朋友。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 3,
+    "comment": "三条分别走念旧、服务、兴趣分享，路径清晰；第三条最贴合客户兴趣与安静气质。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  }
+ ]
+}

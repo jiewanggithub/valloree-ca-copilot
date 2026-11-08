@@ -1,0 +1,299 @@
+{
+ "case_id": "R08",
+ "meta": {
+  "type": "edge",
+  "focus": "中英夹杂的轻松语气，但仍要有品牌分寸；不要过度使用英文"
+ },
+ "request": {
+  "case_id": "R08",
+  "scenario": "recommendation",
+  "today": "2026-11-21",
+  "ca_name": "Lina",
+  "client": {
+   "client_id": "C17",
+   "surname": "谢",
+   "gender": "F",
+   "preferred_name": "Emily",
+   "age_band": "25-30",
+   "city": "上海",
+   "tier": "会员 Member",
+   "birthday": "12-25",
+   "occupation": "刚从伦敦硕士毕业，在上海做品牌策略",
+   "interests": [
+    "艺术展",
+    "brunch",
+    "网球"
+   ],
+   "style_notes": "黄金，喜欢叠戴手镯",
+   "purchases": [
+    {
+     "date": "2025-08-20",
+     "item": "Petit Trésor 小珍宝 珍珠母贝吊坠",
+     "note": "自购，出国读书前买的"
+    }
+   ],
+   "last_visit": "2025-08-20",
+   "preferences": [
+    "习惯中英夹杂，喜欢轻松的语气"
+   ],
+   "family": null,
+   "ca_notes": "说过2026年夏天毕业后回上海"
+  },
+  "history": [
+   {
+    "speaker": "client",
+    "time": "2026-08-02 14:05",
+    "text": "Hi Lina! 我回上海啦，settle下来去店里找你"
+   },
+   {
+    "speaker": "CA",
+    "time": "2026-08-02 14:20",
+    "text": "欢迎回来Emily！等你有空来坐坐"
+   }
+  ],
+  "products": [
+   {
+    "sku": "LRR-B-01",
+    "name": "Lierre 常春藤 手镯",
+    "collection": "Lierre 常春藤",
+    "category": "bracelet",
+    "material": "18K玫瑰金，藤叶纹手工錾刻",
+    "price": 38000,
+    "story": "常春藤象征长久的陪伴，藤叶纹由匠人逐片錾刻，每只略有不同",
+    "care": "可终身免费抛光"
+   }
+  ],
+  "context": "客户喜欢叠戴手镯，推荐常春藤手镯"
+ },
+ "result": {
+  "case_id": "R08",
+  "version": "v2",
+  "analysis": {
+   "key_facts": [
+    "Emily于2026-08-02说回到上海，说settle下来会来店里",
+    "她的风格偏好：黄金、喜欢叠戴手镯",
+    "上一段对话已在111天前自然结束，最后一条是CA说的",
+    "她习惯中英夹杂、轻松的语气"
+   ],
+   "risks": [
+    "不要为延迟回复道歉，也不要把8月的旧消息当成正在进行的对话",
+    "你/您不能混用，全文用你",
+    "只推荐这一只手镯，不能引入其他款式或尺寸",
+    "避免制造紧迫感，不报价优惠",
+    "生日在12月底，现在提太早，不借生日做由头"
+   ],
+   "timing_ok": true,
+   "max_similarity": 0.34
+  },
+  "candidates": [
+   {
+    "angle": "懂你型",
+    "message": "Emily，突然想到你。之前你说喜欢叠戴手镯，我这边有只Lierre常春藤，18K玫瑰金，藤叶纹是一片片手工錾刻的，线条细，跟手上已有的手镯叠着戴应该很搭。你毕业回上海也有几个月了，哪天路过静安可以来看看，不急的。",
+    "rationale": "从她说过喜欢叠戴手镯的偏好切入，把手镯和她的搭配方式直接关联。",
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "故事型",
+    "message": "Emily，分享一件最近很喜欢的作品：Lierre常春藤手镯。藤叶纹是匠人一片片錾刻出来的，所以每只都不太一样，常春藤本身讲的也是长久陪伴这件事。看到它的时候想到你去年出国前买的那只小珍宝，感觉是同一类会一直戴下去的东西。有兴趣的话我拍几张细节图给你？",
+    "rationale": "以錾刻工艺和常春藤的含义为主，再连到她已有的吊坠，推荐有来处。",
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "邀约体验型",
+    "message": "Emily，好久没见啦。店里新到一只Lierre常春藤手镯，18K玫瑰金，你之前说喜欢叠戴，这只很适合上手试试。哪天方便的话来静安坐坐，我给你留着；不方便也没关系，我拍段视频发你也行。",
+    "rationale": "轻提产品，重点放在试戴和私享体验，给两个都容易拒绝的选项。",
+    "issues": [],
+    "repaired": false
+   }
+  ],
+  "model": "deepseek:deepseek-chat",
+  "latency_s": 4.3
+ },
+ "judge": {
+  "candidates": [
+   {
+    "id": 1,
+    "unsupported_claims": [
+     "“之前你说喜欢叠戴手镯”——客户档案 style_notes 有记录，但对话历史中客户并未说过，写成“你说”属于把档案信息编成客户原话",
+     "“你毕业回上海也有几个月了”——ca_notes 只说 2026 夏天毕业后回上海，未给出具体月份，属推断性表述"
+    ],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 4,
+     "goal": 4,
+     "faithfulness": 3
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "整体自然克制，但把档案里的风格偏好写成“你说”，有轻微编造客户原话之嫌，建议改为“记得你偏爱叠戴”。"
+   },
+   {
+    "id": 2,
+    "unsupported_claims": [
+     "“看到它的时候想到你去年出国前买的那只小珍宝”——购买记录属实，但“看到它时想到你”属虚构的CA心理场景，属轻微由头"
+    ],
+    "scores": {
+     "personalization": 5,
+     "brand_voice": 5,
+     "naturalness": 4,
+     "appropriateness": 4,
+     "goal": 4,
+     "faithfulness": 3
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "故事与客户旧作衔接得好，温度与分寸俱佳；仅“看到它时想到你”略像虚构由头，可弱化为“跟你的小珍宝是一路的”。"
+   },
+   {
+    "id": 3,
+    "unsupported_claims": [
+     "“店里新到一只Lierre常春藤手镯”——输入未说明是新到货，属虚构库存/到货信息",
+     "“我给你留着”——输入未说明已留货，且保留需门店确认，属声称已完成动作"
+    ],
+    "scores": {
+     "personalization": 3,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 3,
+     "goal": 3,
+     "faithfulness": 2
+    },
+    "hard_fail": true,
+    "hard_fail_reason": "虚构“新到”库存信息，并声称“我给你留着”，属输入中不存在的动作与库存事实",
+    "comment": "语气轻松但踩了编造库存与“已留货”的红线，需改为“可以帮你确认能否保留”。"
+   }
+  ],
+  "set": {
+   "diversity": 4,
+   "best_id": 2,
+   "comment": "三条分别走懂你、故事、邀约体验路线，区分度好；候选2最贴合品牌气质，只需微调一处由头表述。"
+  },
+  "judge_model": "deepseek:deepseek-chat"
+ },
+ "judge_history": [
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [
+      "你毕业回上海也有几个月了（客户档案写的是2026年夏天毕业回上海，但对话历史里客户8月2日已说回上海，具体毕业时间未明确，此句为推断性陈述，但基于档案'2026年夏天毕业后回上海'可勉强支撑，不算完全编造，但'几个月了'是CA自行推算）"
+     ],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 4
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "开头'突然想到你'自然，引用了叠戴偏好和毕业回沪，但'几个月了'略带推算感，整体可用。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [
+      "看到它的时候想到你去年出国前买的那只小珍宝（客户购买记录为2025-08-20，距今天458天，'去年'表述基本成立，但'出国前买'档案有写，可支撑）"
+     ],
+     "scores": {
+      "personalization": 5,
+      "brand_voice": 5,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 4
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "用常春藤'长久陪伴'的故事勾连客户已有的小珍宝，懂行且有分寸，结尾给轻松下一步，较好。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [
+      "店里新到一只Lierre常春藤手镯（场景背景未说明'新到'，产品信息也未写库存或新品状态，属编造）",
+      "我给你留着（声称已留货，输入中无此动作）"
+     ],
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 3,
+      "naturalness": 4,
+      "appropriateness": 3,
+      "goal": 3,
+      "faithfulness": 2
+     },
+     "hard_fail": true,
+     "hard_fail_reason": "编造'新到'与'我给你留着'，输入中无库存或留货依据",
+     "comment": "语气轻松但'新到''给你留着'均为无依据陈述，违反事实忠实。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 2,
+    "comment": "三条分别走懂你、故事、邀约体验路线，差异明显；候选2最贴合'记得我、懂我'的目标且无编造。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  },
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 5,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "自然引用叠戴偏好与毕业回沪，语气轻松克制，结尾易拒绝，几乎可直接发送。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 5,
+      "brand_voice": 5,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "故事与旧作关联有温度，但“最近很喜欢”略像文案，且未回应叠戴偏好。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [
+      "店里新到一只Lierre常春藤手镯（输入未说明新品到店）",
+      "我给你留着（声称已为客户保留，输入中无此动作）"
+     ],
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 3,
+      "naturalness": 4,
+      "appropriateness": 3,
+      "goal": 3,
+      "faithfulness": 2
+     },
+     "hard_fail": true,
+     "hard_fail_reason": "虚构“新到”库存与“我给你留着”的保留动作，输入中均无依据。",
+     "comment": "语气尚可，但编造到店与留货，违反事实忠实硬性规则。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 1,
+    "comment": "三条分别走懂你、故事、邀约体验路线，差异清晰；候选1最稳，候选3需删去虚构的到店与留货。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  }
+ ]
+}

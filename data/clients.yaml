@@ -1,0 +1,265 @@
+# Fictional CRM records. No real people.
+C01:
+  surname: 王
+  gender: F
+  preferred_name: Vivian
+  age_band: 35-40
+  city: 上海
+  tier: 典藏 Heritage
+  birthday: "11-07"
+  occupation: 投资银行合伙人
+  interests: [歌剧, 旅行, 普拉提]
+  style_notes: 偏爱白金与冷色调，简洁线条；戒指尺寸11号
+  purchases:
+    - {date: "2023-06-18", item: Constellation 星宿 钻石戒指, note: 自购，纪念升任合伙人}
+    - {date: "2026-10-30", item: Heure Bleue 蓝调时刻 女士腕表 33mm, note: 自购}
+  last_visit: "2026-10-30"
+  preferences: [喜欢简短的消息, 希望被称呼为Vivian]
+  ca_notes: 工作忙，回复常在深夜；10月底提到11月要去维也纳听歌剧
+C02:
+  surname: 陈
+  gender: M
+  age_band: 45-50
+  city: 北京
+  tier: 尊享 Privilege
+  occupation: 精密制造企业创始人
+  interests: [制表工艺, 古董表收藏, 高尔夫]
+  style_notes: 资深藏家，懂机芯，反感空洞的营销话术；偏好铂金、珐琅
+  purchases:
+    - {date: "2024-04-02", item: Méridien 子午线 两地时腕表 41mm, note: 自购，常往返北京与日内瓦}
+  last_visit: "2026-09-12"
+  preferences: [语气正式, 只谈干货]
+  ca_notes: 曾问过万年历机芯的调校注意事项；对手工珐琅很感兴趣
+C03:
+  surname: 林
+  gender: F
+  age_band: 25-30
+  city: 杭州
+  tier: 会员 Member
+  birthday: "03-14"
+  occupation: 互联网公司产品经理
+  interests: [瑜伽, 咖啡, 极简设计]
+  style_notes: 玫瑰金，喜欢叠戴，日常通勤佩戴；戒指尺寸9号
+  purchases:
+    - {date: "2026-09-10", item: Lierre 常春藤 叠戴戒指（玫瑰金）, note: 自购，庆祝升职}
+  last_visit: "2026-09-10"
+  ca_notes: 第一次买高级珠宝，挑选时很认真；说过以后想再叠一只不同颜色的
+C04:
+  surname: 赵
+  gender: M
+  age_band: 30-35
+  city: 深圳
+  tier: 会员 Member
+  birthday: "11-20"
+  occupation: 科技公司工程总监
+  family: 已婚，太太喜欢珍珠和小巧的款式；结婚纪念日10月18日
+  purchases:
+    - {date: "2025-10-12", item: Petit Trésor 小珍宝 珍珠母贝吊坠, note: 送太太的结婚纪念日礼物}
+  last_visit: "2025-10-12"
+  preferences: [工作日白天很忙，晚上回复]
+  ca_notes: 选礼物时希望CA给明确建议，不喜欢绕弯子
+C05:
+  surname: 周
+  gender: F
+  age_band: 50-55
+  city: 成都
+  tier: 典藏 Heritage
+  birthday: "11-12"
+  occupation: 家族企业董事长
+  interests: [茶, 书法, 慈善]
+  style_notes: 收藏多件高级珠宝，偏爱黄金与传统意象
+  purchases:
+    - {date: "2025-12-20", item: Lierre 常春藤 手镯, note: 自购}
+    - {date: "2024-02-08", item: Constellation 星宿 钻石项链, note: 送母亲的生日礼物}
+  last_visit: "2026-08-15"
+  preferences: [母亲于2026年10月下旬过世，近期请避免喜庆、热闹的语气, 语气正式]
+  ca_notes: 与CA关系很好，曾一起喝茶
+C06:
+  surname: 刘
+  gender: F
+  age_band: 40-45
+  city: 上海
+  tier: 尊享 Privilege
+  birthday: "11-04"
+  occupation: 三甲医院外科医生
+  interests: [马拉松, 古典乐]
+  style_notes: 工作时不能佩戴首饰，周末才戴
+  purchases:
+    - {date: "2025-11-01", item: Lierre 常春藤 手镯, note: 自购，生日礼物}
+  last_visit: "2026-03-20"
+  preferences: [只在周末联系, 工作日不方便看消息]
+C07:
+  surname: 孙
+  gender: M
+  age_band: 30-35
+  city: 北京
+  tier: 新客 New
+  occupation: 咨询公司经理
+  interests: [商务出差, 跑步]
+  style_notes: 预算敏感，喜欢功能性腕表
+  purchases: []
+  last_visit: "2026-10-20"
+  ca_notes: 10月20日到店试戴Méridien两地时，常在北京和新加坡之间出差；提到香港可能更便宜
+C08:
+  surname: 黄
+  gender: F
+  preferred_name: Coco
+  age_band: 25-30
+  city: 深圳
+  tier: 会员 Member
+  occupation: 时尚买手
+  interests: [vintage, 设计档案, 旅行]
+  style_notes: 喜欢有历史感的设计，黄金
+  purchases:
+    - {date: "2024-03-08", item: Petit Trésor 小珍宝 珍珠母贝吊坠, note: 自购，喜欢它来自1920年代档案图稿的故事}
+  last_visit: "2024-03-08"
+  preferences: [希望被称呼为Coco]
+C09:
+  surname: 吴
+  gender: M
+  age_band: 55-60
+  city: 杭州
+  tier: 典藏 Heritage
+  occupation: 已退休，曾任大学教授
+  interests: [天文, 古典音乐, 书法]
+  style_notes: 只戴一块表，非常爱惜
+  purchases:
+    - {date: "2021-03-21", item: Méridien 子午线 万年历腕表 40mm, note: 自购，纪念退休}
+  last_visit: "2025-04-10"
+  preferences: [语气正式, 不喜欢频繁打扰]
+  ca_notes: 对月相显示特别有感情，说过“退休后终于有时间看月亮”
+C10:
+  surname: 郑
+  gender: F
+  age_band: 35-40
+  city: 北京
+  tier: 尊享 Privilege
+  occupation: 律师事务所合伙人
+  style_notes: 偏好玫瑰金，正式场合佩戴腕表
+  purchases:
+    - {date: "2026-10-25", item: Heure Bleue 蓝调时刻 女士腕表 28mm 玫瑰金镶钻, note: 自购}
+  last_visit: "2026-10-25"
+  preferences: [说话直接，重效率]
+C11:
+  surname: 何
+  gender: F
+  age_band: 30-35
+  city: 上海
+  tier: 会员 Member
+  occupation: 建筑师
+  interests: [建筑, 摄影, 烘焙]
+  style_notes: 白金，线条感强的设计
+  purchases:
+    - {date: "2026-05-02", item: Constellation 星宿 钻石戒指, note: 客户告知是自己的婚戒}
+  last_visit: "2026-05-02"
+  ca_notes: 客户主动分享5月结婚，先生也是建筑师
+C12:
+  surname: 马
+  gender: M
+  age_band: 40-45
+  city: 成都
+  tier: 会员 Member
+  occupation: 餐饮集团创始人
+  interests: [美食, 摄影]
+  purchases:
+    - {date: "2023-01-15", item: Méridien 子午线 两地时腕表 41mm, note: 自购，当时说要去新加坡开分店}
+  last_visit: "2023-01-15"
+  ca_notes: 2023年后很少联系，朋友圈显示常在新加坡和成都两地
+C13:
+  surname: 杨
+  gender: F
+  age_band: 45-50
+  city: 上海
+  tier: 尊享 Privilege
+  occupation: 私募基金创始人
+  interests: [当代艺术, 骑马]
+  style_notes: 喜欢独处式的购物体验
+  purchases:
+    - {date: "2025-09-30", item: Heure Bleue 蓝调时刻 女士腕表 33mm, note: 自购}
+  last_visit: "2025-09-30"
+  preferences: [不接受活动邀约, 偏好一对一私人预约]
+C14:
+  surname: 许
+  gender: F
+  age_band: 25-30
+  city: 杭州
+  tier: 新客 New
+  purchases: []
+  last_visit: "2026-10-03"
+  ca_notes: 国庆期间在杭州快闪店加的微信，试戴过小珍宝吊坠，说“再考虑一下”；其他信息不多
+C15:
+  surname: 高
+  gender: M
+  age_band: 35-40
+  city: 深圳
+  tier: 会员 Member
+  occupation: 跨境电商创业者
+  purchases:
+    - {date: "2024-11-11", item: Lierre 常春藤 叠戴戒指（黄金）, note: 送女友}
+  last_visit: "2025-11-08"
+  ca_notes: 习惯比价，2025年11月曾要求双十一折扣被婉拒，之后未再联系
+C16:
+  surname: 罗
+  gender: F
+  age_band: 45-50
+  city: 北京
+  tier: 典藏 Heritage
+  occupation: 艺术基金会理事
+  interests: [珐琅艺术, 当代艺术收藏, 古籍]
+  style_notes: 收藏珐琅器，喜欢有工艺深度的作品
+  purchases:
+    - {date: "2025-06-06", item: Constellation 星宿 钻石项链, note: 自购，定制了出生月星图}
+  last_visit: "2026-07-18"
+  preferences: [语气正式]
+  ca_notes: 对珐琅表盘的多次烧制工艺非常感兴趣
+C17:
+  surname: 谢
+  gender: F
+  preferred_name: Emily
+  age_band: 25-30
+  city: 上海
+  tier: 会员 Member
+  birthday: "12-25"
+  occupation: 刚从伦敦硕士毕业，在上海做品牌策略
+  interests: [艺术展, brunch, 网球]
+  style_notes: 黄金，喜欢叠戴手镯
+  purchases:
+    - {date: "2025-08-20", item: Petit Trésor 小珍宝 珍珠母贝吊坠, note: 自购，出国读书前买的}
+  last_visit: "2025-08-20"
+  preferences: [习惯中英夹杂，喜欢轻松的语气]
+  ca_notes: 说过2026年夏天毕业后回上海
+C18:
+  surname: 唐
+  gender: M
+  age_band: 50-55
+  city: 杭州
+  tier: 尊享 Privilege
+  occupation: 企业家
+  purchases:
+    - {date: "2026-10-28", item: Lierre 常春藤 手镯, note: 礼物，客户嘱咐保密，不要主动提及收礼人}
+  last_visit: "2026-10-28"
+  preferences: [注重隐私, 消息简短]
+C19:
+  surname: 冯
+  gender: F
+  age_band: 40-45
+  city: 成都
+  tier: 会员 Member
+  occupation: 中学校长
+  family: 女儿今年读大一
+  purchases:
+    - {date: "2025-09-01", item: Petit Trésor 小珍宝 珍珠母贝吊坠, note: 送女儿的升学礼物}
+  last_visit: "2025-09-01"
+  ca_notes: 很温和，喜欢聊女儿
+C20:
+  surname: 韩
+  gender: M
+  age_band: 40-45
+  city: 北京
+  tier: 尊享 Privilege
+  occupation: 律师
+  purchases:
+    - {date: "2025-05-10", item: Méridien 子午线 两地时腕表 41mm, note: 自购}
+  last_visit: "2025-05-10"
+  preferences: [不喜欢频繁收到消息]
+  ca_notes: 话少，曾两次婉拒活动邀请

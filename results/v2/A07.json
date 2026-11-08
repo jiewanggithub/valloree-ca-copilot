@@ -1,0 +1,277 @@
+{
+ "case_id": "A07",
+ "meta": {
+  "type": "core",
+  "focus": "镶爪检查的具体理由；可提婚礼但不评论婚姻；客户是建筑师可呼应工作场景"
+ },
+ "request": {
+  "case_id": "A07",
+  "scenario": "aftercare",
+  "today": "2026-11-04",
+  "ca_name": "Lina",
+  "client": {
+   "client_id": "C11",
+   "surname": "何",
+   "gender": "F",
+   "preferred_name": null,
+   "age_band": "30-35",
+   "city": "上海",
+   "tier": "会员 Member",
+   "birthday": null,
+   "occupation": "建筑师",
+   "interests": [
+    "建筑",
+    "摄影",
+    "烘焙"
+   ],
+   "style_notes": "白金，线条感强的设计",
+   "purchases": [
+    {
+     "date": "2026-05-02",
+     "item": "Constellation 星宿 钻石戒指",
+     "note": "客户告知是自己的婚戒"
+    }
+   ],
+   "last_visit": "2026-05-02",
+   "preferences": [],
+   "family": null,
+   "ca_notes": "客户主动分享5月结婚，先生也是建筑师"
+  },
+  "history": [
+   {
+    "speaker": "client",
+    "time": "2026-05-02 18:00",
+    "text": "戒指太美了，婚礼那天一定闪闪的"
+   }
+  ],
+  "products": [
+   {
+    "sku": "CST-R-01",
+    "name": "Constellation 星宿 钻石戒指",
+    "collection": "Constellation 星宿",
+    "category": "ring",
+    "material": "18K白金，主石0.5克拉圆形钻石，七颗小钻环绕如星座",
+    "price": 68000,
+    "story": "以创始人观星笔记为灵感，七颗星钻以手工爪镶排布，单枚约需42小时工时",
+    "care": "每半年回店免费清洁检查镶爪"
+   }
+  ],
+  "context": "戒指购买已半年，建议回店免费清洁并检查镶爪"
+ },
+ "result": {
+  "case_id": "A07",
+  "version": "v2",
+  "analysis": {
+   "key_facts": [
+    "何女士于2026年5月2日购买Constellation星宿钻石戒指，作为婚戒",
+    "购买时她分享5月结婚，先生也是建筑师",
+    "购买至今已186天，约半年",
+    "产品保养建议：每半年回店免费清洁检查镶爪"
+   ],
+   "risks": [
+    "上一段对话已自然结束，不要当成进行中对话回应，不要为迟回道歉",
+    "不评论婚姻状况、年龄、外貌",
+    "不推销新品，不承诺额外服务",
+    "人称统一用您"
+   ],
+   "timing_ok": true,
+   "max_similarity": 0.33
+  },
+  "candidates": [
+   {
+    "angle": "关心体验",
+    "message": "何女士，五月您来取星宿戒指时提到婚礼，一晃半年过去了。日常佩戴下来，戒圈贴合度还舒服吗？戴得自在，我就放心了。",
+    "rationale": "引用购买时的婚礼话题，轻松问候佩戴感受，不推销。",
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "实用保养",
+    "message": "何女士，星宿这枚戒指主石周边是手工爪镶，日常佩戴建议每半年回店做一次免费清洁和镶爪检查。您这枚刚好满半年，方便时我帮您约个时段，检查完戴着也更安心。",
+    "rationale": "结合产品保养信息给出具体节点，提供清洁检查服务。",
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "专属服务",
+    "message": "何女士，星宿戒指戴了半年，若想让它恢复光泽，我可以帮您安排回店免费清洁抛光，顺带检查一下七颗小钻的镶爪。您哪天路过静安恒汇，提前说一声，我留个位子给您。",
+    "rationale": "主动提供免费清洁抛光与镶爪检查，给出轻松可拒绝的下一步。",
+    "issues": [],
+    "repaired": false
+   }
+  ],
+  "model": "deepseek:deepseek-chat",
+  "latency_s": 3.7
+ },
+ "judge": {
+  "candidates": [
+   {
+    "id": 1,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 5,
+     "naturalness": 5,
+     "appropriateness": 5,
+     "goal": 3,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "语气温润自然，引用了婚礼与取件事实，但只问贴合度、未提半年清洁检查，售后关怀目标完成得偏弱。"
+   },
+   {
+    "id": 2,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 5,
+     "naturalness": 5,
+     "appropriateness": 5,
+     "goal": 5,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "保养知识准确（手工爪镶、半年清洁检查镶爪），邀约轻松可拒绝，目标完成度好。"
+   },
+   {
+    "id": 3,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 5,
+     "naturalness": 5,
+     "appropriateness": 5,
+     "goal": 5,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "清洁抛光与镶爪检查均在政策内，提到静安恒汇门店自然，留位子表述略主动但属可提供的预约服务。"
+   }
+  ],
+  "set": {
+   "diversity": 4,
+   "best_id": 2,
+   "comment": "三条分别侧重体验关怀、保养提醒与到店服务，角度区分清晰；候选2在专业性与分寸上最均衡。"
+  },
+  "judge_model": "deepseek:deepseek-chat"
+ },
+ "judge_history": [
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 3,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "语气温润自然，引用了婚礼这一真实细节，但只问体验未落到保养服务，场景目标偏弱。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "保养知识与半年节点都来自产品信息，邀约轻松可拒绝，目标完成度高。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [
+      "免费清洁抛光——产品保养信息只写免费清洁检查镶爪，未提抛光；品牌政策中的终身免费清洁抛光针对珠宝，但此处将其作为本戒指的具体服务承诺，超出产品信息"
+     ],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 3
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "“恢复光泽/抛光”超出该产品保养条款，需改为清洁与镶爪检查。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 2,
+    "comment": "三条分别走关心体验、实用保养、到店邀约，角度清晰；候选2最贴合场景且事实最稳。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  },
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 5,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 3,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "引用婚礼与取戒的真实细节，语气温润自然，但只关心体验、未提半年清洁检查，售后目标完成度偏弱。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "准确转述产品保养条款，给出轻松可拒绝的预约下一步，克制得体，可直接发送。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [
+      "“免费清洁抛光”将保养信息中的“清洁检查镶爪”与终身抛光服务混用，且“留个位子”暗示已可安排留位，输入未提供"
+     ],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 3
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "整体可用，但把清洁检查扩写成清洁抛光、并暗示留位，需按实际服务条款收窄表述。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 2,
+    "comment": "三条分别走关心体验、实用保养、专属服务路线，差异清晰；候选2最贴合半年节点与保养政策，稳妥可发。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  }
+ ]
+}

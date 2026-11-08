@@ -1,0 +1,275 @@
+{
+ "case_id": "E08",
+ "meta": {
+  "type": "core",
+  "focus": "可邀请先生同来（客户自己分享过），但不要过度假设；结合建筑师对手工的兴趣"
+ },
+ "request": {
+  "case_id": "E08",
+  "scenario": "event",
+  "today": "2026-11-19",
+  "ca_name": "Lina",
+  "client": {
+   "client_id": "C11",
+   "surname": "何",
+   "gender": "F",
+   "preferred_name": null,
+   "age_band": "30-35",
+   "city": "上海",
+   "tier": "会员 Member",
+   "birthday": null,
+   "occupation": "建筑师",
+   "interests": [
+    "建筑",
+    "摄影",
+    "烘焙"
+   ],
+   "style_notes": "白金，线条感强的设计",
+   "purchases": [
+    {
+     "date": "2026-05-02",
+     "item": "Constellation 星宿 钻石戒指",
+     "note": "客户告知是自己的婚戒"
+    }
+   ],
+   "last_visit": "2026-05-02",
+   "preferences": [],
+   "family": null,
+   "ca_notes": "客户主动分享5月结婚，先生也是建筑师"
+  },
+  "history": [
+   {
+    "speaker": "client",
+    "time": "2026-05-02 18:00",
+    "text": "戒指太美了，婚礼那天一定闪闪的"
+   }
+  ],
+  "products": [],
+  "context": "活动：冬日香槟品鉴暨常春藤錾刻工坊体验\n时间：2026年12月19日（周六）14:00–17:00\n地点：上海静安恒汇店\n可携一位同伴；体验匠人錾刻藤叶纹"
+ },
+ "result": {
+  "case_id": "E08",
+  "version": "v2",
+  "analysis": {
+   "key_facts": [
+    "何女士的婚戒是2026年5月购买的Constellation星宿钻石戒指，她主动分享过5月结婚、先生也是建筑师",
+    "她的风格偏好是白金、线条感强的设计",
+    "距离上次购买和到店已201天，上一段对话已自然结束",
+    "活动为12月19日周六14:00–17:00，上海静安恒汇店，可携一位同伴，内容是香槟品鉴与常春藤錾刻工坊体验"
+   ],
+   "risks": [
+    "不能把201天前的旧消息当作正在进行中的对话来回应，也不要为迟回道歉",
+    "不编造嘉宾、礼品、名额等未给出的活动细节",
+    "不用名额有限、先到先得施压",
+    "活动在工作日之外的周六下午，作息无冲突；但仍需给客户留拒绝余地",
+    "不提及价格、不做投资承诺、不贬低其他渠道"
+   ],
+   "timing_ok": true,
+   "max_similarity": 0.41
+  },
+  "candidates": [
+   {
+    "angle": "专属感",
+    "message": "何女士，好久没见您了。5月您来取星宿戒指时说起婚礼，我一直记着那份高兴。\n12月19日周六下午两点到五点，店里有一场冬日香槟品鉴，还安排了常春藤錾刻工坊，可以亲手试试藤叶纹的錾刻。您做建筑，对线条和纹样应该会有兴趣，我很想请您来看看。\n方便的话回我一声就好，不方便也完全没关系。",
+    "rationale": "以她5月婚礼和建筑师身份为切入点，说明为何特意想到她，再给活动信息，留拒绝余地。",
+    "issues": [
+     "[SOFT:cliche] 套话:一直记着"
+    ],
+    "repaired": false
+   },
+   {
+    "angle": "信息清晰",
+    "message": "何女士，跟您说个活动：12月19日（周六）14:00–17:00，在静安恒汇店有一场冬日香槟品鉴暨常春藤錾刻工坊体验，现场可以试做藤叶纹錾刻，也可以带一位同伴一起来。\n您若想来，回我一句就行；不方便的话我另外帮您安排。",
+    "rationale": "简洁给出时间、地点、内容、可否携伴与回复方式，方便她快速决定。",
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "灵活型",
+    "message": "何女士，12月19日周六下午店里有一场香槟品鉴和常春藤錾刻工坊，想到您平时对纹样和线条的讲究，觉得您会喜欢，就来问问您。\n如果那天不方便，也可以另约一个您方便的时段到店慢慢看，或者我先把活动的资料发给您。您看哪种方式轻松些。",
+    "rationale": "邀请同时给出私人预约和先发资料两种替代，尊重她的时间安排。",
+    "issues": [],
+    "repaired": false
+   }
+  ],
+  "model": "deepseek:deepseek-chat",
+  "latency_s": 4.7
+ },
+ "judge": {
+  "candidates": [
+   {
+    "id": 1,
+    "unsupported_claims": [
+     "5月您来取星宿戒指时说起婚礼——客户档案只记录5月2日购买并告知是婚戒，未记录“到店取戒指”这一具体场景"
+    ],
+    "scores": {
+     "personalization": 5,
+     "brand_voice": 4,
+     "naturalness": 3,
+     "appropriateness": 4,
+     "goal": 5,
+     "faithfulness": 3
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "专属感与场景目标都到位，但“来取戒指时”属轻微虚构场景，且“我一直记着”是套话，建议改为“您之前提过婚礼”并换掉套话开头。"
+   },
+   {
+    "id": 2,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 3,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 4,
+     "goal": 5,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "信息清楚、无编造，但几乎没用客户的具体信息，换个名字也能发，专属感偏弱。"
+   },
+   {
+    "id": 3,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 4,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "用“纹样和线条”呼应客户风格，给了轻松拒绝的出口；但活动时间地点不够完整，另约时段与发资料略分散了邀约重点。"
+   }
+  ],
+  "set": {
+   "diversity": 4,
+   "best_id": 3,
+   "comment": "三条分别走情感专属、信息直给、灵活多选路线，差异明显。候选3最贴合客户风格且无编造，补上具体时间地点即可发送；候选1需去掉虚构的“取戒指”场景。"
+  },
+  "judge_model": "deepseek:deepseek-chat"
+ },
+ "judge_history": [
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [
+      "5月您来取星宿戒指时说起婚礼（对话历史中客户只说“戒指太美了，婚礼那天一定闪闪的”，未明确是“来取戒指”的场景，也未说“说起婚礼”的具体内容，属于对客户经历的细节补充）"
+     ],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 3
+     },
+     "hard_fail": true,
+     "hard_fail_reason": "编造客户经历细节：将客户原话“戒指太美了，婚礼那天一定闪闪的”扩写为“来取星宿戒指时说起婚礼”，输入中无“取戒指”场景依据",
+     "comment": "语气温润、专属感好，但对客户过往场景做了未经证实的补充，需改为直接引用原话。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 2,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "信息清楚、无编造，但缺少客户具体信息，换个名字也能发，专属感不足。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [
+      "想到您平时对纹样和线条的讲究（客户档案仅有“白金，线条感强的设计”的风格备注，未提及客户本人对纹样线条有讲究或表达过相关偏好）"
+     ],
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 3,
+      "faithfulness": 3
+     },
+     "hard_fail": true,
+     "hard_fail_reason": "编造客户偏好：将风格备注“线条感强的设计”引申为客户“平时对纹样和线条的讲究”，输入中无客户本人相关表述",
+     "comment": "灵活选项设计不错，但把风格备注写成客户本人的讲究，属于编造偏好。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 2,
+    "comment": "三条分别走专属感、信息清晰、灵活路线，差异明显；候选2唯一无编造，但专属感偏弱，建议在候选2基础上补一句客户真实原话引用。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  },
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [
+      "5月您来取星宿戒指时说起婚礼（对话历史中客户仅提及婚礼当天，未明确说明是来取戒指时说起）"
+     ],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 3,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 3
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "专属感强，但“取戒指时说起婚礼”略有演绎，且“我一直记着”属套话，建议改为直接引用客户原话。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "信息清晰完整，但缺少个性化细节，稍显群发感，可加入一句客户相关的具体内容。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [
+      "我先把活动的资料发给您（输入中未说明有活动资料可发）"
+     ],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 3
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "灵活度好，但“发活动资料”属未提供的服务，建议删去或改为“把活动信息再跟您说细些”。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 2,
+    "comment": "三条分别侧重专属感、信息清晰、灵活选择，差异明显；候选2最稳妥，候选1需修正细节，候选3需删去未提供的资料发送服务。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  }
+ ]
+}

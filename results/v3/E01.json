@@ -1,0 +1,242 @@
+{
+ "case_id": "E01",
+ "meta": {
+  "type": "core",
+  "focus": "与客户兴趣精准匹配；信息完整准确；正式"
+ },
+ "request": {
+  "case_id": "E01",
+  "scenario": "event",
+  "today": "2026-11-05",
+  "ca_name": "Lina",
+  "client": {
+   "client_id": "C16",
+   "surname": "罗",
+   "gender": "F",
+   "preferred_name": null,
+   "age_band": "45-50",
+   "city": "北京",
+   "tier": "典藏 Heritage",
+   "birthday": null,
+   "occupation": "艺术基金会理事",
+   "interests": [
+    "珐琅艺术",
+    "当代艺术收藏",
+    "古籍"
+   ],
+   "style_notes": "收藏珐琅器，喜欢有工艺深度的作品",
+   "purchases": [
+    {
+     "date": "2025-06-06",
+     "item": "Constellation 星宿 钻石项链",
+     "note": "自购，定制了出生月星图"
+    }
+   ],
+   "last_visit": "2026-07-18",
+   "preferences": [
+    "语气正式"
+   ],
+   "family": null,
+   "ca_notes": "对珐琅表盘的多次烧制工艺非常感兴趣"
+  },
+  "history": [
+   {
+    "speaker": "client",
+    "time": "2026-07-18 17:20",
+    "text": "上次说的珐琅表盘多次烧制，有机会想看看"
+   }
+  ],
+  "products": [],
+  "context": "活动：「火与时间——瓦洛蕾珐琅工艺之夜」\n时间：2026年11月21日（周六）19:00–21:00\n地点：北京国贸丽庭店二楼沙龙\n内容：日内瓦珐琅匠人现场演示大明火珐琅烧制，展出Méridien万年历珐琅表盘\n可携一位同伴；请于11月15日前回复"
+ },
+ "result": {
+  "case_id": "E01",
+  "version": "v3",
+  "analysis": {
+   "key_facts": [
+    "C3/C5：罗女士收藏珐琅器，兴趣在珐琅艺术，喜欢有工艺深度的作品",
+    "H1：2026年7月18日她提到想看看珐琅表盘的多次烧制工艺",
+    "X1–X5：11月21日周六19:00–21:00，北京国贸丽庭店二楼沙龙，日内瓦珐琅匠人现场演示大明火珐琅烧制，展出Méridien万年历珐琅表盘，可携一位同伴，11月15日前回复",
+    "S7：可另约私人时段"
+   ],
+   "risks": [
+    "上一段对话已在110天前自然结束，不可当作进行中的对话来回应，也不要为迟回道歉",
+    "客户偏好正式语气，全文用“您”，不使用emoji",
+    "不可编造嘉宾、礼品、名额等未给出的活动细节",
+    "不用“名额有限、先到先得”施压",
+    "活动为周六晚间，与工作日常作息无冲突，但需给客户留拒绝余地"
+   ],
+   "timing_ok": true,
+   "max_similarity": 0.67
+  },
+  "candidates": [
+   {
+    "angle": "专属感",
+    "message": "罗女士，七月时您提到想看看珐琅表盘的多次烧制，这件事我一直放在心上。11月21日周六19:00至21:00，我们在北京国贸丽庭店二楼沙龙举办「火与时间——瓦洛蕾珐琅工艺之夜」，日内瓦珐琅匠人会现场演示大明火珐琅烧制，并展出Méridien万年历珐琅表盘。想到您收藏珐琅器，这场活动我特别想邀请您。您可携一位同伴，若方便，请于11月15日前回复我。",
+    "rationale": "以她七月提出的珐琅烧制兴趣为由头说明为何特意邀请，再给出活动信息，体现被挑选而非群发。",
+    "facts_used": [
+     "H1",
+     "C3",
+     "X1",
+     "X2",
+     "X3",
+     "X4",
+     "X5"
+    ],
+    "critic_removed": [],
+    "issues": [
+     "[SOFT:long] 173字，偏长"
+    ],
+    "repaired": true
+   },
+   {
+    "angle": "信息清晰",
+    "message": "罗女士，向您通报一场门店活动：「火与时间——瓦洛蕾珐琅工艺之夜」，11月21日周六19:00–21:00，北京国贸丽庭店二楼沙龙。届时日内瓦珐琅匠人现场演示大明火珐琅烧制，并展出Méridien万年历珐琅表盘。您可携一位同伴，请于11月15日前回复确认。若时间不便，也请告知，我再为您安排。",
+    "rationale": "要点集中、时间地点内容与回复方式一目了然，便于她快速决定。",
+    "facts_used": [
+     "X1",
+     "X2",
+     "X3",
+     "X4",
+     "X5"
+    ],
+    "critic_removed": [],
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "灵活型",
+    "message": "罗女士，11月21日周六19:00–21:00，北京国贸丽庭店二楼沙龙有一场「火与时间——瓦洛蕾珐琅工艺之夜」，日内瓦珐琅匠人现场演示大明火珐琅烧制，并展出Méridien万年历珐琅表盘，您可携一位同伴。您七月提过想看看多次烧制的工艺，若这场您方便，请于11月15日前回复；若不巧有安排，我也可以为您另约私人时段，或先把相关资料发给您。",
+    "rationale": "邀请同时给出私人时段与资料两种替代方案，尊重她的时间与决定。",
+    "facts_used": [
+     "H1",
+     "X1",
+     "X2",
+     "X3",
+     "X4",
+     "X5",
+     "S7"
+    ],
+    "critic_removed": [],
+    "issues": [
+     "[SOFT:long] 168字，偏长"
+    ],
+    "repaired": false
+   }
+  ],
+  "model": "deepseek:deepseek-chat",
+  "latency_s": 7.9
+ },
+ "judge": {
+  "candidates": [
+   {
+    "id": 1,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 5,
+     "brand_voice": 5,
+     "naturalness": 4,
+     "appropriateness": 5,
+     "goal": 5,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "以七月客户提过的珐琅烧制为引，信息完整、语气温润克制，仅“一直放在心上”略近套话，可微调。"
+   },
+   {
+    "id": 2,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 3,
+     "brand_voice": 4,
+     "naturalness": 3,
+     "appropriateness": 4,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "信息清楚但“向您通报”偏公文腔，且未用客户对珐琅的兴趣做个性化，像群发。"
+   },
+   {
+    "id": 3,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 5,
+     "brand_voice": 5,
+     "naturalness": 5,
+     "appropriateness": 5,
+     "goal": 5,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "引用七月话题自然，信息完整，并给出私人时段与资料两个易拒绝的备选，分寸得当。"
+   }
+  ],
+  "set": {
+   "diversity": 4,
+   "best_id": 3,
+   "comment": "三条覆盖专属感、信息型、灵活型，差异明显；候选3在个性化与分寸上最均衡，可直接发送。"
+  },
+  "judge_model": "deepseek:deepseek-chat"
+ },
+ "judge_history": [
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 5,
+      "brand_voice": 5,
+      "naturalness": 4,
+      "appropriateness": 5,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "以七月客户原话自然开场，信息完整，专属感强；仅“一直放在心上”略近套话，可微调。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 4,
+      "naturalness": 3,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "信息清楚但“向您通报”偏公文，未用客户珐琅兴趣，专属感弱，像群发。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 5,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 5,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "引用七月话题并给出私人时段与资料两个退路，分寸好；开头略直入时间，可稍加一句过渡。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 1,
+    "comment": "三条分别偏专属、通报、灵活，差异明显；候选1在专属感与信息完整度上最均衡。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  }
+ ]
+}

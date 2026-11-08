@@ -1,0 +1,258 @@
+{
+ "case_id": "P01",
+ "meta": {
+  "type": "core",
+  "focus": "不能否认香港价格、不能贬低；说明价格体系与保障；尊重客户在香港购买的选择"
+ },
+ "request": {
+  "case_id": "P01",
+  "scenario": "price_objection",
+  "today": "2026-10-24",
+  "ca_name": "Lina",
+  "client": {
+   "client_id": "C07",
+   "surname": "孙",
+   "gender": "M",
+   "preferred_name": null,
+   "age_band": "30-35",
+   "city": "北京",
+   "tier": "新客 New",
+   "birthday": null,
+   "occupation": "咨询公司经理",
+   "interests": [
+    "商务出差",
+    "跑步"
+   ],
+   "style_notes": "预算敏感，喜欢功能性腕表",
+   "purchases": [],
+   "last_visit": "2026-10-20",
+   "preferences": [],
+   "family": null,
+   "ca_notes": "10月20日到店试戴Méridien两地时，常在北京和新加坡之间出差；提到香港可能更便宜"
+  },
+  "history": [
+   {
+    "speaker": "CA",
+    "time": "2026-10-23 19:00",
+    "text": "孙先生，两地时这周到了一枚石板灰表盘的现货，您有空可以再来试试"
+   },
+   {
+    "speaker": "client",
+    "time": "2026-10-24 12:30",
+    "text": "我查了一下香港好像便宜一万多，下个月正好去香港出差"
+   }
+  ],
+  "products": [
+   {
+    "sku": "MRD-W-02",
+    "name": "Méridien 子午线 两地时腕表 41mm",
+    "collection": "Méridien 子午线",
+    "category": "watch",
+    "material": "精钢表壳，石板灰表盘，第二时区显示，自动上链",
+    "price": 72000,
+    "story": "为常在两地之间往返的人设计，一眼读取家乡时间",
+    "care": "建议每4-5年保养一次"
+   }
+  ],
+  "context": "瓦洛蕾实行全球统一价格体系，各地差异主要来自汇率与税费；内地购买享官方保修与会员计划"
+ },
+ "result": {
+  "case_id": "P01",
+  "version": "v3",
+  "analysis": {
+   "key_facts": [
+    "C4：客户10月20日到店试戴Méridien两地时，常在北京与新加坡之间出差，曾提过香港价格更低",
+    "H2：客户说查过香港好像便宜一万多，下个月去香港出差",
+    "P2：精钢表壳、石板灰表盘、第二时区显示、自动上链",
+    "P4：为常在两地之间往返的人设计，一眼读取家乡时间",
+    "X1：全球统一价格体系，差异主要来自汇率与税费；内地购买享官方保修与会员计划",
+    "S5：标准保修2年，注册会员计划后延长至8年",
+    "S9：官方渠道提供真品证书与全球保修",
+    "S2：免费刻字、礼盒与手写卡片",
+    "S7：私人预约/私享时段、同城CA送达、可发图片或视频"
+   ],
+   "risks": [
+    "客户在等回复，必须先正面回应香港比价这句话，不能回避",
+    "不得暗示可申请更低价格、员工价或赠品抵价",
+    "不得贬低香港渠道或代购，只平和陈述官方渠道保障",
+    "客户预算敏感，不要说‘超出预算’或让客户觉得买不起",
+    "不得说保值、升值、投资",
+    "产品信息未列出其他款式或尺寸，不得提替代款",
+    "人称统一用‘您’"
+   ],
+   "timing_ok": true,
+   "max_similarity": 0.29
+  },
+  "candidates": [
+   {
+    "angle": "共情+价值",
+    "message": "孙先生，香港那边的差价我能理解，比价是应该的。\n这枚Méridien是为常在两地往返的人做的，石板灰盘面配第二时区，您在北京和新加坡之间飞，落地抬眼就能读到家乡时间。精钢壳、自动上链，功能都落在您日常用得上的地方。\n哪天方便，您再来上手看看，感受一下再决定也不迟。",
+    "rationale": "先认同比价的心情，再把价值落在客户真实的两地出差场景与产品功能上，结尾给轻松的上手邀约。｜事实核查已删改：石板灰盘面配第二时区（P2有石板灰表盘、第二时区显示，属可引用，但“配”为自然转述，可保留）；精钢壳、自动上链（P2可引用）；把表再留给您上手看看（S8作品最多保留7天需门店确认，此处“留给您”暗示可保留，属未确认的服务承诺）",
+    "facts_used": [
+     "H2",
+     "C4",
+     "P2",
+     "P4",
+     "P1"
+    ],
+    "critic_removed": [
+     "石板灰盘面配第二时区（P2有石板灰表盘、第二时区显示，属可引用，但“配”为自然转述，可保留）",
+     "精钢壳、自动上链（P2可引用）",
+     "把表再留给您上手看看（S8作品最多保留7天需门店确认，此处“留给您”暗示可保留，属未确认的服务承诺）"
+    ],
+    "issues": [],
+    "repaired": true
+   },
+   {
+    "angle": "政策+保障",
+    "message": "孙先生，您查到的差价我明白，这里面主要是汇率和税费的不同。瓦洛蕾实行全球统一价格体系，各地门店都不打折，所以香港那边并不是同一件作品在让价。\n内地购买的话，作品带真品证书与全球保修，腕表注册会员计划后保修可延到8年。您下个月出差前若有空，可以来坐坐，我把这些保障当面和您说清楚。",
+    "rationale": "坦诚说明统一价格与差异来源，平和陈述官方渠道的证书与保修保障，不贬低其他渠道。｜事实核查已删改：后续清洁、保养也都在门店办（S3为珠宝终身免费清洁抛光，S6为腕表保养建议，未说明腕表清洁保养均在门店办，属未给出的服务范围）",
+    "facts_used": [
+     "H2",
+     "X1",
+     "S1",
+     "S9",
+     "S5",
+     "S3"
+    ],
+    "critic_removed": [
+     "后续清洁、保养也都在门店办（S3为珠宝终身免费清洁抛光，S6为腕表保养建议，未说明腕表清洁保养均在门店办，属未给出的服务范围）"
+    ],
+    "issues": [],
+    "repaired": true
+   },
+   {
+    "angle": "增值服务/体验",
+    "message": "孙先生，香港便宜一万多这个我理解，价格上我这边确实没有空间，瓦洛蕾各地都是统一价。\n不过您常出差，这枚Méridien两地时看时间省心，表背上可以免费刻字，戴起来是自己的东西。您要是愿意，我也可以先拍段视频给您，或者约个安静些的时间再来试。",
+    "rationale": "温和明确不能打折后，转向刻字等政策内增值服务与体验方式，把对话引向合适的选择。｜事实核查已删改：把新加坡的时区或您常记的那几个字刻上（S2仅说免费刻字，未提及可刻时区或具体内容，属未给出的工艺细节）",
+    "facts_used": [
+     "H2",
+     "S1",
+     "C4",
+     "P4",
+     "S2",
+     "S7"
+    ],
+    "critic_removed": [
+     "把新加坡的时区或您常记的那几个字刻上（S2仅说免费刻字，未提及可刻时区或具体内容，属未给出的工艺细节）"
+    ],
+    "issues": [],
+    "repaired": true
+   }
+  ],
+  "model": "deepseek:deepseek-chat",
+  "latency_s": 9.0
+ },
+ "judge": {
+  "candidates": [
+   {
+    "id": 1,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 3,
+     "goal": 3,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "语气温润，但完全没回应香港差价与统一价格政策，客户的价格疑问被绕开，目标完成度偏弱。"
+   },
+   {
+    "id": 2,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 5,
+     "naturalness": 4,
+     "appropriateness": 5,
+     "goal": 5,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "先共情再平和说明统一价格与汇率税费差异，落到官方保修与会员计划，不争辩不贬低，分寸到位。"
+   },
+   {
+    "id": 3,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 4,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "直接说明价格无空间并转向刻字与视频，可用；但“安静些的时间”接近套话，价值落点略散。"
+   }
+  ],
+  "set": {
+   "diversity": 4,
+   "best_id": 2,
+   "comment": "三条分别走价值、政策保障、增值服务路线，差异清晰；候选2最贴合价格异议场景，既守住政策又给出台阶。"
+  },
+  "judge_model": "deepseek:deepseek-chat"
+ },
+ "judge_history": [
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 3,
+      "goal": 3,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "共情到位、价值转述准确，但没有正面回应统一价格政策，客户的价格疑问被绕开，说服力偏弱。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 5,
+      "naturalness": 4,
+      "appropriateness": 5,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "先回应香港差价并平和解释汇率税费，坚守统一价格，再落到保修与会员计划，分寸与目标都到位。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "明确说明价格无空间并转向刻字与试戴体验，可用；'安静些的时间'接近套话，可换一种说法。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 2,
+    "comment": "三条分别走价值、政策保障、体验服务三条路，差异清晰；候选2最完整地回应了比价并守住价格政策。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  }
+ ]
+}

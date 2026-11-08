@@ -1,0 +1,387 @@
+{
+ "case_id": "E02",
+ "meta": {
+  "type": "core",
+  "focus": "名额有限是真实信息，可平和告知，不能“先到先得”施压；藏家干货"
+ },
+ "request": {
+  "case_id": "E02",
+  "scenario": "event",
+  "today": "2026-11-10",
+  "ca_name": "Lina",
+  "client": {
+   "client_id": "C02",
+   "surname": "陈",
+   "gender": "M",
+   "preferred_name": null,
+   "age_band": "45-50",
+   "city": "北京",
+   "tier": "尊享 Privilege",
+   "birthday": null,
+   "occupation": "精密制造企业创始人",
+   "interests": [
+    "制表工艺",
+    "古董表收藏",
+    "高尔夫"
+   ],
+   "style_notes": "资深藏家，懂机芯，反感空洞的营销话术；偏好铂金、珐琅",
+   "purchases": [
+    {
+     "date": "2024-04-02",
+     "item": "Méridien 子午线 两地时腕表 41mm",
+     "note": "自购，常往返北京与日内瓦"
+    }
+   ],
+   "last_visit": "2026-09-12",
+   "preferences": [
+    "语气正式",
+    "只谈干货"
+   ],
+   "family": null,
+   "ca_notes": "曾问过万年历机芯的调校注意事项；对手工珐琅很感兴趣"
+  },
+  "history": [
+   {
+    "speaker": "client",
+    "time": "2026-09-12 16:02",
+    "text": "万年历那款下次去日内瓦时再看看实物"
+   }
+  ],
+  "products": [],
+  "context": "活动：Méridien万年历机芯拆解课，由日内瓦制表师主讲\n时间：2026年11月28日（周六）14:00–16:30\n地点：北京国贸丽庭店\n本场仅设8个座位（真实信息）"
+ },
+ "result": {
+  "case_id": "E02",
+  "version": "v1",
+  "analysis": {
+   "key_facts": [
+    "客户最后一条消息是2026-09-12「万年历那款下次去日内瓦时再看看实物」，至今未回复，必须先行回应",
+    "客户是资深藏家，懂机芯，曾问过万年历机芯调校注意事项",
+    "客户对珐琅与制表工艺有兴趣，常往返北京与日内瓦",
+    "活动为Méridien万年历机芯拆解课，11月28日14:00–16:30，北京国贸丽庭店，仅设8个座位"
+   ],
+   "risks": [
+    "客户最后消息待回应，不能像没发过一样直接推活动",
+    "客户偏好语气正式、只谈干货，需避免多余寒暄与情绪化措辞",
+    "不得暗示折扣、不得编造嘉宾礼品或承诺座位",
+    "仅设8个座位需平和表述，不使用名额有限、先到先得式施压",
+    "不能暴露消费金额或会员等级"
+   ],
+   "timing_ok": true,
+   "max_similarity": 0.59
+  },
+  "candidates": [
+   {
+    "angle": "专属感",
+    "message": "陈先生，您九月提到万年历那款想下次去日内瓦再看实物，我一直记着。本月28日周六14:00至16:30，日内瓦的制表师会到北京国贸丽庭店做一场Méridien万年历机芯拆解课，现场拆解讲解，也正好回应您之前问过的调校问题。想着您对机芯的了解，这场课适合您来听。若您有兴趣，回复我一声即可；那天不方便也无需勉强。",
+    "rationale": "先回应客户的日内瓦计划，再以其曾问过的调校问题为切入点说明为何特意想到他。",
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "信息清晰",
+    "message": "陈先生，接着您上次说的万年历，补充一个信息：11月28日周六14:00至16:30，日内瓦制表师在北京国贸丽庭店主讲Méridien万年历机芯拆解课，现场拆解机芯结构，可当面请教调校细节。这场仅设8个座位。您若到场，回复我确认即可；时间不合也请直言。",
+    "rationale": "以最简结构给出时间、地点、内容与座位数，方便客户快速判断，不做多余铺陈。",
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "灵活型",
+    "message": "陈先生，万年历那款您说下次去日内瓦再看实物，这边先同步一件事：11月28日周六14:00至16:30，日内瓦制表师在北京国贸丽庭店讲Méridien万年历机芯拆解课，仅设8个座位。您若那天在北京，我可以为您留一个位置；若不便到场，也可另约私人时段，由我陪您看机芯细节。回复告知即可。",
+    "rationale": "邀请同时给出私人时段替代，尊重客户往返两地的时间安排，降低回复压力。",
+    "issues": [],
+    "repaired": false
+   }
+  ],
+  "model": "deepseek:deepseek-chat",
+  "latency_s": 5.1
+ },
+ "judge": {
+  "candidates": [
+   {
+    "id": 1,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 5,
+     "brand_voice": 4,
+     "naturalness": 3,
+     "appropriateness": 4,
+     "goal": 5,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "内容扎实、专属感强，但“我一直记着”属套话，且“想着您对机芯的了解”略空，可换成更具体的干货表述。"
+   },
+   {
+    "id": 2,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 5,
+     "naturalness": 5,
+     "appropriateness": 5,
+     "goal": 5,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "信息清楚、语气克制，明确是“补充信息”而非旧对话延续，符合只谈干货的偏好；专属感稍弱于候选1。"
+   },
+   {
+    "id": 3,
+    "unsupported_claims": [
+     "“我可以为您留一个位置”暗示已可代为保留座位，输入未写明CA可预留名额"
+    ],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 3,
+     "goal": 4,
+     "faithfulness": 3
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "灵活度好，但“为您留一个位置”超出输入授权，且“仅设8个座位”后接留位有轻微施压感，建议改为“回复我确认即可”。"
+   }
+  ],
+  "set": {
+   "diversity": 4,
+   "best_id": 2,
+   "comment": "三条分别走专属感、信息清晰、灵活备选，差异明显；候选2最稳，候选1需去套话，候选3需删去留位承诺。"
+  },
+  "judge_model": "deepseek:deepseek-chat"
+ },
+ "judge_history": [
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "scores": {
+      "personalization": 5,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "先回应日内瓦看实物的话，再自然引出拆解课，并呼应调校问题，分寸与干货兼备。"
+    },
+    {
+     "id": 2,
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "信息清楚、回应了待办，但“补充一个信息”略显事务化，专属感稍弱。"
+    },
+    {
+     "id": 3,
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 3,
+      "goal": 4,
+      "faithfulness": 4
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "另约私人时段属政策内服务，但输入未提及，且“留一个位置”略近施压，需谨慎。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 1,
+    "comment": "三条均回应待办，候选1最贴合资深藏家偏好，专属感与克制度最佳。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  },
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [
+      "我一直记着（套话，且暗示持续记忆动作，输入无依据）"
+     ],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 3
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "信息完整、语气克制，但“我一直记着”属规范明令避免的套话，建议删去。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 5,
+      "naturalness": 4,
+      "appropriateness": 5,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "干货式表达贴合客户偏好，时间地点内容清楚，仅设8座为真实信息且未施压，可直接发送。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [
+      "另约私人时段，由我陪您看机芯细节（私人时段属政策内服务，但“陪您看机芯细节”为自造的具体安排，输入未提供）"
+     ],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 3
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "留位与备选方案灵活，但“陪您看机芯细节”超出输入依据，建议改为政策内的私人预约表述。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 2,
+    "comment": "三条角度区分明显（专属感/干货/灵活），候选2最贴合客户“只谈干货”的偏好且无编造。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  },
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [
+      "我一直记着（套话，且暗示持续记忆动作）"
+     ],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 3,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 4
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "信息完整、引用九月原话得当，但“我一直记着”属规范明令避免的套话，需替换开头。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "以“补充一个信息”自然承接旧话题，时间地点内容与8座信息清楚，结尾易拒绝，符合正式只谈干货的偏好。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [
+      "另约私人时段由我陪您看机芯细节（私人预约为政策内服务，但“看机芯细节”的具体安排略超出活动信息）"
+     ],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 4
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "灵活度好，但“另约私人时段看机芯细节”稍显承诺过度，且整体略长于客户偏好的干货风格。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 2,
+    "comment": "三条分别偏专属感、信息清晰、灵活备选，差异明显；候选2最贴合正式、只谈干货的偏好且无套话。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  },
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [
+      "“也正好回应您之前问过的调校问题”——客户档案中确有“曾问过万年历机芯的调校注意事项”，属档案字段，有依据"
+     ],
+     "scores": {
+      "personalization": 5,
+      "brand_voice": 4,
+      "naturalness": 3,
+      "appropriateness": 4,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "信息完整、专属感强，但“我一直记着”属套话，且“想着您对机芯的了解”略空，删掉更利落。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 5,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "以“补充一个信息”承接旧话题，时间地点内容清楚，8座平和不施压，符合正式、只谈干货的偏好。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [
+      "“由我陪您看机芯细节”——私人时段陪看属政策内可提供的服务，有依据"
+     ],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "给了退路较灵活，但“若那天在北京”与客户常驻北京略脱节，且私人时段选项分散了活动邀约的重点。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 2,
+    "comment": "三条分别偏情感、干货、灵活，差异明显；候选2最贴合客户“正式、只谈干货”的偏好，可直接发送。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  }
+ ]
+}

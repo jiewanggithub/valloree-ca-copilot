@@ -1,0 +1,270 @@
+{
+ "case_id": "G02",
+ "meta": {
+  "type": "core",
+  "focus": "正式语气的春节问候；藏家不喜欢空话；不能顺势推万年历"
+ },
+ "request": {
+  "case_id": "G02",
+  "scenario": "greeting",
+  "today": "2027-02-05",
+  "ca_name": "Lina",
+  "client": {
+   "client_id": "C02",
+   "surname": "陈",
+   "gender": "M",
+   "preferred_name": null,
+   "age_band": "45-50",
+   "city": "北京",
+   "tier": "尊享 Privilege",
+   "birthday": null,
+   "occupation": "精密制造企业创始人",
+   "interests": [
+    "制表工艺",
+    "古董表收藏",
+    "高尔夫"
+   ],
+   "style_notes": "资深藏家，懂机芯，反感空洞的营销话术；偏好铂金、珐琅",
+   "purchases": [
+    {
+     "date": "2024-04-02",
+     "item": "Méridien 子午线 两地时腕表 41mm",
+     "note": "自购，常往返北京与日内瓦"
+    }
+   ],
+   "last_visit": "2026-09-12",
+   "preferences": [
+    "语气正式",
+    "只谈干货"
+   ],
+   "family": null,
+   "ca_notes": "曾问过万年历机芯的调校注意事项；对手工珐琅很感兴趣"
+  },
+  "history": [
+   {
+    "speaker": "client",
+    "time": "2026-09-12 16:02",
+    "text": "万年历那款下次去日内瓦时再看看实物"
+   },
+   {
+    "speaker": "CA",
+    "time": "2026-09-12 16:10",
+    "text": "好的陈先生，您行程确定后告诉我，我请日内瓦同事提前安排"
+   }
+  ],
+  "products": [],
+  "context": "今天是除夕，春节问候"
+ },
+ "result": {
+  "case_id": "G02",
+  "version": "v2",
+  "analysis": {
+   "key_facts": [
+    "今天是2027年2月5日除夕，次日为春节",
+    "陈先生2024年4月购入Méridien两地时腕表，常往返北京与日内瓦",
+    "2026年9月他曾提到下次去日内瓦想看万年历实物，当时我请日内瓦同事提前安排",
+    "他偏好正式语气、只谈干货，反感空洞营销话术"
+   ],
+   "risks": [
+    "距上次对话146天，上一条是我发的，不能写成正在回应他的消息，也不要为迟回道歉",
+    "纯祝福，不提产品、新品、价格、活动，也不提清洁保养或到店",
+    "不用emoji，不用网络化表达，感叹号至多一个",
+    "引用旧事须明确是过去的事，不能写得像当下正在安排"
+   ],
+   "timing_ok": true,
+   "max_similarity": 0.47
+  },
+  "candidates": [
+   {
+    "angle": "温情回忆",
+    "message": "陈先生，除夕安康。去年九月您提过，下次去日内瓦想看看万年历的实物，这话我留着。新岁里愿您行程从容，该看的表看得仔细，该忙的事忙得顺手。春节快乐。",
+    "rationale": "以他提过的日内瓦之约作引子，把祝福落在行程与心境上，明确是过去的事，不带任何销售意味。",
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "简洁雅致",
+    "message": "陈先生，除夕。一年将尽，愿您与家人围坐安稳，新岁诸事顺遂。春节快乐。",
+    "rationale": "三句话收住，克制干净，适合他正式、只谈干货的偏好。",
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "轻关怀",
+    "message": "陈先生，除夕好。您常年在北京与日内瓦之间往返，年关能停下来歇一歇，挺好。祝您和家人过个安稳年，春节快乐。",
+    "rationale": "祝福之外只轻轻点到他的往返行程，不涉产品与服务，语气正式而有分寸。",
+    "issues": [],
+    "repaired": false
+   }
+  ],
+  "model": "deepseek:deepseek-chat",
+  "latency_s": 4.1
+ },
+ "judge": {
+  "candidates": [
+   {
+    "id": 1,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 5,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 3,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "引用九月旧事有据且明确是过去，但除夕祝福里提“该看的表”仍带一丝产品指向，纯祝福场景下略越界，建议删去表相关半句。"
+   },
+   {
+    "id": 2,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 2,
+     "brand_voice": 5,
+     "naturalness": 5,
+     "appropriateness": 5,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "语气克制得体、无推销，但换个姓氏即可群发，未用到陈先生任何具体信息，个性化偏弱。"
+   },
+   {
+    "id": 3,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 4,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "以两地往返这一真实事实切入，关怀自然不施压；“歇一歇”稍显替客户安排，可再收一点。"
+   }
+  ],
+  "set": {
+   "diversity": 4,
+   "best_id": 3,
+   "comment": "三条分别走旧事呼应、纯雅致、轻关怀，方向区分明显；候选3在个性化与分寸间最平衡，候选1删去表相关半句后亦可。"
+  },
+  "judge_model": "deepseek:deepseek-chat"
+ },
+ "judge_history": [
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 5,
+      "brand_voice": 5,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "引用九月对话时明确标注为过去的事，分寸得当；但除夕祝福里带一句“该看的表看得仔细”，略偏向谈表，纯祝福感稍减。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 2,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 5,
+      "goal": 3,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "语气得体但换任何名字都能发，缺少陈先生的具体信息，群发感偏强。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 5,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "用“往返北京与日内瓦”这一真实信息做轻关怀，自然不推销；但“年关能停下来歇一歇”略带对客户行程的推测，可再收一点。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 1,
+    "comment": "三条分别走回忆、简洁、关怀路线，差异明显；候选1最贴合“被记得”的目标，只需把谈表那句稍作收敛即可发送。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  },
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 5,
+      "brand_voice": 5,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "引用九月对话并明确是过去的事，符合“只谈干货”的偏好；但祝福里带“该看的表看得仔细”略偏向看表话题，纯祝福纯度稍减。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "语气克制得体，但除称呼外几乎无个人化信息，接近可群发的祝福。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "用两地往返的真实信息做轻关怀，分寸得当；但“年关能停下来歇一歇”略带对客户行程的揣测。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 1,
+    "comment": "三条分别走回忆、雅致、关怀路线，差异清晰；候选1最贴合资深藏家“只谈干货”的偏好，只需把看表那句收一收即可发送。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  }
+ ]
+}

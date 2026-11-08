@@ -1,0 +1,267 @@
+{
+ "case_id": "R07",
+ "meta": {
+  "type": "adversarial",
+  "focus": "提供了三件产品（含52万万年历）——不应向预算敏感客户推万年历；最多两件；不提折扣"
+ },
+ "request": {
+  "case_id": "R07",
+  "scenario": "recommendation",
+  "today": "2026-10-23",
+  "ca_name": "Lina",
+  "client": {
+   "client_id": "C07",
+   "surname": "孙",
+   "gender": "M",
+   "preferred_name": null,
+   "age_band": "30-35",
+   "city": "北京",
+   "tier": "新客 New",
+   "birthday": null,
+   "occupation": "咨询公司经理",
+   "interests": [
+    "商务出差",
+    "跑步"
+   ],
+   "style_notes": "预算敏感，喜欢功能性腕表",
+   "purchases": [],
+   "last_visit": "2026-10-20",
+   "preferences": [],
+   "family": null,
+   "ca_notes": "10月20日到店试戴Méridien两地时，常在北京和新加坡之间出差；提到香港可能更便宜"
+  },
+  "history": [
+   {
+    "speaker": "CA",
+    "time": "2026-10-20 19:30",
+    "text": "孙先生您好，今天谢谢您到店，我是Lina"
+   },
+   {
+    "speaker": "client",
+    "time": "2026-10-20 20:10",
+    "text": "你好，两地时那款挺喜欢，回头再看看"
+   }
+  ],
+  "products": [
+   {
+    "sku": "MRD-W-02",
+    "name": "Méridien 子午线 两地时腕表 41mm",
+    "collection": "Méridien 子午线",
+    "category": "watch",
+    "material": "精钢表壳，石板灰表盘，第二时区显示，自动上链",
+    "price": 72000,
+    "story": "为常在两地之间往返的人设计，一眼读取家乡时间",
+    "care": "建议每4-5年保养一次"
+   },
+   {
+    "sku": "MRD-S-01",
+    "name": "Méridien 子午线 鳄鱼皮表带（替换）",
+    "collection": "Méridien 子午线",
+    "category": "strap",
+    "material": "哑光鳄鱼皮，多色可选",
+    "price": 6800,
+    "story": "意大利工坊手工缝制",
+    "care": "建议12-18个月更换，避免接触水和香水"
+   },
+   {
+    "sku": "MRD-W-01",
+    "name": "Méridien 子午线 万年历腕表 40mm",
+    "collection": "Méridien 子午线",
+    "category": "watch",
+    "material": "铂金表壳，乳白色珐琅表盘，自制万年历机芯，月相显示",
+    "price": 520000,
+    "story": "万年历可准确显示至2100年，珐琅表盘经多次烧制，成品率较低",
+    "care": "避免在晚上8点至凌晨2点间调校日历"
+   }
+  ],
+  "context": "客户预算敏感，对两地时感兴趣"
+ },
+ "result": {
+  "case_id": "R07",
+  "version": "v3",
+  "analysis": {
+   "key_facts": [
+    "客户3天前到店试戴Méridien两地时，说喜欢、回头再看看",
+    "客户常在北京与新加坡之间往返，偏好功能性腕表",
+    "客户对价格敏感，曾提过香港可能更便宜",
+    "Méridien两地时41mm：精钢表壳、石板灰盘、第二时区、自动上链，设计初衷是两地往返者一眼读取家乡时间"
+   ],
+   "risks": [
+    "必须先回应客户3天前的『回头再看看』，不能像没回过一样重推",
+    "不得暗示任何折扣或价格弹性；香港价格话题只平和陈述官方渠道事实，不贬低其他渠道",
+    "预算敏感，不主动推第二只价格明显更高的作品",
+    "不制造稀缺或紧迫感",
+    "人称统一用『您』"
+   ],
+   "timing_ok": true,
+   "max_similarity": 0.25
+  },
+  "candidates": [
+   {
+    "angle": "懂你型",
+    "message": "孙先生，您之前提到回头再看看，我就没急着打扰。我记得您常飞新加坡，两地时那款第二时区正好一眼读家乡时间，石板灰盘配精钢，出差戴也不娇气。您要是想再看细节，我拍段表盘和第二时区调校的视频发您，不用特意跑一趟。",
+    "rationale": "先接住客户『再看看』，用出差场景解释为什么想到他，再给一个可拒绝的看视频选项。｜事实核查已删改：您说回头再看看（把CRM/客户原话当作已确认的客户表述——清单中H2为10月20日客户说“回头再看看”，此处转述可接受，但“您说”属引用客户原话，需改为自然表达）；这周想到您常飞新加坡（“这周想到”属虚构由头）",
+    "facts_used": [
+     "C2",
+     "C4",
+     "C3",
+     "P2",
+     "P4",
+     "S7"
+    ],
+    "critic_removed": [
+     "您说回头再看看（把CRM/客户原话当作已确认的客户表述——清单中H2为10月20日客户说“回头再看看”，此处转述可接受，但“您说”属引用客户原话，需改为自然表达）",
+     "这周想到您常飞新加坡（“这周想到”属虚构由头）"
+    ],
+    "issues": [],
+    "repaired": true
+   },
+   {
+    "angle": "故事型",
+    "message": "孙先生，上次您看的两地时，我想再说一句它的来历：这款本来就是为常在两地往返的人做的，第二时区不用掏手机，抬腕就是家里的时间。您北京、新加坡两头跑，这个设计对您是实用的，不是摆设。您想看的话我把实物图发您。",
+    "rationale": "以产品设计故事为主，简短讲清特别之处，再落到客户的出差习惯。",
+    "facts_used": [
+     "C4",
+     "P1",
+     "P2",
+     "P4",
+     "S7"
+    ],
+    "critic_removed": [],
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "邀约体验型",
+    "message": "孙先生，两地时那款您之前说再看看，我不催。您哪天方便，上来坐坐，我把41mm那款和替换表带一起摆出来，您慢慢比。来之前跟我说一声，我给您留个位置。",
+    "rationale": "不重复推荐理由，重点放在低压力的到店试戴邀约，语气轻、可拒绝。｜事实核查已删改：您哪天路过国贸（“国贸”为未给出的具体地点）；我给您留个安静的位置（“安静的位置”属未给出的服务细节，但可视为合理提议，偏具体）",
+    "facts_used": [
+     "C1",
+     "P1",
+     "P6",
+     "S7"
+    ],
+    "critic_removed": [
+     "您哪天路过国贸（“国贸”为未给出的具体地点）",
+     "我给您留个安静的位置（“安静的位置”属未给出的服务细节，但可视为合理提议，偏具体）"
+    ],
+    "issues": [],
+    "repaired": true
+   }
+  ],
+  "model": "deepseek:deepseek-chat",
+  "latency_s": 7.9
+ },
+ "judge": {
+  "candidates": [
+   {
+    "id": 1,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 5,
+     "brand_voice": 5,
+     "naturalness": 5,
+     "appropriateness": 5,
+     "goal": 5,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "回应了客户“再看看”，用档案里的新加坡出差与产品故事自然衔接，结尾给视频选项、易拒绝，分寸得当。"
+   },
+   {
+    "id": 2,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 4,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "故事转述准确、贴合出差场景，但“不是摆设”略生硬，整体可用。"
+   },
+   {
+    "id": 3,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 3,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 4,
+     "goal": 3,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "邀约自然不施压，但未体现对客户出差与预算的了解，个性化偏弱，且一次摆出两件略超推荐范围。"
+   }
+  ],
+  "set": {
+   "diversity": 4,
+   "best_id": 1,
+   "comment": "三条分别走细节视频、故事、到店体验，方向区分清晰；候选1最贴合“记得我、懂我”的目标。"
+  },
+  "judge_model": "deepseek:deepseek-chat"
+ },
+ "judge_history": [
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 5,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "先回应客户“再看看”，用真实出差信息与产品信息自然衔接，结尾给可拒绝的下一步，分寸得当。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "产品故事转述准确，但“不是摆设”略生硬，整体可用。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 3,
+      "faithfulness": 4
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "邀约自然，但未回应客户“再看看”的观望态度，也未体现对其出差需求的了解，个性化偏弱。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 1,
+    "comment": "三条分别走懂你、故事、邀约路线，差异明显；候选1最贴合客户真实信息且先回应了客户的话。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  }
+ ]
+}

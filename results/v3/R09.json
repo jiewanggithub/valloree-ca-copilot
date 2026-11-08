@@ -1,0 +1,254 @@
+{
+ "case_id": "R09",
+ "meta": {
+  "type": "core",
+  "focus": "跟进CA承诺；客户偏爱白金冷色调，而推荐款是玫瑰金——好的回复应诚实提及或巧妙衔接，而非忽略"
+ },
+ "request": {
+  "case_id": "R09",
+  "scenario": "recommendation",
+  "today": "2026-11-21",
+  "ca_name": "Lina",
+  "client": {
+   "client_id": "C01",
+   "surname": "王",
+   "gender": "F",
+   "preferred_name": "Vivian",
+   "age_band": "35-40",
+   "city": "上海",
+   "tier": "典藏 Heritage",
+   "birthday": "11-07",
+   "occupation": "投资银行合伙人",
+   "interests": [
+    "歌剧",
+    "旅行",
+    "普拉提"
+   ],
+   "style_notes": "偏爱白金与冷色调，简洁线条；戒指尺寸11号",
+   "purchases": [
+    {
+     "date": "2023-06-18",
+     "item": "Constellation 星宿 钻石戒指",
+     "note": "自购，纪念升任合伙人"
+    },
+    {
+     "date": "2026-10-30",
+     "item": "Heure Bleue 蓝调时刻 女士腕表 33mm",
+     "note": "自购"
+    }
+   ],
+   "last_visit": "2026-10-30",
+   "preferences": [
+    "喜欢简短的消息",
+    "希望被称呼为Vivian"
+   ],
+   "family": null,
+   "ca_notes": "工作忙，回复常在深夜；10月底提到11月要去维也纳听歌剧"
+  },
+  "history": [
+   {
+    "speaker": "client",
+    "time": "2026-11-18 23:50",
+    "text": "维也纳回来了，12月有个慈善晚宴，在想戴什么"
+   },
+   {
+    "speaker": "CA",
+    "time": "2026-11-19 09:00",
+    "text": "欢迎回来Vivian！晚宴的造型我帮您想想"
+   }
+  ],
+  "products": [
+   {
+    "sku": "HBL-W-02",
+    "name": "Heure Bleue 蓝调时刻 女士腕表 28mm 玫瑰金镶钻",
+    "collection": "Heure Bleue 蓝调时刻",
+    "category": "watch",
+    "material": "18K玫瑰金表壳，表圈镶嵌62颗钻石，石英机芯",
+    "price": 168000,
+    "story": "更纤细的比例，适合晚宴与正式场合",
+    "care": "石英电池约3年更换一次，可回店免费检测"
+   }
+  ],
+  "context": "回应客户晚宴需求，推荐28mm玫瑰金镶钻款"
+ },
+ "result": {
+  "case_id": "R09",
+  "version": "v3",
+  "analysis": {
+   "key_facts": [
+    "C4 偏爱白金与冷色调、简洁线条",
+    "C5 10月底提到11月去维也纳听歌剧",
+    "H1 12月慈善晚宴在想戴什么",
+    "P1/P2/P4 28mm玫瑰金镶钻，更纤细比例，适合晚宴与正式场合"
+   ],
+   "risks": [
+    "客户喜欢简短，每条不超过80字",
+    "客户偏好白金冷色调，推荐玫瑰金需说明理由、不硬推",
+    "上次是CA发言、客户未回，语气要轻，不重复已说过的话",
+    "不报价、不提优惠、不制造紧迫感"
+   ],
+   "timing_ok": true,
+   "max_similarity": 0.45
+  },
+  "candidates": [
+   {
+    "angle": "懂你型",
+    "message": "Vivian，晚宴的事我想了一款：Heure Bleue 28mm，比您那只33mm更纤细，配礼服不抢戏。虽是玫瑰金，但镶钻表圈偏冷光，和您惯常的白金调子能接上。要不要我先拍段视频给您看？",
+    "rationale": "从她已有33mm和冷色调偏好出发，解释为何仍想到玫瑰金款，并给低压力的看视频选项。",
+    "facts_used": [
+     "H1",
+     "C4",
+     "P1",
+     "P2",
+     "P4",
+     "S7"
+    ],
+    "critic_removed": [],
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "故事型",
+    "message": "Vivian，Heure Bleue 28mm的比例是为晚宴收的——表圈62颗钻，线条比33mm更收，正式场合戴着刚好。想到您12月那场晚宴，或许正合。方便时来店里试一下？",
+    "rationale": "以纤细比例与镶钻工艺为主，简短说明特别之处，再轻轻落到她的晚宴需求。",
+    "facts_used": [
+     "H1",
+     "P2",
+     "P4",
+     "S7"
+    ],
+    "critic_removed": [],
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "邀约体验型",
+    "message": "Vivian，12月晚宴若还没定，我这儿有只Heure Bleue 28mm镶钻款，比例纤巧，适合正式场合。您哪天方便，我留个私享时段给您慢慢试。",
+    "rationale": "只简短提产品，重点放在可拒绝的私享试戴邀约上。",
+    "facts_used": [
+     "H1",
+     "P1",
+     "P4",
+     "S7"
+    ],
+    "critic_removed": [],
+    "issues": [],
+    "repaired": false
+   }
+  ],
+  "model": "deepseek:deepseek-chat",
+  "latency_s": 5.5
+ },
+ "judge": {
+  "candidates": [
+   {
+    "id": 1,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 5,
+     "brand_voice": 5,
+     "naturalness": 5,
+     "appropriateness": 5,
+     "goal": 5,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "精准引用33mm与白金偏好，用视频降低到店压力，分寸与个性化俱佳。"
+   },
+   {
+    "id": 2,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 4,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "产品描述准确、语气克制，但未用到客户的白金偏好，个性化略逊于候选1。"
+   },
+   {
+    "id": 3,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 3,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 4,
+     "goal": 3,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "邀约自然，但内容偏通用，换个名字也能发，缺少对客户偏好的具体呼应。"
+   }
+  ],
+  "set": {
+   "diversity": 4,
+   "best_id": 1,
+   "comment": "三条分别走懂你、故事、邀约路线，差异清晰；候选1最贴合客户白金偏好与简短消息习惯。"
+  },
+  "judge_model": "deepseek:deepseek-chat"
+ },
+ "judge_history": [
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 5,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "引用客户已有的33mm与白金偏好，对比自然，结尾轻松可拒绝，最贴合“懂我”的目标。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "产品描述准确，但“为晚宴收的比例”略像文案，个性化弱于候选1。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 3,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "邀约得体，但未用到客户的白金偏好与已有33mm，换个名字也能发，偏通用。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 1,
+    "comment": "三条分别走对比懂你、产品故事、到店邀约，方向清晰；候选1最有个体记忆点。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  }
+ ]
+}

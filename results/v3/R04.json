@@ -1,0 +1,261 @@
+{
+ "case_id": "R04",
+ "meta": {
+  "type": "edge",
+  "focus": "必须回应客户的具体需求；HBL-W-02（镶钻、晚宴款）不适合日常——好的回复应只推荐或优先推荐HBL-W-01"
+ },
+ "request": {
+  "case_id": "R04",
+  "scenario": "recommendation",
+  "today": "2026-11-10",
+  "ca_name": "Lina",
+  "client": {
+   "client_id": "C11",
+   "surname": "何",
+   "gender": "F",
+   "preferred_name": null,
+   "age_band": "30-35",
+   "city": "上海",
+   "tier": "会员 Member",
+   "birthday": null,
+   "occupation": "建筑师",
+   "interests": [
+    "建筑",
+    "摄影",
+    "烘焙"
+   ],
+   "style_notes": "白金，线条感强的设计",
+   "purchases": [
+    {
+     "date": "2026-05-02",
+     "item": "Constellation 星宿 钻石戒指",
+     "note": "客户告知是自己的婚戒"
+    }
+   ],
+   "last_visit": "2026-05-02",
+   "preferences": [],
+   "family": null,
+   "ca_notes": "客户主动分享5月结婚，先生也是建筑师"
+  },
+  "history": [
+   {
+    "speaker": "client",
+    "time": "2026-11-09 22:30",
+    "text": "Lina，我想找一块能日常戴的表，工地和办公室来回跑，不要太娇气的，有推荐吗"
+   }
+  ],
+  "products": [
+   {
+    "sku": "HBL-W-01",
+    "name": "Heure Bleue 蓝调时刻 女士腕表 33mm",
+    "collection": "Heure Bleue 蓝调时刻",
+    "category": "watch",
+    "material": "精钢表壳，蓝色珍珠母贝表盘，钻石时标，自动上链机芯，动力储存70小时",
+    "price": 86000,
+    "story": "表盘的蓝来自日内瓦湖黄昏的“蓝调时刻”，每片母贝纹理独一无二",
+    "care": "建议每4-5年保养一次；加入瓦洛蕾会员计划保修延长至8年"
+   },
+   {
+    "sku": "HBL-W-02",
+    "name": "Heure Bleue 蓝调时刻 女士腕表 28mm 玫瑰金镶钻",
+    "collection": "Heure Bleue 蓝调时刻",
+    "category": "watch",
+    "material": "18K玫瑰金表壳，表圈镶嵌62颗钻石，石英机芯",
+    "price": 168000,
+    "story": "更纤细的比例，适合晚宴与正式场合",
+    "care": "石英电池约3年更换一次，可回店免费检测"
+   }
+  ],
+  "context": "客户昨晚提问，今天上午回复"
+ },
+ "result": {
+  "case_id": "R04",
+  "version": "v3",
+  "analysis": {
+   "key_facts": [
+    "H1：客户11-09晚间询问日常腕表，需工地与办公室两地佩戴，不要太娇气",
+    "C2：职业建筑师",
+    "C3：偏好白金与线条感强的设计",
+    "P2/P4：33mm 精钢表壳、蓝色珍珠母贝表盘、钻石时标、自动上链、70小时动力储存；表盘蓝来自日内瓦湖黄昏的蓝调时刻，母贝纹理每片不同"
+   ],
+   "risks": [
+    "客户昨晚的提问尚未回复，三条都必须先回应，不能直接推产品",
+    "客户强调不要太娇气，28mm 玫瑰金镶钻为晚宴定位，本条不宜作为主推",
+    "不得暗示折扣或库存紧迫，价格只作平实陈述",
+    "客户偏好白金与线条感，推荐理由需与这一点呼应"
+   ],
+   "timing_ok": true,
+   "max_similarity": 0.44
+  },
+  "candidates": [
+   {
+    "angle": "懂你型",
+    "message": "何女士，昨晚的问题我看到了。您说工地和办公室来回跑，我想到的是蓝调时刻33mm：精钢表壳，不娇气；蓝色珍珠母贝盘配钻石时标，线条干净，跟您平时偏爱的白金、直线条是一路的。自动上链，动力储存70小时，周末摘下周一也不用重调。价格是¥86000，全球统一价。要不要我先拍几张实物图给您看看？",
+    "rationale": "从客户的职业场景和已知偏好出发，说明为什么想到这款，再给低门槛的看图选项。",
+    "facts_used": [
+     "H1",
+     "C2",
+     "C3",
+     "P1",
+     "P2",
+     "P3",
+     "S1",
+     "S7"
+    ],
+    "critic_removed": [],
+    "issues": [],
+    "repaired": true
+   },
+   {
+    "angle": "故事型",
+    "message": "何女士，昨晚的问题我看到了。想给您讲讲蓝调时刻这块表：盘面那抹蓝取自日内瓦湖黄昏的“蓝调时刻”，每片珍珠母贝的纹理都不一样，所以每块盘面只属于一个人。33mm精钢表壳，自动上链，动力储存70小时，日常戴得住。想到您是建筑师，对光线和材质大概会比常人更挑剔一些，这块表或许经得起您看。方便时来店里上手试试？",
+    "rationale": "以盘面故事与材质为主，落到客户的建筑师眼光上，结尾给可拒绝的到店邀约。",
+    "facts_used": [
+     "H1",
+     "C2",
+     "P1",
+     "P2",
+     "P4"
+    ],
+    "critic_removed": [],
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "邀约体验型",
+    "message": "何女士，昨晚的消息回复晚了。日常戴的表，我这边有一块蓝调时刻33mm比较合适：精钢表壳，蓝色珍珠母贝盘，自动上链，动力储存70小时，不用太费心。您哪天从工地或办公室过来方便，我留个安静时段给您慢慢试；不方便的话，我先发段视频给您看也可以。",
+    "rationale": "简短带过产品，重点放在可来店试戴或先看视频的低压力下一步。",
+    "facts_used": [
+     "H1",
+     "P1",
+     "P2",
+     "S7",
+     "S8"
+    ],
+    "critic_removed": [],
+    "issues": [
+     "[SOFT:cliche] 套话:安静的时段"
+    ],
+    "repaired": false
+   }
+  ],
+  "model": "deepseek:deepseek-chat",
+  "latency_s": 8.7
+ },
+ "judge": {
+  "candidates": [
+   {
+    "id": 1,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 5,
+     "brand_voice": 5,
+     "naturalness": 5,
+     "appropriateness": 5,
+     "goal": 5,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "精准回应客户需求，把精钢、线条感与客户的白金偏好自然衔接，报价平和，结尾轻松可拒绝。"
+   },
+   {
+    "id": 2,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 5,
+     "naturalness": 4,
+     "appropriateness": 4,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "故事讲得克制有质感，但未提价格，且“经得起您看”略带推销味，客户问的是推荐，信息略欠完整。"
+   },
+   {
+    "id": 3,
+    "unsupported_claims": [
+     "“留个安静时段给您”属套话式表述，且暗示已可安排私享时段，虽政策允许但措辞模板化"
+    ],
+    "scores": {
+     "personalization": 3,
+     "brand_voice": 4,
+     "naturalness": 3,
+     "appropriateness": 4,
+     "goal": 4,
+     "faithfulness": 4
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "回应了需求也给了下一步，但“安静时段”是规范明令避免的套话，且未体现客户的白金线条偏好，个性化偏弱。"
+   }
+  ],
+  "set": {
+   "diversity": 4,
+   "best_id": 1,
+   "comment": "三条分别走懂你、故事、邀约路线，差异清晰；候选1最贴合客户偏好与场景目标，可直接发送。"
+  },
+  "judge_model": "deepseek:deepseek-chat"
+ },
+ "judge_history": [
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 5,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "精准回应工地与办公室的需求，并关联客户偏好的白金与线条感；主动报价略显直白，但无违规。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 5,
+      "brand_voice": 5,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "以蓝调时刻的故事与建筑师对光线材质的敏感相呼应，温润有分寸；对“不娇气”的回应稍弱。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [
+      "“留个安静时段给您”属套话式表述，且未先回应客户对‘不娇气’的具体关切"
+     ],
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 4,
+      "naturalness": 3,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 4
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "邀约体验自然，但“安静时段”是模板套话，个性化不足，且对工地场景的回应偏泛。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 2,
+    "comment": "三条分别走懂你、故事、邀约体验路线，差异清晰；候选2最贴合品牌气质与客户身份，候选1最直接回应需求。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  }
+ ]
+}

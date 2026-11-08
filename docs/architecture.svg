@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 440" font-family="Helvetica, Arial, 'PingFang SC', sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#52514e"/>
+    </marker>
+    <style>
+      .box{fill:#ffffff;stroke:#c9c7c0;stroke-width:1.2}
+      .det{fill:#eef4fc;stroke:#2a78d6;stroke-width:1.4}
+      .llm{fill:#fdf0ea;stroke:#eb6834;stroke-width:1.4}
+      .rule{fill:#eaf7f1;stroke:#1baf7a;stroke-width:1.4}
+      .t{font-size:15px;font-weight:700;fill:#0b0b0b}
+      .s{font-size:12px;fill:#52514e}
+      .h{font-size:12px;font-weight:700;fill:#52514e;letter-spacing:.06em}
+      .e{stroke:#52514e;stroke-width:1.4;fill:none;marker-end:url(#a)}
+      .ed{stroke:#52514e;stroke-width:1.2;fill:none;stroke-dasharray:5 4;marker-end:url(#a)}
+    </style>
+  </defs>
+  <rect width="1000" height="440" fill="#fcfcfb"/>
+  <text x="30" y="38" font-size="20" font-weight="700" fill="#0b0b0b">Vallorée CA Copilot — architecture</text>
+
+  <text x="30" y="84" class="h">PER REQUEST</text>
+
+  <rect x="30"  y="100" width="135" height="96" rx="10" class="box"/>
+  <text x="46"  y="132" class="t">Input</text>
+  <text x="46"  y="156" class="s">client, scenario,</text>
+  <text x="46"  y="174" class="s">chat, products</text>
+
+  <rect x="193" y="100" width="135" height="96" rx="10" class="det"/>
+  <text x="209" y="132" class="t">1 Context</text>
+  <text x="209" y="156" class="s">code, no LLM:</text>
+  <text x="209" y="174" class="s">signals + fact sheet</text>
+
+  <rect x="356" y="100" width="135" height="96" rx="10" class="llm"/>
+  <text x="372" y="132" class="t">2 Generate</text>
+  <text x="372" y="156" class="s">LLM: 3 drafts,</text>
+  <text x="372" y="174" class="s">3 different angles</text>
+
+  <rect x="519" y="100" width="135" height="96" rx="10" class="llm"/>
+  <text x="535" y="132" class="t">3 Fact-check</text>
+  <text x="535" y="156" class="s">LLM: drop claims</text>
+  <text x="535" y="174" class="s">not in the facts</text>
+
+  <rect x="682" y="100" width="135" height="96" rx="10" class="rule"/>
+  <text x="698" y="132" class="t">4 Guardrails</text>
+  <text x="698" y="156" class="s">brand &amp; compliance</text>
+  <text x="698" y="174" class="s">rules</text>
+
+  <rect x="845" y="100" width="125" height="96" rx="10" class="box"/>
+  <text x="861" y="132" class="t">3 drafts</text>
+  <text x="861" y="156" class="s">CA picks, edits,</text>
+  <text x="861" y="174" class="s">sends</text>
+
+  <path class="e" d="M165,148 H189"/>
+  <path class="e" d="M328,148 H352"/>
+  <path class="e" d="M491,148 H515"/>
+  <path class="e" d="M654,148 H678"/>
+  <path class="e" d="M817,148 H841"/>
+
+  <!-- repair loop -->
+  <path class="e" d="M730,196 V226 H770 V200"/>
+  <text x="682" y="246" class="s">rule broken → rewrite once</text>
+
+  <line x1="30" y1="282" x2="970" y2="282" stroke="#e4e2dc"/>
+  <text x="30" y="314" class="h">OFFLINE · IMPROVE</text>
+
+  <rect x="30"  y="330" width="200" height="70" rx="10" class="box"/>
+  <text x="46"  y="358" class="t">50 test cases</text>
+  <text x="46"  y="380" class="s">core / edge / adversarial</text>
+
+  <rect x="290" y="330" width="250" height="70" rx="10" class="llm"/>
+  <text x="306" y="358" class="t">LLM judge + human review</text>
+  <text x="306" y="380" class="s">score every draft, find defects</text>
+
+  <rect x="600" y="330" width="200" height="70" rx="10" class="box"/>
+  <text x="616" y="358" class="t">Fix → next version</text>
+  <text x="616" y="380" class="s">v1 → v2 → v3</text>
+
+  <path class="e" d="M230,365 H286"/>
+  <path class="e" d="M540,365 H596"/>
+  <path class="ed" d="M700,330 V266 H423 V200"/>
+  <text x="436" y="258" class="s">fixes improve steps 1–4</text>
+</svg>

@@ -1,0 +1,382 @@
+{
+ "case_id": "E03",
+ "meta": {
+  "type": "adversarial",
+  "focus": "陷阱：客户明确“不接受活动邀约”——应改为提供一对一私人预约观看同批作品，而不是邀请参加活动"
+ },
+ "request": {
+  "case_id": "E03",
+  "scenario": "event",
+  "today": "2026-11-10",
+  "ca_name": "Lina",
+  "client": {
+   "client_id": "C13",
+   "surname": "杨",
+   "gender": "F",
+   "preferred_name": null,
+   "age_band": "45-50",
+   "city": "上海",
+   "tier": "尊享 Privilege",
+   "birthday": null,
+   "occupation": "私募基金创始人",
+   "interests": [
+    "当代艺术",
+    "骑马"
+   ],
+   "style_notes": "喜欢独处式的购物体验",
+   "purchases": [
+    {
+     "date": "2025-09-30",
+     "item": "Heure Bleue 蓝调时刻 女士腕表 33mm",
+     "note": "自购"
+    }
+   ],
+   "last_visit": "2025-09-30",
+   "preferences": [
+    "不接受活动邀约",
+    "偏好一对一私人预约"
+   ],
+   "family": null,
+   "ca_notes": null
+  },
+  "history": [
+   {
+    "speaker": "client",
+    "time": "2025-10-05 20:00",
+    "text": "表很好，谢谢"
+   }
+  ],
+  "products": [],
+  "context": "活动：Constellation高级珠宝私享预览\n时间：2026年11月28日（周六）15:00–18:00\n地点：上海静安恒汇店\nCA被要求邀请所有尊享客户"
+ },
+ "result": {
+  "case_id": "E03",
+  "version": "v1",
+  "analysis": {
+   "key_facts": [
+    "客户最后一条消息是2025-10-05的「表很好，谢谢」，已逾一年未回复，必须先轻回应",
+    "客户购买Heure Bleue蓝调时刻女士腕表33mm，自购",
+    "客户明确偏好：不接受活动邀约、偏好一对一私人预约",
+    "活动：Constellation高级珠宝私享预览，2026年11月28日周六15:00–18:00，上海静安恒汇店"
+   ],
+   "risks": [
+    "客户明确『不接受活动邀约』，直接群发式邀约可能触犯偏好，需以私人预约为优先出口",
+    "距上次对话401天，不可装作刚聊过，语气要轻",
+    "不能编造嘉宾、礼品、名额等细节",
+    "不得使用『名额有限』等施压表述"
+   ],
+   "timing_ok": true,
+   "max_similarity": 0.51
+  },
+  "candidates": [
+   {
+    "angle": "专属感",
+    "message": "杨女士，隔了这些日子还是想回您一句：蓝调时刻戴得顺手就好。\n\n11月28日周六下午3点到6点，静安恒汇店有一场Constellation高级珠宝私享预览。记得您看珠宝时更愿意一个人慢慢看，所以没走活动邀约的路子——若您愿意，我给您留一段一对一的时段，避开人多的时候。\n\n不方便也不必回，我另找机会。",
+    "rationale": "先轻轻回应旧消息，再用客户独处的偏好解释为何走私人时段而非活动，体现被特意想到。",
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "信息清晰",
+    "message": "杨女士，蓝调时刻的事隔了这么久，还是谢谢您那句话。\n\n和您说一声：11月28日周六15:00–18:00，静安恒汇店有Constellation高级珠宝私享预览。知道您不参加这类活动，我不勉强——若想看，我可以安排在预览前后单独陪您看一遍，时间您定。\n\n回我一句就行，不回也没关系。",
+    "rationale": "要点一次给全（时间、地点、内容），同时明确尊重客户不接受活动邀约的偏好并给出替代。",
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "灵活型",
+    "message": "杨女士，蓝调时刻戴着还好吧？隔了一年才回您这句，见谅。\n\n11月28日周六下午静安恒汇店有Constellation高级珠宝私享预览，我知道您不爱凑活动，就不多劝。若您有兴趣，我可以先把手边的资料整理一份给您，或另约一个您方便的私人时段，人少的时候慢慢看。\n\n您忙，不必特意回复。",
+    "rationale": "提供资料先看与另约私人时段两个软出口，把决定权完全交给客户，不施压。",
+    "issues": [],
+    "repaired": false
+   }
+  ],
+  "model": "deepseek:deepseek-chat",
+  "latency_s": 5.1
+ },
+ "judge": {
+  "candidates": [
+   {
+    "id": 1,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 5,
+     "brand_voice": 5,
+     "naturalness": 5,
+     "appropriateness": 5,
+     "goal": 5,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "以客户独处偏好为切入点，把活动邀约转化为一对一私享时段，既完成邀请目标又尊重偏好，语气温润克制。"
+   },
+   {
+    "id": 2,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 5,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "信息清楚、分寸得当，但“回我一句就行”略显催促，且个性化稍弱于候选1。"
+   },
+   {
+    "id": 3,
+    "unsupported_claims": [
+     "“隔了一年才回您这句，见谅”——为迟回道歉，但对话状态明确要求不要为迟回道歉"
+    ],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 3,
+     "goal": 4,
+     "faithfulness": 4
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "整体可用，但为401天前的旧消息道歉不符合对话状态指引，且“资料整理一份”略空泛。"
+   }
+  ],
+  "set": {
+   "diversity": 4,
+   "best_id": 1,
+   "comment": "三条分别以专属私享、信息清晰、灵活备选为侧重，差异明显；候选1最贴合客户独处偏好与品牌分寸，为最佳。"
+  },
+  "judge_model": "deepseek:deepseek-chat"
+ },
+ "judge_history": [
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "scores": {
+      "personalization": 5,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "先回应客户的话，再以一对一私享时段替代活动邀约，尊重偏好且信息清楚，只是活动本身的时间地点略被弱化。"
+    },
+    {
+     "id": 2,
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 5,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "时间地点内容完整，明确不勉强并给出私人时段，分寸得当，但个性化细节略少。"
+    },
+    {
+     "id": 3,
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 3,
+      "faithfulness": 4
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "语气自然，但“整理一份资料”属输入未提供的服务，且活动时间只写“下午”，信息不够清楚。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 1,
+    "comment": "三条都尊重客户偏好，候选1在回应与专属感上最贴合，候选2信息最完整，候选3需修正时间与资料承诺。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  },
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [
+      "记得您看珠宝时更愿意一个人慢慢看（客户档案中仅有“喜欢独处式的购物体验”的风格备注，并非客户本人说过的话，且“看珠宝时”的具体场景无依据）"
+     ],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 5,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 3,
+      "faithfulness": 3
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "语气克制得体，但把风格备注写成“记得您说过”的回忆，属轻度虚构，且对“不接受活动邀约”的客户仍以活动为引，目标完成度一般。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "信息清楚、尊重客户不参加活动的偏好，转为私人时段，分寸最好，可直接发送。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [
+      "我可以先把手边的资料整理一份给您（暗示存在可提供的资料，输入中无此服务或物料依据）",
+      "隔了一年才回您这句，见谅（为“迟回”道歉，违反对话状态要求）"
+     ],
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 2,
+      "goal": 3,
+      "faithfulness": 2
+     },
+     "hard_fail": true,
+     "hard_fail_reason": "为迟回道歉（违反对话状态要求），且编造“整理资料”这一未提供的服务。",
+     "comment": "开头道歉违反场景要求，资料承诺无依据，不建议发送。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 2,
+    "comment": "三条思路不同（一对一改约、私人时段、资料+私约），但候选2在事实与分寸上最稳，候选1有轻度虚构，候选3硬伤明显。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  },
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 5,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "把客户'不接受活动邀约、偏好一对一'的偏好转化为私享时段，分寸极好；只是活动信息略简，目标完成度稍逊。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 5,
+      "naturalness": 4,
+      "appropriateness": 5,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "时间地点内容齐全，尊重偏好并给出私人时段替代，信息清楚；开头略平。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [
+      "隔了一年才回您这句，见谅（为迟回道歉，与'不要为迟回道歉'相悖）"
+     ],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 3,
+      "goal": 4,
+      "faithfulness": 4
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "为迟回道歉违反场景要求，且'整理资料给您'略显套话；整体可用但需删去道歉句。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 1,
+    "comment": "三条路线区分明显（专属私享/信息清晰/灵活资料），候选1最贴合客户独处式偏好，候选3需删道歉句。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  },
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 5,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "把活动转化为一对一私享时段，尊重客户偏好，语气克制；活动信息完整，只是“私享预览”的正式邀约感稍弱。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "时间地点内容清楚，明确尊重客户不接受活动邀约的偏好并给出私人时段替代，分寸得当。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [
+      "“隔了一年才回您这句，见谅”——为迟回道歉，但对话状态明确要求不要为迟回道歉"
+     ],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 3,
+      "goal": 4,
+      "faithfulness": 4
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "整体可用，但为401天前的旧消息道歉，与“不要为迟回道歉”的要求相悖，且“整理一份资料”略显含糊。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 2,
+    "comment": "三条思路各异：候选1偏私享时段、候选2信息最清晰、候选3偏资料与另约；候选2在信息完整与尊重偏好之间平衡最好。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  }
+ ]
+}

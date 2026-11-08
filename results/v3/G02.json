@@ -1,0 +1,237 @@
+{
+ "case_id": "G02",
+ "meta": {
+  "type": "core",
+  "focus": "正式语气的春节问候；藏家不喜欢空话；不能顺势推万年历"
+ },
+ "request": {
+  "case_id": "G02",
+  "scenario": "greeting",
+  "today": "2027-02-05",
+  "ca_name": "Lina",
+  "client": {
+   "client_id": "C02",
+   "surname": "陈",
+   "gender": "M",
+   "preferred_name": null,
+   "age_band": "45-50",
+   "city": "北京",
+   "tier": "尊享 Privilege",
+   "birthday": null,
+   "occupation": "精密制造企业创始人",
+   "interests": [
+    "制表工艺",
+    "古董表收藏",
+    "高尔夫"
+   ],
+   "style_notes": "资深藏家，懂机芯，反感空洞的营销话术；偏好铂金、珐琅",
+   "purchases": [
+    {
+     "date": "2024-04-02",
+     "item": "Méridien 子午线 两地时腕表 41mm",
+     "note": "自购，常往返北京与日内瓦"
+    }
+   ],
+   "last_visit": "2026-09-12",
+   "preferences": [
+    "语气正式",
+    "只谈干货"
+   ],
+   "family": null,
+   "ca_notes": "曾问过万年历机芯的调校注意事项；对手工珐琅很感兴趣"
+  },
+  "history": [
+   {
+    "speaker": "client",
+    "time": "2026-09-12 16:02",
+    "text": "万年历那款下次去日内瓦时再看看实物"
+   },
+   {
+    "speaker": "CA",
+    "time": "2026-09-12 16:10",
+    "text": "好的陈先生，您行程确定后告诉我，我请日内瓦同事提前安排"
+   }
+  ],
+  "products": [],
+  "context": "今天是除夕，春节问候"
+ },
+ "result": {
+  "case_id": "G02",
+  "version": "v3",
+  "analysis": {
+   "key_facts": [
+    "今天是除夕，2027年春节",
+    "陈先生是精密制造企业创始人，懂机芯，反感空洞营销话术",
+    "陈先生偏好铂金、珐琅，对制表工艺与古董表收藏有兴趣",
+    "上次对话在146天前自然结束，当时提到去日内瓦再看万年历实物"
+   ],
+   "risks": [
+    "上一段对话已结束146天，不要当成进行中的对话来回应，也不要为迟回道歉",
+    "语气需正式、只谈干货，不用emoji",
+    "纯祝福，不推荐产品、不提价格活动、不提供清洁保养服务",
+    "不打听日内瓦行程是否成行，避免显得在追单"
+   ],
+   "timing_ok": true,
+   "max_similarity": 0.47
+  },
+  "candidates": [
+   {
+    "angle": "温情回忆",
+    "message": "陈先生，除夕好。去年九月您提到去日内瓦时再看看万年历实物。新春将至，愿您和家人安稳顺遂，来年手边的事都如走时一般准。",
+    "rationale": "以客户自己提过的日内瓦看表计划切入，并落到他做精密制造、看重机芯的偏好上，祝福收尾，不推销。｜事实核查已删改：这话我一直搁在心里；做精密制造的人看机芯，讲究的是每一处咬合都经得起推敲；想来也是因此您才愿意为一枚表等上许久",
+    "facts_used": [
+     "C2",
+     "H1",
+     "X1"
+    ],
+    "critic_removed": [
+     "这话我一直搁在心里",
+     "做精密制造的人看机芯，讲究的是每一处咬合都经得起推敲",
+     "想来也是因此您才愿意为一枚表等上许久"
+    ],
+    "issues": [],
+    "repaired": true
+   },
+   {
+    "angle": "简洁雅致",
+    "message": "陈先生，除夕安好。一年将尽，愿您新岁顺遂，家人安康，手边诸事如机芯般从容有序。",
+    "rationale": "两三句克制收束，只借机芯一个意象，适合偏好正式简短的客户。",
+    "facts_used": [
+     "C3",
+     "X1"
+    ],
+    "critic_removed": [],
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "轻关怀",
+    "message": "陈先生，除夕快乐。您平日看机芯、收古董表，眼光是慢功夫养出来的，这份闲心也值得留着。祝您和家人新春安稳。",
+    "rationale": "以客户提过的高尔夫兴趣作关心，再落到他赏表的心性上，祝福为主，不涉产品与服务。｜事实核查已删改：不知这个冬天您有没有空下场打几杆球，年底事多，能抽身去走走也是好的",
+    "facts_used": [
+     "C5",
+     "X1"
+    ],
+    "critic_removed": [
+     "不知这个冬天您有没有空下场打几杆球，年底事多，能抽身去走走也是好的"
+    ],
+    "issues": [],
+    "repaired": true
+   }
+  ],
+  "model": "deepseek:deepseek-chat",
+  "latency_s": 7.1
+ },
+ "judge": {
+  "candidates": [
+   {
+    "id": 1,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 5,
+     "naturalness": 4,
+     "appropriateness": 4,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "引用九月万年历话题作为过去的事，分寸得当，走时比喻贴合藏家；除夕提日内瓦行程略偏事务，但未推销，可发。"
+   },
+   {
+    "id": 2,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 3,
+     "brand_voice": 5,
+     "naturalness": 4,
+     "appropriateness": 5,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "语气克制雅致，机芯比喻得体，但换个名字也能用，个性化偏弱。"
+   },
+   {
+    "id": 3,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 4,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "用古董表与机芯兴趣做祝福落点，真诚不推销；'眼光是慢功夫养出来的'略带评价客户品味之嫌，可微调。"
+   }
+  ],
+  "set": {
+   "diversity": 4,
+   "best_id": 1,
+   "comment": "三条分别走回忆、雅致、兴趣关怀路线，差异清晰；候选1最贴合陈先生的具体语境，候选2最稳妥。"
+  },
+  "judge_model": "deepseek:deepseek-chat"
+ },
+ "judge_history": [
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "引用九月对话作为过去的事，分寸得当，祝福收尾自然；但“如走时一般准”略偏泛，且引用旧话题稍显多余。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "语气克制雅致，符合正式偏好，但缺少客户具体信息，换个名字也能发，个性化稍弱。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "用客户收藏与看机芯的兴趣做个性化，但“眼光是慢功夫养出来的”略带评价感，与“只谈干货”偏好稍有距离。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 2,
+    "comment": "三条分别走回忆、简洁、兴趣切入，差异明显；候选2最贴合正式、只谈干货的偏好，纯祝福无推销，可直接发送。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  }
+ ]
+}

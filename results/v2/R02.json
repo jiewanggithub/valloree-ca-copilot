@@ -1,0 +1,285 @@
+{
+ "case_id": "R02",
+ "meta": {
+  "type": "core",
+  "focus": "回应客户问题并给明确建议（客户喜欢明确）；星图可定制为结婚月份；最多推荐两件"
+ },
+ "request": {
+  "case_id": "R02",
+  "scenario": "recommendation",
+  "today": "2026-09-28",
+  "ca_name": "Lina",
+  "client": {
+   "client_id": "C04",
+   "surname": "赵",
+   "gender": "M",
+   "preferred_name": null,
+   "age_band": "30-35",
+   "city": "深圳",
+   "tier": "会员 Member",
+   "birthday": "11-20",
+   "occupation": "科技公司工程总监",
+   "interests": [],
+   "style_notes": null,
+   "purchases": [
+    {
+     "date": "2025-10-12",
+     "item": "Petit Trésor 小珍宝 珍珠母贝吊坠",
+     "note": "送太太的结婚纪念日礼物"
+    }
+   ],
+   "last_visit": "2025-10-12",
+   "preferences": [
+    "工作日白天很忙，晚上回复"
+   ],
+   "family": "已婚，太太喜欢珍珠和小巧的款式；结婚纪念日10月18日",
+   "ca_notes": "选礼物时希望CA给明确建议，不喜欢绕弯子"
+  },
+  "history": [
+   {
+    "speaker": "client",
+    "time": "2026-09-27 21:45",
+    "text": "纪念日快到了，今年送什么好？去年那个吊坠她很喜欢，这次想要不一样一点的"
+   }
+  ],
+  "products": [
+   {
+    "sku": "CST-N-02",
+    "name": "Constellation 星宿 钻石项链",
+    "collection": "Constellation 星宿",
+    "category": "necklace",
+    "material": "18K白金，0.3克拉主钻",
+    "price": 46000,
+    "story": "吊坠背面刻有出生当月的星图，可定制",
+    "care": "避免与硬物碰撞，睡前取下"
+   },
+   {
+    "sku": "PTR-P-01",
+    "name": "Petit Trésor 小珍宝 珍珠母贝吊坠",
+    "collection": "Petit Trésor 小珍宝",
+    "category": "pendant",
+    "material": "18K黄金，白色珍珠母贝，0.05克拉钻石点缀",
+    "price": 12800,
+    "story": "四叶造型来自瓦洛蕾1920年代的档案图稿",
+    "care": "母贝避免接触香水与水"
+   }
+  ],
+  "context": "结婚纪念日10月18日；客户主动询问"
+ },
+ "result": {
+  "case_id": "R02",
+  "version": "v2",
+  "analysis": {
+   "key_facts": [
+    "客户1天前主动询问：纪念日快到了，今年送什么好",
+    "去年送太太的Petit Trésor珍珠母贝吊坠她很喜欢，这次想要不一样一点的",
+    "太太喜欢珍珠和小巧的款式；结婚纪念日10月18日",
+    "客户希望CA给明确建议，不喜欢绕弯子"
+   ],
+   "risks": [
+    "必须先回应客户1天前的提问，不能像没看到一样直接推产品",
+    "客户偏好晚上回复，此刻发送需注意时段",
+    "客户要明确建议，语气不要含糊试探",
+    "不能虚构客户未说过的细节；不能报价时暗示优惠；不能一次推两件"
+   ],
+   "timing_ok": true,
+   "max_similarity": 0.49
+  },
+  "candidates": [
+   {
+    "angle": "懂你型",
+    "message": "赵先生，去年那枚珍珠母贝吊坠太太喜欢，我记着。这次想不一样，我想到Constellation星宿钻石项链——18K白金，0.3克拉主钻，比小珍宝更利落，日常也能戴。吊坠背面还能刻出生当月的星图，定制一份只属于她的。您晚上方便的话，我发几张实物图给您看看？",
+    "rationale": "从客户给出的“她喜欢去年那款、这次想不一样”出发，给出明确单一建议并说明与他情况的关联。",
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "故事型",
+    "message": "赵先生，您说想换个不一样的，我想到星宿系列。它的吊坠背面可以刻上出生当月的星图，18K白金配0.3克拉主钻，线条比小珍宝更简洁。去年那枚是四叶的温柔，这枚更像把某个日子留在身上。纪念日在10月18日，定制需要留出时间，您看要不要我先发图给您？",
+    "rationale": "以星图定制的设计故事为主线，点出与去年作品的差异，并平和提示定制周期。",
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "邀约体验型",
+    "message": "赵先生，今年想换个方向的话，Constellation星宿钻石项链可以看看，18K白金、0.3克拉主钻，背面能刻出生当月星图，和去年那枚珍珠母贝是完全不同的气质。您工作日晚间方便时来店里试戴一下最直观，或者我先拍段视频发您，您看完再定。",
+    "rationale": "简短提及产品，重点放在低压力下一步：晚间到店试戴或先看视频，契合他白天忙的作息。",
+    "issues": [],
+    "repaired": false
+   }
+  ],
+  "model": "deepseek:deepseek-chat",
+  "latency_s": 4.4
+ },
+ "judge": {
+  "candidates": [
+   {
+    "id": 1,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 5,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 5,
+     "goal": 5,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "回应了客户“想不一样”的诉求，用去年吊坠作对照，结尾发图邀约轻松可拒；开头“我记着”略套话，可微调。"
+   },
+   {
+    "id": 2,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 5,
+     "naturalness": 5,
+     "appropriateness": 4,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "“四叶的温柔”与星图对照有分寸，但“定制需要留出时间”未在输入中给出周期，属轻微推断，建议改为不涉时长的表述。"
+   },
+   {
+    "id": 3,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 5,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "试戴与视频两个选项都合规，尊重晚间回复偏好；但未直接回应“去年吊坠她很喜欢”这层信息，个性化稍弱。"
+   }
+  ],
+  "set": {
+   "diversity": 4,
+   "best_id": 1,
+   "comment": "三条分别走懂你、故事、体验路线，差异清晰；候选1最贴合客户要明确建议的偏好，且完整回应了客户消息。"
+  },
+  "judge_model": "deepseek:deepseek-chat"
+ },
+ "judge_history": [
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 5,
+      "brand_voice": 4,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "直接回应“想不一样”，用去年吊坠作锚点，产品信息准确，结尾轻松可拒绝；开头“我记着”略近套话，可微调。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [
+      "“去年那枚是四叶的温柔”——四叶造型来自产品故事，但“温柔”是对客户感受的引申，尚可接受；主要问题在“定制需要留出时间”属对周期的推断，输入未给出定制周期"
+     ],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 5,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 3
+     },
+     "hard_fail": true,
+     "hard_fail_reason": "“定制需要留出时间”暗示了输入中未提供的定制周期/时效，属编造服务条款",
+     "comment": "故事感好，但“定制需要留出时间”是无依据的时效暗示，需删改。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "邀约试戴合理，但客户明确工作日白天忙、偏好晚上回复，“工作日晚间来店”与偏好略有张力，且未先回应“去年吊坠她很喜欢”这层信息。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 1,
+    "comment": "三条分别走懂你、故事、体验路线，差异清晰；候选1最贴合客户“要明确建议”的偏好且事实干净。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  },
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 5,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 5,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "回应了客户“想不一样”的诉求，用去年吊坠做锚点，推荐克制且给出轻松下一步；开头“我记着”略套话，可微调。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [
+      "“去年那枚是四叶的温柔”——四叶造型来自产品信息，但把客户去年购买与“温柔”气质关联属合理转述，可接受"
+     ],
+     "scores": {
+      "personalization": 5,
+      "brand_voice": 5,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 5,
+      "faithfulness": 4
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "故事感与品牌气质贴合，但“定制需要留出时间”暗示了输入未给出的定制周期，属轻微自造，需删或改为平和表述。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 5,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "邀约体验自然、尊重晚间偏好，但“拍段视频”与“来店试戴”并列稍显发散，且对“懂我”的呼应弱于前两条。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 1,
+    "comment": "三条分别走懂你、故事、体验路线，差异清晰；候选1最贴合客户“要明确建议”的偏好，回应到位且无编造。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  }
+ ]
+}

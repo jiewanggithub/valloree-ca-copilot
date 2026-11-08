@@ -1,0 +1,263 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<title>Vallorée CA Copilot</title>
+<style>
+@page { size: A4; margin: 16mm 14mm; }
+:root { --ink:#0b0b0b; --ink2:#52514e; --line:#e4e3df; --bg:#fcfcfb; --acc:#2a78d6; }
+* { box-sizing:border-box; }
+body { font-family: -apple-system, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", sans-serif; color:var(--ink);
+       background:#fff; font-size:10.5pt; line-height:1.5; max-width: 980px; margin: 0 auto; padding: 24px; }
+h1 { font-size:22pt; margin:0 0 4px; } h2 { font-size:15pt; margin:28px 0 8px; padding-top:8px; border-top:2px solid var(--ink); }
+h3 { font-size:12pt; margin:18px 0 6px; } h4 { font-size:10.5pt; margin:0 0 6px; }
+p { margin:6px 0; } .muted { color:var(--ink2); font-weight:400; } .small { font-size:9pt; }
+table { border-collapse:collapse; width:100%; margin:8px 0 12px; font-size:9.3pt; }
+th, td { border-bottom:1px solid var(--line); padding:5px 6px; text-align:left; vertical-align:top; }
+th { background:#f3f2ef; font-weight:600; }
+.kpis { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin:14px 0; }
+.kpi { border:1px solid var(--line); border-radius:8px; padding:10px 12px; } .kpi b { font-size:18pt; display:block; }
+.pill { display:inline-block; border-radius:10px; padding:0 7px; font-size:8.5pt; font-weight:600; }
+.ok { background:#e3f4e3; color:#0a6b0a; } .edit { background:#fff3cd; color:#7a5600; } .bad { background:#f8d7da; color:#9b1c1c; }
+.zh { font-family:"PingFang SC","Hiragino Sans GB",sans-serif; white-space:pre-wrap; }
+.ex { border:1px solid var(--line); border-radius:8px; padding:10px 12px; margin:10px 0; break-inside:avoid; }
+.bagrid { display:grid; gap:8px; } .bagrid.c2 { grid-template-columns:1fr 1fr; } .bagrid.c3 { grid-template-columns:1fr 1fr 1fr; }
+.ba { background:var(--bg); border-radius:6px; padding:8px; font-size:9.3pt; } .bah { font-weight:600; margin-bottom:4px; }
+.note { color:#9b1c1c; font-size:8.6pt; margin-top:4px; } .fix { font-size:9.3pt; margin:6px 0 0; }
+.sample { border:1px solid var(--line); border-radius:8px; padding:10px 12px; margin:10px 0; break-inside:avoid; }
+.opts { display:grid; grid-template-columns:1fr 1fr 1fr; gap:8px; } .opt { background:var(--bg); border-radius:6px; padding:8px; font-size:9.2pt; }
+.opth { font-weight:600; margin-bottom:4px; }
+img.fig { width:100%; border:1px solid var(--line); border-radius:6px; margin:6px 0; }
+img.shot { display:block; max-width:100%; height:auto; border:1px solid var(--line); border-radius:4px; margin:4px 0 2px; }
+.worklog tr:not(.shotrow) td { border-bottom:none; } .shotrow { break-inside:avoid; } .todo { color:#b45309; font-size:8.5pt; }
+.cols { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+.box { border-left:3px solid var(--acc); padding:4px 10px; background:#f4f8fd; margin:8px 0; }
+.badbox { border-left-color:#d03b3b; background:#fdf3f3; }
+code { font-size:9pt; background:#f3f2ef; padding:0 3px; border-radius:3px; }
+.pb { break-before:page; }
+</style></head><body>
+
+<h1>Vallorée CA Copilot</h1>
+<p class="muted">Applied AI Engineer written challenge · a tool that drafts three on-brand WeChat messages for luxury Client Advisors · November 2026</p>
+
+<div class="kpis">
+<div class="kpi"><b>95%</b>of v3 options are OK to send as-is (v1: 76%)</div>
+<div class="kpi"><b>1/150</b>unacceptable in v3 (v1: 19/150)</div>
+<div class="kpi"><b>43/50</b>cases where all three options are OK (v1: 23/50)</div>
+<div class="kpi"><b>6 / 50</b>scenarios / test cases, 26 core · 13 edge · 11 adversarial</div>
+</div>
+
+<p><b>What it is.</b> A Python tool (<code>ca_copilot/</code>) with a local web app (FastAPI + single-page frontend). Input: a CRM client record, the scenario, the WeChat history,
+product information and the occasion. Output: three Chinese WeChat drafts that take <i>different angles</i>, each with a rationale, any remaining
+compliance flags, and a timing warning when sending now would break a client preference. The brand, Maison Vallorée (瓦洛蕾), is a fictional
+Geneva high-jewellery and watch house. Everything in this submission is fictional.</p>
+<p><b>How it got here.</b> Three tested versions. v1 worked on the happy path but invented details and misread old conversations. v2 fixed the
+context problems. v3 added a numbered fact sheet and a fact-check step, which cut unacceptable drafts from 19 to 1 out of 150.
+The same frozen LLM judge and the same manual rubric scored all three versions.</p>
+
+<p class="small muted">Files: <code>deliverables/test_cases_v3.xlsx</code> (C: 50 cases with outputs; D: per-option scores; E: v1 vs v2 vs v3) ·
+<code>docs/architecture.svg</code> · code and data in the repository · run it: <code>./start.sh</code> → http://localhost:8000.</p>
+
+<h2>A. Work log</h2>
+<p class="small muted">The AI assistant was Claude Code (Claude Opus 5.5) in VS Code for design, coding and analysis. DeepSeek (<code>deepseek-chat</code>) is the
+model inside the tool. Under each step is the prompt I gave Claude Code for it.</p>
+<table class="worklog"><tr><th>Step</th><th>What I did</th><th>Input</th><th>Output</th><th>Tool or agent used</th></tr>
+<tr><td>1</td><td>Briefed the AI as an engineering partner: goal, fixed decisions (DeepSeek via OpenAI-compatible API with the key kept in .env; fictional high-jewellery &amp; watch brand; conda env; deliverables), and working rules (stop after each stage to report; deterministic logic in code, not the LLM; freeze each version in snapshots/; human labels drafted by AI are marked “to be checked by me”). Asked for its understanding, open questions and a staged plan before any code.</td><td>Brief PDF</td><td>Requirements summary, open questions, staged plan with outputs and acceptance criteria per stage</td><td>Claude Code (Claude Opus 5.5) in VS Code</td></tr>
+<tr class="shotrow"><td></td><td colspan="4"><div class="small muted">Prompt for step 1:</div><img class="shot" src="screenshots/1.png" width="645" alt="Prompt for step 1"></td></tr>
+<tr><td>2</td><td>Had the brand bible written: history, voice (3 keywords, each with do/don&#x27;t examples), client segments, hard rules (no discounts, no value-retention promises, Advertising Law absolute terms, no disparaging competitors, no invention, privacy, respect client preferences), and CA services. Reviewed the voice examples before moving on.</td><td>Own assumptions about luxury CRM practice and China&#x27;s Advertising Law</td><td>brand/brand_bible.md, brand/products.yaml (10 SKUs with prices)</td><td>Claude Code; reviewed and edited by me</td></tr>
+<tr class="shotrow"><td></td><td colspan="4"><div class="small muted">Prompt for step 2:</div><img class="shot" src="screenshots/2.png" width="511" alt="Prompt for step 2"></td></tr>
+<tr><td>3</td><td>Asked for a design proposal before implementation: data contracts (Client / Turn / Product / Request / Candidate), 3 distinct angles per scenario with must-do and must-not rules, which signals code computes vs. the LLM, and what the rule-check layer blocks. Approved the data flow, then had it built.</td><td>Brand bible, brief</td><td>Design and data-flow diagram; ca_copilot/ package (v1)</td><td>Claude Code</td></tr>
+<tr class="shotrow"><td></td><td colspan="4"><div class="small muted">Prompt for step 3:</div><img class="shot" src="screenshots/3.png" width="412" alt="Prompt for step 3"></td></tr>
+<tr><td>4</td><td>Designed the test set: 20 client personas and 50 cases covering all 6 scenarios, split about 5:3:2 core / edge / adversarial (26 / 13 / 11), each with a focus field. Adversarial cases target discount requests, investment-value questions, competitor bait, preference conflicts, stale chat history and mourning. Reviewed the distribution table and the 10 hardest cases.</td><td>Coverage matrix (scenario × difficulty × context type)</td><td>data/clients.yaml, data/cases.yaml</td><td>Claude Code; reviewed by me</td></tr>
+<tr class="shotrow"><td></td><td colspan="4"><div class="small muted">Prompt for step 4:</div><img class="shot" src="screenshots/4.png" width="577" alt="Prompt for step 4"></td></tr>
+<tr><td>5</td><td>Defined the evaluation framework before running anything: definitions of good / edit / not acceptable with 2 examples each, LLM-judge dimensions (1–5) plus hard-fail conditions, a defect-code taxonomy, and validating the judge by precision and recall against human labels.</td><td>Brand bible, test set</td><td>Rubric (section B4), judge prompt, defect codes</td><td>Claude Code</td></tr>
+<tr class="shotrow"><td></td><td colspan="4"><div class="small muted">Prompt for step 5:</div><img class="shot" src="screenshots/5.png" width="447" alt="Prompt for step 5"></td></tr>
+<tr><td>6</td><td>Connected DeepSeek and smoke-tested the 2 hardest cases (G04 mourning birthday, P02 staff-price request); found a guardrail false positive on refusals (‘员工价…确实没有’). Ran all 50 cases (150 drafts) for v1, scored them with the judge, and had 150 human labels drafted, then checked them. Asked for root-cause hypotheses before any fix.</td><td>DeepSeek API key, data/cases.yaml</td><td>results/v1, data/human_review_v1.yaml: 19 unacceptable, 17 edit; judge recall on unacceptable only 11%</td><td>DeepSeek (generator + judge), Claude Code</td></tr>
+<tr class="shotrow"><td></td><td colspan="4"><div class="small muted">Prompt for step 6:</div><img class="shot" src="screenshots/6.png" width="485" alt="Prompt for step 6"></td></tr>
+<tr><td>7</td><td>Fix loop used for each version, one prompt per defect: propose a fix that targets the root cause, freeze the current version, rerun all cases with the same frozen judge, and report before/after (what was fixed, what broke, latency and cost). v2: stale-history detection, CA location, pronouns, timing rules, fact boundaries, cliché ban, guardrail unit tests (13 unacceptable left; root cause: content-hungry angles invent details). v3: numbered fact sheet, fact-check critic step, preferences as hard rules, new guardrails.</td><td>Defect taxonomy and root-cause hypotheses</td><td>snapshots/ v1–v2, ca_copilot v2 and v3, tests/, results/v2, results/v3: 1 unacceptable / 150</td><td>Claude Code, DeepSeek, pytest</td></tr>
+<tr class="shotrow"><td></td><td colspan="4"><div class="small muted">Prompt for step 7:</div><img class="shot" src="screenshots/7.png" width="491" alt="Prompt for step 7"></td></tr>
+<tr><td>8</td><td>Calibrated the judge against the human labels: listed every disagreement and decided whether the judge or the label was wrong; tuned the rubric for 100% recall on unacceptable outputs with precision as high as possible (too lenient → too strict → balanced). Froze it and re-scored v1, v2 and v3 with the same judge so versions are comparable.</td><td>Human labels v1–v3</td><td>Frozen judge; recall on unacceptable 11% → 100%; comparison table</td><td>Claude Code, DeepSeek</td></tr>
+<tr class="shotrow"><td></td><td colspan="4"><div class="small muted">Prompt for step 8:</div><img class="shot" src="screenshots/8.png" width="513" alt="Prompt for step 8"></td></tr>
+<tr><td>9</td><td>Built the deliverables: Excel with sheet C in the brief&#x27;s exact columns plus a score sheet and a version comparison; this English report (A–E, charts, screenshots, architecture); then checked everything against the brief&#x27;s “what to submit” list.</td><td>results/v1–v3</td><td>deliverables/, docs/</td><td>Claude Code, matplotlib, Playwright, Chrome</td></tr>
+<tr class="shotrow"><td></td><td colspan="4"><div class="small muted">Prompt for step 9:</div><img class="shot" src="screenshots/9.png" width="540" alt="Prompt for step 9"></td></tr>
+<tr><td>10</td><td>Added a local web front end (FastAPI + plain JS, no build step): a generate page with editable input showing the 3 drafts, the facts each one cites and compliance flags; an evaluation page that reads saved results (no API calls) and compares v1/v2/v3 side by side. Tested end to end and fixed a message-ordering bug.</td><td>ca_copilot/, results/</td><td>server.py, frontend/, start.sh</td><td>Claude Code, FastAPI, Playwright</td></tr>
+<tr class="shotrow"><td></td><td colspan="4"><div class="small muted">Prompt for step 10:</div><img class="shot" src="screenshots/10.png" width="434" alt="Prompt for step 10"></td></tr>
+</table>
+
+<h2 class="pb">B. Methodology</h2>
+<h3>B1. Brand assumptions</h3>
+<p>Maison Vallorée: founded 1897 in Geneva, high jewellery and fine watchmaking, “quiet luxury”. Clients are mostly 30–55 year-old
+self-purchasers in Tier-1 cities, plus gift buyers and a small group of watch collectors. The voice is <b>温润 · 克制 · 精准</b>
+(warm, restrained, precise), like a knowledgeable old friend. Full rules are in <code>brand/brand_bible.md</code>. The ones that drive the design:</p>
+<div class="cols"><div>
+<p><b>Eight hard rules</b> (breaking any one makes a draft unacceptable): no discounts or hints of one (global price policy) · no investment or
+“保值/升值” claims · no Advertising-Law absolutes (最好, 顶级, 唯一…) · no disparaging other brands or daigou · <b>no fabrication</b> ·
+privacy (no spend or tier, discreet gifts) · respect stated preferences · no remarks on age, looks or health.</p>
+</div><div>
+<p><b>Allowed gestures</b>, never framed as a price concession: engraving, gift box and card, lifetime jewellery cleaning, 30-day ring resizing,
+warranty extended to 8 years, private appointments, same-city delivery, a 7-day hold.<br><b>Style</b>: address by surname + 女士/先生 or a
+preferred name; 40–150 characters; at most one emoji (none for the top tier); one low-pressure next step.</p>
+</div></div>
+
+<h3>B2. Tool design</h3>
+<img class="fig" src="img/architecture.png">
+<p><b>Design principles.</b> (1) <b>Do in code what code does reliably.</b> Dates, weekdays, whether the client is waiting for a reply, the CA's
+city and which preferences apply are computed deterministically, not left to the LLM. (2) <b>The three options must be real choices.</b> Each
+scenario playbook defines three angles: for a price objection, empathy + value / policy + guarantees / alternatives or services. The CA picks a
+strategy, not a paraphrase. (3) <b>The model may only say what the input supports.</b> v3 turns the input into a numbered fact sheet; the generator
+cites fact IDs, and a separate critic removes unsupported specifics. (4) <b>Defence in depth.</b> The critic catches semantic fabrication, unit-tested
+rules catch compliance words that must never appear, and a single repair pass handles what is left. (5) <b>The CA stays in the loop.</b> The tool
+drafts and warns; it never sends.</p>
+
+<h3>B3. Test set design</h3>
+<table><tr><th>Scenario</th><th>Core</th><th>Edge</th><th>Adversarial</th><th>Total</th></tr><tr><td>1 Birthday & festive greeting</td><td>5</td><td>4</td><td>·</td><td>9</td></tr><tr><td>2 Product recommendation</td><td>5</td><td>3</td><td>1</td><td>9</td></tr><tr><td>3 Post-purchase care</td><td>5</td><td>2</td><td>1</td><td>8</td></tr><tr><td>4 Reactivation</td><td>4</td><td>1</td><td>3</td><td>8</td></tr><tr><td>5 Event invitation</td><td>4</td><td>2</td><td>2</td><td>8</td></tr><tr><td>6 Price objection</td><td>3</td><td>1</td><td>4</td><td>8</td></tr></table>
+<p>The 20 personas are reused across scenarios, so one client appears in different moments; this also catches inconsistent tone. Cases vary
+deliberately along: <b>relationship stage</b> (new, active, dormant 1–4 years) · <b>history state</b> (pending question, closed old thread, CA
+message left unanswered, no history) · <b>product info</b> (none, one, several including an unsuitable trap such as a ¥520k watch for a
+budget-sensitive client) · <b>sensitive context</b> (mourning, complaint, discreet gift, weekend-only contact, “no event invitations”) ·
+<b>register</b> (formal collector, mixed Chinese–English) · <b>adversarial pressure</b> (11-11 discount, staff price, Hong Kong price,
+daigou, competitor comparison, compensation discount after a defect). Each case records what it tests (column “Test design” in the Excel).</p>
+
+<h3>B4. What “good” and “not acceptable” mean</h3>
+<div class="cols"><div class="box">
+<p><b>Good (OK to send as-is)</b><br>Breaks no hard rule · uses at least one true, specific detail about the client · answers the client's pending
+message first · fits the scenario goal and the moment · sounds like a person typing on WeChat, in the brand voice · one easy-to-decline next step ·
+the three options differ in approach. A CA would send it with at most a word changed.</p>
+<p><b>Needs edit</b><br>Safe, but a CA should touch it: a stock phrase, a small invented pretext (“前几天整理资料时看到…”), awkward wording.</p>
+</div><div class="box badbox">
+<p><b>Not acceptable</b><br>Any of the eight hard rules, plus: ignoring the client's question · treating a months-old thread as live · selling inside a
+greeting or a complaint reply · wrong name or gender · misapplying a policy (resizing for a bracelet) · inviting a client who refuses invitations ·
+inventing memories, products, events or stock. <b>Fabrication is the most dangerous failure</b>: an invented memory reads as warm, so it passes a
+quick glance, but it breaks trust the moment the client notices.</p>
+</div></div>
+
+<h3>B5. How results were evaluated</h3>
+<p><b>Three layers.</b> (1) <b>Rule checks</b> on every draft (deterministic, unit-tested). (2) <b>LLM judge</b>: six 1–5 dimensions
+(personalisation, brand voice, naturalness, appropriateness, scenario goal, faithfulness), a <code>hard_fail</code> flag, and a set-level diversity score.
+The judge must fact-check first. (3) <b>Manual review</b> of all 150 options per version (450 in total) as OK / Edit / Unacceptable, with a defect code.
+Manual review is the primary measure; the judge is the scalable screen.</p>
+<p><b>Judge calibration.</b> The first judge passed almost everything (it caught 2 of 19 unacceptable drafts). I tightened it in two rounds against the
+manual labels, then <b>froze it and re-scored every version with the same judge</b>, so differences between versions come from the tool, not the
+ruler. Agreement with the manual labels:</p>
+<table><tr><th>Version</th><th>Both fail</th><th>Judge only</th><th>Manual only</th><th>Both pass</th><th>Recall</th><th>Precision</th><th>Agreement</th></tr><tr><td>v1</td><td>16</td><td>25</td><td>3</td><td>106</td><td>84%</td><td>39%</td><td>81%</td></tr>
+<tr><td>v2</td><td>13</td><td>14</td><td>0</td><td>123</td><td>100%</td><td>48%</td><td>91%</td></tr>
+<tr><td>v3</td><td>1</td><td>0</td><td>0</td><td>149</td><td>100%</td><td>100%</td><td>100%</td></tr></table>
+<p class="small muted">The final judge never misses an unacceptable draft in v2–v3, and is deliberately strict: most “judge only” flags are drafts
+the manual review rated Edit. A conservative gate is the right trade-off for client-facing text. Caveat: the generator and the judge are the same model
+family (only a DeepSeek key was available); the code can switch the judge to Qwen with one environment variable.</p>
+<p class="small muted">Manual review labels were drafted in Claude Code by reading every output against the rubric, then checked by me. They are in
+<code>data/human_review_v*.yaml</code> and in the Excel.</p>
+
+<h2 class="pb">C. 50 test cases</h2>
+<p>All 50 cases with their inputs and the three outputs are in <b><code>deliverables/test_cases_v3.xlsx</code></b>, sheet “C. 50 test cases”, using the
+exact columns of the brief plus a <b>Tool version</b> column (all final results are <b>v3</b>). Sheet “E. v1 vs v2 vs v3” shows every option in all
+three versions side by side with its review verdict. A sample of v3 outputs, one per scenario:</p>
+<div class="sample"><h4>G01 · 1 Birthday & festive greeting</h4><p class="muted small">生日当天；用维也纳歌剧细节个性化；典藏客户不用emoji；客户偏好简短<br>Last message (CA, 2026-10-31): 太好了Vivian，蓝色母贝在剧院的灯光下会很好看。祝旅途愉快</p><div class="opts"><div class="opt"><div class="opth">1. 温情回忆</div><div class="zh">Vivian，生日快乐。记得您这个月要去维也纳听歌剧，愿这一岁里有好音乐，也有让您安静下来的时刻。</div></div><div class="opt"><div class="opth">2. 简洁雅致</div><div class="zh">Vivian，生日快乐。愿这一年如您偏爱的冷色调，清简、从容，余韵长。</div></div><div class="opt"><div class="opth">3. 轻关怀</div><div class="zh">Vivian，生日快乐。这个月要去维也纳了，愿您听得尽兴，也留一点时间给自己。</div></div></div></div>
+<div class="sample"><h4>R04 · 2 Product recommendation</h4><p class="muted small">必须回应客户的具体需求；HBL-W-02（镶钻、晚宴款）不适合日常——好的回复应只推荐或优先推荐HBL-W-01<br>Last message (client, 2026-11-09): Lina，我想找一块能日常戴的表，工地和办公室来回跑，不要太娇气的，有推荐吗</p><div class="opts"><div class="opt"><div class="opth">1. 懂你型</div><div class="zh">何女士，昨晚的问题我看到了。您说工地和办公室来回跑，我想到的是蓝调时刻33mm：精钢表壳，不娇气；蓝色珍珠母贝盘配钻石时标，线条干净，跟您平时偏爱的白金、直线条是一路的。自动上链，动力储存70小时，周末摘下周一也不用重调。价格是¥86000，全球统一价。要不要我先拍几张实物图给您看看？</div></div><div class="opt"><div class="opth">2. 故事型</div><div class="zh">何女士，昨晚的问题我看到了。想给您讲讲蓝调时刻这块表：盘面那抹蓝取自日内瓦湖黄昏的“蓝调时刻”，每片珍珠母贝的纹理都不一样，所以每块盘面只属于一个人。33mm精钢表壳，自动上链，动力储存70小时，日常戴得住。想到您是建筑师，对光线和材质大概会比常人更挑剔一些，这块表或许经得起您看。方便时来店里上手试试？</div></div><div class="opt"><div class="opth">3. 邀约体验型</div><div class="zh">何女士，昨晚的消息回复晚了。日常戴的表，我这边有一块蓝调时刻33mm比较合适：精钢表壳，蓝色珍珠母贝盘，自动上链，动力储存70小时，不用太费心。您哪天从工地或办公室过来方便，我留个安静时段给您慢慢试；不方便的话，我先发段视频给您看也可以。</div></div></div></div>
+<div class="sample"><h4>A02 · 3 Post-purchase care</h4><p class="muted small">投诉：先致歉共情、给出明确方案；不能轻松愉快；不能承诺赔偿或折扣<br>Last message (client, 2026-11-04): 买了不到两周，表扣就有点松，开会的时候差点滑下来。这个价位不应该吧</p><div class="opts"><div class="opt"><div class="opth">1. 关心体验</div><div class="zh">郑女士，表扣松这件事我向您道歉，开会时差点滑下来，确实让人不放心。表扣是可以免费检测调整的，我这边可以安排上门取表，检测调整好再给您送回去，不用您专门跑一趟。您看这周哪天方便，我按您时间来。</div></div><div class="opt"><div class="opth">2. 实用保养</div><div class="zh">郑女士，表扣的事是我这边没让您省心，抱歉。门店可以免费检测处理。另外这块蓝调时刻是石英机芯，电池大约三年更换一次，回店检测时一起看就好。您方便的话我安排上门取表，调整好给您送回来。</div></div><div class="opt"><div class="opth">3. 专属服务</div><div class="zh">郑女士，表扣的问题我记下了，让您在会上分心，实在抱歉。这块表可以安排免费检测调整，我也可以上门取送，省得您抽时间跑门店。您定个方便的时间，我过来取表，处理好再送回您手上。</div></div></div></div>
+<div class="sample"><h4>RA04 · 4 Reactivation</h4><p class="muted small">连续未回复+反感打扰——应极轻、可不需回复，甚至建议暂缓；绝不能再追问“为什么没回”<br>Last message (CA, 2026-10-20): 韩先生，好久不见，最近一切都好吗？</p><div class="opts"><div class="opt"><div class="opth">1. 念旧型</div><div class="zh">韩先生，上次那句问候就不必回了。想起您那只子午线两地时，走时还稳吗？不用特意回，我在这边，需要时说一声就好。</div></div><div class="opt"><div class="opth">2. 服务理由型</div><div class="zh">韩先生，打扰一句。您那只子午线两地时按建议四到五年保养一次，现在还早，等走时有什么变化，我帮您安排检测就行。无需回复。</div></div><div class="opt"><div class="opth">3. 轻分享型</div><div class="zh">韩先生，一句闲话：腕表注册会员计划后保修可延到八年，首次保养也免。您那只子午线若还没注册，我把步骤发您，不回复也没关系。</div></div></div></div>
+<div class="sample"><h4>E06 · 5 Event invitation</h4><p class="muted small">客户是古典乐爱好者但工作日是手术日——活动在周四，应给出替代方案（周末私人时段）<br>Last message (client, 2026-11-07): 谢谢Lina，有心了</p><div class="opts"><div class="opt"><div class="opth">1. 专属感</div><div class="zh">刘女士，11月26日周四晚上店里有一场室内乐沙龙，主题是古典乐与腕表，19:30开始，就在静安恒汇店。想到您平时工作日忙，若周四不便，也可以另约一个周末的私人时段，我把活动内容当面讲给您听。您看哪种方便？</div></div><div class="opt"><div class="opth">2. 信息清晰</div><div class="zh">刘女士，和您说个活动：11月26日（周四）19:30–21:00，静安恒汇店有一场“古典乐与腕表”室内乐沙龙，您感兴趣的话可以来坐坐。若周四晚上医院走不开，我们也可以约周末的私人时段，您方便时回我一声就好。</div></div><div class="opt"><div class="opth">3. 灵活型</div><div class="zh">刘女士，周末好。店里11月26日周四晚有一场古典乐沙龙，想到您喜欢古典乐，先跟您说一声。知道您工作日不便，若来不了也没关系，我可以另约周末的私人时段，或先把活动内容发给您看看。</div></div></div></div>
+<div class="sample"><h4>P07 · 6 Price objection</h4><p class="muted small">合理诉求+不能打折的两难；真诚致歉、不能打折、给出政策内诚意<br>Last message (client, 2026-11-11): 表扣问题这件事挺影响体验的。我还想再买一条星宿项链，能不能给我个补偿价？</p><div class="opts"><div class="opt"><div class="opth">1. 共情+价值</div><div class="zh">郑女士，表扣的事让您费心了，我明白体验上的落差，也谢谢您直接跟我说。补偿价确实给不了，瓦洛蕾是全球统一价格，这点我不能含糊。星宿这条您可以先看看实物：18K白金配0.3克拉主钻，吊坠背面能刻出生当月的星图，是件可以带上个人印记的东西。要不要我拍段视频给您，或者约个私享时段来上手？</div></div><div class="opt"><div class="opth">2. 政策+保障</div><div class="zh">郑女士，表扣那件事我一直放在心上，您觉得影响体验是实情，我不会轻描淡写。关于补偿价，瓦洛蕾实行全球统一价格，我这边没有空间，也不愿给您不实的期待。官方渠道能给您的是真品证书、全球保修，以及珠宝终身免费清洁抛光；您的蓝调时刻注册会员计划后保修可延至8年。星宿项链您若有意，我可以先把细节发您。</div></div><div class="opt"><div class="opth">3. 替代方案（增值服务）</div><div class="zh">郑女士，表扣的事我记着，给您添了麻烦。补偿价这边确实做不到，价格是统一的，我不能开这个口子。星宿项链如果您决定要，我可以帮您安排免费刻字、礼盒和手写卡片，也可以亲自送到您手上；想先看实物，约个私享时段慢慢看。您方便的话告诉我一声就好。</div></div></div></div>
+
+<h2 class="pb">D. Evaluation report</h2>
+<div class="cols"><img class="fig" src="img/human_verdicts.png"><img class="fig" src="img/judge_dimensions.png"></div>
+<table><tr><th>Metric</th><th>v1</th><th>v2</th><th>v3</th></tr><tr><td>Manual review: OK (send as-is)</td><td>114/150 (76%)</td><td>121/150 (81%)</td><td>143/150 (95%)</td></tr>
+<tr><td>Manual review: needs edit</td><td>17</td><td>16</td><td>6</td></tr>
+<tr><td>Manual review: unacceptable</td><td>19 (13%)</td><td>13 (9%)</td><td>1 (1%)</td></tr>
+<tr><td>Cases where all 3 options are OK</td><td>23/50</td><td>29/50</td><td>43/50</td></tr>
+<tr><td>Adversarial candidates OK</td><td>25/33</td><td>24/33</td><td>32/33</td></tr>
+<tr><td>Edge candidates OK</td><td>21/39</td><td>29/39</td><td>36/39</td></tr>
+<tr><td>Judge: hard fail</td><td>41</td><td>27</td><td>1</td></tr>
+<tr><td>Judge: send-ready (no fail, avg ≥ 4)</td><td>47%</td><td>63%</td><td>75%</td></tr>
+<tr><td>Judge mean · personalization</td><td>3.65</td><td>3.76</td><td>3.93</td></tr>
+<tr><td>Judge mean · brand_voice</td><td>4.13</td><td>4.35</td><td>4.43</td></tr>
+<tr><td>Judge mean · naturalness</td><td>3.87</td><td>4.19</td><td>4.26</td></tr>
+<tr><td>Judge mean · appropriateness</td><td>3.82</td><td>4.07</td><td>4.29</td></tr>
+<tr><td>Judge mean · goal</td><td>3.83</td><td>3.97</td><td>4.11</td></tr>
+<tr><td>Judge mean · faithfulness</td><td>3.88</td><td>4.19</td><td>4.85</td></tr>
+<tr><td>Judge: diversity of the 3 options (1–5)</td><td>3.76</td><td>3.96</td><td>4.00</td></tr>
+<tr><td>Max text similarity between options</td><td>0.38</td><td>0.36</td><td>0.40</td></tr>
+<tr><td>Latency per request, mean / p90 (s)</td><td>5.0 / 6.3</td><td>4.8 / 5.8</td><td>6.7 / 8.3</td></tr>
+<tr><td>LLM calls per request</td><td>1 (+repair)</td><td>1 (+repair)</td><td>2 (+repair)</td></tr></table>
+<h3>Findings</h3>
+<p><b>1. Fabrication is the core risk, and prompting alone does not remove it.</b> In v1, 13 of 19 unacceptable drafts were invented facts; in v2,
+after explicit “do not invent” rules, it was still 12 of 13. The cause is structural: angles such as “warm memory” or “light share” demand content,
+and when the record is thin the model fills the gap. Making facts explicit and checkable (fact sheet + critic) cut unacceptable drafts to 1.</p>
+<p><b>2. Time is where LLMs slip.</b> v1 answered a March message in November as if it were live (all three options in G08 and A08). Pre-computed
+signals fixed this completely. One date-arithmetic slip (“四年多” for 5 years 8 months) remains.</p>
+<p><b>3. Compliance words are the easy part.</b> No draft in any version offered a discount, used an investment claim or an Advertising-Law absolute
+after guardrails; adversarial cases (staff price, daigou, compensation) are handled well from v1. The hard part is <i>judgement</i>: preferences,
+timing, tone in sensitive moments.</p>
+<p><b>4. Templated feel is measurable.</b> In v1, 8 of 9 greetings told the client to dress warmly and 21% of drafts said “我一直记着”. Banning
+these by name reduced the repetition; across 50 cases, cross-case repetition is a better signal of “scripted” than any single message.</p>
+<p><b>5. Trade-offs of v3.</b> The critic adds one LLM call (mean latency 4.8 s → 6.7 s) and edits 71 of 150 drafts, occasionally leaving a
+sentence without its point (2 drafts). Personalisation is still the lowest judge dimension (3.93): being stricter about facts makes some drafts plainer.</p>
+<h3>Demo screenshots</h3>
+<p class="small muted">Local web app, live v3 runs. <b>A08</b>: the tool warns that today is Tuesday and this client accepts messages only at weekends;
+each draft lists the fact IDs it cites and what the fact-check removed. <b>P02</b>: a staff-price request on 11-11; all three options decline
+clearly and still help with the gift. <b>Evaluation page</b>: the saved test-set results for G04 (birthday during mourning) side by side for v1, v2
+and v3, with review verdicts and judge scores. Live runs vary between runs, so they can differ from the evaluated outputs (see E3).</p>
+<img class="fig" src="img/web_generate_A08.png">
+<img class="fig pb" src="img/web_generate_P02.png">
+<img class="fig" src="img/web_eval_G04.png">
+
+<h2 class="pb">E. Defects and next steps</h2>
+<h3>E1. Defects found, by version</h3>
+<p class="small muted">Count of options per defect: unacceptable / needs edit (manual review).</p>
+<table><tr><th>Defect</th><th>v1</th><th>v2</th><th>v3</th></tr><tr><td>CA written as if abroad</td><td>· / 3</td><td>· / ·</td><td>· / ·</td></tr>
+<tr><td>Critic edit left text incoherent</td><td>· / ·</td><td>· / ·</td><td>· / 2</td></tr>
+<tr><td>Date arithmetic error</td><td>· / ·</td><td>· / ·</td><td>· / 1</td></tr>
+<tr><td>Invented events, exhibitions, new arrivals</td><td>1 / 1</td><td>4 / 1</td><td>· / ·</td></tr>
+<tr><td>Invented client memory or behaviour</td><td>3 / 2</td><td>4 / 4</td><td>· / ·</td></tr>
+<tr><td>Invented product facts / alternatives</td><td>7 / ·</td><td>2 / 1</td><td>· / ·</td></tr>
+<tr><td>Invented / misapplied service terms</td><td>2 / 2</td><td>2 / 2</td><td>· / ·</td></tr>
+<tr><td>Selling inside a greeting</td><td>· / 4</td><td>· / ·</td><td>· / ·</td></tr>
+<tr><td>Ignores client preference / timing</td><td>· / 3</td><td>1 / 1</td><td>· / ·</td></tr>
+<tr><td>Invented pretext for contacting</td><td>· / ·</td><td>· / 5</td><td>· / 2</td></tr>
+<tr><td>Other wording issue</td><td>· / ·</td><td>· / 1</td><td>· / 1</td></tr>
+<tr><td>Soft sell in after-care</td><td>· / ·</td><td>· / 1</td><td>· / ·</td></tr>
+<tr><td>Old thread treated as live</td><td>6 / 2</td><td>· / ·</td><td>1 / ·</td></tr></table>
+<h3>E2. Changes made, with before and after</h3>
+<table><tr><th>Version</th><th>Changes</th></tr>
+<tr><td>v1 → v2</td><td>Context builder: closed-thread detection (client message older than 3 days is not “pending”), CA boutique city, weekday and
+weekend-only check, pronoun 您/你 · Prompt: explicit fact boundaries, banned stock phrases, no sign-off · Playbooks: greeting angle without services,
+price-objection alternatives only from the product list, event-time conflict check · Guardrails: fixed 3 false positives found in v1 (refusals read as
+discount offers, “灯火可亲” read as slang, “3万8” price parsing), new checks for service words in greetings, CA location, pronoun mixing, clichés ·
+7 unit tests.</td></tr>
+<tr><td>v2 → v3</td><td>Numbered fact sheet ([C] client, [H] history, [P] product, [X] context, [S] policy) and <code>facts_used</code> per option ·
+fact-check critic (one LLM call per request) · CRM preferences turned into hard instructions · guardrails for invented new arrivals and exhibitions,
+ring-only resizing, unlisted plus-ones, “1万6千8” parsing · 11 unit tests in total.</td></tr>
+<tr><td>Evaluation</td><td>Judge v1 (lenient) → v2 (too strict) → v3 (calibrated, consistency rule) → final (given the full policy list), then frozen. All
+versions re-scored with the final judge.</td></tr></table>
+<div class="ex"><h4>Stale thread treated as live <span class="muted">· case G08, option 1</span></h4><div class="bagrid c2"><div class="ba"><div class="bah">v1 <span class="pill bad">Unacceptable</span></div><div class="zh">刘女士，周六上午您说过来取手镯——不知后来是否顺利，若还没取也不急，我给您留着。另外，四号是您的生日，我记得那只Lierre手镯是您买给自己的生日礼物，这份心意我一直记着。迟了几天，还是想认真说一句：生日快乐，愿这一年跑得尽兴、听得舒心。</div><div class="note">把3月份“周六上午过来取”当成正在进行的对话来回应</div></div><div class="ba"><div class="bah">v3 <span class="pill ok">OK</span></div><div class="zh">刘女士，生日是四号，那天是周三，等到周末才把这句话送到：生日快乐。想起去年您把手镯留作给自己的生日礼物，这份心意我一直觉得很好。祝新的一岁顺遂，周末戴得上它的时候，都过得舒展。</div></div></div><p class="fix"><b>Change:</b> Context builder: a client message older than 3 days is a closed thread; the prompt says so explicitly.</p></div>
+<div class="ex"><h4>Invented memory in a sensitive moment <span class="muted">· case G04, option 1</span></h4><div class="bagrid c3"><div class="ba"><div class="bah">v1 <span class="pill bad">Unacceptable</span></div><div class="zh">周女士，今天是您的生日，我想起上次一起喝茶时您说起母亲教您写字的事，一直记着。这个日子不便多说什么，只愿您心里安稳，被好好照看着。改日您愿意的话，我陪您坐坐。</div><div class="note">编造“母亲教您写字”的回忆，且在服丧期——最严重的一类</div></div><div class="ba"><div class="bah">v2 <span class="pill bad">Unacceptable</span></div><div class="zh">周女士，今天是您的生日。记得上次一起喝茶时，您说起家里的事总是很平静，那份平静我一直记在心里。这个生日想必与往年不同，我不多说什么，只愿您今日能有一刻安宁，身边有可说话的人。</div><div class="note">编造“喝茶时说起家里的事很平静”，服丧期</div></div><div class="ba"><div class="bah">v3 <span class="pill ok">OK</span></div><div class="zh">周女士，今天是您的生日。愿这一年，笔下有从容，心里有安宁。母亲的事，我一直在心里放着，不敢多扰，只想让您知道，我记挂着您。</div></div></div><p class="fix"><b>Change:</b> v2 prompt rules were not enough; v3 fact sheet + critic removed the invented detail.</p></div>
+<div class="ex"><h4>Invented alternative products <span class="muted">· case P06, option 3</span></h4><div class="bagrid c2"><div class="ba"><div class="bah">v1 <span class="pill bad">Unacceptable</span></div><div class="zh">Emily，明白你在算这笔，伦敦退税价差是存在的，我不跟你绕。价格这边统一，没法动，但我可以陪你看看别的可能：常春藤系列还有更简洁的款式，或者先来店里把这只和你手上的金色系叠一叠，比较过再决定。想要的话刻字和礼盒都能安排，不急的。</div><div class="note">“常春藤系列还有更简洁的款式”不存在</div></div><div class="ba"><div class="bah">v3 <span class="pill ok">OK</span></div><div class="zh">hmm 退税这个我明白，换我也会心动。价格上瓦洛蕾是全球统一的，我这边确实没有空间，不好意思。不过如果你喜欢这只，可以在内圈免费刻字，做成只属于你的那只；也可以约个安静的时间来店里慢慢试，我帮你把叠戴的效果拍给你看。你方便的话我把时间留出来。</div></div></div><p class="fix"><b>Change:</b> Playbook: offer an alternative only if one is in the product list, otherwise policy-level services.</p></div>
+<div class="ex"><h4>Selling inside a birthday greeting <span class="muted">· case G01, option 3</span></h4><div class="bagrid c2"><div class="ba"><div class="bah">v1 <span class="pill edit">Edit</span></div><div class="zh">Vivian，生日快乐。维也纳十一月已冷，歌剧夜出门记得多带一件。回来上海时欢迎来坐坐，我给您把表做个清洁。</div><div class="note">生日祝福里提供清洁服务</div></div><div class="ba"><div class="bah">v3 <span class="pill ok">OK</span></div><div class="zh">Vivian，生日快乐。这个月要去维也纳了，愿您听得尽兴，也留一点时间给自己。</div></div></div><p class="fix"><b>Change:</b> Greeting angle redefined; guardrail blocks service words in greetings.</p></div>
+<div class="ex"><h4>CA writing as if in Geneva <span class="muted">· case G09, option 2</span></h4><div class="bagrid c2"><div class="ba"><div class="bah">v1 <span class="pill edit">Edit</span></div><div class="zh">冯女士，中秋安康。日内瓦的秋天也到了，月亮照到哪儿，都是同一轮。愿您和家人这一晚清静圆满。</div><div class="note">“日内瓦的秋天也到了”</div></div><div class="ba"><div class="bah">v3 <span class="pill ok">OK</span></div><div class="zh">冯女士，中秋快乐。月圆之时，愿您和家人围坐一处，清闲自在。</div></div></div><p class="fix"><b>Change:</b> Signal: CA works in the client&#x27;s city boutique; guardrail on ‘日内瓦的秋天’ patterns.</p></div>
+<div class="ex"><h4>Policy applied to the wrong product <span class="muted">· case A05, option 3</span></h4><div class="bagrid c3"><div class="ba"><div class="bah">v1 <span class="pill bad">Unacceptable</span></div><div class="zh">唐先生，不客气。手镯若有需要调整的地方，三十天内可以免费改圈；往后清洁抛光也不收费用。您方便的时候提前告诉我，我安排一个安静时段，不必等。</div><div class="note">手镯“三十天内免费改圈”——政策只适用于戒指</div></div><div class="ba"><div class="bah">v2 <span class="pill bad">Unacceptable</span></div><div class="zh">唐先生，手镯戴了一周，若尺寸上想再合手一些，30天内可以免费改圈。您来湖滨店前跟我说一声，我替您安排个安静些的时段。</div><div class="note">手镯“30天免费改圈”——与v1相同的错误</div></div><div class="ba"><div class="bah">v3 <span class="pill ok">OK</span></div><div class="zh">唐先生，手镯若有需要，清洁抛光随时可以做，我这边帮您约个方便的时间，到店或我送过去都行。您忙的话，不回复也没关系。</div></div></div><p class="fix"><b>Change:</b> Fact sheet states ‘ring only’; guardrail checks resizing against rings.</p></div>
+<div class="ex"><h4>Invented store exhibition <span class="muted">· case RA06, option 3</span></h4><div class="bagrid c2"><div class="ba"><div class="bah">v2 <span class="pill bad">Unacceptable</span></div><div class="zh">冯女士，小珍宝系列的四叶造型其实来自瓦洛蕾1920年代的档案图稿，去年给您女儿选的那枚珍珠母贝也是这个来源。最近店里有些关于老图稿的小展陈，您如果对这类工艺故事感兴趣，可以来看看，不一定要买东西，路过就好。</div><div class="note">编造“店里有些关于老图稿的小展陈”</div></div><div class="ba"><div class="bah">v3 <span class="pill ok">OK</span></div><div class="zh">冯女士，小珍宝那枚四叶的造型来自1920年代的档案图稿，忽然想起您女儿那枚。她这一年过得可好？您忙您的，不用特意回我，改天想清洁了跟我说一声就是。</div></div></div><p class="fix"><b>Change:</b> Fact sheet + critic; guardrail on exhibitions not present in the input.</p></div>
+<div class="ex"><h4>Ignoring ‘no event invitations’ <span class="muted">· case E03, option 3</span></h4><div class="bagrid c2"><div class="ba"><div class="bah">v2 <span class="pill bad">Unacceptable</span></div><div class="zh">杨女士，好久没联系。11月28日周六下午店里有一场Constellation高级珠宝私享预览，我想到您对当代艺术的眼光，觉得您或许会有兴趣——但也知道您一向偏爱安静的私人时段。
+所以三个选择：那天来，我全程陪着；另约一个只有您的时间；或者我先把这场的资料发给您看。您回一个数字就好。</div><div class="note">明确邀请“那天来，我全程陪着”，违反客户偏好</div></div><div class="ba"><div class="bah">v3 <span class="pill ok">OK</span></div><div class="zh">杨女士，想到您对当代艺术的眼光，Constellation高级珠宝私享预览或许合您心意。11月28日周六15:00–18:00在静安恒汇店，不过按您的习惯，我更想为您留一段安静的一对一私享时段。
+若那阵子不便，我也可以先把作品的图片或视频发给您，看过再约。您看哪种方式轻松些？</div></div></div><p class="fix"><b>Change:</b> CRM preference translated into a hard instruction: offer only a one-to-one appointment.</p></div>
+
+<h3>E3. What remains to be fine-tuned</h3>
+<table><tr><th>Remaining issue</th><th>Evidence</th><th>Next step</th></tr>
+<tr><td>Critic edits can leave a sentence without its point</td><td>A06-1, RA02-3</td><td>Critic returns a fluent rewrite and the result is checked again; if the
+fix would remove the angle's core, regenerate that option instead of deleting phrases.</td></tr>
+<tr><td>Critic removes legitimate boutique names</td><td>R01, RA08 (“湖滨店”, “静安”)</td><td>Put the boutique and CA facts in the fact sheet.</td></tr>
+<tr><td>Date arithmetic</td><td>RA03-2 “四年多” (5 years 8 months)</td><td>Pre-compute durations for every purchase and conversation in the fact sheet.</td></tr>
+<tr><td>Small invented pretexts</td><td>R08-1, RA05-3</td><td>A whitelist of honest openers (“想到您…”) and a soft rule; measure with the pretext detector.</td></tr>
+<tr><td>Old thread referenced ambiguously</td><td>A08-3</td><td>Pass only the gist of closed threads, not their wording.</td></tr>
+<tr><td>Personalisation is the weakest dimension</td><td>judge 3.93 / 5</td><td>Richer CRM memory (past chats, occasions, family dates) through retrieval;
+few-shot examples from real top-performing CAs; ultimately fine-tune on approved messages.</td></tr>
+<tr><td>Evaluation bias</td><td>Same model family judges; test set written by the tool's author</td><td>Second judge family (Qwen), a panel of real CAs for
+inter-rater agreement, cases sampled from anonymised CA logs, a larger red-team set.</td></tr>
+<tr><td>Single sample per case</td><td>Live re-runs of the same case produce different drafts</td><td>Evaluate 3–5 samples per case and report the
+worst case and variance, not one draw; consider a lower temperature for sensitive scenarios.</td></tr>
+<tr><td>No real-world signal yet</td><td>—</td><td>Online metrics: which option the CA picks, edit distance before sending, client reply rate, opt-outs.</td></tr>
+<tr><td>Latency and cost</td><td>6.7 s mean, 2 calls</td><td>Stream the first option; run the critic in parallel per option; cache the brand and system prompt.</td></tr>
+<tr><td>Timing only warns</td><td>A08</td><td>Schedule the send for the next allowed window.</td></tr>
+</table>
+
+<h2>Bonus. Architecture</h2>
+<p>See the diagram in B2 (source: <code>docs/architecture.svg</code>). Code map: <code>context.py</code> (step 1) · <code>prompts.py</code>,
+<code>scenarios.py</code> (2) · <code>pipeline.py</code> (2–4, repair) · <code>guardrails.py</code> (4) · <code>judge.py</code>, <code>scripts/</code> (offline loop).
+Earlier versions are frozen in <code>snapshots/</code>.</p>
+</body></html>

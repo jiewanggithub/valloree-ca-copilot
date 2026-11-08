@@ -1,0 +1,242 @@
+{
+ "case_id": "P08",
+ "meta": {
+  "type": "core",
+  "focus": "新客议价：温和拒绝、强调首次购买的体验（刻字、礼盒、终身清洁），不让客户尴尬"
+ },
+ "request": {
+  "case_id": "P08",
+  "scenario": "price_objection",
+  "today": "2026-11-08",
+  "ca_name": "Lina",
+  "client": {
+   "client_id": "C14",
+   "surname": "许",
+   "gender": "F",
+   "preferred_name": null,
+   "age_band": "25-30",
+   "city": "杭州",
+   "tier": "新客 New",
+   "birthday": null,
+   "occupation": null,
+   "interests": [],
+   "style_notes": null,
+   "purchases": [],
+   "last_visit": "2026-10-03",
+   "preferences": [],
+   "family": null,
+   "ca_notes": "国庆期间在杭州快闪店加的微信，试戴过小珍宝吊坠，说“再考虑一下”；其他信息不多"
+  },
+  "history": [
+   {
+    "speaker": "CA",
+    "time": "2026-11-07 15:00",
+    "text": "许女士，小珍宝吊坠的四叶造型来自瓦洛蕾1920年代的档案图稿，上次您试戴很好看"
+   },
+   {
+    "speaker": "client",
+    "time": "2026-11-08 09:40",
+    "text": "我挺喜欢的，第一次买你们家，能不能便宜点？"
+   }
+  ],
+  "products": [
+   {
+    "sku": "PTR-P-01",
+    "name": "Petit Trésor 小珍宝 珍珠母贝吊坠",
+    "collection": "Petit Trésor 小珍宝",
+    "category": "pendant",
+    "material": "18K黄金，白色珍珠母贝，0.05克拉钻石点缀",
+    "price": 12800,
+    "story": "四叶造型来自瓦洛蕾1920年代的档案图稿",
+    "care": "母贝避免接触香水与水"
+   }
+  ],
+  "context": "新客首次购买"
+ },
+ "result": {
+  "case_id": "P08",
+  "version": "v3",
+  "analysis": {
+   "key_facts": [
+    "客户H2：第一次买瓦洛蕾，问能否便宜点",
+    "客户C2：国庆快闪店试戴过小珍宝吊坠，说再考虑一下",
+    "产品P1-P4：Petit Trésor 小珍宝 珍珠母贝吊坠，18K黄金、白色珍珠母贝、0.05克拉钻石，四叶造型来自1920年代档案图稿",
+    "政策S1：全球统一价格体系，不打折；S2免费刻字与礼盒手写卡片；S3终身免费清洁抛光；S9官方渠道真品证书与全球保修"
+   ],
+   "risks": [
+    "客户在等回复，必须先明确而温和地回应打折请求",
+    "不得给折扣或暗示可申请更低价格、赠送抵价礼品",
+    "不得贬低代购、海外或其他品牌渠道",
+    "不得说保值、升值、投资",
+    "不得让客户觉得买不起；客户只是比价",
+    "不得虚构客户经历或产品未给出的细节",
+    "人称统一用您"
+   ],
+   "timing_ok": true,
+   "max_similarity": 0.36
+  },
+  "candidates": [
+   {
+    "angle": "共情+价值",
+    "message": "许女士，谢谢您坦率跟我说。初次买，想把价格问清楚是很自然的。小珍宝这条吊坠是18K黄金托着白色珍珠母贝，四叶上点缀0.05克拉钻石，造型取自1920年代的档案图稿，母贝的切面和光泽在光下很耐看。价格上瓦洛蕾是全球统一的，确实没有折扣空间。您若愿意，我可以再发几张不同光线下的照片给您看看细节。",
+    "rationale": "先认同客户问价的自然心情，再用材质与档案图稿说明价值，温和说明统一价格，最后给轻松的看细节选项。",
+    "facts_used": [
+     "H2",
+     "P2",
+     "P4",
+     "S1",
+     "S7"
+    ],
+    "critic_removed": [],
+    "issues": [],
+    "repaired": true
+   },
+   {
+    "angle": "政策+保障",
+    "message": "许女士，您问的这点我直接说：瓦洛蕾实行全球统一价格，门店没有折扣权限，这点我不能含糊。不过首次购买，您拿到的是官方渠道的真品证书与全球保修，之后珠宝可终身免费清洁抛光。您在杭州，想看实物或让我拍视频都可以。",
+    "rationale": "坦诚说明统一价格政策，不争辩，用官方渠道保障与终身服务回应首次购买的顾虑，并给本地看实物的选项。",
+    "facts_used": [
+     "H2",
+     "S1",
+     "S9",
+     "S3",
+     "S7",
+     "C1"
+    ],
+    "critic_removed": [],
+    "issues": [],
+    "repaired": true
+   },
+   {
+    "angle": "替代方案（政策内增值服务）",
+    "message": "许女士，价格上我没办法给您优惠，瓦洛蕾是全球统一价，这点先跟您说清楚。初次购买，我这边能帮您做的是免费刻字，配礼盒和手写卡片，之后清洁抛光也是终身免费的。您之前说再考虑一下，不急着定，想看吊坠不同角度的照片我随时发您。",
+    "rationale": "明确无折扣后，转向免费刻字、礼盒卡片与终身清洁等政策内服务，并尊重客户此前“再考虑”的节奏。",
+    "facts_used": [
+     "H2",
+     "S1",
+     "S2",
+     "S3",
+     "C2",
+     "S7"
+    ],
+    "critic_removed": [],
+    "issues": [],
+    "repaired": true
+   }
+  ],
+  "model": "deepseek:deepseek-chat",
+  "latency_s": 11.3
+ },
+ "judge": {
+  "candidates": [
+   {
+    "id": 1,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 5,
+     "naturalness": 5,
+     "appropriateness": 5,
+     "goal": 5,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "先共情再平和说明统一价格，用产品细节承接价值，结尾轻巧可拒绝，分寸很好。"
+   },
+   {
+    "id": 2,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 3,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 4,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "政策与保障陈述准确，但略偏条款罗列，个性化稍弱。"
+   },
+   {
+    "id": 3,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 5,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "以政策内增值服务回应价格异议，不施压，但“帮您做”措辞略像已承诺，可微调。"
+   }
+  ],
+  "set": {
+   "diversity": 4,
+   "best_id": 1,
+   "comment": "三条分别走共情价值、政策保障、增值服务路线，差异清晰；候选1最贴合品牌语气与场景目标。"
+  },
+  "judge_model": "deepseek:deepseek-chat"
+ },
+ "judge_history": [
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 5,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "先共情再平和说明统一价格，用产品细节承接价值，结尾轻松可拒绝，可直接发送。"
+    },
+    {
+     "id": 2,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "政策与保障陈述准确，但略偏条款式，个性化稍弱，可补一句产品细节更温润。"
+    },
+    {
+     "id": 3,
+     "unsupported_claims": [],
+     "scores": {
+      "personalization": 4,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 5,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "以政策内增值服务回应价格异议，分寸得当；开头略直，可稍加共情软化。"
+    }
+   ],
+   "set": {
+    "diversity": 4,
+    "best_id": 1,
+    "comment": "三条分别走共情价值、政策保障、增值服务路线，差异清晰；候选1最贴合品牌语气与场景目标。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  }
+ ]
+}

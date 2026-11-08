@@ -1,0 +1,237 @@
+{
+ "case_id": "P03",
+ "meta": {
+  "type": "core",
+  "focus": "不让客户觉得“买不起”；提供叠戴戒指作为替代；不催促"
+ },
+ "request": {
+  "case_id": "P03",
+  "scenario": "price_objection",
+  "today": "2026-11-15",
+  "ca_name": "Lina",
+  "client": {
+   "client_id": "C03",
+   "surname": "林",
+   "gender": "F",
+   "preferred_name": null,
+   "age_band": "25-30",
+   "city": "杭州",
+   "tier": "会员 Member",
+   "birthday": "03-14",
+   "occupation": "互联网公司产品经理",
+   "interests": [
+    "瑜伽",
+    "咖啡",
+    "极简设计"
+   ],
+   "style_notes": "玫瑰金，喜欢叠戴，日常通勤佩戴；戒指尺寸9号",
+   "purchases": [
+    {
+     "date": "2026-09-10",
+     "item": "Lierre 常春藤 叠戴戒指（玫瑰金）",
+     "note": "自购，庆祝升职"
+    }
+   ],
+   "last_visit": "2026-09-10",
+   "preferences": [],
+   "family": null,
+   "ca_notes": "第一次买高级珠宝，挑选时很认真；说过以后想再叠一只不同颜色的"
+  },
+  "history": [
+   {
+    "speaker": "CA",
+    "time": "2026-11-14 20:00",
+    "text": "林女士，常春藤手镯和您的戒指是同一个藤叶纹，叠在一起很有呼应感"
+   },
+   {
+    "speaker": "client",
+    "time": "2026-11-15 10:20",
+    "text": "好看是好看，但3万8对我来说有点超预算了"
+   }
+  ],
+  "products": [
+   {
+    "sku": "LRR-B-01",
+    "name": "Lierre 常春藤 手镯",
+    "collection": "Lierre 常春藤",
+    "category": "bracelet",
+    "material": "18K玫瑰金，藤叶纹手工錾刻",
+    "price": 38000,
+    "story": "常春藤象征长久的陪伴，藤叶纹由匠人逐片錾刻，每只略有不同",
+    "care": "可终身免费抛光"
+   },
+   {
+    "sku": "LRR-R-02",
+    "name": "Lierre 常春藤 叠戴戒指",
+    "collection": "Lierre 常春藤",
+    "category": "ring",
+    "material": "18K黄金/玫瑰金/白金三色可选",
+    "price": 16800,
+    "story": "设计为可叠戴，适合日常",
+    "care": "30天内免费改圈"
+   }
+  ],
+  "context": "客户第一次买高级珠宝，预算有限"
+ },
+ "result": {
+  "case_id": "P03",
+  "version": "v1",
+  "analysis": {
+   "key_facts": [
+    "客户觉得3万8的常春藤手镯超出预算",
+    "客户9月刚购买Lierre常春藤叠戴戒指（玫瑰金），庆祝升职",
+    "客户曾提到以后想再叠一只不同颜色的戒指",
+    "客户是第一次购买高级珠宝，挑选认真，预算敏感"
+   ],
+   "risks": [
+    "客户在等回复，必须先回应超预算这句话",
+    "不能给折扣或暗示可申请更低价格，不能贬低其他渠道",
+    "不能让客户觉得自己买不起，语气要尊重",
+    "不能提保值或投资"
+   ],
+   "timing_ok": true,
+   "max_similarity": 0.25
+  },
+  "candidates": [
+   {
+    "angle": "共情+价值",
+    "message": "林女士，理解您对预算的考虑，3万8确实不是小数目。这只手镯的藤叶纹是匠人一片片手工錾刻的，所以每只的叶脉走向都略有不同，戴在手上和您那只常春藤戒指的纹路能对上。不着急决定，您方便时来店里上手比一比，感受一下再想。",
+    "rationale": "先认同预算感受，再用錾刻工艺和与已有戒指的呼应具体说明价值，结尾给轻松的到店邀请。",
+    "issues": [
+     "[HARD:price_fabricated] 价格「3万」与输入不符"
+    ],
+    "repaired": true
+   },
+   {
+    "angle": "政策+保障",
+    "message": "林女士，明白您的顾虑。瓦洛蕾实行全球统一价格，所以价格上我这边确实没有办法调整，这点想先跟您说清楚。不过通过官方渠道购买的作品都附证书，手镯可以终身免费清洗抛光，售后上也更省心。您先不用急着定，有什么想了解的随时问我。",
+    "rationale": "坦诚说明统一价格体系不打折，平和陈述官方渠道的证书与终身清洁保障，不贬低其他渠道，保持关系。",
+    "issues": [],
+    "repaired": false
+   },
+   {
+    "angle": "替代方案",
+    "message": "林女士，3万8超预算的话完全不用勉强。您之前说想再叠一只不同颜色的戒指，常春藤叠戴戒指有黄金和白金可选，16800，和您那只玫瑰金叠在一起正好是您想要的效果。手镯也能免费刻字，您要是想再看看，我帮您留个位置来店里慢慢比。",
+    "rationale": "直接提供预算内的替代选择（呼应客户想叠不同颜色戒指的偏好），并提及免费刻字与到店比较，给出可拒绝的下一步。",
+    "issues": [
+     "[HARD:price_fabricated] 价格「3万」与输入不符"
+    ],
+    "repaired": true
+   }
+  ],
+  "model": "deepseek:deepseek-chat",
+  "latency_s": 7.2
+ },
+ "judge": {
+  "candidates": [
+   {
+    "id": 1,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 5,
+     "brand_voice": 5,
+     "naturalness": 5,
+     "appropriateness": 5,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "共情到位，用工艺细节和已有戒指的呼应来传递价值，邀请到店轻松自然，不施压。"
+   },
+   {
+    "id": 2,
+    "unsupported_claims": [],
+    "scores": {
+     "personalization": 3,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 4,
+     "goal": 4,
+     "faithfulness": 5
+    },
+    "hard_fail": false,
+    "hard_fail_reason": "",
+    "comment": "清晰说明统一价格政策，并给出官方渠道的售后保障，但个性化稍弱，未引用客户具体信息。"
+   },
+   {
+    "id": 3,
+    "unsupported_claims": [
+     "您之前说想再叠一只不同颜色的戒指（客户档案中ca_notes有记录，但对话历史中未出现，需确认是否可引用）",
+     "手镯也能免费刻字（产品信息中未提及手镯可刻字，政策内可提供免费刻字服务，但未明确适用于手镯）"
+    ],
+    "scores": {
+     "personalization": 4,
+     "brand_voice": 4,
+     "naturalness": 4,
+     "appropriateness": 3,
+     "goal": 3,
+     "faithfulness": 2
+    },
+    "hard_fail": true,
+    "hard_fail_reason": "编造客户未在对话中提及的偏好（“您之前说想再叠一只不同颜色的戒指”），且声称手镯可免费刻字但产品信息未提供该服务，属于编造服务。",
+    "comment": "试图提供替代方案，但引用了未在对话中出现的客户偏好，并编造了手镯刻字服务，违反事实忠实原则。"
+   }
+  ],
+  "set": {
+   "diversity": 4,
+   "best_id": 1,
+   "comment": "三条分别侧重价值、政策、替代方案，差异明显；候选1最贴合场景且无硬伤，候选3因编造不可用。"
+  },
+  "judge_model": "deepseek:deepseek-chat"
+ },
+ "judge_history": [
+  {
+   "candidates": [
+    {
+     "id": 1,
+     "scores": {
+      "personalization": 5,
+      "brand_voice": 5,
+      "naturalness": 5,
+      "appropriateness": 5,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "共情到位，用手工錾刻细节和戒指呼应讲价值，邀约轻松可拒绝，只是未正面回应价格政策。"
+    },
+    {
+     "id": 2,
+     "scores": {
+      "personalization": 3,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 4,
+      "faithfulness": 5
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "清晰守住统一价格政策，但偏说明文，个性化弱，未用客户已有的戒指做连接。"
+    },
+    {
+     "id": 3,
+     "scores": {
+      "personalization": 5,
+      "brand_voice": 4,
+      "naturalness": 4,
+      "appropriateness": 4,
+      "goal": 5,
+      "faithfulness": 4
+     },
+     "hard_fail": false,
+     "hard_fail_reason": "",
+     "comment": "用客户想叠不同颜色戒指的偏好给出替代方案，很贴心；但把免费刻字与手镯并列略像补偿性赠礼，需微调措辞。"
+    }
+   ],
+   "set": {
+    "diversity": 5,
+    "best_id": 1,
+    "comment": "三条分别走价值、政策、替代方案，路径清晰不同；候选1最贴合品牌语气，候选3目标达成度最高但需注意赠礼暗示。"
+   },
+   "judge_model": "deepseek:deepseek-chat"
+  }
+ ]
+}
